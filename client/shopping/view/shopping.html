@@ -1,0 +1,51 @@
+<div class="container" style="width:800px;">
+    <h3 align="center">Shopping</h3><br />
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#products">
+                <h5>
+                    Produtos
+                </h5>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#cart">
+                <h5> Carrinho <span class="badge badge-secondary">  </span> </h5>
+            </a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="products" class="tab-pane fade in active">
+
+        </div>
+
+        <div id="cart" class="tab-pane fade">
+            <div class="table-responsive" id="order_table">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th width="40%">Product Name</th>
+                            <th width="10%">Quantity</th>
+                            <th width="20%">Price</th>
+                            <th width="15%">Sub total</th>
+                            <th width="5%">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="client/shopping/controller/shopping.js"></script>
+<script src="client/shopping/controller/addProducts.js"></script>
+<script src="client/shopping/controller/deleteProducts.js"></script>
+<script src="client/shopping/controller/quantityProducts.js"></script>
+<script src="client/shopping/controller/listProducts.js"></script>
+<script src="client/shopping/controller/itemsProducts.js"></script>
