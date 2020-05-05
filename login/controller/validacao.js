@@ -17,7 +17,7 @@ $(document).ready(function() {
                     $(location).attr('href', url)
                 } else {
                     Swal.fire({
-                        icon: 'success',
+                        icon: 'error',
                         title: 'SysAgenda!',
                         text: dados.return,
                         type: 'error',

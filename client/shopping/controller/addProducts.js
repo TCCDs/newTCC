@@ -18,13 +18,21 @@ $(document).ready(function(data) {
                     action: action
                 },
                 success: function(data) {
-
-                    alert("Product has been Added into Cart")
-
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Supermecado Caravelas',
+                        type: 'success',
+                        confirmButtonText: 'O produto foi adicionado ao carrinho '
+                    })
                 }
             });
         } else {
-            alert("Please Enter Number of Quantity")
+            Swal.fire({
+                icon: 'error',
+                title: 'Supermecado Caravelas',
+                type: 'error',
+                confirmButtonText: 'Digite o número da quantidade '
+            })
         }
     });
 });
