@@ -11,13 +11,23 @@ $(document).ready(function() {
             total = 0;
             for (var i = 0; i < data.length; i++) {
                 let listarProdutosCompra = `
-                    <tr>
-                        <td>` + data[i].product_name + `</td>
-                        <td><input type="text" name="quantity[]" id="quantity` + data[i].product_id + `" value="` + data[i].product_quantity + `" data-product_id="` + data[i].product_id + `" class="form-control quantity" /></td>
-                        <td align="right">R$ ` + data[i].product_price + `</td>
-                        <td align="right">R$ ` + data[i].product_quantity * data[i].product_price + `</td>
-                        <td><button name="delete" class="btn btn-danger btn-xs delete" id="` + data[i].product_id + `">Remove</button></td>
-                    </tr>
+
+                <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title"> ` + data[i].product_name + `</h5>
+                  <h4 class="card-title text-success mt-2"><input type="text" name="quantity[]" id="quantity` + data[i].product_id + `" value="` + data[i].product_quantity + `" data-product_id="` + data[i].product_id + `" class="form-control quantity" /> </h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">R$ ` + data[i].product_price + `</li>
+                  <li class="list-group-item">R$ ` + data[i].product_quantity * data[i].product_price + `
+                  </li>
+                  <li class="list-group-item"><button name="delete" class="btn btn-danger btn-xs delete" id="` + data[i].product_id + `">Remove</button></li>
+                </ul>
+                <div class="card-body">
+                <input type="button" name="add_to_cart" id="` + data[i].ID_PRODUTOS + `" style="margin-top:5px;" class="btn btn-warning form-control add_to_cart" value="Adicionar o carrinho" />
+                </div>
+              </div>
+              
                     `
                 var total = total + (data[i].product_quantity * data[i].product_price);
                 $('tbody').append(listarProdutosCompra)

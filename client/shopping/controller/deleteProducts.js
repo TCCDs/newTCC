@@ -9,7 +9,12 @@ $(document).ready(function(data) {
                 dataType: "json",
                 data: { product_id: product_id, action: action },
                 success: function(data) {
-                    alert("Product has been Added into Cart");
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Supermecado Caravelas',
+                        type: 'error',
+                        confirmButtonText: 'Deseja excluir? '
+                    })
                 }
             });
         } else {
