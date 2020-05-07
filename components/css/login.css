@@ -233,64 +233,6 @@ textarea:-ms-input-placeholder {
     width: 100%;
 }
 
-.redesT {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: right;
-}
-
-.redesF {
-    font-size: 25px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 5px;
-    background: rgb(3, 118, 250);
-    width: 50px;
-    height: 50px;
-    padding: 18px;
-    border-radius: 100px;
-    position: relative;
-    margin-left: 35px;
-}
-
-.redesG {
-    font-size: 25px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 5px;
-    background: rgb(185, 10, 10);
-    width: 50px;
-    height: 50px;
-    padding: 18px;
-    border-radius: 100px;
-    position: relative;
-}
-
-.redesF:hover {
-    background: rgba(253, 254, 255, 0.301);
-}
-
-.redesG:hover {
-    background: rgba(253, 254, 255, 0.301);
-}
-
 .mdi {
     color: #ffffff;
 }
