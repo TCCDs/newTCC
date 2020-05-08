@@ -6,7 +6,7 @@
 
     //$qrcode = $_POST['qrcode'];
 
-    $QR_CODE_PRODUTOS  = 15962390;
+    $QR_CODE_PRODUTOS  = 15962380;
     $sql = mysqli_query ($conn, "SELECT * FROM produtos where QR_CODE_PRODUTOS = '$QR_CODE_PRODUTOS ' ORDER BY ID_PRODUTOS limit 1");
     while($resultado = mysqli_fetch_assoc($sql)) {
         $listarProdutos[] = array_map('utf8_encode', $resultado);

@@ -40,6 +40,7 @@ $(document).ready(function() {
               
                     `
                 var total = total + (data[i].product_quantity * data[i].product_price);
+                $('.modal-body').append(listarProdutosCompra)
                 $('#cart').append(listarProdutosCompra)
 
             }
@@ -68,7 +69,9 @@ $(document).ready(function() {
             </div>           
             `
 
+            $('.modal-body').append(listarProdutosCompra)
             $('#cart').append(listarProdutosCompra)
+
 
             // $('#order_table').html(data.order_table);
 
