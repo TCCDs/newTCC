@@ -12,12 +12,19 @@ $(document).ready(function() {
             for (var i = 0; i < data.length; i++) {
                 let listarProdutosCompra = `
 
-                <div class="card" style="width: 18rem;">
+                <div class="card text-center" style="width: 18rem;">
                 <div class="card-body">
                   <h5 class="card-title"> ` + data[i].product_name + `</h5>
-                  <h4 class="card-title text-success mt-2"><input type="text" name="quantity[]" id="quantity` + data[i].product_id + `" value="` + data[i].product_quantity + `" data-product_id="` + data[i].product_id + `" class="form-control quantity" disabled /> </h4>
-                </div>
-                <ul class="list-group list-group-flush">
+                  </div>
+                  <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                  <div class="row ">
+                  <div class="col-6 col-md-6">
+                  <h6>Quantidade</h6></div>
+                  <div class="col-6 col-md-6"> 
+                  <h6>` + data[i].product_quantity + `</h6>
+                  </div>    
+                  </li>
                   <li class="list-group-item">
                   <div class="row ">
                   <div class="col-6 col-md-6">
@@ -33,8 +40,21 @@ $(document).ready(function() {
                   <div class="col-6 col-md-6"> 
                   <h6>R$ ` + data[i].product_quantity * data[i].product_price + `</h6>
                   </div>
+                  </li>   
+                  <li class="list-group-item">
+                  <div class="card-body">
+                  <div class="row">
+                   <div class="col-6 col-md-6">
+                   <button name="delete" class="btn btn-danger btn-block btn-xs delete" id="` + data[i].product_id + `">
+                   <i class="mdi mdi-trash-can-outline"> </i>
+                   </button>
+                   </div>
+                   <div class="col-6 col-md-6">
+                    <button class="btn btn-block btn-info">Mais</button>
+                   </div>
+                  </div>
+                  </div>              
                   </li>
-                  <li class="list-group-item"><button name="delete" class="btn btn-danger btn-block btn-xs delete" id="` + data[i].product_id + `">Remove</button></li>
                 </ul>
               </div>
               
@@ -42,6 +62,7 @@ $(document).ready(function() {
                 var total = total + (data[i].product_quantity * data[i].product_price);
                 $('.modal-body').append(listarProdutosCompra)
                 $('#cart').append(listarProdutosCompra)
+
 
             }
 
