@@ -243,3 +243,7 @@ textarea:-ms-input-placeholder {
     text-align: center;
     margin-top: 2em;
 }
+
+.saldo {
+    position: absolute;
+}

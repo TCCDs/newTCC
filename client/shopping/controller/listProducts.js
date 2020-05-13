@@ -68,7 +68,7 @@ $(document).ready(function() {
 
             //console.log(totalResult);
             let listarProdutosCompra = `
-            <div class="col-12 col-md-12 saldo fixed-bottom ">
+            <div class="col-12 col-md-12 fixed-bottom">
              <div class="card text-center mt-2 ">
                 <div class="card-header">
                 <div class="row ">
