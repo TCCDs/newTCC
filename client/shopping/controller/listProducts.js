@@ -12,7 +12,7 @@ $(document).ready(function() {
             for (var i = 0; i < data.length; i++) {
                 let listarProdutosCompra = `
 
-                <div class="card text-center" style="width: 18rem;">
+                <div class="card text-center mt-3" style="width: 18rem;">
                 <div class="card-body">
                   <h5 class="card-title"> ` + data[i].product_name + `</h5>
                   </div>

@@ -11,10 +11,15 @@ $(document).ready(function() {
             var i = 0;
             while (data[i]) {
                 let listarProdutos = `
-                <div class="card" style="width: 18rem;">
-                <div class="card-body">
+                <div class="card mt-2" style="width: 18rem;">
+                <div class="card-body text-center">
                   <h5 class="card-title"> ` + data[i].NOME_PRODUTOS + `</h5>
-                  <h4 class="card-title text-success mt-2"> ` + data[i].PRECO_VENDA_PRODUTOS + `</h4>
+                  <div class="row ">
+                  <div class="col-6 col-md-6">
+                  <h6>Preço</h6></div>
+                  <div class="col-6 col-md-6"> 
+                  <h5 class="text-success">` + data[i].PRECO_VENDA_PRODUTOS + `</h5>
+                  </div>  
                 </div>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item"><input type="text"  name="quantity" id="quantity` + data[i].ID_PRODUTOS + `" class="form-control" value="1" />
