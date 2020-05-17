@@ -231,25 +231,8 @@
         width: 100%;
     }
     
-    .mdi {
-        color: #ffffff;
-    }
-    
-    .login {
-        padding: 10px;
-        color: #ffffff;
-        text-align: center;
-        margin-top: 2em;
-    }
-    
-    .menu {
-        background: rgb(121, 121, 121);
-    }
-    
-    .menu2 {
-        background: blueviolet;
-    }
-    
-    .ml-1 {
-        margin-left: (spacer 1 .25) !important;
+    img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
     }
