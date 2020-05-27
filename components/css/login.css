@@ -245,3 +245,91 @@
     h5 {
         color: white;
     }
+    
+    #formulario {
+        margin: 10px auto;
+        text-align: center;
+    }
+    
+    #formulario h2,
+    #formulario h3 {
+        font: 22px "Trebuchet MS", tahoma, arial;
+        color: 090;
+        width: 100%;
+        float: left;
+        text-align: left;
+        margin-bottom: 4%;
+    }
+    
+    #formulario h2 {
+        color: rgb(255, 255, 255);
+    }
+    
+    #formulario h3 {
+        color: rgb(255, 255, 255);
+        font-size: 17px;
+    }
+    
+    #formulario fieldset {
+        border: 0 none;
+        border-radius: 6px;
+        box-shadow: 0 0 15 1px rgba(0, 0, 0, 0.4);
+        padding: 20px 30px;
+    }
+    
+    #formulario fieldset:not(:first-of-type) {
+        display: none;
+    }
+    /* -------LINHA DE ETAPAS------------ */
+    
+    #formulario #progress {
+        margin-bottom: 30px;
+        overflow: hidden;
+        counter-reset: step;
+    }
+    
+    #formulario #progress li {
+        list-style-type: none;
+        color: rgb(139, 134, 125);
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 10px;
+        float: left;
+        width: 33.33%;
+        position: relative;
+    }
+    
+    #formulario #progress li:before {
+        content: counter(step);
+        counter-increment: step;
+        width: 20px;
+        display: block;
+        line-height: 20px;
+        background: white;
+        color: #0a0a0a;
+        border-radius: 10px;
+        margin: 0 auto 10px auto;
+    }
+    
+    #formulario #progress li:after {
+        content: '';
+        width: 100%;
+        background: white;
+        height: 2px;
+        position: absolute;
+        top: 9px;
+        left: -50%;
+        z-index: -1;
+        /*  colocando na camada debaixo */
+    }
+    
+    #formulario #progress li:first-child:after {
+        content: none;
+    }
+    
+    #formulario #progress li.ativo:before,
+    #formulario #progress li.ativo:after {
+        background: rgba(62, 177, 81, 0.897);
+        color: white;
+        text-shadow: 0 1px 0;
+    }
