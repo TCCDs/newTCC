@@ -28,7 +28,7 @@ $(document).ready(function() {
     })
 
     $('.inscreva').click(function() {
-        $('#conteudo').load('login/view/cadCliente.html')
+        $('#conteudo').load('client/customers/view/cad-user.html')
 
     })
     $('.login').click(function() {

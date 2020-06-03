@@ -1,7 +1,12 @@
 <div class="row">
-    <div class="col-12 offset-md-2 col-md-8 shadow p-3 mb-5 bg-white rounder">
-        <h4 class="text-danger text-center">Cadastro de produtos</h4>
-        <form id="formulario" method="post" enctype="multipar/form-data" name="formulario">
+    <div class="col-12 offset-md-2 col-md-8 shadow-lg p-3 mb-5 bg-white rounded-top">
+        <div class="row">
+            <div class="col-12 col-md-12 title-product">
+                <h4 class="text-danger text-light ">Cadastro de produtos</h4>
+
+            </div>
+        </div>
+        <form id="formulario" method="post" enctype="multipar/form-data" name="formulario" class="mt-3">
             <ul id="progress">
                 <li class="ativo">Informações</li>
                 <li>Dados</li>
@@ -9,37 +14,43 @@
 
             </ul>
             <fieldset>
-
                 <div class="row">
                     <div class="col-12 col-md-12">
                         <h2 class="text-dark ">Informações</h2>
                         <hr class="mt-4">
                         <div class="form-group mt-4">
-                            <label>Nome</label>
-                            <input class="form-control" type="text" name="NOME_PRODUTOS">
+                            <div class="wrap-input100">
+                                <input type="text" class="input100" placeholder="Nome do produto" name="NOME_PRODUTOS">
+                                <span class="focus-input100"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-6 col-md-6">
+                    <div class="col-12 col-md-6">
                         <div class="form-group">
-                            <label>Preço custo</label>
-                            <input class="form-control" type="text" name="PRECO_CUSTO_PRODUTOS">
+                            <div class="wrap-input100">
+                                <input type="text" class="input100" placeholder="Custo do produto" name="PRECO_CUSTO_PRODUTOS">
+                                <span class="focus-input100"></span>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-6 col-md-6">
+                    <div class="col-12 col-md-6">
                         <div class="form-group">
-                            <label>Preço venda</label>
-                            <input class="form-control" type="text" name="PRECO_VENDA_PRODUTOS">
+                            <div class="wrap-input100">
+                                <input type="text" class="input100" placeholder="Preço de venda" name="PRECO_VENDA_PRODUTOS">
+                                <span class="focus-input100"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 col-md-12">
                         <div class="form-group">
-                            <label>Modo De Preparo</label>
-                            <textarea class="form-control textarea1" id="exampleFormControlTextarea1" rows="6" name="mododepreparo"></textarea>
-
+                            <div class="wrap-input100">
+                                <input type="text" class="input100" placeholder="Categoria" name="CATEGORIAS_PRODUTOS">
+                                <span class="focus-input100"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -47,23 +58,98 @@
             </fieldset>
             <fieldset>
                 <div class="row">
-                    <h2 class="text-dark">Ingredientes </h2>
-                    <div class="col-6 col-md-6">
-                        <div class="form-group">
-                            <label>Quantidade:</label>
-                            <input class="form-control" type="text" name="quantidade">
+                    <div class="col-12 col-md-12">
+                        <h2 class="text-dark ">Dados</h2>
+                        <hr class="mt-4">
+                        <div class="form-group mt-4">
+                            <div class="wrap-input100">
+                                <input type="text" class="input100" placeholder="Descrição do produto" name="DESCRICAO_PRODUTOS">
+                                <span class="focus-input100"></span>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-6 col-md-6">
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
                         <div class="form-group">
-                            <label>Ingrediente:</label>
-                            <input class="form-control" type="text" name="ingredientes">
+                            <div class="wrap-input100">
+                                <input type="text" class="input100" placeholder="Validade do produto" name="VALIDADE_PRODUTOS">
+                                <span class="focus-input100"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <div class="wrap-input100">
+                                <input type="text" class="input100" placeholder="Peso do produto" name="PESO_PRODUTOS">
+                                <span class="focus-input100"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <div class="wrap-input100">
+                                <input type="text" class="input100" placeholder="Marca do produto" name="ID_MARCAS_PRODUTOS">
+                                <span class="focus-input100"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <div class="wrap-input100">
+                                <input type="text" class="input100" placeholder="Fornecedor do produto" name="ID_FORNECEDORES_PRODUTOS">
+                                <span class="focus-input100"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="button" name="prev" class="prev acao btn btn-warning" value="Anterior">
+                <input type="button" name="next2" class="next acao btn btn-success" value="Proximo">
+            </fieldset>
+            <fieldset>
+                <div class="row">
+                    <div class="col-12 col-md-12">
+                        <h2 class="text-dark ">Dados</h2>
+                        <hr class="mt-4">
+                        <div class="form-group mt-4">
+                            <div class="wrap-input100">
+                                <input type="text" class="input100" placeholder="Lote do produto" name="LOTE_PRODUTOS">
+                                <span class="focus-input100"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <div class="wrap-input100">
+                                <input type="text" class="input100" placeholder="Corredor do produto" name="CORREDOR_PRODUTOS">
+                                <span class="focus-input100"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <div class="wrap-input100">
+                                <input type="text" class="input100" placeholder="Pratilheira do produto" name="PRATILEIRA_PRODUTOS">
+                                <span class="focus-input100"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-12">
+                        <div class="form-group">
+                            <div class="wrap-input100">
+                                <input type="text" class="input100" placeholder="QR-CODE do produto" name="QR_CODE_PRODUTOS">
+                            </div>
                         </div>
                     </div>
                 </div>
                 <input type="button" name="prev" class="prev acao btn btn-warning" value="Anterior">
                 <button class="btn btn-success btn-add">Enviar</button>
-
             </fieldset>
         </form>
 
@@ -73,4 +159,4 @@
 
 
 
-<script src="administration/products/controller/formulario.js"></script>
+<script src="administration/products/controller/formulario-add-product.js"></script>
