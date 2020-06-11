@@ -238,7 +238,8 @@
     }
     
     .menu {
-        border-radius: 12px;
+        border-top-right-radius: 12px;
+        border-top-left-radius: 12px;
         background: rgb(160, 30, 30);
     }
     
@@ -332,4 +333,8 @@
         background: rgba(62, 177, 81, 0.897);
         color: white;
         text-shadow: 0 1px 0;
+    }
+    
+    .ctr-cliente:hover {
+        cursor: pointer;
     }
