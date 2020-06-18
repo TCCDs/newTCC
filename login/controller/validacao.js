@@ -18,7 +18,7 @@ $(document).ready(function() {
                 } else {
                     Swal.fire({
                         icon: 'error',
-                        title: 'SysAgenda!',
+                        title: 'Supermercado Caravelas!',
                         text: dados.return,
                         type: 'error',
                         confirmButtonText: 'Tentar novamente....'

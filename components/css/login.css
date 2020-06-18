@@ -1,18 +1,15 @@
     /* background: url('../../fundo.png') no-repeat center center; */
     
+    body {
+        background: rgb(202, 205, 255);
+    }
+    
     hr {
         background: rgb(138, 138, 138);
     }
     
     .tudo {
-        background: rgba(0, 0, 0, 0.5);
-        padding: 12px;
-        border-radius: 6px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 2em;
-        margin-bottom: 2em;
+        padding: 18px;
     }
     
     h2 {
@@ -31,7 +28,7 @@
         bottom: -10px;
         width: 0;
         height: 2px;
-        background-color: rgb(17, 133, 141);
+        background-color: hsl(207, 68%, 39%);
         content: "";
         transition: width 0.2s;
     }
@@ -45,7 +42,7 @@
     }
     
     .inscreva:hover {
-        color: hsl(0, 0%, 100%);
+        color: hsl(207, 68%, 39%);
     }
     
     .inscreva:hover:after {
@@ -58,28 +55,33 @@
         bottom: -10px;
         width: 0;
         height: 2px;
-        background-color: rgb(35, 199, 211);
+        background-color: hsl(207, 68%, 39%);
         content: "";
         transition: width 0.2s;
     }
     
     .login:hover {
-        color: hsl(0, 0%, 100%);
+        color: hsl(207, 68%, 39%);
     }
     
     .login:hover:after {
         width: 100%;
     }
     
-    .bton {
+    .btn-login {
         color: white;
-        background: rgb(37, 129, 165);
+        background: rgb(22, 115, 128);
         border: none;
         border-radius: 6px;
         width: 100%;
         height: auto;
         padding: 10px;
         font-size: 15px;
+    }
+    
+    .btn-login:hover {
+        background: hsl(207, 67%, 23%);
+        color: white;
     }
     
     input {
@@ -191,7 +193,7 @@
     .focus-input100::after {
         content: attr(data-symbol);
         font-family: Material-Design-Iconic-Font;
-        color: #555555;
+        color: hsl(207, 68%, 39%);
         font-size: 22px;
         display: -webkit-box;
         display: -webkit-flex;
@@ -216,7 +218,7 @@
         left: 0;
         width: 0;
         height: 2px;
-        background: #575656;
+        background: hsl(207, 68%, 39%);
         -webkit-transition: all 0.4s;
         -o-transition: all 0.4s;
         -moz-transition: all 0.4s;
@@ -240,7 +242,7 @@
     .menu {
         border-top-right-radius: 12px;
         border-top-left-radius: 12px;
-        background: rgb(160, 30, 30);
+        background: rgb(30, 71, 160);
     }
     
     h5 {
@@ -263,11 +265,11 @@
     }
     
     #formulario h2 {
-        color: rgb(255, 255, 255);
+        color: hsl(207, 68%, 39%);
     }
     
     #formulario h3 {
-        color: rgb(255, 255, 255);
+        color: hsl(207, 68%, 39%);
         font-size: 17px;
     }
     
@@ -337,4 +339,68 @@
     
     .ctr-cliente:hover {
         cursor: pointer;
+    }
+    
+    .ladoA {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        background-image: url("../../img/fundo.png");
+        box-shadow: 0 0 1em rgb(26, 25, 24);
+        border-radius: 8px;
+    }
+    
+    .ladoB {
+        margin-top: 4em;
+        margin-bottom: 4em;
+        background: white;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        box-shadow: 0 0 1em rgb(117, 114, 96);
+    }
+    
+    .intA {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    .carousel-inner {
+        height: 100%;
+    }
+    
+    .img-carrinho {
+        margin-top: 2em;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .login-text {
+        font-size: 2.5em;
+        color: white;
+    }
+    
+    .supermer {
+        margin-bottom: 3em;
+        color: white;
+    }
+    
+    @media (max-width: 576px) {
+        body {
+            background: white;
+        }
+        .tudo {
+            background: rgba(252, 252, 252, 0.979);
+            border-radius: 8px;
+            box-shadow: 0 0 1em rgb(117, 114, 96);
+        }
+        .ladoB {
+            background: none;
+            box-shadow: none;
+            position: absolute;
+            margin-top: 14em;
+        }
+        .ladoC {
+            height: 20em;
+            background: hsl(207, 68%, 39%);
+        }
     }

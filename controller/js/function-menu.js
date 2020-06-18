@@ -1,6 +1,8 @@
 $(document).ready(function() {
     $('.produtos-cliente').click(function() {
         $('#conteudo').load('client/products/view/administrationProducts.html')
+        $('.saldo').hide();
+        $('.menu').hide();
     })
 
     $('.ctr-cliente').click(function() {
@@ -10,24 +12,37 @@ $(document).ready(function() {
 
     })
 
+    $('.home').click(function() {
+        $('body').load('customerPanel.html')
+    })
     $('.credito-cliente').click(function() {
         $('#conteudo').load('client/credits/view/customerCredits.html')
+        $('.saldo').hide();
+        $('.menu').hide();
     })
 
     $('.qrcode-cliente').click(function() {
         $('#conteudo').load('client/qrcode/view/qrcode-cliente.html')
+        $('.saldo').hide();
+        $('.menu').hide();
     })
 
     $('.comprarProduto-cliente').click(function() {
         $('#conteudo').load('client/shopping/view/shopping.html')
+        $('.saldo').hide();
+        $('.menu').hide();
     })
 
     $('.historico-cliente').click(function() {
         $('#conteudo').load('client/historical/view/administrationHistory.html')
+        $('.saldo').hide();
+        $('.menu').hide();
     })
 
     $('.dados-usuario').click(function() {
         $('#conteudo').load('login/view/edit-usuario.html');
+        $('.saldo').hide();
+        $('.menu').hide();
 
     })
 
@@ -39,7 +54,10 @@ $(document).ready(function() {
         $('body').load('index.html')
     })
 
+    $('.logout').click(function() {
+        window.location.href = "index.html";
 
+    })
     $(".sidebar-dropdown > a").click(function() {
         $(".sidebar-submenu").slideUp(200);
         if (
