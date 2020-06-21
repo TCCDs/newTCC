@@ -17,8 +17,8 @@ $(document).ready(function() {
                     $(location).attr('href', url)
                 } else {
                     Swal.fire({
-                        icon: 'success',
-                        title: 'SysAgenda!',
+                        icon: 'error',
+                        title: 'Supermercado Caravelas!',
                         text: dados.return,
                         type: 'error',
                         confirmButtonText: 'Tentar novamente....'
