@@ -76,7 +76,7 @@ body {
 }
 
 .page-wrapper .theme.chiller-theme {
-    background: #dd2626;
+    background: #2926dd;
 }
 
 
@@ -390,7 +390,7 @@ body {
 /*-----------------------------chiller-theme-------------------------------------------------*/
 
 .chiller-theme .sidebar-wrapper {
-    background: rgb(177, 34, 34);
+    background: rgb(26, 109, 141);
 }
 
 .chiller-theme .sidebar-wrapper .sidebar-header,
@@ -436,7 +436,7 @@ body {
 .chiller-theme .sidebar-wrapper .sidebar-search input.search-menu:focus+span,
 .chiller-theme .sidebar-wrapper .sidebar-menu .sidebar-dropdown.active a i {
     color: #16c7ff;
-    text-shadow: 0px 0px 10px rgba(22, 199, 255, 0.5);
+    text-shadow: 0px 0px 10px rgb(20, 84, 108);
 }
 
 .chiller-theme .sidebar-wrapper .sidebar-menu ul li a i,
@@ -447,13 +447,13 @@ body {
 }
 
 .chiller-theme .sidebar-wrapper .sidebar-menu .header-menu span {
-    color: #db1414;
+    color: rgb(20, 84, 108);
 }
 
 .chiller-theme .sidebar-footer {
-    background: #f03c3c;
+    background: rgb(20, 84, 108);
     box-shadow: 0px -1px 5px #332828;
-    border-top: 1px solid #4e0404;
+    border-top: 1px solid rgb(14, 57, 73);
 }
 
 .chiller-theme .sidebar-footer>a:first-child {
