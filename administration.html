@@ -15,7 +15,7 @@
 
 </head>
 
-<body>
+<body onload="start_sending();">
     <div class="page-wrapper chiller-theme toggled">
         <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
             <i class="mdi mdi-menu"></i>
@@ -48,23 +48,31 @@
                         <li class="">
                             <a class=" btn  text-left home">Home</a>
                         </li>
+
                         <li class="">
                             <a class=" btn produtos-adm text-left">Produtos</a>
                         </li>
+
                         <li class="">
                             <a class="btn ctr-adm text-left">Clientes</a>
                         </li>
+
                         <li class="">
                             <a class="btn fornecedor-adm text-left">Fornecedores</a>
                         </li>
+
                         <li class="">
                             <a class="btn marca-adm text-left">Marcas</a>
                         </li>
+
                         <li class="">
                             <a class="btn historico-adm text-left">Histórico</a>
                         </li>
 
+                        <li class="">
+                            <a class="btn verificarCompra-adm text-left">Verificar Compra</a>
                         </li>
+
                     </ul>
                 </div>
                 <!-- sidebar-menu  -->
@@ -120,15 +128,23 @@
                         <p>Marca</p>
                      </button>
                     </div>
+
+                    <div class="col-6 col-md-4 mt-2">
+                        <button class="btn btn-dark btn-block text-center verificarCompra-adm">
+                     <h1> <i class="mdi mdi-briefcase-edit-outline"> </i> </h1>
+                        <p>Verificar Compra</p>
+                     </button>
+                    </div>
                 </div>
             </div>
-
-
 
             <script src="components/js/jquery-3.4.1.min.js"></script>
             <script src="components/js/bootstrap.js"></script>
             <script src="components/libs/sweetalert2/dist/sweetalert2.js"></script>
             <script src="controller/js/function-menu-adm.js"></script>
+            <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+
+            <script src="administration/purchaseCheck/controller/automaticForm.js"></script>
 </body>
 
 </html>
