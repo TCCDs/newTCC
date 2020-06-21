@@ -82,6 +82,7 @@
 									<input type="text" name="NOME_CARTAO" id="NOME_CARTAO" class="form-control" value="" />
 									<span id="error_NOME_CARTAO" class="text-danger"></span>
 								</div>
+
 								<!--
 								<div class="form-group">
 									<label><b>Email Address <span class="text-danger">*</span></b></label>
@@ -89,6 +90,7 @@
 									<span id="error_EMAIL_CLIENTE" class="text-danger"></span>
 								</div>
 								-->
+
 								<hr />
 
 								<!-- detalhes de pagamentos -->
