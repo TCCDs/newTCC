@@ -10,11 +10,17 @@ $(document).ready(function() {
     $('.historico-adm').click(function() {
         $('#conteudo').load('administration/historical/view/administrationHistory.html')
     })
+
     $('.fornecedor-adm').click(function() {
         $('#conteudo').load('administration/providers/view/fornecedor-adm.html')
     })
+
     $('.marca-adm').click(function() {
         $('#conteudo').load('administration/brands/view/marca-adm.html')
+    })
+
+    $('.verificarCompra-adm').click(function() {
+        $('#conteudo').load('administration/purchaseCheck/view/verificarCompra.html')
     })
 
 

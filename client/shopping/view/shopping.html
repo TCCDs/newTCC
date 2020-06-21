@@ -1,51 +1,101 @@
-<div class="container" style="width:800px;">
-    <h3 align="center">Shopping</h3><br />
+<!--<!DOCTYPE html>
+<html>
 
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#products">
-                <h5>
-                    Produtos
-                </h5>
-            </a>
-        </li>
+<head>
+    <title>PHP Shopping Cart with Stripe Payment Integration</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+        .popover {
+            width: 100%;
+            max-width: 800px;
+        }
+    </style>
+</head>
 
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#cart">
-                <h5> Carrinho <span class="badge badge-secondary">  </span> </h5>
-            </a>
-        </li>
-    </ul>
+<body>-->
 
-    <div class="tab-content">
-        <div id="products" class="tab-pane fade in active">
+<div class="container">
+    <br />
+    <h3 align="center"><a href="#">Carrinho de Compras - Caravelas</a></h3>
+    <br />
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Menu</span>
+                            <span class="glyphicon glyphicon-menu-hamburger"></span>
+                        </button>
 
-        </div>
+                <a class="navbar-brand" href="/">Nome: Cliente</a>
+            </div>
 
-        <div id="cart" class="tab-pane fade">
-            <div class="table-responsive" id="order_table">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th width="40%">Product Name</th>
-                            <th width="10%">Quantity</th>
-                            <th width="20%">Price</th>
-                            <th width="15%">Sub total</th>
-                            <th width="5%">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                </table>
+            <div id="navbar-cart" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a id="cart-popover" class="btn" data-placement="bottom" title="Shopping Cart">
+                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                            <span class="badge"></span>
+                            <span class="total_price">$ 0.00</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
+
+    <div id="popover_content_wrapper" style="display: none">
+        <span id="cart_details">
+                <div class="table-responsive" id="order_table">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>  
+                                <th width="40%">Product Name</th>  
+                                <th width="10%">Quantity</th>  
+                                <th width="20%">Price</th>  
+                                <th width="15%">Total</th>  
+                                <th width="5%">Action</th>  
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </span>
+
+        <div align="right">
+            <a href="client/shopping/model/order_process.php" class="btn btn-primary" id="check_out_cart">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Check out
+            </a>
+
+            <a href="#" class="btn btn-default" id="clear_cart">
+                <span class="glyphicon glyphicon-trash"></span> Clear
+            </a>
+        </div>
     </div>
+
+    <div id="display_item" class="row">
+
+    </div>
+
+    <br /> <br />
 </div>
 
-<script src="client/shopping/controller/shopping.js"></script>
-<script src="client/shopping/controller/addProducts.js"></script>
-<script src="client/shopping/controller/deleteProducts.js"></script>
-<script src="client/shopping/controller/quantityProducts.js"></script>
-<script src="client/shopping/controller/listProducts.js"></script>
-<script src="client/shopping/controller/itemsProducts.js"></script>
+<!--
+        <script src="../controller/addCart.js"></script>
+        <script src="../controller/cleanCart.js"></script>
+        <script src="../controller/deleteCart.js"></script>
+
+        <script src="../controller/load_cart_data.js"></script>
+        <script src="../controller/load_product.js"></script>
+        <script src="../controller/popover.js"></script>
+    -->
+
+<script src="client/shopping/controller/unicoJs.js"></script>
+<!--
+</body>
+
+</html>-->
