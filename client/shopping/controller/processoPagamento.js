@@ -5,12 +5,8 @@ function validate_form() {
     var CARTAO_VALIDADE_MES = $('#CARTAO_VALIDADE_MES').val();
     var CARATO_VALIDADE_ANO = $('#CARATO_VALIDADE_ANO').val();
     var NUMERO_CARTAO = $('#NUMERO_CARTAO').val();
-    var EMAIL_CLIENTE = $('#EMAIL_CLIENTE').val();
+    //var EMAIL_CLIENTE = $('#EMAIL_CLIENTE').val();
     var NOME_CARTAO = $('#NOME_CARTAO').val();
-    //var customer_address = $('#customer_address').val();
-    //var customer_city = $('#customer_city').val();
-    //var customer_pin = $('#customer_pin').val();
-    //var customer_country = $('#customer_country').val();
     var name_expression = /^[a-z ,.'-]+$/i;
     var email_expression = /^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/;
     var month_expression = /^01|02|03|04|05|06|07|08|09|10|11|12$/;
@@ -69,6 +65,7 @@ function validate_form() {
             valid = true;
         }
 
+        /*
         if (!email_expression.test(EMAIL_CLIENTE)) {
             $('#EMAIL_CLIENTE').addClass('require');
             $('#error_EMAIL_CLIENTE').text('Invalid Email Address');
@@ -77,49 +74,7 @@ function validate_form() {
             $('#EMAIL_CLIENTE').removeClass('require');
             $('#error_EMAIL_CLIENTE').text('');
             valid = true;
-        }
-        /*
-                        if (customer_address == '') {
-                            $('#customer_address').addClass('require');
-                            $('#error_customer_address').text('Enter Address Detail');
-                            valid = false;
-                        } else {
-                            $('#customer_address').removeClass('require');
-                            $('#error_customer_address').text('');
-                            valid = true;
-                        }
-
-                        if (customer_city == '') {
-                            $('#customer_city').addClass('require');
-                            $('#error_customer_city').text('Enter City');
-                            valid = false;
-                        } else {
-                            $('#customer_city').removeClass('require');
-                            $('#error_customer_city').text('');
-                            valid = true;
-                        }
-
-                        if (customer_pin == '') {
-                            $('#customer_pin').addClass('require');
-                            $('#error_customer_pin').text('Enter Zip code');
-                            valid = false;
-                        } else {
-                            $('#customer_pin').removeClass('require');
-                            $('#error_customer_pin').text('');
-                            valid = true;
-                        }
-
-                        if (customer_country == '') {
-                            $('#customer_country').addClass('require');
-                            $('#error_customer_country').text('Enter Country Detail');
-                            valid = false;
-                        } else {
-                            $('#customer_country').removeClass('require');
-                            $('#error_customer_country').text('');
-                            valid = true;
-                        }
-                */
-
+        }*/
     }
     return valid;
 }

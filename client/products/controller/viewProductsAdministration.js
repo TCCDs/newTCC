@@ -6,7 +6,7 @@ $(document).ready(function() {
         $('.modal-body').empty()
         $('.modal.footer').empty()
 
-        var url = "administration/products/model/viewProductsAdministration.php"
+        var url = "client/products/model/viewProductsAdministration.php"
         var dados = 'ID_PRODUTOS='
         dados += $(this).attr('id')
 

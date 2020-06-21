@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('tbody').empty()
 
-    var url = "administration/products/model/administrationProducts.php"
+    var url = "client/products/model/administrationProducts.php"
 
     $.ajax({
         type: 'POST',
@@ -22,7 +22,7 @@ $(document).ready(function() {
                 `
                 $('tbody').append(produtos)
             }
-            $('body').append('<script src="administration/products/controller/viewProductsAdministration.js"></script>')
+            $('body').append('<script src="client/products/controller/viewProductsAdministration.js"></script>')
         }
     })
 })
