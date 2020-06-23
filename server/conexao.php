@@ -3,7 +3,7 @@
     $localhost = "localhost";
     $database = "new_supermercado";
     $username = "root";
-    $password = "usbw";
+    $password = "";
 
     if ($conn = mysqli_connect($localhost, $username, $password, $database)) {
         //echo "banco de dados conectado...";

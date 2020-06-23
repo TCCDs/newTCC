@@ -3,10 +3,10 @@ $(document).ready(function() {
         e.preventDefault()
 
         var dados = $('#edit-cliente').serialize()
-        var url = "administration/customers/model/updateClientAdministration.php"
+        var url = "client/customers/model/updateClientAdministration.php"
 
         $.ajax({
-            type: 'POST',
+            method: 'POST',
             dataType: 'json',
             url: url,
             async: true,
@@ -22,11 +22,10 @@ $(document).ready(function() {
                     })
 
                     function atualizar() {
-                        $('#conteudo').load('administration/customers/view/customerAdministration.html')
+                        $('#conteudo').load('client/customers/view/customerAdministration.html')
                     }
 
                     setTimeout(atualizar, 2000)
-
 
                     $('#modalContato').modal('hide')
 

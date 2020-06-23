@@ -1,160 +1,147 @@
-<div class="row">
-    <div class="col-12 offset-md-2 col-md-8 shadow-lg p-3 mb-5 bg-white rounded-top">
-        <div class="row">
-            <div class="col-12 col-md-12 title-product">
-                <h4 class="text-danger text-light ">Cadastro de Fornecedores</h4>
-
+<div class="col-12 col-md-9">
+    <h3 class="text-dark">Cadastro de Fornecedores</h3>
+</div>
+<form>
+    <div class="row">
+        <div class="col-6 col-md-4">
+            <div class="form-group">
+                <div class="wrap-input100">
+                    <input type="text" class="input100" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu nome" type="text" name="NOME">
+                    <span class="focus-input100"></span>
+                </div>
             </div>
         </div>
-        <form id="formulario" method="post" enctype="multipar/form-data" name="formulario" class="mt-3">
-            <ul id="progress">
-                <li class="ativo">Informações</li>
-                <li>Dados</li>
-                <li>Detalhes</li>
+        <div class="col-6 col-md-4">
+            <div class="form-group">
+                <div class="wrap-input100">
+                    <input type="text" class="input100" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu CPF" type="text" name="CPF" maxlength="13" name="cpf">
+                    <span class="focus-input100"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="form-group">
+                <div class="wrap-input100">
+                    <input type="text" class="input100" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu RG" type="text" name="RG">
+                    <span class="focus-input100"></span>
+                </div>
+            </div>
+        </div>
 
-            </ul>
-            <fieldset>
-                <div class="row">
-                    <div class="col-12 col-md-12">
-                        <h2 class="text-dark ">Informações</h2>
-                        <hr class="mt-4">
-                    </div>
+        <div class="col-6 col-md-4">
+            <div class="form-group">
+                <div class="wrap-input100">
+                    <input type="text" class="input100" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu nome fantasia" type="text" name="NOME_FANTASIA">
+                    <span class="focus-input100"></span>
                 </div>
-                <div class="row">
-                    <div class="col-12 col-md-12">
-                        <div class="form-group">
-                            <div class="wrap-input100">
-                                <input type="text" class="input100" placeholder="Digite seu nome fantasia" name="NOME_FANTASIA_FORNECEDORES">
-                                <span class="focus-input100"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="form-group">
-                            <div class="wrap-input100">
-                                <input type="text" class="input100" placeholder="Digite seu CNPJ" name="CNPJ_FORNECEDORES">
-                                <span class="focus-input100"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="form-group">
-                            <div class="wrap-input100">
-                                <input type="text" class="input100" placeholder="Digite sua razão social" name="RAZAO_SOCIAL_FORNECEDORES">
-                                <span class="focus-input100"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-12">
-                        <div class="form-group">
-                            <div class="wrap-input100">
-                                <input type="text" class="input100" placeholder="Digite seu Email" name="EMAIL_FORNECEDORES">
-                                <span class="focus-input100"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <input type="button" name="next1" class="next acao btn btn-block btn-success" value="Proximo">
-            </fieldset>
-            <fieldset>
-                <div class="row">
-                    <div class="col-12 col-md-12">
-                        <h2 class="text-dark ">Dados</h2>
-                        <hr class="mt-4">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="form-group">
-                            <div class="wrap-input100">
-                                <input type="text" class="input100" placeholder="Tipo" name="TIPO_PESSOA_FORNECDORES">
-                                <span class="focus-input100"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="form-group">
-                            <div class="wrap-input100">
-                                <input type="text" class="input100" placeholder="Digite seu País" name="PAIS_FORNECEDORES">
-                                <span class="focus-input100"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <input type="button" name="prev" class="prev acao btn btn-warning" value="Anterior">
-                <input type="button" name="next2" class="next acao btn btn-success" value="Proximo">
-            </fieldset>
-            <fieldset>
-                <div class="row">
-                    <div class="col-12 col-md-12">
-                        <h2 class="text-dark ">Detalhes</h2>
-                        <hr class="mt-4">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="form-group">
-                            <div class="wrap-input100">
-                                <input type="text" class="input100" placeholder="Digite seu cep" name="CEP_FORNECEDORES">
-                                <span class="focus-input100"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="form-group">
-                            <div class="wrap-input100">
-                                <input type="text" class="input100" placeholder="Digite seu Estado" name="ESTADO_FORNECEDORES">
-                                <span class="focus-input100"></span>
-                            </div>
-                        </div>
-                    </div>
+            </div>
 
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="form-group">
+                <div class="wrap-input100">
+                    <input type="text" class="input100" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite sua razão social" type="text" name="RAZAO_SOCIAL">
+                    <span class="focus-input100"></span>
                 </div>
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="form-group">
-                            <div class="wrap-input100">
-                                <input type="text" class="input100" placeholder="Digite sua cidade" name="CIDADE_FORNECEDORES">
-                                <span class="focus-input100"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="form-group">
-                            <div class="wrap-input100">
-                                <input type="text" class="input100" placeholder="Digite seu bairro" name="BAIRRO_FORNECEDORES">
-                                <span class="focus-input100"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-12">
-                        <div class="wrap-input100">
-                            <input type="text" class="input100" placeholder="Digite seu Endereço" name="ENDERECO_FORNECEDORES">
-                            <span class="focus-input100"></span>
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="form-group">
+                <div class="wrap-input100">
+                    <input type="text" class="input100" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu CNPJ" type="text" name="CNPJ">
+                    <span class="focus-input100"></span>
                 </div>
-                <div class="row mt-2">
-                    <div class="col-12 col-md-12">
-                        <div class="form-group">
-                            <div class="wrap-input100">
-                                <input type="text" class="input100" placeholder="Digite seu telefone" name="CELULAR_FORNECEDORES">
-                                <span class="focus-input100"></span>
-                            </div>
-                        </div>
-                    </div>
+            </div>
 
-                </div>
-
-
-                <input type="button" name="prev" class="prev acao btn btn-warning" value="Anterior">
-                <button class="btn btn-success btn-add">Enviar</button>
-            </fieldset>
-        </form>
+        </div>
     </div>
-</div>
+
+    <div class="row">
+        <div class="col-6 col-md-3">
+            <div class="wrap-input100">
+                <input type="text" class="input100" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Data de nascimento" type="text" name="DATA_NASCIMENTO">
+                <span class="focus-input100"></span>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="form-group text-white">
+                <label for="">Sexo</label>
+                <select name="" class="selectsexo ">
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+            </select>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="form-group">
+                <div class="wrap-input100">
+                    <input type="text" class="input100" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite sua Nacionalidade" type="text" name="NACIONALIDADE">
+                    <span class="focus-input100"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="form-group">
+                <div class="wrap-input100">
+                    <input type="text" class="input100" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu cep" type="text" name="CEP">
+                    <span class="focus-input100"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-6 col-md-3">
+            <div class="wrap-input100">
+                <input type="text" class="input100" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu Endereço" type="text" name="ENDERECO">
+                <span class="focus-input100"></span>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="form-group">
+                <div class="wrap-input100">
+                    <input type="text" class="input100" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite sua cidade" type="text" name="CIDADE">
+                    <span class="focus-input100"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="form-group">
+                <div class="wrap-input100">
+                    <input type="text" class="input100" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu Estado" type="text" name="ESTADO">
+                    <span class="focus-input100"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="form-group">
+                <div class="wrap-input100">
+                    <input type="text" class="input100" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu bairro" type="text" name="BAIRRO">
+                    <span class="focus-input100"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <div class="wrap-input100">
+                    <input type="text" class="input100" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu telefone" type="text" name="TELEFONE">
+                    <span class="focus-input100"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <div class="wrap-input100">
+                    <input type="text" class="input100" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu E-MAIL" name="EMAIL">
+                    <span class="focus-input100"></span>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-
-
-<script src="administration/providers/controller/formulario-add-providers.js"></script>
+    </div>
+    <button class="btn btn-dark btn-md btn-block">Enviar</button>
+</form>
