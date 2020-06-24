@@ -1,10 +1,22 @@
 <?php
-    include_once('../../../server/conexao.php');
+    session_start();
+    //include_once('../../../server/conexao.php');
+    include_once ('../../../server/Conn.php');
 
-    $sql = mysqli_query($conn, "SELECT * FROM clientes");
+    $id_usuarios_clientes = $_SESSION['ID_USUARIOS'];
+    
+    $conn = new Conn();
 
-    while($resultado = mysqli_fetch_assoc($sql)) {
-        $cliente[] = array_map('utf8_encode', $resultado);
+    $sql = "SELECT * FROM clientes
+    INNER  JOIN usuarios ON clientes.ID_USUARIOS_CLIENTES = usuarios.ID_USUARIOS
+    WHERE clientes.ID_USUARIOS_CLIENTES = :ID_USUARIOS_CLIENTES ";
+    
+    $resultado = $conn->getConn()->prepare($sql);
+    $resultado->bindParam(':ID_USUARIOS_CLIENTES', $id_usuarios_clientes, PDO::PARAM_INT);
+    $resultado->execute();
+
+    while($resultado_user = $resultado->fetch(PDO::FETCH_ASSOC)) {
+        $cliente[] = array_map('utf8_encode', $resultado_user);
 
     }
 
