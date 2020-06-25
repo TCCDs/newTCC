@@ -2,7 +2,7 @@
     $connect = mysqli_connect("localhost", "root", "", "new_shopping");  
 
     $qr_code = $_POST["qrcode"];
-   
+    
     $query = 'SELECT 
                 compras_pagamentos.NOME_CARTAO,
                 compras_pagamentos.NUMERO_CARTAO,
@@ -28,7 +28,6 @@
             INNER JOIN clientes ON (compras.ID_CLIENTES_COMPRAS = clientes.ID_CLIENTES) 
             WHERE QR_CODE = "'.$qr_code.'" 
         '; 
-    $query = 'SELECT * FROM compra_itens WHERE QR_CODE = "'.$qr_code.'" '; 
     $result = mysqli_query($connect, $query);  
 ?>
 

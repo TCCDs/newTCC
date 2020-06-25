@@ -5,8 +5,7 @@ function validate_form() {
     var CARTAO_VALIDADE_MES = $('#CARTAO_VALIDADE_MES').val();
     var CARATO_VALIDADE_ANO = $('#CARATO_VALIDADE_ANO').val();
     var NUMERO_CARTAO = $('#NUMERO_CARTAO').val();
-    var NOME_CARTAO = $('#NOME_CARTAO').val();
-    var EMAIL_CLIENTE = $('#EMAIL_CLIENTE').val();
+    //var EMAIL_CLIENTE = $('#EMAIL_CLIENTE').val();
     var NOME_CARTAO = $('#NOME_CARTAO').val();
     var name_expression = /^[a-z ,.'-]+$/i;
     var email_expression = /^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/;
@@ -76,7 +75,6 @@ function validate_form() {
             $('#error_EMAIL_CLIENTE').text('');
             valid = true;
         }*/
-        }
     }
     return valid;
 }

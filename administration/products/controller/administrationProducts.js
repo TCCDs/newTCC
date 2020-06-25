@@ -24,7 +24,7 @@ $(document).ready(function() {
                 `
                 $('tbody').append(produtos)
             }
-            $('body').append('<script>$(".produtos-add").click(function(){ $("#conteudo").load("administration/products/view/add-produto-adm.html")})</script>')
+            $('body').append('<script>$(".btn-new").click(function(){ $("#conteudo").load("administration/products/view/add-produto-adm.html")})</script>')
             $('body').append('<script src="administration/products/controller/viewProductsAdministration.js"></script>')
             $('body').append('<script src="administration/products/controller/edit-produto.js"></script>')
             $('body').append('<script src="administration/products/controller/deleteProductsAdministration.js"></script>')
