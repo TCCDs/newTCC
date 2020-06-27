@@ -1,18 +1,12 @@
 <?php
-    //include_once('../../../server/conexao.php');
-    include_once ('../../../server/Conn.php');
-
-    $conn = new Conn();
+    include_once('../../../server/conexao.php');
 
     $ID_CLIENTES = $_POST['ID_CLIENTES'];
 
-    $sql = "SELECT * FROM clientes WHERE ID_CLIENTES = :ID_CLIENTES";
-    $resultado = $conn->getConn()->prepare($sql);
-    $resultado->bindParam(':ID_CLIENTES', $ID_CLIENTES, PDO::PARAM_INT);
-    $resultado->execute();
+    $sql = mysqli_query($conn, "SELECT * FROM clientes WHERE ID_CLIENTES = ".$ID_CLIENTES."");
 
-    while($resultado_user = $resultado->fetch(PDO::FETCH_ASSOC)) {
-        $produtos[] = array_map('utf8_encode', $resultado_user);
+    while($resultado = mysqli_fetch_assoc($sql)) {
+        $produtos[] = array_map('utf8_encode', $resultado);
     }
 
     echo json_encode($produtos);

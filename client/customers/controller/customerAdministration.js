@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('tbody').empty()
 
-    var url = "client/customers/model/customerAdministration.php"
+    var url = "administration/customers/model/customerAdministration.php"
 
     $.ajax({
         type: 'POST',
@@ -26,8 +26,8 @@ $(document).ready(function() {
                 `
                 $('tbody').append(cliente)
             }
-            $('body').append('<script src="client/customers/controller/viewClientAdministration.js"></script>')
-            $('body').append('<script src="client/customers/controller/editClientAdministration.js"></script>')
+            $('body').append('<script src="administration/customers/controller/viewClientAdministration.js"></script>')
+            $('body').append('<script src="administration/customers/controller/editClientAdministration.js"></script>')
         }
     })
 })
