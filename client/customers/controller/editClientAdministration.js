@@ -7,7 +7,7 @@ $(document).ready(function() {
         $('.modal.footer').empty()
         $('.modal.title').append('Edição de registro cadastrado')
 
-        var url = "client/customers/model/viewClientAdministration.php"
+        var url = "administration/customers/model/viewClientAdministration.php"
         var dados = 'ID_CLIENTES='
         dados += $(this).attr('id')
 
@@ -20,8 +20,6 @@ $(document).ready(function() {
                 for (var i = 0; dados.length > i; i++) {
                     let cliente = `
                         <form class="mt-3" id="edit-cliente">
-                        <input type="hidden"  name="ID_CLIENTES" value="` + dados[i].ID_CLIENTES + `" />
-
                             <div class="form-group">
                                 <label>Nome do Cliente</label>
                                 <input class="form-control" type="text" name="NOME_CLIENTES" value="` + dados[i].NOME_CLIENTES + `">
@@ -84,14 +82,14 @@ $(document).ready(function() {
 
                             <div class="form-group">
                                 <label>COMPLEMENTO</label>
-                                <input class="form-control" type="text" name="COMPLEMENTO_CLIENTES" value="` + dados[i].COMPLEMENTO_CLIENTES + `">
+                                <input class="form-control" type="text" name="COMPLEMENTOS_CLIENTES" value="` + dados[i].ENDERECO_CLIENTES + `">
                             </div>
 
                             <div class="form-group">
-                                <label>NACIONALIDADE</label>
-                                <input class="form-control" type="text" name="NACIONALIDADE_CLIENTES" value="` + dados[i].NACIONALIDADE_CLIENTES + `">
-                            </div>
-
+                            <label>NACIONALIDADE</label>
+                            <input class="form-control" type="text" name="NACIONALIDADE_CLIENTES" value="` + dados[i].NACIONALIDADE_CLIENTES + `">
+                        </div>
+                            <input type="hidden"  name="ID_CLIENTES" value="` + dados[i].ID_CLIENTES + `" />
                             <button class="btn btn-outline-warning btn-update"> <i class="mdi mdi-content-save"></i> Salvar </button>
                         </form>
                     `
@@ -99,7 +97,7 @@ $(document).ready(function() {
                     $('.modal-body').append(cliente)
                 }
                 $('#modalContato').modal('show')
-                $('body').append('<script src="client/customers/controller/updateClientAdministration.js"></script>')
+                $('body').append('<script src="administration/customers/controller/updateClientAdministration.js"></script>')
             }
         })
     })

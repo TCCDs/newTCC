@@ -16,24 +16,28 @@
 
 <body>
     <div class="page-wrapper chiller-theme toggled">
-        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
-            <i class="mdi mdi-menu"></i>
-        </a>
-
+        <nav class="navbar navbar-dark bg-menu">
+            <button class="navbar-toggler" id="show-sidebar" type="button">
+                <span class="navbar-toggler-icon "></span>
+              </button>
+            <a class="navbar-brand md-block" href="#">
+                <img src="img/caravelas.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+            </a>
+        </nav>
         <nav id="sidebar" class="sidebar-wrapper">
             <div class="sidebar-content">
                 <div class="sidebar-brand">
-                    <a href="#">Painel do clientes</a>
+                    <a href="#">Painel do cliente</a>
                     <div id="close-sidebar">
                         <i class="mdi mdi-close"></i>
                     </div>
                 </div>
+
                 <div class="sidebar-header" id="sidebar-header">
                     <div class="user-pic">
                         <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" alt="User picture">
                     </div>
                 </div>
-
                 <div class="sidebar-menu">
                     <ul>
                         <li class="">
@@ -52,85 +56,87 @@
                             <a class="btn marca-adm text-left  qrcode-cliente">Qr-code</a>
                         </li>
                         <li class="">
-                            <a class="btn historico-adm text-left credito-cliente">Crédio</a>
+                            <a class="btn historico-adm text-left credito-cliente">Crédito</a>
                         </li>
                         <li class="">
-                            <a class="btn historico-adm text-left ctr-cliente">Gerenciar dados</a>
+                            <a class="btn historico-adm text-left ctr-cliente">Perfil</a>
                         </li>
                     </ul>
                 </div>
             </div>
-
-            <div class="sidebar-footer">
+            <div class="sidebar-footer logout">
                 <a href="#">
                     <i class="mdi mdi-power"></i>
                 </a>
             </div>
         </nav>
-
-        <main class="page-content">
-            <div id="conteudo" class="container mt-2">
-                <div class="row border-bottom">
-                    <div class="col-12">
-                        <h3 class="text-dark">Painel do Cliente</h3>
+        <div class="container">
+            <div class="row text-center mt-2 saldo">
+                <div class="col-6 col-md-6">
+                    <small>Saldo</small>
+                    <h4>R$ 200,00</h4>
+                </div>
+                <div class="col-6 col-md-6 credito-cliente ">
+                    <h4><i class="mdi mdi-square-inc-cash text-success "></i></h4>
+                    <small>Adicionar</small>
+                </div>
+            </div>
+            <div id="conteudo"></div>
+            <div class="fixed-bottom">
+                <div class="menu">
+                    <div class="row text-center">
+                        <div class="col-6 mt-3 border-right">
+                            <h1><i class="mdi mdi-check-decagram text-light "></i></h1>
+                            <h5>Ofertas do dia</h5>
+                        </div>
+                        <div class="col-6 mt-3 ">
+                            <button class=" btn comprarProduto-cliente">
+                            <h1><i class="mdi mdi-cart-plus text-light "></i></h1>
+                        <h5>Comprar</h5>
+                        </button>
+                        </div>
+                    </div>
+                    <div class="row text-center ">
+                        <div class="col-6 mt-3 border-right receitas">
+                            <h1><i class="mdi mdi-book-open text-light "></i></h1>
+                            <h5>receitas</h5>
+                        </div>
+                        <div class="col-6 mt-3">
+                            <h1><i class="mdi mdi-help text-light "></i></h1>
+                            <h5>Ajuda</h5>
+                        </div>
                     </div>
                 </div>
-
-                <div class="row mt-3">
-                    <div class="col-6 col-md-4 mt-2">
-                        <button class="btn btn-dark btn-block text-center produtos-cliente">
-                                <h1> <i class="mdi mdi-hamburger"> </i> </h1>
-                                <p>Produtos</p>
-                            </button>
+                <div class=" row  menu-rodape text-center">
+                    <div class="col-3 col-md-3">
+                        <h4><i class="mdi mdi-hamburger text-light produtos-cliente"></i></h4>
+                        <small class="text-light"> Produtos</small>
                     </div>
-
-                    <div class="col-6 col-md-4 mt-2">
-                        <button class="btn btn-dark btn-block text-center ctr-cliente">
-                                <h1> <i class="mdi mdi-library-books"> </i> </h1>
-                                <p>Gerenciar Dados</p>
-                            </button>
+                    <div class="col-3 col-md-3 home">
+                        <h4><i class="mdi mdi-home text-light "></i></h4>
+                        <small class="text-light">Home</small>
                     </div>
-
-                    <div class="col-6 col-md-4 mt-2">
-                        <button class="btn btn-dark btn-block text-center credito-cliente">
-                                <h1> <i class="mdi mdi-credit-card"> </i> </h1>
-                                <p>Crédito</p>
-                            </button>
+                    <div class="col-3 col-md-3 credito-cliente">
+                        <h4><i class="mdi mdi-cash text-light "></i></h4>
+                        <small class="text-light">Adicionar</small>
                     </div>
-
-                    <div class="col-6 col-md-4 mt-2">
-                        <button class="btn btn-dark btn-block text-center qrcode-cliente">
-                                <h1> <i class="mdi mdi-qrcode"> </i> </h1>
-                                <p>QR-code</p>
-                            </button>
-                    </div>
-
-                    <div class="col-6 col-md-4 mt-2">
-                        <button class="btn btn-dark btn-block text-center comprarProduto-cliente">
-                                <h1> <i class="mdi mdi-cash-register"> </i> </h1>
-                                <p>Comprar</p>
-                            </button>
-                    </div>
-
-                    <div class="col-6 col-md-4 mt-2">
-                        <button class="btn btn-dark btn-block text-center historico-cliente">
-                                <h1> <i class="mdi mdi-file-document-box-outline"> </i> </h1>
-                                <p>Histórico</p>
-                            </button>
+                    <div class="col-3 col-md-3 ctr-cliente">
+                        <h4><i class="mdi mdi-account text-light "></i></h4>
+                        <small class="text-light">Perfil</small>
                     </div>
                 </div>
             </div>
-        </main>
-    </div>
+        </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-    <script src="components/libs/sweetalert2/dist/sweetalert2.js"></script>
-    <script src="controller/js/function-menu.js"></script>
-    <script src="client/navUsers/controller/nav.js"></script>
-    <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+        <script src="components/libs/sweetalert2/dist/sweetalert2.js"></script>
+        <script src="controller/js/function-menu.js"></script>
+        <script src="client/navUsers/controller/nav.js"></script>
+        <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
 </body>
 
 </html>
