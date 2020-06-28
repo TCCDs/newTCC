@@ -400,6 +400,31 @@
         background: rgb(17, 71, 92);
     }
     
+    .avatar {
+        height: 80px;
+        width: 80px;
+    }
+    
+    .dados-pessoais {
+        padding: 10px;
+        border-bottom: 1px solid rgb(101, 134, 243);
+    }
+    
+    .enderecos {
+        padding: 10px;
+        border-bottom: 1px solid rgb(101, 134, 243);
+    }
+    
+    .pagamentos {
+        padding: 10px;
+        border-bottom: 1px solid rgb(101, 134, 243);
+    }
+    
+    .footer {
+        position: absolute;
+        bottom: 0;
+    }
+    
     @media (max-width: 576px) {
         .display-4 {
             font-size: 1.8rem;

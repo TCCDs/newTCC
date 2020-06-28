@@ -1,7 +1,7 @@
 <?php
     include_once('../../../server/conexao.php');
 
-    $ID_CLIENTES = $_POST['ID_CLIENTES'];
+    $ID_CLIENTES = 1;
 
     $sql = mysqli_query($conn, "SELECT * FROM clientes WHERE ID_CLIENTES = ".$ID_CLIENTES."");
 
