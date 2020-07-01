@@ -53,19 +53,24 @@
 		<script src="https://js.stripe.com/v2/"></script>
 		<script src="../../../components/js/jquery.creditCardValidator.js"></script>
 		
-		<style>
-			.popover {
-				width: 100%;
-				max-width: 800px;
-			}
-
-			.require {
-				border:1px solid #FF0000;
-				background-color: #cbd9ed;
-			}
-		</style>
 	</head>
 	<body>
+		<div class="container">
+			<div class="col-12 col-md-12">
+				<div class="jumbotron">
+					<h1 class="display-4">Finalizar Compra</h1>
+					<hr class="my-4">
+			</div>
+			<h3>Processo de pagamento</h3>
+			<form id="order_process_form" action="../model/payment.php">
+			<h4 class="text-center">Detalhes do Cliente</h4>
+								<div class="form-group">
+									<label><b>Nome <span class="text-danger">*</span></b></label>
+									<input type="text" name="NOME_CARTAO" id="NOME_CARTAO" class="form-control" value="" />
+									<span id="error_NOME_CARTAO" class="text-danger"></span>
+								</div>
+		</form>
+		</div>
 		<div class="container">
 			<h3 align="center"><a href="#">Finalizar Compra</a></h3>
 			<span id="message"></span>
