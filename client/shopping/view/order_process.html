@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Processo de Pagamento</title>
+
+    <link rel="stylesheet" href="../../../components/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../components/libs/MaterialDesign/css/materialdesignicons.css">
+    <link rel="stylesheet" href="../../../components/libs/sweetalert2/dist/sweetalert2.css">
+    <link rel="stylesheet" href="../../../components/css/login.css">
+
+    <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <form action="" method="post">
+                    <div class="shadow p-3 mb-5 bg-white rounded mt-3">
+                        <h4 class="mt-2 text-center">
+                            Finalizar compra
+                        </h4>
+                        <hr>
+                        <div class="col-12 col-md-12 mt-4">
+                            <h6 class="mt-2 text-center">
+                                Detalhes do Cliente
+                            </h6>
+                            <div class="form-group">
+                                <label>Nome <span class="text-danger">*</span></label>
+                                <input type="text" name="NOME_CARTAO" id="NOME_CARTAO" class="form-control" value="" />
+                                <span id="error_NOME_CARTAO" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <hr class="mt-3">
+                        <div class="col-12 col-md-12 mt-4">
+                            <h6 class="mt-2 text-center">
+                                Detalhes de pagamentos
+                            </h6>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col md-12">
+                                <div class="form-group">
+                                    <label>Numero do Cartão<span class="text-danger">*</span></label>
+                                    <input type="text" name="NUMERO_CARTAO" id="NUMERO_CARTAO" class="form-control" placeholder="1234 5678 9012 3456" maxlength="20" onkeypress="" />
+                                    <span id="error_NUMERO_CARTAO" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <label>Mês de Validade</label>
+                                    <input type="text" name="CARTAO_VALIDADE_MES" id="CARTAO_VALIDADE_MES" class="form-control" placeholder="MM" maxlength="2" onkeypress="return only_number(event);" />
+                                    <span id="error_CARTAO_VALIDADE_MES" class="text-danger"></span>
+                                </div>
+                                <div class="col-12 col-md-4 mt-3">
+                                    <label>Ano de Validade</label>
+                                    <input type="text" name="CARTAO_VALIDADE_ANO" id="CARTAO_VALIDADE_ANO" class="form-control" placeholder="YYYY" maxlength="4" onkeypress="return only_number(event);" />
+                                    <span id="error_CARTAO_VALIDADE_ANO" class="text-danger"></span>
+                                </div>
+                                <div class="col-12 col-md-4 mt-3">
+                                    <label>CVC</label>
+                                    <input type="text" name="CODIGO_CARTAO" id="CODIGO_CARTAO" class="form-control" placeholder="123" maxlength="4" onkeypress="return only_number(event);" />
+                                    <span id="error_CODIGO_CARTAO" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 mt-4">
+                            <h6 class="mt-2 text-center">
+                                Detalhes da compra
+                            </h6>
+                            <div class="card ">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <div class="col-12 col-md-6">
+                                            <small>Nome do Produto</small>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            Nome
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="col-12 col-md-6">
+                                            <small>Quantidade</small>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            Quantidade
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="col-12 col-md-6">
+                                            Subtotal </div>
+                                        <div class="col-12 col-md-6">
+                                            <small>Subtotal</small>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="card-footer">
+                                    <div class="col-12 col-md-6">
+                                        Total </div>
+                                    <div class="col-12 col-md-6">
+                                        <small>R$ 45,45</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-block btn-success mt-4">Play Now</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="../../../components/js/jquery-3.4.1.min.js"></script>
+    <script src="../../../components/js/bootstrap.js"></script>
+    <script src="../../../components/libs/sweetalert2/dist/sweetalert2.js"></script>
+    <script src="../../../login/controller/validacao.js"></script>
+    <script src="../../../controller/js/function-menu.js"></script>
+</body>
+
+</html>
