@@ -1,12 +1,12 @@
 $(document).ready(function() {
     $('.produtos-cliente').click(function() {
-        $('#conteudo').load('client/products/view/administrationProducts.html')
+        $('#conteudo').load('client/products/view/customersProducts.html')
         $('.saldo').hide();
         $('.menu').hide();
     })
 
     $('.ctr-cliente').click(function() {
-        $('#conteudo').load('client/customers/view/customerAdministration.html')
+        $('#conteudo').load('client/customers/view/customers.html')
         $('.saldo').hide();
         $('.menu').hide();
 
@@ -15,8 +15,9 @@ $(document).ready(function() {
     $('.home').click(function() {
         $('body').load('customerPanel.html')
     })
+
     $('.credito-cliente').click(function() {
-        $('#conteudo').load('client/credits/view/customerCredits.html')
+        $('#conteudo').load('client/credits/view/creditsCustomers.html')
         $('.saldo').hide();
         $('.menu').hide();
     })
@@ -34,7 +35,7 @@ $(document).ready(function() {
     })
 
     $('.historico-cliente').click(function() {
-        $('#conteudo').load('client/historical/view/administrationHistory.html')
+        $('#conteudo').load('client/historical/view/customersHistory.html')
         $('.saldo').hide();
         $('.menu').hide();
     })

@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('.listaDadosCompras').empty()
 
-    var url = "client/historical/purchases/model/historicalPurchasesAdministration.php"
+    var url = "client/historical/purchases/model/detalhesComprasDados.php"
 
     $.ajax({
         type: 'POST',
@@ -21,7 +21,6 @@ $(document).ready(function() {
                 `
                 $('.listaDadosCompras').append(historicoCompras)
             }
-            //$('body').append('<script src="client/historical/controller/controlePaginas.js"></script>')
         }
     })
 })

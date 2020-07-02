@@ -1,13 +1,22 @@
 <?php
-    include_once('../../../server/conexao.php');
+    include_once ('../../../server/Conn.php');
+    $conn = new Conn();
 
-    $sql = "DELETE FROM produtos WHERE ID_PRODUTOS = ".$_POST['ID_PRODUTOS']."";
+    $idProdutos = $_POST['ID_PRODUTOS'];
+    $statusProdutos = 'D';
 
-    if (mysqli_query($conn, $sql)) {
-        $data = array("return" => true);
-    } else {
-        $data = array("return" => mysqli_error($conn));
+    try {
+        //$sql = "DELETE FROM produtos WHERE ID_PRODUTOS = :ID_PRODUTOS";
+        $sql = "UPDATE produtos SET STATUS_PRODUTOS = :STATUS_PRODUTOS WHERE ID_PRODUTOS = :ID_PRODUTOS";
+        $resultado = $conn->getConn()->prepare($sql);
+        $resultado->bindParam(':ID_PRODUTOS', $idProdutos);
+        $resultado->bindParam(':STATUS_PRODUTOS', $statusProdutos);
+        $resultado->execute();
+
+        $data = array('return' => true);
+
+    } catch (Exception $ex){
+        $data = array('return' => $ex->getMessage());
     }
-
-    echo json_encode($data);
+        echo json_encode($data);
 ?>

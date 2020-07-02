@@ -45,7 +45,7 @@ $(function() {
 
     $('input[name=next2]').click(function() {
         var array = formulario.serializeArray();
-        if (array[4].value == '' || array[5].value == '' || array[6].value == '' || array[7].value == '' || array[8].value == '') {
+        if (array[4].value == '' || array[5].value == '' || array[6].value == '') {
 
             Swal.fire({
                 icon: 'error',
@@ -68,7 +68,7 @@ $(function() {
 
     $('input[name-btn-add]').click(function(evento) {
         var array = formulario.serializeArray();
-        if (array[9].value == '' || array[10].value == '' || array[11].value == '') {
+        if (array[7].value == '' || array[8].value == '' || array[9].value == '') {
 
 
             Swal.fire({
@@ -80,7 +80,7 @@ $(function() {
             })
         } else {
             var dados = $('#formulario').serialize()
-            var url = "add-produto.php"
+            var url = "administration/products/model/addProductsAdministration"
 
             $.ajax({
                 type: 'POST',
@@ -97,6 +97,7 @@ $(function() {
                             type: 'success',
                             confirmButtonText: 'Feito!'
                         })
+                        $('#conteudo').load('administration/products/view/administrationProducts.html')
                     } else {
                         Swal.fire({
                             icon: 'error',

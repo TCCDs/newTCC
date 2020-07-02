@@ -1,10 +1,16 @@
 <?php
-    include_once('../../../server/conexao.php');
+    include_once ('../../../server/Conn.php');
+    $conn = new Conn();
 
-    $sql = mysqli_query($conn, "SELECT * FROM produtos ");
+    $status_produtos = 'A';
 
-    while($resultado = mysqli_fetch_assoc($sql)) {
-        $produtos[] = array_map('utf8_encode', $resultado);
+    $sql = "SELECT * FROM produtos where STATUS_PRODUTOS = :STATUS_PRODUTOS";
+    $resultado = $conn->getConn()->prepare($sql);
+    $resultado->bindParam(':STATUS_PRODUTOS', $status_produtos, PDO::PARAM_STR);
+    $resultado->execute();
+
+    while($resultadoProdutos = $resultado->fetch(PDO::FETCH_ASSOC)) {
+        $produtos[] = array_map('utf8_encode', $resultadoProdutos);
     }
 
     echo json_encode($produtos);

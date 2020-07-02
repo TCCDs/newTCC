@@ -17,6 +17,10 @@ $(document).ready(function() {
         $('#conteudo').load('administration/brands/view/marca-adm.html')
     })
 
+    $('.verificarCompra-adm').click(function() {
+        $('#conteudo').load('administration/purchaseCheck/view/verificarCompra.html')
+    })
+
 
     $(".sidebar-dropdown > a").click(function() {
         $(".sidebar-submenu").slideUp(200);
