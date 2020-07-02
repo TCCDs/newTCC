@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('tbody').empty()
 
-    var url = "../model/processoVerificacao.php"
+    var url = "administration/purchasesCheck/model/processoVericacao.php"
 
     $.ajax({
         type: 'POST',
