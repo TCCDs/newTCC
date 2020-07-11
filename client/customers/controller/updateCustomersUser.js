@@ -28,7 +28,7 @@ $(document).ready(function() {
                     setTimeout(atualizar, 2000)
 
 
-                    $('#modalContato').modal('hide')
+                    $('#modalClient').modal('hide')
 
                 } else {
                     Swal.fire({
@@ -39,7 +39,7 @@ $(document).ready(function() {
                         confirmButtonText: 'Tente novamente...!'
                     })
                 }
-                $('#modalContato').modal('hide')
+                $('#modalClient').modal('hide')
             }
         })
     })

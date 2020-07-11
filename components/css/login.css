@@ -247,16 +247,6 @@
         height: 50px;
     }
     
-    .bg-menu {
-        background: rgb(20, 84, 108);
-    }
-    
-    .menu {
-        border-top-right-radius: 12px;
-        border-top-left-radius: 12px;
-        background: rgb(20, 84, 108);
-    }
-    
     h5 {
         color: white;
     }
@@ -394,10 +384,6 @@
     .supermer {
         margin-bottom: 3em;
         color: white;
-    }
-    
-    .menu-rodape {
-        background: rgb(17, 71, 92);
     }
     
     .avatar {
