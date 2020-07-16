@@ -34,6 +34,12 @@ $(document).ready(function() {
         $('.menu').hide();
     })
 
+    /*$('.comprarProduto-cliente').click(function() {
+        $('#conteudo').load('client/shopping/view/order_process.html')
+        $('.saldo').hide();
+        $('.menu').hide();
+    })*/
+
     $('.historico-cliente').click(function() {
         $('#conteudo').load('client/historical/view/customersHistory.html')
         $('.saldo').hide();

@@ -16,11 +16,11 @@
 	            cliente_pagamentos
             INNER JOIN moedas ON cliente_pagamentos.ID_MOEDAS = moedas.ID_MOEDAS
             INNER JOIN clientes ON moedas.ID_CLIENTES_MOEDAS = clientes.ID_CLIENTES
-            WHERE clientes.ID_USUARIOS_CLIENTES = :ID_USUARIO_CLIENTES
+            WHERE clientes.ID_USUARIOS = :ID_USUARIOS
             ORDER BY clientes.NOME_CLIENTES ASC ';
 
     $resultado = $conn->getConn()->prepare($sql);
-    $resultado->bindParam(':ID_USUARIO_CLIENTES', $id_clientes_moedas, PDO::PARAM_INT);
+    $resultado->bindParam(':ID_USUARIOS', $id_clientes_moedas, PDO::PARAM_INT);
     $resultado->execute();
 
     while($resultadoMoedas = $resultado->fetch(PDO::FETCH_ASSOC)) {
