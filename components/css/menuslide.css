@@ -463,3 +463,18 @@ body {
 .chiller-theme .sidebar-footer>a:last-child {
     border-right: none;
 }
+
+.menu-rodape {
+    background: #105a77;
+    padding: 5px;
+}
+
+.bg-menu {
+    background-image: linear-gradient(to bottom right, #1c5160, rgb(72, 117, 138));
+}
+
+.menu {
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    background: #2d859d;
+}
