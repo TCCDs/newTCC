@@ -1,0 +1,186 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Formulario Cliente</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .box {
+            width: 800px;
+            margin: 0 auto;
+        }
+        
+        .active_tab1 {
+            background-color: #fff;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        .inactive_tab1 {
+            background-color: #f5f5f5;
+            color: #333;
+            cursor: not-allowed;
+        }
+        
+        .has-error {
+            border-color: #cc0000;
+            background-color: #ffff99;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container box">
+        <h2 align="center">Formulario Cliente</h2><br />
+
+        <form method="post" action="administration/form/formClientes/model/formClient.php" id="register_form">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active_tab1" style="border:1px solid #ccc" id="list_login_details">Login Details</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link inactive_tab1" id="list_personal_details" style="border:1px solid #ccc">Personal Details</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link inactive_tab1" id="list_contact_details" style="border:1px solid #ccc">Contact Details</a>
+                </li>
+            </ul>
+
+            <div class="tab-content" style="margin-top:16px;">
+                <div class="tab-pane active" id="login_details">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Login Details</div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label>NOME_CLIENTES</label>
+                                <input type="text" name="NOME_CLIENTES" id="NOME_CLIENTES" class="form-control" />
+                                <span id="error_NOME_CLIENTES" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>RG_CLIENTES</label>
+                                <input type="text" name="RG_CLIENTES" id="RG_CLIENTES" class="form-control" />
+                                <span id="error_RG_CLIENTES" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>CPF_CLIENTES</label>
+                                <input type="text" name="CPF_CLIENTES" id="CPF_CLIENTES" class="form-control" />
+                                <span id="error_CPF_CLIENTES" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>SEXO_CLIENTES</label>
+                                <input type="text" name="SEXO_CLIENTES" id="SEXO_CLIENTES" class="form-control" />
+                                <span id="error_SEXO_CLIENTES" class="text-danger"></span>
+                            </div>
+
+                            <div align="center">
+                                <button type="button" name="btn_login_details" id="btn_login_details" class="btn btn-info btn-lg">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="personal_details">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Fill Personal Details</div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label>DATA_NASCIMENTO_CLIENTES</label>
+                                <input type="text" name="DATA_NASCIMENTO_CLIENTES" id="DATA_NASCIMENTO_CLIENTES" class="form-control" />
+                                <span id="error_DATA_NASCIMENTO_CLIENTES" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>EMAIL_CLIENTES</label>
+                                <input type="text" name="EMAIL_CLIENTES" id="EMAIL_CLIENTES" class="form-control" />
+                                <span id="error_EMAIL_CLIENTES" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>CELULAR_CLIENTES</label>
+                                <input type="text" name="CELULAR_CLIENTES" id="CELULAR_CLIENTES" class="form-control" />
+                                <span id="error_CELULAR_CLIENTES" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>NACIONALIDADE_CLIENTES</label>
+                                <input type="text" name="NACIONALIDADE_CLIENTES" id="NACIONALIDADE_CLIENTES" class="form-control" />
+                                <span id="error_NACIONALIDADE_CLIENTES" class="text-danger"></span>
+                            </div>
+
+
+                            <div align="center">
+                                <button type="button" name="previous_btn_personal_details" id="previous_btn_personal_details" class="btn btn-default btn-lg">Previous</button>
+                                <button type="button" name="btn_personal_details" id="btn_personal_details" class="btn btn-info btn-lg">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="contact_details">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Fill Contact Details</div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label>CEP_CLIENTES</label>
+                                <input name="CEP_CLIENTES" id="CEP_CLIENTES" class="form-control"></input>
+                                <span id="error_CEP_CLIENTES" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>CIDADE_CLIENTES</label>
+                                <input type="text" name="CIDADE_CLIENTES" id="CIDADE_CLIENTES" class="form-control" />
+                                <span id="error_CIDADE_CLIENTES" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>ESTADO_CLIENTES</label>
+                                <input name="ESTADO_CLIENTES" id="ESTADO_CLIENTES" class="form-control"></textarea>
+                                <span id="error_ESTADO_CLIENTES" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>ENDERECO_CLIENTES</label>
+                                <input type="text" name="ENDERECO_CLIENTES" id="ENDERECO_CLIENTES" class="form-control" />
+                                <span id="error_ENDERECO_CLIENTES" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>NUMERO_CLIENTES</label>
+                                <input name="NUMERO_CLIENTES" id="NUMERO_CLIENTES" class="form-control"></textarea>
+                                <span id="error_NUMERO_CLIENTES" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>BAIRRO_CLIENTES</label>
+                                <input type="text" name="BAIRRO_CLIENTES" id="BAIRRO_CLIENTES" class="form-control" />
+                                <span id="error_BAIRRO_CLIENTES" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>COMPLEMENTO_CLIENTES</label>
+                                <input type="text" name="COMPLEMENTO_CLIENTES" id="COMPLEMENTO_CLIENTES" class="form-control" />
+                                <span id="error_COMPLEMENTO_CLIENTES" class="text-danger"></span>
+                            </div>
+
+                            <div align="center">
+                                <button type="button" name="previous_btn_contact_details" id="previous_btn_contact_details" class="btn btn-default btn-lg">Previous</button>
+                                <button type="button" name="btn_contact_details" id="btn_contact_details" class="btn btn-success btn-lg">Register</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="administration/form/formClientes/controller/formClient.js"></script>
+</body>
+
+</html>

@@ -1,27 +1,35 @@
 <?php
-    include_once("../../server/conexao.php");
+	session_start();
+	include_once("../../server/conexao.php");
 
-    $LOGIN_USUARIOS = $_POST['LOGIN_USUARIOS'];
-    $SENHA_USUARIOS = $_POST['SENHA_USUARIOS'];
+	$usuario = $_POST['LOGIN_USUARIOS'];
+	$senha = $_POST['SENHA_USUARIOS'];
+		
+	if((!empty($usuario)) AND (!empty($senha))):
+		$result_usuario = "SELECT * FROM login_usuarios WHERE LOGIN_USUARIOS='$usuario' LIMIT 1";
+		$resultado_usuario = mysqli_query($conn, $result_usuario);
 
-    $sql = "SELECT *, count(ID_USUARIOS) as registro FROM usuarios
-                WHERE LOGIN_USUARIOS = '".$LOGIN_USUARIOS."' AND SENHA_USUARIOS = '".$SENHA_USUARIOS."' ";
+		if($resultado_usuario):
+			$row_usuario = mysqli_fetch_assoc($resultado_usuario);
+			if(password_verify($senha, $row_usuario['SENHA_USUARIOS'])):
+				$_SESSION['ID_USUARIOS'] = $row_usuario['ID_USUARIOS'];
+				$_SESSION['LOGIN_USUARIOS'] = $row_usuario['LOGIN_USUARIOS'];
+				$_SESSION['TIPO_USUARIOS'] = $row_usuario['TIPO_USUARIOS'];
 
-    if (mysqli_query($conn, $sql)) {
+				if ($_SESSION['TIPO_USUARIOS'] == 1):
+					$data = array("return" => 1);
+				elseif ($_SESSION['TIPO_USUARIOS'] == 2):
+					$data = array("return" => 2);
+				endif;
 
-        $pesquisa = mysqli_query($conn, $sql); //gerando um array com a consulta do banco de dados
+			else:
+				$data = array("return" => "Usuario e/ou senha não validado");
+			endif;
+		endif;
 
-        while ($resultado = mysqli_fetch_array($pesquisa)) {
-            if ($resultado['registro'] == 1) {
-                session_start();
-                $_SESSION['ID_USUARIOS'] = $resultado['ID_USUARIOS'];
-                $data = array("return" => true);
-            } else {
-                $data = array("return" => "Usuario e/ou senha não validado");
-            }
-        }
-    }
+	else:
+		$data = array("return" => "Usuario e/ou senha não validado");
+	endif;
 
-    echo json_encode($data);
-
+	echo json_encode($data);
 ?>

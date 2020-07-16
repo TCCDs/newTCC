@@ -11,10 +11,32 @@ $(document).ready(function() {
         $('#conteudo').load('administration/historical/view/administrationHistory.html')
     })
     $('.fornecedor-adm').click(function() {
-        $('#conteudo').load('administration/providers/view/fornecedor-adm.html')
+        $('#conteudo').load('administration/providers/view/providersAdministration.html')
     })
+
     $('.marca-adm').click(function() {
-        $('#conteudo').load('administration/brands/view/marca-adm.html')
+        $('#conteudo').load('administration/brands/view/brandsAdministration.html')
+    })
+
+    // formularios
+    $('.formUser-administration').click(function() {
+        $('#conteudo').load('administration/form/formUsuario/view/formUsers.html')
+    })
+
+    $('.formProducts-administration').click(function() {
+        $('#conteudo').load('administration/form/formProdutos/view/formProducts.html')
+    })
+
+    $('.formBrands-administration').click(function() {
+        $('#conteudo').load('administration/form/formMarca/view/formBrands.html')
+    })
+
+    $('.formProviders-administration').click(function() {
+        $('#conteudo').load('administration/form/formFornecedores/view/formProviders.html')
+    })
+
+    $('.formClient-administration').click(function() {
+        $('#conteudo').load('administration/form/formClientes/view/formClient.html')
     })
 
     $('.verificarCompra-adm').click(function() {

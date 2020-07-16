@@ -3,14 +3,14 @@ function validate_form() {
     var valid = false;
     var CODIGO_CARTAO = $('#CODIGO_CARTAO').val();
     var CARTAO_VALIDADE_MES = $('#CARTAO_VALIDADE_MES').val();
-    var CARATO_VALIDADE_ANO = $('#CARATO_VALIDADE_ANO').val();
+    var CARTAO_VALIDADE_ANO = $('#CARTAO_VALIDADE_ANO').val();
     var NUMERO_CARTAO = $('#NUMERO_CARTAO').val();
     //var EMAIL_CLIENTE = $('#EMAIL_CLIENTE').val();
     var NOME_CARTAO = $('#NOME_CARTAO').val();
     var name_expression = /^[a-z ,.'-]+$/i;
     var email_expression = /^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/;
     var month_expression = /^01|02|03|04|05|06|07|08|09|10|11|12$/;
-    var year_expression = /^2017|2018|2019|2020|2021|2022|2023|2024|2025|2026|2027|2028|2029|2030|2031$/;
+    var year_expression = /^2020|2021|2022|2023|2024|2025|2026|2027|2028|2029|2030|2031$/;
     var cvv_expression = /^[0-9]{3,3}$/;
 
     $('#NUMERO_CARTAO').validateCreditCard(function(result) {
@@ -36,13 +36,13 @@ function validate_form() {
             valid = true;
         }
 
-        if (!year_expression.test(CARATO_VALIDADE_ANO)) {
-            $('#CARATO_VALIDADE_ANO').addClass('require');
-            $('#error_CARATO_VALIDADE_ANO').error('Invalid Data');
+        if (!year_expression.test(CARTAO_VALIDADE_ANO)) {
+            $('#CARTAO_VALIDADE_ANO').addClass('require');
+            $('#error_CARTAO_VALIDADE_ANO').text('Invalid Data');
             valid = false;
         } else {
-            $('#CARATO_VALIDADE_ANO').removeClass('require');
-            $('#error_CARATO_VALIDADE_ANO').error('');
+            $('#CARTAO_VALIDADE_ANO').removeClass('require');
+            $('#error_CARTAO_VALIDADE_ANO').text('');
             valid = true;
         }
 
