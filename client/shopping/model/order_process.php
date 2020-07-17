@@ -15,10 +15,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>PHP Shopping Cart with Stripe Payment Integration</title>
+		<title>Finalizar Pagamento</title>
 		<script src="../../../components/js/jquery-3.4.1.min.js"></script>
 		<link rel="stylesheet" href="../../../components/css/bootstrap.min.css" />
-		<script src="../../../components/js/jquery-3.4.1.min.js"></script>
+		<script src="../../../components/js/bootstrap.min.js"></script>
 
 		<script src="https://js.stripe.com/v2/"></script>
         <script src="../../../components/js/jquery.creditCardValidator.js"></script>
