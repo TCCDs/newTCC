@@ -438,7 +438,7 @@
         }
         .ladoC {
             height: 20em;
-            background: hsl(207, 68%, 39%);
+            background: linear-gradient( rgb(12, 60, 66), rgb(16, 47, 82));
         }
         .btn-cancelar {
             font-size: 15px;
