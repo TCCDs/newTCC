@@ -12,7 +12,7 @@ if(isset($_POST["token"])) {
 	\Stripe\Stripe::setApiKey('sk_test_L4OlaLFVannSQwgff3M8c6xy00XcTFpF85');
 
 	$customer = \Stripe\Customer::create(array(
-		'email'			=>	$_POST["EMAIL_CLIENTE"],
+		//'email'			=>	$_POST["EMAIL_CLIENTE"],
 		'source'		=>	$_POST["token"],
 		'name'			=>	$_POST["NOME_CARTAO"]
 	));
