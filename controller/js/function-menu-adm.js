@@ -73,8 +73,4 @@ $(document).ready(function() {
         $(".page-wrapper").addClass("toggled");
     });
 
-
-
-
-
 })

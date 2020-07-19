@@ -1,271 +1,57 @@
-    /* background: url('../../fundo.png') no-repeat center center; */
-    
-    hr {
-        background: rgb(138, 138, 138);
-    }
-    
-    .title-product {
-        background: rgb(190, 60, 60);
-        width: 100%;
-        padding: 10px;
-    }
-    
-    .selectsexo {
-        background: rgba(245, 222, 179, 0.103);
-        border-radius: 6px;
-        width: 100%;
-        height: 2em;
-        color: rgb(133, 133, 133);
-    }
-    
-    input {
-        outline: none;
-        border: none;
-    }
-    
-    input:focus::-webkit-input-placeholder {
-        color: transparent;
-    }
-    
-    input:focus:-moz-placeholder {
-        color: transparent;
-    }
-    
-    input:focus::-moz-placeholder {
-        color: transparent;
-    }
-    
-    input:focus:-ms-input-placeholder {
-        color: transparent;
-    }
-    
-    textarea:focus::-webkit-input-placeholder {
-        color: transparent;
-    }
-    
-    textarea:focus:-moz-placeholder {
-        color: transparent;
-    }
-    
-    textarea:focus::-moz-placeholder {
-        color: transparent;
-    }
-    
-    textarea:focus:-ms-input-placeholder {
-        color: transparent;
-    }
-    
-    input::-webkit-input-placeholder {
-        color: #adadad;
-    }
-    
-    input:-moz-placeholder {
-        color: #adadad;
-    }
-    
-    input::-moz-placeholder {
-        color: #adadad;
-    }
-    
-    input:-ms-input-placeholder {
-        color: #adadad;
-    }
-    
-    textarea::-webkit-input-placeholder {
-        color: #adadad;
-    }
-    
-    textarea:-moz-placeholder {
-        color: #adadad;
-    }
-    
-    textarea::-moz-placeholder {
-        color: #adadad;
-    }
-    
-    textarea:-ms-input-placeholder {
-        color: #adadad;
-    }
-    
-    .wrap-input100 {
-        width: 100%;
-        position: relative;
-        border-bottom: 2px solid #999999;
-    }
-    
-    .label-input100 {
-        font-family: Poppins-Regular;
-        font-size: 14px;
-        color: #333333;
-        line-height: 1.5;
-        padding-left: 7px;
-    }
-    
-    .input100 {
-        font-family: Poppins-Medium;
-        font-size: 16px;
-        color: #850b0b;
-        line-height: 1.2;
-        display: block;
-        width: 100%;
-        height: 55px;
-        background: transparent;
-        padding: 0 7px 0 20px;
-    }
-    /*---------------------------------------------*/
-    
-    .focus-input100 {
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        pointer-events: none;
-    }
-    
-    .focus-input100::after {
-        content: attr(data-symbol);
-        font-family: Material-Design-Iconic-Font;
-        color: #adadad;
-        font-size: 22px;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        height: calc(100% - 20px);
-        bottom: 0;
-        left: 0;
-        padding-left: 13px;
-        padding-top: 3px;
-    }
-    
-    .focus-input100::before {
-        content: "";
-        display: block;
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: #4e4c4c;
-        -webkit-transition: all 0.4s;
-        -o-transition: all 0.4s;
-        -moz-transition: all 0.4s;
-        transition: all 0.4s;
-    }
-    
-    .input100:focus+.focus-input100::before {
-        width: 100%;
-    }
-    
-    .has-val.input100+.focus-input100::before {
-        width: 100%;
-    }
-    
-    img {
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-    }
-    
-    .menu {
-        border-radius: 12px;
-        background: rgb(160, 30, 30);
-    }
-    
-    h5 {
-        color: white;
-    }
-    
-    #formulario {
-        margin: 10px auto;
-        text-align: center;
-    }
-    
-    #formulario h2,
-    #formulario h3 {
-        font: 22px "Trebuchet MS", tahoma, arial;
-        color: 090;
-        width: 100%;
-        float: left;
-        text-align: left;
-        margin-bottom: 4%;
-    }
-    
-    #formulario h2 {
-        color: rgb(255, 255, 255);
-    }
-    
-    #formulario h3 {
-        color: rgb(255, 255, 255);
-        font-size: 17px;
-    }
-    
-    #formulario fieldset {
-        border: 0 none;
-        border-radius: 6px;
-        box-shadow: 0 0 15 1px rgba(0, 0, 0, 0.4);
-        padding: 20px 30px;
-    }
-    
-    #formulario fieldset:not(:first-of-type) {
-        display: none;
-    }
-    /* -------LINHA DE ETAPAS------------ */
-    
-    #formulario #progress {
-        margin-bottom: 30px;
-        overflow: hidden;
-        counter-reset: step;
-    }
-    
-    #formulario #progress li {
-        list-style-type: none;
-        color: rgb(139, 134, 125);
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 10px;
-        float: left;
-        width: 33.33%;
-        position: relative;
-    }
-    
-    #formulario #progress li:before {
-        content: counter(step);
-        counter-increment: step;
-        width: 20px;
-        display: block;
-        line-height: 20px;
-        background: rgb(190, 144, 45);
-        color: hsl(0, 0%, 91%);
-        border-radius: 10px;
-        margin: 0 auto 10px auto;
-    }
-    
-    #formulario #progress li:after {
-        content: '';
-        width: 100%;
-        background: rgb(115, 190, 45);
-        height: 2px;
-        position: absolute;
-        top: 9px;
-        left: -50%;
-        z-index: -1;
-        /*  colocando na camada debaixo */
-    }
-    
-    #formulario #progress li:first-child:after {
-        content: none;
-    }
-    
-    #formulario #progress li.ativo:before,
-    #formulario #progress li.ativo:after {
-        background: rgba(62, 177, 81, 0.897);
-        color: white;
-        text-shadow: 0 1px 0;
-    }
+.form {
+    width: 100%;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+}
+
+.form input {
+    width: 100%;
+    height: 100%;
+    color: #595f6e;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border: none;
+    outline: none;
+}
+
+.form label {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+}
+
+.form label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #5fa8d3;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.content-input {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.form input:focus+.label-input .content-input,
+form input:valid+.label-input .content-input {
+    transform: translateY(-150%);
+    font-size: 12px;
+    color: #5fa8d3;
+}
+
+.form input:focus+.label-input::after,
+.form input:valid+.label-input::after {
+    transform: translateX(0%);
+}
