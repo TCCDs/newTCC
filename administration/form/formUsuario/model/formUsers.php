@@ -26,7 +26,6 @@ session_start();
         $_SESSION['idUsuario'] = $idUsuario;
 
         $data = array('return' => true);
-        header('Location: ../../formClientes/view/formClient.html');
 
         } catch (Exception $ex){
             $data = array('return' => $ex->getMessage());

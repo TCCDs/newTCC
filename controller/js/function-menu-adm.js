@@ -11,11 +11,11 @@ $(document).ready(function() {
         $('#conteudo').load('administration/historical/view/administrationHistory.html')
     })
     $('.fornecedor-adm').click(function() {
-        $('#conteudo').load('administration/providers/view/providersAdministration.html')
+        $('#conteudo').load('administration/form/formFornecedores/view/formProviders.html ')
     })
 
     $('.marca-adm').click(function() {
-        $('#conteudo').load('administration/brands/view/brandsAdministration.html')
+        $('#conteudo').load('administration/form/formMarca/view/formBrands.html')
     })
 
     // formularios
@@ -72,5 +72,27 @@ $(document).ready(function() {
     $("#show-sidebar").click(function() {
         $(".page-wrapper").addClass("toggled");
     });
+
+    var atual_fs, next_fs, prev_fs;
+    var register_form = $('form[name=register_form]');
+
+    function next(elem) {
+        atual_fs = $(elem).parent();
+        next_fs = $(elem).parent().next();
+
+        $('#progress li').eq($('fieldset').index(next_fs)).addClass('ativo');
+
+        atual_fs.hide(800);
+        next_fs.show(800);
+    }
+    $('.prev').click(function() {
+        atual_fs = $(this).parent();
+        prev_fs = $(this).parent().prev();
+
+        $('#progress li').eq($('fieldset').index(atual_fs)).removeClass('ativo');
+        atual_fs.hide(800);
+        prev_fs.show(800);
+    });
+
 
 })

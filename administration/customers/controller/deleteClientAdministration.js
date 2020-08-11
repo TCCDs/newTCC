@@ -20,7 +20,7 @@ $(document).ready(function() {
                     type: 'POST',
                     dataType: 'json',
                     data: dados,
-                    url: 'administration/products/model/deleteProductsAdministration.php',
+                    url: 'administration/products/model/deleteClientAdministration.php',
                     success: function(dados) {
                         Swal.fire({
                             icon: 'success',
@@ -29,7 +29,7 @@ $(document).ready(function() {
                             type: 'success',
                             confirmButtonText: 'Feito!'
                         })
-                        $('#conteudo').load('administration/products/view/administrationProducts.html')
+                        $('#conteudo').load('administration/Client/view/customerAdministration.html')
                     }
                 })
             } else {

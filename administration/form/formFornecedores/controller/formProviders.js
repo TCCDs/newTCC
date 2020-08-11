@@ -1,55 +1,58 @@
-$(document).ready(function() {
-    $('#btn_login_details').click(function() {
-        $('#list_login_details').removeClass('active active_tab1');
-        $('#list_login_details').removeAttr('href data-toggle');
-        $('#login_details').removeClass('active');
-        $('#list_login_details').addClass('inactive_tab1');
-        $('#list_personal_details').removeClass('inactive_tab1');
-        $('#list_personal_details').addClass('active_tab1 active');
-        $('#list_personal_details').attr('href', '#personal_details');
-        $('#list_personal_details').attr('data-toggle', 'tab');
-        $('#personal_details').addClass('active in');
-    });
+    $(document).ready(function() {
+        var atual_fs, next_fs, prev_fs;
 
-    $('#previous_btn_personal_details').click(function() {
-        $('#list_personal_details').removeClass('active active_tab1');
-        $('#list_personal_details').removeAttr('href data-toggle');
-        $('#personal_details').removeClass('active in');
-        $('#list_personal_details').addClass('inactive_tab1');
-        $('#list_login_details').removeClass('inactive_tab1');
-        $('#list_login_details').addClass('active_tab1 active');
-        $('#list_login_details').attr('href', '#login_details');
-        $('#list_login_details').attr('data-toggle', 'tab');
-        $('#login_details').addClass('active in');
-    });
+        $('.next').click(function() {
+            atual_fs = $(this).parent();
+            next_fs = $(this).parent().next();
 
-    $('#btn_personal_details').click(function() {
-        $('#list_personal_details').removeClass('active active_tab1');
-        $('#list_personal_details').removeAttr('href data-toggle');
-        $('#personal_details').removeClass('active');
-        $('#list_personal_details').addClass('inactive_tab1');
-        $('#list_contact_details').removeClass('inactive_tab1');
-        $('#list_contact_details').addClass('active_tab1 active');
-        $('#list_contact_details').attr('href', '#contact_details');
-        $('#list_contact_details').attr('data-toggle', 'tab');
-        $('#contact_details').addClass('active in');
-    });
+            $('#progress li').eq($('#formCad').index(next_fs)).addClass('ativo');
 
-    $('#previous_btn_contact_details').click(function() {
-        $('#list_contact_details').removeClass('active active_tab1');
-        $('#list_contact_details').removeAttr('href data-toggle');
-        $('#contact_details').removeClass('active in');
-        $('#list_contact_details').addClass('inactive_tab1');
-        $('#list_personal_details').removeClass('inactive_tab1');
-        $('#list_personal_details').addClass('active_tab1 active');
-        $('#list_personal_details').attr('href', '#personal_details');
-        $('#list_personal_details').attr('data-toggle', 'tab');
-        $('#personal_details').addClass('active in');
-    });
+            atual_fs.hide(800);
+            next_fs.show(800);
+        });
+        $('.prev').click(function() {
+            atual_fs = $(this).parent();
+            prev_fs = $(this).parent().prev();
 
-    $('#btn_contact_details').click(function() {
-        $('#btn_contact_details').attr("disabled", "disabled");
-        $(document).css('cursor', 'prgress');
-        $("#register_form").submit();
+            $('#progress li').eq($('#formCad').index(atual_fs)).removeClass('ativo');
+
+            atual_fs.hide(800);
+            prev_fs.show(800);
+        });
+        $('.registrar').click(function(e) {
+            e.preventDefault()
+
+            var dados = $('#register_form').serialize()
+            var url = "administration/form/formFornecedores/model/formProviders.php"
+
+            $.ajax({
+                type: 'POST',
+                dataType: 'json',
+                url: url,
+                async: true,
+                data: dados,
+                success: function(dados) {
+                    if (dados.return == true) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Supermercado Caravelas!',
+                            text: 'Cadastro efetuado com sucesso!',
+                            type: 'success',
+                            confirmButtonText: 'Feito!'
+                        })
+                        $('#conteudo').load('administration/form/formFornecedores/view/formProviders.html')
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Supermercado Caravelas!',
+                            text: dados.return,
+                            type: 'error',
+                            confirmButtonText: 'Tente novamente...!'
+                        })
+                    }
+                    // $('#register_form input').val("")
+                }
+            })
+        })
+
     });
-});
