@@ -42,22 +42,29 @@
                         <h2 class="login"> Login </h2>
                         <h2 class="inscreva">Inscreva-se</h2>
                     </div>
-
-                    <form action="" id="form-login">
-                        <div id="conteudo">
-                            <div class="form-group">
-                                <div class="wrap-input100">
-                                    <input type="text" class="input100" placeholder="Digite seu Nome" name="LOGIN_USUARIOS">
-                                    <span class="focus-input100"></span>
+                    <div id="conteudo">
+                        <form action="" id="form-login">
+                            <div class="row col-12 col-md-12">
+                                <div class="row col-12 col-md-12">
+                                    <div class=" form-group form">
+                                        <input type="text" name="LOGIN_USUARIOS" id="LOGIN_USUARIOS" aria-autocomplete="off" required>
+                                        <label for="LOGIN_USUARIOS" class="label-input">
+                                            <span class="content-input">Login do Usuário</span>
+                                        </label>
+                                    </div>
                                 </div>
-
-                                <div class="wrap-input100">
-                                    <input type="password" class="input100" placeholder="Digite sua senha" name="SENHA_USUARIOS">
-                                    <span class="focus-input100"></span>
+                                <div class="row col-12 col-md-12">
+                                    <div class=" form-group form">
+                                        <input type="password" name="SENHA_USUARIOS" id="SENHA_USUARIOS" aria-autocomplete="off" required>
+                                        <label for="SENHA_USUARIOS" class="label-input">
+                                            <span class="content-input">Digite sua senha</span>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
+
                             <button class="btn btn-block btn-login">Verificar</button>
-                        </div>
+                    </div>
                     </form>
                 </div>
             </div>

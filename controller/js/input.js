@@ -10,4 +10,5 @@ $(document).ready(function() {
     $('#CELULAR_FORNECEDORES').mask('(99) 99999-9999')
     $('#DATA_NASCIMENTO_FORNECEDORES').mask('99/99/9999')
     $('#CEP_FORNECEDORES').cep();
+
 })

@@ -33,14 +33,6 @@
         transition: width 0.2s;
     }
     
-    .selectsexo {
-        background: rgba(245, 222, 179, 0.103);
-        border-radius: 6px;
-        width: 100%;
-        height: 2em;
-        color: rgb(133, 133, 133);
-    }
-    
     .inscreva:hover {
         color: hsl(207, 68%, 39%);
     }
@@ -94,208 +86,106 @@
         color: white;
     }
     
-    input {
-        outline: none;
-        border: none;
-    }
-    
-    input:focus::-webkit-input-placeholder {
-        color: transparent;
-    }
-    
-    input:focus:-moz-placeholder {
-        color: transparent;
-    }
-    
-    input:focus::-moz-placeholder {
-        color: transparent;
-    }
-    
-    input:focus:-ms-input-placeholder {
-        color: transparent;
-    }
-    
-    textarea:focus::-webkit-input-placeholder {
-        color: transparent;
-    }
-    
-    textarea:focus:-moz-placeholder {
-        color: transparent;
-    }
-    
-    textarea:focus::-moz-placeholder {
-        color: transparent;
-    }
-    
-    textarea:focus:-ms-input-placeholder {
-        color: transparent;
-    }
-    
-    input::-webkit-input-placeholder {
-        color: #adadad;
-    }
-    
-    input:-moz-placeholder {
-        color: #adadad;
-    }
-    
-    input::-moz-placeholder {
-        color: #adadad;
-    }
-    
-    input:-ms-input-placeholder {
-        color: #adadad;
-    }
-    
-    textarea::-webkit-input-placeholder {
-        color: #adadad;
-    }
-    
-    textarea:-moz-placeholder {
-        color: #adadad;
-    }
-    
-    textarea::-moz-placeholder {
-        color: #adadad;
-    }
-    
-    textarea:-ms-input-placeholder {
-        color: #adadad;
-    }
-    
-    .wrap-input100 {
+    .form {
         width: 100%;
         position: relative;
-        border-bottom: 2px solid #c7c6c6;
+        height: 50px;
+        overflow: hidden;
     }
     
-    .label-input100 {
-        font-size: 14px;
-        color: #858484;
-        line-height: 1.5;
-        padding-left: 7px;
-    }
-    
-    .input100 {
-        font-size: 16px;
-        color: #494848;
-        line-height: 1.2;
-        display: block;
-        width: 100%;
-        height: 55px;
-        background: transparent;
-        padding: 0 7px 0 20px;
-    }
-    /*---------------------------------------------*/
-    
-    .focus-input100 {
-        position: absolute;
-        display: block;
+    .form input {
         width: 100%;
         height: 100%;
-        top: 0;
-        left: 0;
+        color: #595f6e;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        border: none;
+        outline: none;
+    }
+    
+    .form label {
+        position: absolute;
+        bottom: 0px;
+        left: 0%;
+        width: 100%;
+        height: 100%;
         pointer-events: none;
+        border-bottom: 1px solid black;
     }
     
-    .focus-input100::after {
-        content: attr(data-symbol);
-        font-family: Material-Design-Iconic-Font;
-        color: hsl(207, 68%, 39%);
-        font-size: 22px;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        height: calc(100% - 20px);
-        bottom: 0;
-        left: 0;
-        padding-left: 13px;
-        padding-top: 3px;
-    }
-    
-    .focus-input100::before {
+    .form label::after {
         content: "";
-        display: block;
         position: absolute;
-        bottom: -2px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: hsl(207, 68%, 39%);
-        -webkit-transition: all 0.4s;
-        -o-transition: all 0.4s;
-        -moz-transition: all 0.4s;
-        transition: all 0.4s;
-    }
-    
-    .input100:focus+.focus-input100::before {
+        left: 0px;
+        bottom: -1px;
+        height: 100%;
         width: 100%;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
     }
     
-    .has-val.input100+.focus-input100::before {
+    .content-input {
+        position: absolute;
+        bottom: 1px;
+        left: 0px;
+        transition: all 0.3s ease;
+    }
+    
+    .form input:focus+.label-input .content-input,
+    form input:valid+.label-input .content-input {
+        transform: translateY(-150%);
+        font-size: 12px;
+        color: #5fa8d3;
+    }
+    
+    .form input:focus+.label-input::after,
+    .form input:valid+.label-input::after {
+        transform: translateX(0%);
+    }
+    
+    #register_form {
         width: 100%;
-    }
-    
-    .img-user {
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-    }
-    
-    h5 {
-        color: white;
-    }
-    
-    #formulario {
-        margin: 10px auto;
         text-align: center;
     }
     
-    #formulario h2,
-    #formulario h3 {
+    #register_form h2,
+    #register_form h3 {
         font: 22px "Trebuchet MS", tahoma, arial;
-        color: 090;
+        color: brown;
         width: 100%;
         float: left;
         text-align: left;
         margin-bottom: 4%;
     }
     
-    #formulario h2 {
-        color: hsl(207, 68%, 39%);
-    }
-    
-    #formulario h3 {
-        color: hsl(207, 68%, 39%);
+    #register_form h3 {
+        color: #333;
         font-size: 17px;
     }
     
-    #formulario fieldset {
+    #register_form #formCad {
+        background: rgb(255, 255, 255);
         border: 0 none;
         border-radius: 6px;
-        box-shadow: 0 0 15 1px rgba(0, 0, 0, 0.4);
-        padding: 20px 30px;
+        box-shadow: rgba(0, 0, 0, 0.4);
+        box-sizing: border-box;
+        /* Nao deixa o conteudo passar do tamanho do elemento pai  */
+        margin: 0 10%;
     }
     
-    #formulario fieldset:not(:first-of-type) {
+    #register_form #formCad:not(:first-of-type) {
         display: none;
     }
-    /* -------LINHA DE ETAPAS------------ */
     
-    #formulario #progress {
+    #register_form #progress {
         margin-bottom: 30px;
         overflow: hidden;
         counter-reset: step;
     }
     
-    #formulario #progress li {
+    #register_form #progress li {
         list-style-type: none;
-        color: rgb(139, 134, 125);
+        color: white;
         font-weight: bold;
         text-transform: uppercase;
         font-size: 10px;
@@ -304,22 +194,22 @@
         position: relative;
     }
     
-    #formulario #progress li:before {
+    #register_form #progress li:before {
         content: counter(step);
         counter-increment: step;
         width: 20px;
         display: block;
         line-height: 20px;
-        background: rgb(69, 134, 39);
-        color: #0a0a0a;
+        background: white;
+        color: black;
         border-radius: 10px;
         margin: 0 auto 10px auto;
     }
     
-    #formulario #progress li:after {
+    #register_form #progress li:after {
         content: '';
         width: 100%;
-        background: rgb(69, 134, 39);
+        background: rgb(145, 26, 26);
         height: 2px;
         position: absolute;
         top: 9px;
@@ -328,12 +218,12 @@
         /*  colocando na camada debaixo */
     }
     
-    #formulario #progress li:first-child:after {
+    #register_form #progress li:first-child:after {
         content: none;
     }
     
-    #formulario #progress li.ativo:before,
-    #formulario #progress li.ativo:after {
+    #register_form #progress li.ativo:before,
+    #register_form #progress li.ativo:after {
         background: rgba(62, 177, 81, 0.897);
         color: white;
         text-shadow: 0 1px 0;
