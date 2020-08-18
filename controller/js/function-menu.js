@@ -27,8 +27,13 @@ $(document).ready(function() {
         $('.saldo').hide();
         $('.menu').hide();
     })
-
     $('.comprarProduto-cliente').click(function() {
+        $('#conteudo').load('client/payment/view/payment-select.html')
+        $('.saldo').hide();
+        $('.menu').hide();
+    })
+
+    $('.moeda').click(function() {
         $('#conteudo').load('client/shopping/view/shopping.html')
         $('.saldo').hide();
         $('.menu').hide();
