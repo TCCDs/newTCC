@@ -28,22 +28,23 @@ $(document).ready(function() {
         $('.menu').hide();
     })
     $('.comprarProduto-cliente').click(function() {
-        $('#conteudo').load('client/payment/view/payment-select.html')
-        $('.saldo').hide();
-        $('.menu').hide();
-    })
-
-    $('.moeda').click(function() {
         $('#conteudo').load('client/shopping/view/shopping.html')
         $('.saldo').hide();
         $('.menu').hide();
     })
 
-    /*$('.comprarProduto-cliente').click(function() {
-        $('#conteudo').load('client/shopping/view/order_process.html')
+    $('.payment').click(function() {
+        $('#conteudo').load('client/payment/view/payment-select.html')
         $('.saldo').hide();
         $('.menu').hide();
-    })*/
+    })
+
+    $('.payment-coin').click(function() {
+        $('#conteudo').load('client/payment/view/payment-coin.html')
+        $('.saldo').hide();
+        // $('.menu').hide();
+    })
+
 
     $('.historico-cliente').click(function() {
         $('#conteudo').load('client/historical/view/customersHistory.html')
