@@ -74,7 +74,6 @@ $(document).ready(function() {
                 },
                 success: function(data) {
                     load_cart_data();
-                    //alert("O item foi adicionado ao carrinho");
                 }
             })
         } else {

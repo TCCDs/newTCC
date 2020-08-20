@@ -7,7 +7,7 @@ $(document).ready(function() {
 
         Swal.fire({
             icon: 'success',
-            title: 'SysAgenda!',
+            title: 'Supermercado Caravelas!',
             text: 'Alteração efetuada com sucesso!',
             type: 'warning',
             showCancelButton: true,
@@ -24,7 +24,7 @@ $(document).ready(function() {
                     success: function(dados) {
                         Swal.fire({
                             icon: 'success',
-                            title: 'SysAgenda!',
+                            title: 'Supermercado Caravelas!',
                             text: 'Exclusão efetuada com sucesso',
                             type: 'success',
                             confirmButtonText: 'Feito!'
@@ -35,7 +35,7 @@ $(document).ready(function() {
             } else {
                 Swal.fire({
                     icon: 'error',
-                    title: 'SysAgenda!',
+                    title: 'Supermercado Caravelas!',
                     text: 'Operação cancelada com sucesso',
                     type: 'success',
                     confirmButtonText: 'Feito!'
