@@ -10,6 +10,7 @@ $.ajax({
     success: function(dados) {
         for (var i = 0; i < dados.length; i++) {
             let produtos = `
+            
             <div class="row ml-2">
             <div class="mt-3 mr-2 col-12 col-md-2">
                 <div class="card" style="width: 18rem;  height: 20rem;">
