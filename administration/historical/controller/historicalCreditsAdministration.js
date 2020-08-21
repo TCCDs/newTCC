@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('tbody').empty()
+    $('.historical').empty()
 
     var url = "administration/historical/model/historicalCreditsAdministration.php"
 
@@ -11,15 +11,22 @@ $(document).ready(function() {
         success: function(dados) {
             for (var i = 0; i < dados.length; i++) {
                 let historicoMoedas = `
-                <tr>
-                    <td class="text-center" width="40%"> ` + dados[i].NOME_CLIENTES + ` </td>
-                    <td class="text-center" width="20%"> ` + dados[i].VALOR_MOEDAS + ` </td>
-                    <td class="text-center" width="15%">
-                        <button id="` + dados[i].ID_MOEDAS + `" class="btn btn-outline-primary btn-sm btn-view-credito"> <i class="mdi mdi-eye mdi-18px"></i> </button>
-                    </td>
-                </tr>
+                <div class="row ml-2">
+                <div class="mt-3 mr-2 col-12 col-md-2">
+                    <div class="card" style="width: 18rem;  height: 13rem;">
+                        <div class="card-body">
+                                <h5 class="card-title text-dark">` + dados[i].NOME_CLIENTES + `</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">` + dados[i].VALOR_MOEDAS + `</li>
+                                    <li class="list-group-item"> <button id="` + dados[i].ID_MOEDAS + `" class="btn btn-outline-primary btn-block btn-sm btn-view-credito"> <i class="mdi mdi-eye mdi-18px"></i> </button>
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
                 `
-                $('tbody').append(historicoMoedas)
+                $('.historical').append(historicoMoedas)
             }
             $('body').append('<script src="administration/historical/controller/viewCreditsAdministration.js"></script>')
 

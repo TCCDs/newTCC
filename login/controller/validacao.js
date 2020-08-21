@@ -12,17 +12,27 @@ $(document).ready(function() {
             async: true,
             data: dados,
             success: function(dados) {
-                if (dados.return == true) {
+
+                if (dados.return == 1) {
                     let url = 'customerPanel.html'
                     $(location).attr('href', url)
+
+                } else if (dados.return == 2) {
+                    let url = 'administration.html'
+                    $(location).attr('href', url)
+
                 } else {
                     Swal.fire({
-                        icon: 'success',
-                        title: 'SysAgenda!',
+                        icon: 'error',
+                        title: 'Supermercado Caravelas!',
                         text: dados.return,
                         type: 'error',
-                        confirmButtonText: 'Tentar novamente....'
+                        confirmButtonText: 'Tentar novamente....',
                     })
+
+                    let url = 'index.html'
+                    $(location).attr('href', url)
+
                     $('#formLogin input').val("")
                 }
             }

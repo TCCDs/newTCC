@@ -1,10 +1,13 @@
 <?php
-    include_once('../../../server/conexao.php');
+    include_once('../../../server/Conn.php');
+    $conn = new Conn();
 
-    $sql = mysqli_query($conn, "SELECT * FROM clientes");
+    $sql = "SELECT * FROM clientes";
+    $resultado = $conn->getConn()->prepare($sql);
+    $resultado->execute();
 
-    while($resultado = mysqli_fetch_assoc($sql)) {
-        $cliente[] = array_map('utf8_encode', $resultado);
+    while($resultadoClientes = $resultado->fetch(PDO::FETCH_ASSOC)) {
+        $cliente[] = array_map('utf8_encode', $resultadoClientes);
 
     }
 

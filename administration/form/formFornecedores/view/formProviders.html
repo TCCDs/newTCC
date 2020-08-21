@@ -1,0 +1,173 @@
+<form method="post" action="administration/form/formFornecedores/model/formProviders.php" id="register_form">
+    <div class="row">
+        <div class="col-12 col-md-12">
+            <ul id="progress">
+                <li class="ativo">Configurações</li>
+                <li>Perfis Pessoais</li>
+                <li>Detalhes</li>
+            </ul>
+            <div id="formCad">
+                <h2>Perfis Pessoais </h2>
+                <h3>Algumas Configurações</h3>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="NOME_FANTASIA_FORNECEDORES" id="NOME_FANTASIA_FORNECEDORES" aria-autocomplete="off" required>
+                            <label for="NOME_FANTASIA_FORNECEDORES" class="label-input">
+                            <span class="content-input">Nome</span>
+                        </label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="RAZAO_SOCIAL_FORNECEDORES" id="RAZAO_SOCIAL_FORNECEDORES" aria-autocomplete="off" required>
+                            <label for="RAZAO_SOCIAL_FORNECEDORES" class="label-input">
+                            <span class="content-input">Razão Social</span>
+                        </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="CNPJ_FORNECEDORES" id="CNPJ_FORNECEDORES" aria-autocomplete="off" required>
+                            <label for="CNPJ_FORNECEDORES" class="label-input">
+                            <span class="content-input">CNPJ</span>
+                        </label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="EMAIL_FORNECEDORES" id="EMAIL_FORNECEDORES" aria-autocomplete="off" required>
+                            <label for="EMAIL_FORNECEDORES" class="label-input">
+                            <span class="content-input">Email</span>
+                        </label>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="submit" name="next" class="btn btn-block btn-success next acao" value="Proximo">
+            </div>
+
+            <div id="formCad">
+                <h2>Configurações da conta</h2>
+                <h3>Detalhes de Contato</h3>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="CELULAR_FORNECEDORES" id="CELULAR_FORNECEDORES" aria-autocomplete="off" required>
+                            <label for="CELULAR_FORNECEDORES" class="label-input">
+                            <span class="content-input">Celular</span>
+                        </label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="SEXO_FORNECEDORES" id="SEXO_FORNECEDORES" aria-autocomplete="off" required>
+                            <label for="SEXO_FORNECEDORES" class="label-input">
+                            <span class="content-input">Gênero</span>
+                        </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="DATA_NASCIMENTO_FORNECEDORES" id="DATA_NASCIMENTO_FORNECEDORES" aria-autocomplete="off" required>
+                            <label for="DATA_NASCIMENTO_FORNECEDORES" class="label-input">
+                            <span class="content-input">Data de nascimento</span>
+                        </label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="NACIONALIDADE_FORNECEDORES" id="NACIONALIDADE_FORNECEDORES" aria-autocomplete="off" required>
+                            <label for="NACIONALIDADE_FORNECEDORES" class="label-input">
+                            <span class="content-input">Nacionalidade</span>
+                        </label>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" name="prev" class="prev acao btn btn-block btn-warning" value="Anterior">
+                <input type="submit" name="next" class="next acao btn btn-block btn-success" value="Proximo">
+            </div>
+            <div id="formCad">
+                <h2>Detalhes pessoais </h2>
+                <h3>Informe alguns detalhes</h3>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="CEP_FORNECEDORES" id="CEP_FORNECEDORES" aria-autocomplete="off" required>
+                            <label for="CEP_FORNECEDORES" class="label-input">
+                            <span class="content-input">CEP</span>
+                        </label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="CIDADE_FORNECEDORES" id="CIDADE_FORNECEDORES" data-cep="cidade" required>
+                            <label for="CIDADE_FORNECEDORES" class="label-input">
+                            <span class="content-input">Cidade</span>
+                        </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="ESTADO_FORNECEDORES" id="ESTADO_FORNECEDORES" data-cep="uf" required>
+                            <label for="ESTADO_FORNECEDORES" class="label-input">
+                        <span class="content-input">Estado</span>
+                    </label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="ENDERECO_FORNECEDORES" id="ENDERECO_FORNECEDORES" required>
+                            <label for="ENDERECO_FORNECEDORES" class="label-input">
+                        <span class="content-input">Endereço</span>
+                    </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col md-12">
+                        <div class=" form-group form">
+                            <input type="text" name="NUMERO_FORNECEDORES" id="NUMERO_FORNECEDORES" aria-autocomplete="off" required>
+                            <label for="NUMERO_FORNECEDORES" class="label-input">
+                            <span class="content-input">Número</span>
+                        </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="BAIRRO_FORNECEDORES" id="BAIRRO_FORNECEDORES" aria-autocomplete="off" required>
+                            <label for="BAIRRO_FORNECEDORES" class="label-input">
+                            <span class="content-input">Bairro</span>
+                        </label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="COMPLEMENTO_FORNECEDORES" id="COMPLEMENTO_FORNECEDORES" aria-autocomplete="off" required>
+                            <label for="COMPLEMENTO_FORNECEDORES" class="label-input">
+                            <span class="content-input">Complemento</span>
+                        </label>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="submit" name="prev" class="prev acao btn btn-block btn-warning" value="Anterior">
+                <input type="submit" name="registrar" class="registrar acao btn btn-block btn-success" value="Registrar">
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+</form>
+<script src="components/js/bootstrap.min.js"></script>
+<script src="administration/form/formFornecedores/controller/formProviders.js"></script>
+<script src="controller/js/input.js"></script>

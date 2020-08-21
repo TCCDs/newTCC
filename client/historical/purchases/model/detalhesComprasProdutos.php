@@ -1,12 +1,16 @@
 <?php
-    include '../../../../server/conexao.php';
-    
-    // detalhes Produtos
-    $sql = 'SELECT * FROM compras_itens WHERE compras_itens.CODIGO_ITENS = 2059952836';
-    $result = mysqli_query($conn, $sql);
+    include_once ('../../../../server/Conn.php');
+    $conn = new Conn();
 
-    while($resultado = mysqli_fetch_assoc($result)) {
-        $detalhesComprasProdutos[] = array_map('utf8_encode', $resultado);
+    $codigos_itens = 2059952836;
+
+    $sql = 'SELECT * FROM compras_itens WHERE compras_itens.CODIGO_ITENS = :CODIGOS_ITENS';
+    $resultado = $conn->getConn()->prepare($sql);
+    $resultado->bindParam(':CODIGOS_ITENS', $codigos_itens);
+    $resultado->execute();
+
+    while($resultadoProdutos = $resultado->fetch(PDO::FETCH_ASSOC)) {
+        $detalhesComprasProdutos[] = array_map('utf8_encode', $resultadoProdutos);
     }
 
     echo json_encode($detalhesComprasProdutos);

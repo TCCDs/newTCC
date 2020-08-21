@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-12 col md-12 text-center">
+        <img class="img-fluid mt-4 avatar" src="img/avatar.png" alt="">
+        <h6 class="mt-2 text-center nome-cliente"> </h6>
+    </div>
+
+    <div class="col-6 col-md-6 mt-3">
+        <small>Última compra</small>
+        <h6 class="text-left dataCompra-cliente"> </h6>
+    </div>
+
+    <div class="col-6 col-md-6 mt-3">
+        <small>Saldo</small>
+        <h6 class="text-left saldo-cliente"> </h6>
+    </div>
+</div>
+
+<hr class="mt-2">
+<div class="col-12 mt-4 dados-pessoais">
+    <h6> <i class="class mdi mdi-account mr-2 "></i>Dados Pessoais</h6>
+</div>
+<div class="col-12 mt-4 enderecos">
+    <h6> <i class="class mdi mdi-map-check mr-2 "></i>Endereços</h6>
+</div>
+<div class="col-12 mt-4 pagamentos">
+    <h6> <i class="class mdi mdi-card-bulleted-outline mr-2 "></i>Pagamentos</h6>
+</div>
+<button class=" btn btn-block bg-danger text-white mt-4">Sair</button>
+<div class="modal fade" id="modalClient" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title text-info" id="exampleModalLabel">Título do modal</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="client/customers/controller/saldoCliente.js"></script>
+<script src="client/customers/controller/dataCompra.js"></script>
+<script src="client/customers/controller/nomeCliente.js"></script>
+<script src="client/customers/controller/edit-user.js"></script>
+<script src="client/customers/controller/edit-address.js"></script>

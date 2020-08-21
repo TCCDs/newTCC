@@ -7,7 +7,7 @@ $(document).ready(function() {
 
         Swal.fire({
             icon: 'success',
-            title: 'SysAgenda!',
+            title: 'Supermercado Caravelas!',
             text: 'Alteração efetuada com sucesso!',
             type: 'warning',
             showCancelButton: true,
@@ -20,22 +20,22 @@ $(document).ready(function() {
                     type: 'POST',
                     dataType: 'json',
                     data: dados,
-                    url: 'administrador/products/model/deleteProductsAdministration.php',
+                    url: 'administration/products/model/deleteProductsAdministration.php',
                     success: function(dados) {
                         Swal.fire({
                             icon: 'success',
-                            title: 'SysAgenda!',
+                            title: 'Supermercado Caravelas!',
                             text: 'Exclusão efetuada com sucesso',
                             type: 'success',
                             confirmButtonText: 'Feito!'
                         })
-                        $('#conteudo').load('administrador/products/view/administrationProducts.html')
+                        $('#conteudo').load('administration/products/view/administrationProducts.html')
                     }
                 })
             } else {
                 Swal.fire({
                     icon: 'error',
-                    title: 'SysAgenda!',
+                    title: 'Supermercado Caravelas!',
                     text: 'Operação cancelada com sucesso',
                     type: 'success',
                     confirmButtonText: 'Feito!'

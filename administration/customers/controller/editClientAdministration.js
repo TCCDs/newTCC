@@ -20,6 +20,8 @@ $(document).ready(function() {
                 for (var i = 0; dados.length > i; i++) {
                     let cliente = `
                         <form class="mt-3" id="edit-cliente">
+                        <input type="hidden"  name="ID_CLIENTES" value="` + dados[i].ID_CLIENTES + `" />
+
                             <div class="form-group">
                                 <label>Nome do Cliente</label>
                                 <input class="form-control" type="text" name="NOME_CLIENTES" value="` + dados[i].NOME_CLIENTES + `">
@@ -82,14 +84,14 @@ $(document).ready(function() {
 
                             <div class="form-group">
                                 <label>COMPLEMENTO</label>
-                                <input class="form-control" type="text" name="COMPLEMENTOS_CLIENTES" value="` + dados[i].ENDERECO_CLIENTES + `">
+                                <input class="form-control" type="text" name="COMPLEMENTO_CLIENTES" value="` + dados[i].COMPLEMENTO_CLIENTES + `">
                             </div>
 
                             <div class="form-group">
-                            <label>NACIONALIDADE</label>
-                            <input class="form-control" type="text" name="NACIONALIDADE_CLIENTES" value="` + dados[i].NACIONALIDADE_CLIENTES + `">
-                        </div>
-                            <input type="hidden"  name="ID_CLIENTES" value="` + dados[i].ID_CLIENTES + `" />
+                                <label>NACIONALIDADE</label>
+                                <input class="form-control" type="text" name="NACIONALIDADE_CLIENTES" value="` + dados[i].NACIONALIDADE_CLIENTES + `">
+                            </div>
+
                             <button class="btn btn-outline-warning btn-update"> <i class="mdi mdi-content-save"></i> Salvar </button>
                         </form>
                     `

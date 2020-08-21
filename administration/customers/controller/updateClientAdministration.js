@@ -15,7 +15,7 @@ $(document).ready(function() {
                 if (dados.return == true) {
                     Swal.fire({
                         icon: 'success',
-                        title: 'SysAgenda!',
+                        title: 'SupermercadoCaravelas!',
                         text: 'Alteração efetuada com sucesso!',
                         type: 'success',
                         confirmButtonText: 'Feito!'
@@ -33,7 +33,7 @@ $(document).ready(function() {
                 } else {
                     Swal.fire({
                         icon: 'error',
-                        title: 'SysAgenda!',
+                        title: 'SupermercadoCaravelas!',
                         text: dados.return,
                         type: 'error',
                         confirmButtonText: 'Tente novamente...!'

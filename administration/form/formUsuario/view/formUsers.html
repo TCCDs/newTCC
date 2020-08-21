@@ -1,0 +1,33 @@
+<form method="post" action="administration/form/formUsuario/model/formUsers.php" id="register_form">
+    <div id="formCad">
+        <h2> Formulário Usuarios</h2>
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <div class=" form-group form">
+                    <input type="text" name="LOGIN_USUARIOS" id="LOGIN_USUARIOS" aria-autocomplete="off" required>
+                    <label for="LOGIN_USUARIOS" class="label-input">
+                    <span class="content-input">Login usuário</span>
+                </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <div class=" form-group form">
+                    <input type="text" name="SENHA_USUARIOS" id="SENHA_USUARIOS" aria-autocomplete="off" required>
+                    <label for="SENHA_USUARIOS" class="label-input">
+                    <span class="content-input">Senha do usuário</span>
+                </label>
+                </div>
+            </div>
+        </div>
+
+        <label></label>
+        <input type="hidden" name="TIPO_USUARIOS" id="TIPO_USUARIOS" class="form-control" />
+        </label>
+
+
+        <input type="submit" name="registrar" class="registrar acao btn btn-block btn-success" value="Registrar">
+    </div>
+
+    <script src="administration/form/formUsuario/controller/formUsers.js "></script>
