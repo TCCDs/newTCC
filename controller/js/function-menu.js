@@ -59,6 +59,11 @@ $(document).ready(function() {
 
     })
 
+    $('.offer').click(function() {
+        $('#conteudo').load('administration/offer/view/offerday.html')
+        $('.saldo').hide();
+        $('.menu').hide();
+    })
     $('.inscreva').click(function() {
         $('#conteudo').load('client/customers/view/cad-user.html')
 
