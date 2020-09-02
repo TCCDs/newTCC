@@ -471,6 +471,8 @@ body {
 
 .bg-menu {
     background-image: linear-gradient(to bottom right, #1c5160, rgb(72, 117, 138));
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
 
 .menu {
