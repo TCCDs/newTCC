@@ -13,7 +13,7 @@ $(document).ready(function() {
     })
 
     $('.home').click(function() {
-        $('body').load('customerPanel.html')
+        $('body').load('customerPanel.php')
     })
 
     $('.credito-cliente').click(function() {
@@ -22,25 +22,38 @@ $(document).ready(function() {
         $('.menu').hide();
     })
 
-    $('.qrcode-cliente').click(function() {
-        $('#conteudo').load('client/qrcode/view/qrcode-cliente.html')
-        $('.saldo').hide();
-        $('.menu').hide();
-    })
     $('.comprarProduto-cliente').click(function() {
         $('#conteudo').load('client/shopping/view/shopping.html')
         $('.saldo').hide();
         $('.menu').hide();
     })
 
-    $('.payment').click(function() {
+    /*$('.payment').click(function() {
         $('#conteudo').load('client/payment/view/payment-select.html')
         $('.saldo').hide();
         $('.menu').hide();
-    })
+    })*/
 
     $('.payment-coin').click(function() {
         $('#conteudo').load('client/payment/view/payment-coin.html')
+        $('.saldo').hide();
+        // $('.menu').hide();
+    })
+
+    $('.leitorQrProdutos').click(function() {
+        $('#conteudo').load('client/leitorQr/view/leitorProdutos.html')
+        $('.saldo').hide();
+        // $('.menu').hide();
+    })
+
+    $('.testeLeitor').click(function() {
+        $('#conteudo').load('client/leitorQr/view/testeLeitor.html')
+        $('.saldo').hide();
+        // $('.menu').hide();
+    })
+
+    $('.credito-pagamento').click(function() {
+        $('#conteudo').load('client/shopping/model/order_process.php')
         $('.saldo').hide();
         // $('.menu').hide();
     })

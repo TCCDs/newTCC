@@ -1,0 +1,31 @@
+<video id="preview" width="250px" height="250px"></video>
+
+<script>
+    let scanner = new Instascan.Scanner({
+        video: document.getElementById('preview')
+    });
+
+    scanner.addListener('scan', content => {
+        var resultado = content
+        document.getElementById("testeQRcode").value = resultado;
+    });
+
+    Instascan.Camera.getCameras().then(cameras => {
+        if (cameras.length > 1) {
+            scanner.start(cameras[1]);
+        } else {
+            console.error("Não existe câmera no dispositivo!");
+        }
+    });
+</script>
+
+<form name="form01" action="client/leitorQr/model/leitorProdutos.php" method="POST">
+    <table width="89" border="0">
+        <tr>
+            <td>
+                <input type="text" name="qrcode" id="testeQRcode" value="">
+                <input name="Enviar" type="submit" value="Enviar">
+            </td>
+        </tr>
+    </table>
+</form>

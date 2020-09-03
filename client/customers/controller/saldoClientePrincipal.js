@@ -12,7 +12,7 @@ $(document).ready(function() {
             for (var i = 0; i < dados.length; i++) {
                 let saldoCliente = `
 
-                <h4 class="saldo-cliente-principal"> ` + dados[i].MOEDAS + ` </h4>
+                <h4 class="saldo-cliente-principal"> ` + dados[i].saldo_clientes + ` </h4>
                 `
                 $('.saldo-cliente-principal').append(saldoCliente)
             }
