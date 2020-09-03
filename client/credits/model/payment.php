@@ -79,7 +79,20 @@ if(isset($_POST["token"])) {
 		$statement->execute($order_data);
 		
 		$_SESSION["success_message"] = "O pagamento foi concluído com sucesso. O ID TXN é " . $response["balance_transaction"] . "";
-		header('location:../../../customerPanel.html');
+		
+
+		$addMoedas = $amount + $_SESSION['saldo_clientes'];
+
+		$order_saldo = array(
+			':ID_CLIENTE' => $id_clientes_produtos,
+			':SALDO_CLIENTES' => $addMoedas
+		);
+
+		$sql = "UPDATE saldo_clientes SET SALDO_CLIENTES = :SALDO_CLIENTES  WHERE ID_CLIENTE = :ID_CLIENTE";
+		$statement = $conn->prepare($sql);
+		$statement->execute($order_saldo);
+
+		header('location:../../../customerPanel.php');
 	}
 
 }

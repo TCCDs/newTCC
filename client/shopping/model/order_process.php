@@ -21,6 +21,8 @@
 		<script src="../../../components/js/bootstrap.min.js"></script>
 
 		<script src="https://js.stripe.com/v2/"></script>
+        <!-- <script src="components/js/jquery.creditCardValidator.js"></script> -->
+        <!-- <script src="client/credits/js/jquery.creditCardValidator.js"></script> -->
         <script src="../../../components/js/jquery.creditCardValidator.js"></script>
         
         <style>
@@ -123,3 +125,4 @@
 <script src="../controller/listaTotalProdutos.js"></script>
 <script src="../controller/processoPagamento.js"></script>
 <script src="../controller/listaProdutos.js"></script>
+
