@@ -78,7 +78,7 @@ $(document).ready(function() {
         $('.menu').hide();
     })
     $('.inscreva').click(function() {
-        $('#conteudo').load('client/customers/view/cad-user.html')
+        $('#conteudo').load('administration/form/formUsuario/view/formUsers.html')
 
     })
     $('.login').click(function() {
