@@ -1,16 +1,5 @@
 <?php
-    //fetch_cart.php
     session_start();
-    /*
-    if(!empty($_SESSION["shopping_cart"])) {
-        foreach($_SESSION["shopping_cart"] as $keys => $values) {
-            $listarProdutosCompra[] = array_map('utf8_encode', $values);
-        }
-    }
-       echo json_encode($listarProdutosCompra);
-    */
-
-
     $total_price = 0;
 
     $output = '
