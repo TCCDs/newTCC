@@ -24,7 +24,7 @@ $(document).ready(function() {
         e.preventDefault()
 
         var dados = $('#register_form').serialize()
-        var url = "client//customers/model/add-cliente.php"
+        var url = "administration/form/"
 
         $.ajax({
             type: 'POST',
