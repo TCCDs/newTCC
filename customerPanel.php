@@ -1,3 +1,13 @@
+<?php
+    session_start();
+
+    if(!empty($_SESSION['ID_USUARIOS'])):
+        //echo "<a href='sair.php'>Sair</a>";
+    else:
+        header("Location: ./index.html");	
+    endif;
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,6 +22,7 @@
     <link rel="stylesheet" href="components/libs/sweetalert2/dist/sweetalert2.css">
     <link rel="stylesheet" href="components/css/login.css">
     <link rel="stylesheet" href="components/css/menuslide.css">
+
 </head>
 
 <body>
@@ -19,7 +30,7 @@
         <nav class="navbar navbar-dark bg-menu">
             <button class="navbar-toggler" id="show-sidebar" type="button">
                 <span class="navbar-toggler-icon "></span>
-              </button>
+            </button>
             <a class="navbar-brand md-block" href="#">
                 <img src="img/caravelas.png" width="30" height="30" class="d-inline-block align-top img-user" alt="" loading="lazy">
             </a>
@@ -50,20 +61,28 @@
                         <li class="">
                             <a class="btn text-left comprarProduto-cliente">Compra</a>
                         </li>
-                        <li class="">
+                        <!-- <li class="">
                             <a class="btn text-left payment">Pagamento</a>
-                        </li>
+                        </li> -->
                         <li class="">
                             <a class="btn fornecedor-adm text-left historico-cliente">Histórico</a>
-                        </li>
-                        <li class="">
-                            <a class="btn marca-adm text-left  qrcode-cliente">Qr-code</a>
                         </li>
                         <li class="">
                             <a class="btn historico-adm text-left credito-cliente">Crédito</a>
                         </li>
                         <li class="">
                             <a class="btn historico-adm text-left ctr-cliente">Perfil</a>
+                        </li>
+
+                        <li class="">
+                            testes
+                        </li>
+
+                        <li class="">
+                            <a class="btn historico-adm text-left leitorQrProdutos">ler qr</a>
+                        </li>
+                        <li class="">
+                            <a class="btn historico-adm text-left testeLeitor">ver Produtos</a>
                         </li>
                     </ul>
                 </div>
@@ -90,10 +109,8 @@
                 <div class="menu">
                     <div class="row text-center">
                         <div class="col-6 mt-3 border-right">
-                            <button class=" btn offer">
                             <h1><i class="mdi mdi-check-decagram text-light "></i></h1>
                             <h5>Ofertas do dia</h5>
-                        </button>
                         </div>
                         <div class="col-6 mt-3 ">
                             <button class=" btn comprarProduto-cliente">
@@ -143,6 +160,8 @@
         <script src="controller/js/function-menu.js"></script>
         <script src="client/navUsers/controller/nav.js"></script>
         <script src="client/customers/controller/saldoClientePrincipal.js"></script>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </body>
 
 </html>
