@@ -1,5 +1,6 @@
     /* background: url('../../fundo.png') no-repeat center center; */
     
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap&family=Signika&display=swap');
     body {
         background: rgb(214, 213, 213);
     }
@@ -549,8 +550,37 @@
         transform: scale(1.75);
     }
     
+    .img-card1 {
+        margin-top: 0.5em;
+        width: 170px;
+        height: 170px;
+    }
+    
     .card1 {
+        width: 200px;
+        height: 200px;
         margin-top: 2em;
         background: #fdfdfd34;
         border-radius: 100%;
+    }
+    
+    .btn-offer {
+        background: rgba(169, 255, 181, 0.281);
+        color: rgb(255, 255, 255);
+    }
+    
+    .btn-offer:hover {
+        background: rgb(62, 153, 67);
+        color: rgb(255, 255, 255);
+    }
+    
+    .text-product {
+        letter-spacing: 3px;
+        font-family: 'Signika', sans-serif;
+        font-size: 22px;
+    }
+    
+    .text-price {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 18px;
     }

@@ -24,84 +24,84 @@ $(document).ready(function() {
 
                             <div class="row">
                                 <div class="col-12 col-md-12">
-                                    <div class="form-group">
-                                        <div class="wrap-input100">
-                                            <input type="text" class="input100" placeholder="Digite seu Email" name="EMAIL_CLIENTES" value="` + dados[i].EMAIL_CLIENTES + `">
-                                            <span class="focus-input100"></span>
-                                        </div>
+                                    <div class=" form-group form">
+                                        <input type="text" name="EMAIL_CLIENTES" id="EMAIL_CLIENTES" aria-autocomplete="off" required value="` + dados[i].EMAIL_CLIENTES + `">
+                                        <label for="EMAIL_CLIENTES" class="label-input">
+                                            <span class="content-input">Email</span>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-12 col-md-12">
-                                    <div class="form-group">
-                                        <div class="wrap-input100">
-                                            <input type="text" class="input100" placeholder="Digite seu nome" name="NOME_CLIENTES" value="` + dados[i].NOME_CLIENTES + `">
-                                            <span class="focus-input100"></span>
-                                        </div>
+                                    <div class=" form-group form">
+                                        <input type="text" name="NOME_CLIENTES" id="NOME_CLIENTES" aria-autocomplete="off" required value="` + dados[i].NOME_CLIENTES + `">
+                                        <label for="NOME_CLIENTES" class="label-input">
+                                            <span class="content-input">Nome</span>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-12 col-md-6">
-                                    <div class="form-group">
-                                        <div class="wrap-input100">
-                                            <input type="text" class="input100" placeholder="Digite seu CPF" name="CPF_CLIENTES" value="` + dados[i].CPF_CLIENTES + `">
-                                            <span class="focus-input100"></span>
-                                        </div>
+                                    <div class=" form-group form">
+                                        <input type="text" name="CPF_CLIENTES" id="CPF_CLIENTES" aria-autocomplete="off" required value="` + dados[i].CPF_CLIENTES + `">
+                                        <label for="CPF_CLIENTES" class="label-input">
+                                            <span class="content-input">CPF</span>
+                                        </label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <div class="form-group">
-                                        <div class="wrap-input100">
-                                            <input type="text" class="input100" placeholder="Digite seu RG" name="RG_CLIENTES" value="` + dados[i].RG_CLIENTES + `">
-                                            <span class="focus-input100"></span>
-                                        </div>
+                                    <div class=" form-group form">
+                                        <input type="text" name="RG_CLIENTES" id="RG_CLIENTES" aria-autocomplete="off" required value="` + dados[i].RG_CLIENTES + `">
+                                        <label for="RG_CLIENTES" class="label-input">
+                                            <span class="content-input">RG</span>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-12 col-md-6">
-                                    <div class="form-group">
-                                        <div class="wrap-input100">
-                                            <input type="text" class="input100" placeholder="Data de Nascimento" name="DATA_NASCIMENTO_CLIENTES"  value="` + dados[i].DATA_NASCIMENTO_CLIENTES + `">
-                                            <span class="focus-input100"></span>
-                                        </div>
+                                    <div class=" form-group form">
+                                        <input type="text" name="DATA_NASCIMENTO_CLIENTES" id="DATA_NASCIMENTO_CLIENTES" aria-autocomplete="off" required value="` + dados[i].DATA_NASCIMENTO_CLIENTES + `">
+                                        <label for="DATA_NASCIMENTO_CLIENTES" class="label-input">
+                                            <span class="content-input">Data de nascimento</span>
+                                        </label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <div class="form-group">
-                                        <div class="wrap-input100">
-                                            <input type="text" class="input100" placeholder="Sexo do Usuário" name="SEXO_CLIENTES" value="` + dados[i].SEXO_CLIENTES + `">
-                                            <span class="focus-input100"></span>
-                                        </div>
+                                    <div class=" form-group form">
+                                        <input type="text" name="SEXO_CLIENTES" id="SEXO_CLIENTES" aria-autocomplete="off" required value="` + dados[i].SEXO_CLIENTES + `">
+                                        <label for="SEXO_CLIENTES" class="label-input">
+                                            <span class="content-input">Data de nascimento</span>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row ">
                                 <div class="col-12 col-md-6">
-                                    <div class="form-group">
-                                        <div class="wrap-input100">
-                                            <input type="text" class="input100" placeholder="Nacionalidade" name="NACIONALIDADE_CLIENTES" value="` + dados[i].NACIONALIDADE_CLIENTES + `">
-                                            <span class="focus-input100"></span>
-                                        </div>
+                                    <div class=" form-group form">
+                                        <input type="text" name="CELULAR_CLIENTES" id="CELULAR_CLIENTES" aria-autocomplete="off" required value="` + dados[i].CELULAR_CLIENTES + `">
+                                        <label for="CELULAR_CLIENTES" class="label-input">
+                                            <span class="content-input">Data de nascimento</span>
+                                        </label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <div class="form-group">
-                                        <div class="wrap-input100">
-                                            <input type="text" class="input100" placeholder="Digite seu telefone" name="CELULAR_CLIENTES"  value="` + dados[i].CELULAR_CLIENTES + `">
-                                            <span class="focus-input100"></span>
-                                        </div>
+                                    <div class=" form-group form">
+                                        <input type="text" name="NACIONALIDADE_CLIENTES" id="NACIONALIDADE_CLIENTES" aria-autocomplete="off" required value="` + dados[i].NACIONALIDADE_CLIENTES + `">
+                                        <label for="NACIONALIDADE_CLIENTES" class="label-input">
+                                            <span class="content-input">Data de nascimento</span>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
 
-                            <button class="btn btn-block btn-outline-primary btn-update"> <i class="mdi mdi-content-save"></i> Salvar </button>
+                            <button class="btn btn-block btn-primary btn-update"> <i class="mdi mdi-content-save"></i> Salvar </button>
                         </form>
                     `
 
