@@ -7,7 +7,7 @@
     $ID_USUARIOS = $_SESSION['ID_USUARIOS'];
 
     $sql = 'SELECT sum(saldo_clientes.SALDO_CLIENTES) AS saldo_clientes,
-	            clientes.NOME_CLIENTES 
+                clientes.NOME_CLIENTES 
             FROM saldo_clientes
             INNER JOIN clientes ON saldo_clientes.ID_CLIENTE = clientes.ID_CLIENTES
             WHERE clientes.ID_USUARIOS = :ID_USUARIOS
@@ -18,14 +18,10 @@
     $resultado->execute();
 
     while($resultadoSaldo = $resultado->fetch(PDO::FETCH_ASSOC)) {
-        $saldoCliente[] = array_map('utf8_encode', $resultadoSaldo);
+        $totalSaldo[] = array_map('utf8_encode', $resultadoSaldo);
     }
 
-    echo json_encode($saldoCliente);
-
-
-
-
+    echo json_encode($totalSaldo);
 ?>
 
 

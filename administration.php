@@ -250,6 +250,7 @@
                         <h3 class="text-dark">Painel do Administrador</h3>
                     </div>
                 </div>
+
                 <div class="row mt-3">
                     <div class="col-6 col-md-4 mt-2">
                         <button class="btn btn-dark btn-block text-center produtos-adm">
@@ -257,60 +258,70 @@
                             <p>Produtos</p>
                         </button>
                     </div>
+
                     <div class="col-6 col-md-4 mt-2">
                         <button class="btn btn-dark btn-block text-center ctr-adm">
                             <h1> <i class="mdi mdi-account"> </i> </h1>
                             <p>Clientes</p>
                         </button>
                     </div>
+
                     <div class="col-6 col-md-4 mt-2">
                         <button class="btn btn-dark btn-block text-center historico-adm">
                             <h1> <i class="mdi mdi-file-document-box-outline"> </i> </h1>
                             <p>Histórico</p>
                         </button>
                     </div>
+
                     <div class="col-6 col-md-4 mt-2">
                         <button class="btn btn-dark btn-block text-center marca-adm">
                             <h1> <i class="mdi mdi-file-document-box-outline"> </i> </h1>
                             <p>Marca</p>
                         </button>
                     </div>
+
                     <div class="col-6 col-md-4 mt-2">
                         <button class="btn btn-dark btn-block text-center fornecedores-adm">
                             <h1> <i class="mdi mdi-file-document-box-outline"> </i> </h1>
                             <p>Fornecedores</p>
                         </button>
                     </div>
+
                     <div class="col-6 col-md-4 mt-2">
                         <button class="btn btn-dark btn-block text-center formProviders-administration">
                             <h1> <i class="mdi mdi-car-estate"> </i> </h1>
                             <p>Formulario Fornecedor</p>
                         </button>
                     </div>
+
                     <div class="col-6 col-md-4 mt-2">
                         <button class="btn btn-dark btn-block text-center formClient-administration">
                             <h1> <i class="mdi mdi-file-document-box-outline"> </i> </h1>
                             <p>Formulario Clientes</p>
                         </button>
                     </div>
+
                     <div class="col-6 col-md-4 mt-2">
                         <button class="btn btn-dark btn-block text-center formProducts-administration">
                             <h1> <i class="mdi mdi-car-estate"> </i> </h1>
                             <p>Formulario Produtos</p>
                         </button>
                     </div>
+
                     <div class="col-6 col-md-4 mt-2">
                         <button class="btn btn-dark btn-block text-center formBrands-administration">
                             <h1> <i class="mdi mdi-briefcase-edit-outline"> </i> </h1>
                             <p>Formulario Marca</p>
                         </button>
                     </div>
+
                     <div class="col-6 col-md-4 mt-2">
                         <button class="btn btn-dark btn-block text-center formUser-administration">
                             <h1> <i class="mdi mdi-briefcase-edit-outline"> </i> </h1>
                             <p>Formulario Usuarios</p>
                         </button>
                     </div>
+
                     <div class="col-6 col-md-4 mt-2">
                         <button class="btn btn-dark btn-block text-center verificarCompra-adm">
                             <h1> <i class="mdi mdi-briefcase-edit-outline"> </i> </h1>

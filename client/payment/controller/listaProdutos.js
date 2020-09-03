@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('#listaProdutosCards').empty()
 
-    var url = "client/shopping/model/listaProdutos.php"
+    var url = "client/payment/model/listaProdutos.php"
 
     $.ajax({
         type: 'POST',

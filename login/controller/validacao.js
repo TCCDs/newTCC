@@ -14,11 +14,11 @@ $(document).ready(function() {
             success: function(dados) {
 
                 if (dados.return == 1) {
-                    let url = 'customerPanel.html'
+                    let url = 'customerPanel.php'
                     $(location).attr('href', url)
 
                 } else if (dados.return == 2) {
-                    let url = 'administration.html'
+                    let url = 'administration.php'
                     $(location).attr('href', url)
 
                 } else {

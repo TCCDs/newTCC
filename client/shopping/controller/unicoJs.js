@@ -3,7 +3,7 @@ $(document).ready(function() {
     load_cart_data();
 
     function load_product() {
-        var url = "client/shopping/model/fetch_item.php"
+        var url = "client/leitorQr/model/testeLeitor.php"
 
         $.ajax({
             type: 'POST',

@@ -98,7 +98,7 @@ function stripePay(event) {
 
     if (validate_form() == true) {
         $('#button_action').attr('disabled', 'disabled');
-        $('#button_action').val('Processo de pagamento....');
+        $('#button_action').val('Processando Pagamento');
         Stripe.createToken({
             number: $('#NUMERO_CARTAO').val(),
             cvc: $('#CODIGO_CARTAO').val(),

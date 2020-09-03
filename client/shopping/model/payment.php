@@ -5,7 +5,6 @@
 
 	if(isset($_POST["token"])) {
 		require_once '../../../vendor/autoload.php';
-
 		\Stripe\Stripe::setApiKey('sk_test_L4OlaLFVannSQwgff3M8c6xy00XcTFpF85');
 
 		$customer = \Stripe\Customer::create(array(
@@ -20,7 +19,7 @@
 			'customer'		=>	$customer->id,
 			'amount'		=>	$_POST["total_amount"] * 100,
 			'currency'		=>	$_POST["currency_code"],
-			'description'	=>	$_POST["item_details"],
+			'description'	=>	'Supermercado Caravelas',
 			'metadata'		=> array(
 				'order_id'		=>	$order_number
 			)
@@ -112,7 +111,7 @@
 			unset($_SESSION["shopping_cart"]);
 
 			$_SESSION["success_message"] = "O pagamento foi concluído com sucesso. O ID TXN é " . $response["balance_transaction"] . "";
-			header('location:../../../customerPanel.html');
+			header('location:../../../customerPanel.php');
 
 		}
 	}
