@@ -80,7 +80,7 @@ $(function() {
             })
         } else {
             var dados = $('#formulario').serialize()
-            var url = "administration/products/model/addProductsAdministration"
+            var url = "administration/products/model/addProductsAdministration.php"
 
             $.ajax({
                 type: 'POST',

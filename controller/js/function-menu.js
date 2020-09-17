@@ -89,6 +89,9 @@ $(document).ready(function() {
         window.location.href = "index.html";
 
     })
+
+    $("#sidebar").hide();
+
     $(".sidebar-dropdown > a").click(function() {
         $(".sidebar-submenu").slideUp(200);
         if (
@@ -113,10 +116,22 @@ $(document).ready(function() {
 
     $("#close-sidebar").click(function() {
         $(".page-wrapper").removeClass("toggled");
+
     });
     $("#show-sidebar").click(function() {
         $(".page-wrapper").addClass("toggled");
+        $("#sidebar").show();
     });
 
+});
 
-})
+$('#show_password').hover(function(e) {
+    e.preventDefault();
+    if ($('#SENHA_USUARIOS').attr('type') == 'password') {
+        $('#SENHA_USUARIOS').attr('type', 'text');
+        $('#show_password').attr('class', 'mdi mdi-eye');
+    } else {
+        $('#SENHA_USUARIOS').attr('type', 'password');
+        $('#show_password').attr('class', 'mdi mdi-eye-off');
+    }
+});

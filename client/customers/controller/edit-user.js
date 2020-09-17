@@ -109,6 +109,7 @@ $(document).ready(function() {
                 }
                 $('#modalClient').modal('show')
                 $('body').append('<script src="client/customers/controller/updateCustomersUser.js"></script>')
+                    // $('body').append(' <script src="controller/js/input.js"></script>')
             }
         })
     })
