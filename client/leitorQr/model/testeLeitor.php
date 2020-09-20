@@ -10,6 +10,6 @@
         $listaProdutos[] = array_map('utf8_encode', $values);
     }   
 
-    echo json_encode($listaProdutos);
+    echo json_encode($listaProdutos, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
     
 ?>

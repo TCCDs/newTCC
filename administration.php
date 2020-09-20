@@ -1,4 +1,5 @@
 <?php
+/*
     session_start();
 
     if(!empty($_SESSION['ID_USUARIOS'])):
@@ -6,6 +7,7 @@
     else:
         header("Location: ./index.html");	
     endif;
+    */
 ?> 
 
 

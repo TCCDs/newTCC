@@ -113,7 +113,12 @@
             <div class="fixed-bottom">
                 <div class="menu">
                     <div class="row text-center">
+<<<<<<< HEAD
                         <div class="col-6 mt-3 border-right offer">
+=======
+                        <div class="col-6 mt-3 border-right">
+                            <button class=" btn offer">
+>>>>>>> 10ab2d3a3da0333d4a036cf67a70cfa5716ed349
                             <h1><i class="mdi mdi-check-decagram text-light"></i></h1>
                             <h5>Ofertas do dia</h5>
                         </div>

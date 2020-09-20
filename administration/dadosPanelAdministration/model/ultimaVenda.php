@@ -2,8 +2,7 @@
     include_once("../../../server/Conn.php");
     $conn = new Conn();
 
-
-    $sql = "SELECT COUNT(compras.ID_COMPRAS) AS ultima_venda, compras.DATA_CAD AS datas_vendas FROM compras
+    $sql = "SELECT COUNT(compras.ID_COMPRAS) AS ultima_venda, compras.DATA_CAD_COMPRAS AS datas_vendas FROM compras
     order BY compras.ID_COMPRAS DESC";
     $resultado = $conn->getConn()->prepare($sql);
     $resultado->execute();
