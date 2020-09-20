@@ -109,7 +109,8 @@
                 <div class="menu">
                     <div class="row text-center">
                         <div class="col-6 mt-3 border-right">
-                            <h1><i class="mdi mdi-check-decagram text-light "></i></h1>
+                            <button class=" btn offer">
+                            <h1><i class="mdi mdi-check-decagram text-light"></i></h1>
                             <h5>Ofertas do dia</h5>
                         </div>
                         <div class="col-6 mt-3 ">

@@ -15,7 +15,7 @@
         $produtos[] = array_map('utf8_encode', $resultado_user);
     }
 
-    $_SESSION['testeProdutos'] = json_encode($produtos);
+    $_SESSION['testeProdutos'] = json_encode($produtos,  JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
     header("Location: ../view/testeLeitor.html");
 
 ?>

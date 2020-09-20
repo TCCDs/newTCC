@@ -1,7 +1,7 @@
 -- --------------------------------------------------------
 -- Servidor:                     127.0.0.1
--- Versão do servidor:           10.4.11-MariaDB - Source distribution
--- OS do Servidor:               Linux
+-- Versão do servidor:           10.4.14-MariaDB - mariadb.org binary distribution
+-- OS do Servidor:               Win64
 -- HeidiSQL Versão:              11.0.0.5919
 -- --------------------------------------------------------
 
@@ -73,33 +73,37 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   PRIMARY KEY (`ID_CLIENTES`),
   KEY `FK_ID_USUARIOS_LOGIN_USUARIOS` (`ID_USUARIOS`),
   CONSTRAINT `FK_ID_USUARIOS_LOGIN_USUARIOS` FOREIGN KEY (`ID_USUARIOS`) REFERENCES `login_usuarios` (`ID_USUARIOS`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela new_supermercado.clientes: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela new_supermercado.clientes: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
+INSERT INTO `clientes` (`ID_CLIENTES`, `ID_USUARIOS`, `NOME_CLIENTES`, `RG_CLIENTES`, `CPF_CLIENTES`, `SEXO_CLIENTES`, `DATA_NASCIMENTO_CLIENTES`, `EMAIL_CLIENTES`, `CELULAR_CLIENTES`, `RAZAO_SOCIAL_CLIENTES`, `NOME_FANTASIA_CLIENTES`, `CNPJ_CLIENTES`, `CEP_CLIENTES`, `CIDADE_CLIENTES`, `ESTADO_CLIENTES`, `ENDERECO_CLIENTES`, `NUMERO_CLIENTES`, `BAIRRO_CLIENTES`, `NACIONALIDADE_CLIENTES`, `COMPLEMENTO_CLIENTES`, `DATA_CAD`, `DATA_MOD`) VALUES
+	(1, 1, 'Jessica Oliveira', '158426359', '15824896522', 'Feminino', '0000-00-00', 'jessicaoliveira@gmail.com', '14995663225', NULL, NULL, NULL, '14852333', 'Bauru', 'SP', '13 Abril', '158', 'centro', 'brasileira', 'casa', '2020-09-08 19:22:25', '2020-09-08 19:22:25');
 /*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela new_supermercado.cliente_pagamentos
 CREATE TABLE IF NOT EXISTS `cliente_pagamentos` (
   `ID_PAGAMENTO` int(11) NOT NULL AUTO_INCREMENT,
   `ID_MOEDAS` int(11) DEFAULT NULL,
-  `ORDER_NUMBER` int(11) NOT NULL DEFAULT 0,
-  `ORDER_TOTAL_AMOUNT` float NOT NULL DEFAULT 0,
-  `TRANSACAO` varchar(255) NOT NULL DEFAULT '0',
-  `CODIGO_CARTAO` int(11) NOT NULL DEFAULT 0,
-  `CARTAO_VALIDADE_MES` varchar(255) NOT NULL DEFAULT '0',
-  `CARTAO_VALIDADE_ANO` varchar(255) NOT NULL DEFAULT '0',
-  `ORDER_STATUS` varchar(255) NOT NULL DEFAULT '0',
-  `NUMERO_CARTAO` varchar(255) NOT NULL DEFAULT '0',
-  `EMAIL_CLIENTE` varchar(255) NOT NULL DEFAULT '0',
-  `NOME_CARTAO` varchar(255) NOT NULL DEFAULT '0',
+  `ORDER_NUMBER` int(11) DEFAULT NULL,
+  `ORDER_TOTAL_AMOUNT` float DEFAULT NULL,
+  `TRANSACAO` varchar(255) DEFAULT NULL,
+  `CODIGO_CARTAO` int(11) DEFAULT NULL,
+  `CARTAO_VALIDADE_MES` varchar(255) DEFAULT NULL,
+  `CARTAO_VALIDADE_ANO` varchar(255) DEFAULT NULL,
+  `ORDER_STATUS` varchar(255) DEFAULT NULL,
+  `NUMERO_CARTAO` varchar(255) DEFAULT NULL,
+  `EMAIL_CLIENTE` varchar(255) DEFAULT NULL,
+  `NOME_CARTAO` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID_PAGAMENTO`),
   KEY `FK_ID_MOEDAS_MOEDAS` (`ID_MOEDAS`),
   CONSTRAINT `FK_ID_MOEDAS_MOEDAS` FOREIGN KEY (`ID_MOEDAS`) REFERENCES `moedas` (`ID_MOEDAS`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela new_supermercado.cliente_pagamentos: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela new_supermercado.cliente_pagamentos: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `cliente_pagamentos` DISABLE KEYS */;
+INSERT INTO `cliente_pagamentos` (`ID_PAGAMENTO`, `ID_MOEDAS`, `ORDER_NUMBER`, `ORDER_TOTAL_AMOUNT`, `TRANSACAO`, `CODIGO_CARTAO`, `CARTAO_VALIDADE_MES`, `CARTAO_VALIDADE_ANO`, `ORDER_STATUS`, `NUMERO_CARTAO`, `EMAIL_CLIENTE`, `NOME_CARTAO`) VALUES
+	(1, 2, 775684, 20, 'txn_1HPG3VDZjX8sc9JCEe96Y9H7', 148, '02', '2021', 'succeeded', '4242424242424242', NULL, 'Jessica Oliveira');
 /*!40000 ALTER TABLE `cliente_pagamentos` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela new_supermercado.compras
@@ -110,15 +114,17 @@ CREATE TABLE IF NOT EXISTS `compras` (
   `VALOR_COMPRAS` float(10,2) DEFAULT NULL,
   `TOTAL_DESCONTO_COMPRAS` float(10,2) DEFAULT NULL,
   `STATUS_COMPRAS` varchar(11) DEFAULT NULL,
-  `DATA_CAD` datetime DEFAULT current_timestamp(),
+  `DATA_CAD_COMPRAS` datetime DEFAULT current_timestamp(),
   `DATA_MOD` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`ID_COMPRAS`) USING BTREE,
   KEY `FK_IDCLIENTES_COMPRAS` (`ID_CLIENTES_COMPRAS`),
   CONSTRAINT `FK_IDCLIENTES_COMPRAS` FOREIGN KEY (`ID_CLIENTES_COMPRAS`) REFERENCES `clientes` (`ID_CLIENTES`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela new_supermercado.compras: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela new_supermercado.compras: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `compras` DISABLE KEYS */;
+INSERT INTO `compras` (`ID_COMPRAS`, `ID_CLIENTES_COMPRAS`, `CODIGO_COMPRAS`, `VALOR_COMPRAS`, `TOTAL_DESCONTO_COMPRAS`, `STATUS_COMPRAS`, `DATA_CAD_COMPRAS`, `DATA_MOD`) VALUES
+	(1, 1, '200705041', 9.28, 0.00, 'F', '2020-09-08 21:00:23', '2020-09-08 21:00:23');
 /*!40000 ALTER TABLE `compras` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela new_supermercado.compras_itens
@@ -134,10 +140,13 @@ CREATE TABLE IF NOT EXISTS `compras_itens` (
   PRIMARY KEY (`ID_COMPRA_ITENS`),
   KEY `FK_ID_COMPRAS_COMPRAS_ITENS` (`ID_COMPRAS`),
   CONSTRAINT `FK_ID_COMPRAS_COMPRAS_ITENS` FOREIGN KEY (`ID_COMPRAS`) REFERENCES `compras` (`ID_COMPRAS`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela new_supermercado.compras_itens: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela new_supermercado.compras_itens: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `compras_itens` DISABLE KEYS */;
+INSERT INTO `compras_itens` (`ID_COMPRA_ITENS`, `ID_COMPRAS`, `CODIGO_ITENS`, `NOME_PRODUTOS`, `QUANTIDADE_PRODUTOS`, `PRECO_PRODUTOS`, `LUCRO`, `QR_CODE`) VALUES
+	(1, 1, '1026437604', 'Detergente LÃÂ­quido YpÃÂª Clear ', 1, 1.89, 0.00, '1399495777'),
+	(2, 1, '1026437604', 'Coca-Cola 2 Litros', 1, 7.39, 0.00, '1399495777');
 /*!40000 ALTER TABLE `compras_itens` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela new_supermercado.compras_pagamentos
@@ -153,13 +162,16 @@ CREATE TABLE IF NOT EXISTS `compras_pagamentos` (
   `TRANSACAO` varchar(255) NOT NULL,
   `TOTAL_COMPRA` float(10,2) NOT NULL,
   `CODIGO_PAGAMENTO` varchar(255) NOT NULL,
+  `DATA_CAD` datetime NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`ID_COMPRAS_PAGAMENTO`),
   KEY `FK_ID_COMPRAS_ITENS_COMPRAS_ITENS` (`ID_COMPRAS_ITENS`),
   CONSTRAINT `FK_ID_COMPRAS_ITENS_COMPRAS_ITENS` FOREIGN KEY (`ID_COMPRAS_ITENS`) REFERENCES `compras_itens` (`ID_COMPRA_ITENS`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela new_supermercado.compras_pagamentos: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela new_supermercado.compras_pagamentos: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `compras_pagamentos` DISABLE KEYS */;
+INSERT INTO `compras_pagamentos` (`ID_COMPRAS_PAGAMENTO`, `ID_COMPRAS_ITENS`, `NOME_CARTAO`, `NUMERO_CARTAO`, `STATUS_PAGAMENTO`, `CARTAO_VALIDADE_MES`, `CARTAO_VALIDADE_ANO`, `CODIGO_CARTAO`, `TRANSACAO`, `TOTAL_COMPRA`, `CODIGO_PAGAMENTO`, `DATA_CAD`) VALUES
+	(1, 2, 'Jessica Oliveira', '4242424242424242', 'succeeded', '02', '2021', 148, 'txn_1HPGjbDZjX8sc9JCzetX4sN4', 9.28, '451420', '2020-09-12 20:58:21');
 /*!40000 ALTER TABLE `compras_pagamentos` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela new_supermercado.fornecedores
@@ -171,7 +183,7 @@ CREATE TABLE IF NOT EXISTS `fornecedores` (
   `RAZAO_SOCIAL_FORNECEDORES` varchar(255) DEFAULT NULL,
   `CELULAR_FORNECEDORES` varchar(11) DEFAULT NULL,
   `SEXO_FORNECEDORES` varchar(255) DEFAULT NULL,
-  `DATA_NASCIMENTO_FORNECEDORES` varchar(255) DEFAULT NULL,
+  `DATA_NASCIMENTO_FORNECEDORES` date DEFAULT NULL,
   `NACIONALIDADE_FORNECEDORES` varchar(255) DEFAULT NULL,
   `CEP_FORNECEDORES` varchar(8) DEFAULT NULL,
   `CIDADE_FORNECEDORES` varchar(255) DEFAULT NULL,
@@ -183,10 +195,12 @@ CREATE TABLE IF NOT EXISTS `fornecedores` (
   `DATA_CAD` datetime DEFAULT current_timestamp(),
   `DATA_MOD` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`ID_FORNECEDORES`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela new_supermercado.fornecedores: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela new_supermercado.fornecedores: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `fornecedores` DISABLE KEYS */;
+INSERT INTO `fornecedores` (`ID_FORNECEDORES`, `NOME_FANTASIA_FORNECEDORES`, `CNPJ_FORNECEDORES`, `EMAIL_FORNECEDORES`, `RAZAO_SOCIAL_FORNECEDORES`, `CELULAR_FORNECEDORES`, `SEXO_FORNECEDORES`, `DATA_NASCIMENTO_FORNECEDORES`, `NACIONALIDADE_FORNECEDORES`, `CEP_FORNECEDORES`, `CIDADE_FORNECEDORES`, `ENDERECO_FORNECEDORES`, `BAIRRO_FORNECEDORES`, `NUMERO_FORNECEDORES`, `ESTADO_FORNECEDORES`, `COMPLEMENTO_FORNECEDORES`, `DATA_CAD`, `DATA_MOD`) VALUES
+	(1, 'Felipe', '5151', 'felipe@gmail.com', 'teste', '14885263332', 'M', '2020-06-03', 'Brasileiro', '15248025', 'teste', 'teste', 'teste', '144', 'sp', 'teste', '2020-09-08 20:42:17', '2020-09-08 20:44:17');
 /*!40000 ALTER TABLE `fornecedores` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela new_supermercado.login_usuarios
@@ -196,10 +210,12 @@ CREATE TABLE IF NOT EXISTS `login_usuarios` (
   `SENHA_USUARIOS` varchar(255) DEFAULT NULL,
   `TIPO_USUARIOS` int(1) DEFAULT NULL,
   PRIMARY KEY (`ID_USUARIOS`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela new_supermercado.login_usuarios: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela new_supermercado.login_usuarios: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `login_usuarios` DISABLE KEYS */;
+INSERT INTO `login_usuarios` (`ID_USUARIOS`, `LOGIN_USUARIOS`, `SENHA_USUARIOS`, `TIPO_USUARIOS`) VALUES
+	(1, 'Jessica Oliveira', '$2y$10$Wke/jyAbaSxB7QXtNeTTTemdOLlhSpwBuqyn0QdclBOZdb6SFwu1e', 1);
 /*!40000 ALTER TABLE `login_usuarios` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela new_supermercado.marca
@@ -208,26 +224,33 @@ CREATE TABLE IF NOT EXISTS `marca` (
   `CODIGO_MARCA` varchar(10) DEFAULT NULL,
   `NOME_MARCA` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID_MARCA`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela new_supermercado.marca: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela new_supermercado.marca: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `marca` DISABLE KEYS */;
+INSERT INTO `marca` (`ID_MARCA`, `CODIGO_MARCA`, `NOME_MARCA`) VALUES
+	(1, '256148752', 'Coca Cola'),
+	(2, '148523698', 'Ypê'),
+	(3, '778542269', 'Colgate');
 /*!40000 ALTER TABLE `marca` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela new_supermercado.moedas
 CREATE TABLE IF NOT EXISTS `moedas` (
   `ID_MOEDAS` int(11) NOT NULL AUTO_INCREMENT,
   `ID_CLIENTES_MOEDAS` int(11) DEFAULT NULL,
-  `CODIGOS` int(11) DEFAULT NULL,
+  `CODIGOS` varchar(255) DEFAULT NULL,
   `VALOR_MOEDAS` float(10,2) DEFAULT NULL,
   `DATA_CAD_MOEDAS` datetime DEFAULT current_timestamp(),
   PRIMARY KEY (`ID_MOEDAS`),
   KEY `FK_ID_CLIENTES_MOEDAS` (`ID_CLIENTES_MOEDAS`),
   CONSTRAINT `FK_ID_CLIENTES_MOEDAS` FOREIGN KEY (`ID_CLIENTES_MOEDAS`) REFERENCES `clientes` (`ID_CLIENTES`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela new_supermercado.moedas: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela new_supermercado.moedas: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `moedas` DISABLE KEYS */;
+INSERT INTO `moedas` (`ID_MOEDAS`, `ID_CLIENTES_MOEDAS`, `CODIGOS`, `VALOR_MOEDAS`, `DATA_CAD_MOEDAS`) VALUES
+	(1, 1, '1760117895', 20.00, '2020-09-08 19:35:35'),
+	(2, 1, '353174513', 20.00, '2020-09-08 20:16:54');
 /*!40000 ALTER TABLE `moedas` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela new_supermercado.produtos
@@ -255,10 +278,13 @@ CREATE TABLE IF NOT EXISTS `produtos` (
   KEY `FK_ID_FORNECEDORES_PRODUTOS` (`ID_FORNECEDORES_PRODUTOS`),
   CONSTRAINT `FK_ID_FORNECEDORES_PRODUTOS` FOREIGN KEY (`ID_FORNECEDORES_PRODUTOS`) REFERENCES `fornecedores` (`ID_FORNECEDORES`),
   CONSTRAINT `FK_produtos_marca` FOREIGN KEY (`ID_MARCAS_PRODUTOS`) REFERENCES `marca` (`ID_MARCA`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela new_supermercado.produtos: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela new_supermercado.produtos: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `produtos` DISABLE KEYS */;
+INSERT INTO `produtos` (`ID_PRODUTOS`, `ID_MARCAS_PRODUTOS`, `ID_FORNECEDORES_PRODUTOS`, `NOME_PRODUTOS`, `PRECO_CUSTO_PRODUTOS`, `PRECO_VENDA_PRODUTOS`, `PESO_PRODUTOS`, `VALIDADE_PRODUTOS`, `DESCRICAO_PRODUTOS`, `QR_CODE_PRODUTOS`, `ESTOQUE_PRODUTOS`, `CATEGORIAS_PRODUTOS`, `CORREDOR_PRODUTOS`, `PRATILEIRA_PRODUTOS`, `LOTE_PRODUTOS`, `STATUS_PRODUTOS`, `DATA_CAD_PRODUTOS`, `DATA_MOD_PRODUTOS`) VALUES
+	(1, 2, 1, 'Detergente Líquido Ypê Clear ', 0.50, 1.89, '500ML', '2021-09-08', 'Detergente Líquido Ypê Clear 500ml', '15962370', 10, 'Alimento', 'A', 'A', '158', 'A', '2020-09-08 20:46:44', '2020-09-08 20:50:07'),
+	(2, 1, 1, 'Coca-Cola 2 Litros', 3.02, 7.39, '2L', '2020-12-08', 'Coca-Cola 2 Litros', '15962371', 25, 'Bebida', 'A', 'B', '365', 'A', '2020-09-08 20:55:13', '2020-09-08 20:57:13');
 /*!40000 ALTER TABLE `produtos` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela new_supermercado.saldo_clientes
@@ -269,10 +295,12 @@ CREATE TABLE IF NOT EXISTS `saldo_clientes` (
   PRIMARY KEY (`ID_SALDO`),
   KEY `FK_ID_CLIENTE_SALDO_CLIENTES` (`ID_CLIENTE`),
   CONSTRAINT `FK_ID_CLIENTE_SALDO_CLIENTES` FOREIGN KEY (`ID_CLIENTE`) REFERENCES `clientes` (`ID_CLIENTES`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela new_supermercado.saldo_clientes: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela new_supermercado.saldo_clientes: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `saldo_clientes` DISABLE KEYS */;
+INSERT INTO `saldo_clientes` (`ID_SALDO`, `ID_CLIENTE`, `SALDO_CLIENTES`) VALUES
+	(1, 1, 31);
 /*!40000 ALTER TABLE `saldo_clientes` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

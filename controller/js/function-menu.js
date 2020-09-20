@@ -72,11 +72,18 @@ $(document).ready(function() {
 
     })
 
-    $('.offer').click(function() {
+    /*$('.offer').click(function() {
         $('#conteudo').load('administration/offer/view/offerday.html')
         $('.saldo').hide();
         $('.menu').hide();
+    })*/
+
+    $('.offer').click(function() {
+        $('#conteudo').load('administration/offer/view/ofertas.html')
+        $('.saldo').hide();
+        $('.menu').hide();
     })
+
     $('.inscreva').click(function() {
         $('#conteudo').load('administration/form/formUsuario/view/formUsers.html')
 
