@@ -23,8 +23,15 @@
     <div class="jumbotron mt-2">
         <h1 class="display-4">Finalizar compra</h1>
         <hr class="my-4">
-        <h4>Detalhes do pagamento</h4>
-    </div>
+             <div class="row">
+                        <div class="col-6 col-md-6">
+                            <h6>Valor Adicionado</h6>
+                        </div>
+                        <div class="col-6 col-md-6">
+                         R$   <?php echo $_SESSION['moedas_clientes']; ?>
+                        </div>
+                    </div>  
+                  </div>
                     <form method="post" id="order_process_form" action="../model/payment.php">
                         <div class="row">
                             <div class="col-12 col md-12">
@@ -46,7 +53,7 @@
                                 </div>
                             </div>
                         </div>
-                            <div class="row">
+                <div class="row">
                     <div class="col-12 col-md-4">
                         <div class=" form-group form">
                             <input type="text" name="CARTAO_VALIDADE_MES" id="CARTAO_VALIDADE_MES" aria-autocomplete="off" required  maxlength="2" onkeypress="return only_number(event);">
@@ -76,28 +83,13 @@
                     </div>
                 </div>
 								
-								<div class="processPayment" align="center">
-									<input type="hidden" name="total_amount" value="<?php echo $_SESSION['moedas_clientes']; ?>" />
-									<input type="hidden" name="currency_code" value="BRL" />
-									<input type="button" name="button_action" id="button_action" class="btn btn-success btn-block btn-md" onclick="stripePay(event)" value="Pagar agora" />
-                                </div>
+                <div class="processPayment" align="center">
+                    <input type="hidden" name="total_amount" value="<?php echo $_SESSION['moedas_clientes']; ?>" />
+                    <input type="hidden" name="currency_code" value="BRL" />
+                    <input type="button" name="button_action" id="button_action" class="btn btn-success btn-block btn-md" onclick="stripePay(event)" value="Pagar agora" />
+                </div>
                                 
-                                <div class="col-12 col-md-12 mt-4">
-                                    <h6 class="mt-2 text-center">
-                                        Detalhes da compra
-                                    </h6>
-                                <div class="row">
-                                    <div class="col-12 col-md-12">
-                                    <div class="footerProcess">
-                                        <?php echo $_SESSION['moedas_clientes']; ?>
-                                </div>
-                                </div>
-                                </div>
-                                    
-                                </div>
-
-</div>
-</div>
+                               
 
 
         </form>

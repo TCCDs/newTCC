@@ -1,184 +1,38 @@
-<!-- <div class="container">
-    <br />
-    <h3 align="center"><a href="#">Carrinho de Compras - Caravelas</a></h3>
-    <br />
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="sr-only">Menu</span>
-                                <span class="glyphicon glyphicon-menu-hamburger"></span>
-                            </button>
-
-                <a class="navbar-brand" href="/">Nome: Cliente</a>
-            </div>
-
-            <div id="navbar-cart" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a id="cart-popover" class="btn" data-placement="bottom" title="Shopping Cart">
-                            <span class="glyphicon glyphicon-shopping-cart"></span>
-                            <span class="badge"></span>
-                            <span class="total_price">$ 0.00</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div id="popover_content_wrapper" style="display: none">
-        <span id="cart_details">
-                    <div class="table-responsive" id="order_table">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                                <tr>  
-                                    <th width="40%">Product Name</th>  
-                                    <th width="10%">Quantity</th>  
-                                    <th width="20%">Price</th>  
-                                    <th width="15%">Total</th>  
-                                    <th width="5%">Action</th>  
-                                </tr>
-                            </thead>
-    
-                            <tbody>
-    
-                            </tbody>
-                        </table>
-                    </div>
-                </span>
-
-        <div align="right">
-            <a href="client/shopping/model/order_process.php" class="btn btn-primary" id="check_out_cart">
-                <span class="glyphicon glyphicon-shopping-cart"></span> Check out
-            </a>
-
-            <a href="#" class="btn btn-default" id="clear_cart">
-                <span class="glyphicon glyphicon-trash"></span> Clear
-            </a>
-        </div>
+<div class="container">
+    <div class="col-12 col-md-12 mt-2 text-center">
+        <h3 class="text-info">Carrinho</h3>
     </div>
-
-    <div id="display_item" class="row">
-
-    </div>
-
-    <br /> <br />
 </div>
 
+<div class="row">
+    <div class="col-12 col-md-6">
+        <div id="cart_details">
 
-            <script src="../controller/addCart.js"></script>
-            <script src="../controller/cleanCart.js"></script>
-            <script src="../controller/deleteCart.js"></script>
-    
-            <script src="../controller/load_cart_data.js"></script>
-            <script src="../controller/load_product.js"></script>
-            <script src="../controller/popover.js"></script>
-        
-
-<script src="client/shopping/controller/unicoJs.js"></script>
-
-    </body>
-    
-    </html> -->
-
-
-<div class="container">
-    <h3 align="center"><a href="#">Carrinho de Compras - Caravelas</a></h3>
-    <!-- <nav class="navbar navbar-default" role="navigation">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="sr-only">Menu</span>
-                            <span class="glyphicon glyphicon-menu-hamburger"></span>
-                        </button>
-    
-                    <a class="navbar-brand" href="/">Nome: Cliente</a>
-                </div>
-    
-                <div id="navbar-cart" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a id="cart-popover" class="btn" data-placement="bottom" title="Shopping Cart">
-                                <span class="glyphicon glyphicon-shopping-cart"></span>
-                                <span class="badge"></span>
-                                <span class="total_price">$ 0.00</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>-->
-
-    <!-- <div id="popover_content_wrapper" style="display: none">
-            <span id="cart_details">
-                    <div class="table-responsive" id="order_table">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                                <tr>  
-                                    <th width="40%">Product Name</th>  
-                                    <th width="10%">Quantity</th>  
-                                    <th width="20%">Price</th>  
-                                    <th width="15%">Total</th>  
-                                    <th width="5%">Action</th>  
-                                </tr>
-                            </thead>
-                            <tbody>
-        
-                            </tbody>
-                        </table>
-                    </div>
-                </span>
-    
-            <div align="right">
-                <a href="client/shopping/model/order_process.php" class="btn btn-primary" id="check_out_cart">
-                    <span class="glyphicon glyphicon-shopping-cart"></span> cartão
-                </a>
-    
-                <a href="#" class="btn btn-default" id="clear_cart">
-                    <span class="glyphicon glyphicon-trash"></span> Clear
-                </a>
-            </div>
-        </div>-->
-
-    <div id="cart_details" class="row">
-
+        </div>
     </div>
-
-    <div class="row">
-        <div class="col-12 col-md-12">
-            <div class="jumbotron">
-                <h3>Escolha um pagamento</h3>
-                <hr class="my-4">
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-6 mt-2">
-                    <button class="btn btn-info btn-block payment-coin">
+    <div class="col-12 col-md-6">
+        <div class="jumbotron">
+            <h3>Escolha um pagamento</h3>
+            <hr class="my-4">
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 mt-2">
+                <button class="btn btn-info btn-block payment-coin">
                         <h4><i class="mdi mdi-coin"></i></h4>
                         Moeda Virtual
                     </button>
-                </div>
+            </div>
 
-                <div class="col-12 col-md-6 mt-2">
-                    <a href="client/shopping/model/order_process.php" class="btn btn-success btn-block" id="check_out_cart">
-                        <h4><i class="mdi mdi-card-bulleted "></i></h4>
-                        Cartão de Crédito
-                        <!--  <span class="glyphicon glyphicon-shopping-cart"></span> -->
-                    </a>
-
-                    <!-- <button class="btn btn-success btn-block credito-pagamento">
-                            <h4><i class="mdi mdi-card-bulleted "></i></h4>
-                            Cartão de Crédito</button> -->
-                </div>
+            <div class="col-12 col-md-6 mt-2">
+                <a href="client/shopping/model/order_process.php" class="btn btn-success btn-block" id="check_out_cart">
+                    <h4><i class="mdi mdi-card-bulleted "></i></h4>
+                    Cartão de Crédito
+                </a>
             </div>
         </div>
     </div>
-
-
-    <!-- <div id="display_item" class="row">
-    
-        </div> -->
 </div>
+
 
 <script src="client/shopping/controller/unicoJs.js"></script>
 <!-- <script src="components/js/bootstrap.min.js"></script>  -->

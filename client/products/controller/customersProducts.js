@@ -17,8 +17,18 @@ $(document).ready(function() {
                         <div class="card-body">
                                 <h5 class="card-title text-dark">` + dados[i].NOME_PRODUTOS + `</h5>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">` + dados[i].PRECO_VENDA_PRODUTOS + `</li>
-                                    <li class="list-group-item">` + dados[i].VALIDADE_PRODUTOS + `</li>
+                                    <li class="list-group-item text-right">
+                                    <div class="row">
+                                    <small class="text-left">Preço</small>
+                                    </div>
+                                    <h5>
+                                    ` + dados[i].PRECO_VENDA_PRODUTOS + ` </h5></li>
+                                    <li class="list-group-item text-right">
+                                    <div class="row">
+                                    <small class="text-left">Validade</small>
+                                    </div>
+                                    <h5>
+                                    ` + dados[i].VALIDADE_PRODUTOS + ` </h5></li>
                                     <li class="list-group-item"><button id="` + dados[i].ID_PRODUTOS + `" class="btn  btn-block btn-outline-primary btn-sm btn-view-produtos"> <i class="mdi mdi-eye mdi-18px "></i> </button>
                                     </li>
                                 </ul>

@@ -31,6 +31,5 @@
 		$data = array("return" => "Usuario e/ou senha não validado");
 	endif;
 
-	
 	echo json_encode($data);
 ?>
