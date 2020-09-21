@@ -48,16 +48,17 @@ $(document).ready(function() {
                 var i = 0;
                 while (data[i]) {
                     let listarProdutos = `
-                            <div class="col-md-4" style="margin-top:12px;">
-                                <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px; height:350px;" align="center">
-                                    <h4 class="text-info"> ` + data[i].NOME_PRODUTOS + ` </h4>
-                                    <h4 class="text-danger"> R$` + data[i].PRECO_VENDA_PRODUTOS + ` </h4>
-
+                                    <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h4 class="text-center"> ` + data[i].NOME_PRODUTOS + ` </h4>
+                                    <h5 class="text-center mt-2"> R$` + data[i].PRECO_VENDA_PRODUTOS + ` </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
                                     <input type="text"  name="quantity" id="quantity` + data[i].ID_PRODUTOS + `" class="form-control" value="1" />
                                     <input type="hidden" name="hidden_name" id="name` + data[i].ID_PRODUTOS + `" value="` + data[i].NOME_PRODUTOS + `" />
                                     <input type="hidden" name="hidden_price" id="price` + data[i].ID_PRODUTOS + `" value="` + data[i].PRECO_VENDA_PRODUTOS + `" />
-                                    <input type="button" name="add_to_cart" id="` + data[i].ID_PRODUTOS + `" style="margin-top:5px;" class="btn btn-warning form-control add_to_cart" value="Add to Cart" />
-                                </div>
+                                    <input type="button" name="add_to_cart" id="` + data[i].ID_PRODUTOS + `" style="margin-top:5px;" class="btn btn-success form-control add_to_cart" value="Adicionar ao carrinho" />
+                                </ul>
                             </div>
                         `
 
@@ -106,7 +107,7 @@ $(document).ready(function() {
                     product_quantity: product_quantity,
                     action: action
                 },
-                 success: function(data) {
+                success: function(data) {
                     load_cart_data();
                 }
             })

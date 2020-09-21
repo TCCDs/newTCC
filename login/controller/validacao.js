@@ -33,7 +33,7 @@ $(document).ready(function() {
                     let url = 'index.html'
                     $(location).attr('href', url)
 
-                    $('#formLogin input').val("")
+                    $('#form-login input').val("")
                 }
             }
         })

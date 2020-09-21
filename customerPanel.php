@@ -35,52 +35,53 @@
                 <img src="img/caravelas.png" width="30" height="30" class="d-inline-block align-top img-user" alt="" loading="lazy">
             </a>
         </nav>
+        <div class="hiden">
         <nav id="sidebar" class="sidebar-wrapper">
-            <div class="sidebar-content">
-                <div class="sidebar-brand">
-                    <a href="#">Painel do cliente</a>
-                    <div id="close-sidebar">
-                        <i class="mdi mdi-close"></i>
+        <div class="sidebar-content">
+            <div class="menu-superior">
+                    <div class="sidebar-brand">
+                        <div id="close-sidebar">
+                            <i class="mdi mdi-close text-white"></i>
+                        </div>
                     </div>
-                </div>
 
-                <div class="sidebar-header" id="sidebar-header">
-                    <div class="user-pic">
-                        <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" alt="User picture">
+                    <div class="sidebar-header" id="sidebar-header">
+                        <div class="col-12 col md-12 text-center">
+                            <img class="img-fluid  avatar-menu" src="img/avatar.png" alt="">
+                        </div>
                     </div>
-                </div>
+             </div>
+     
 
-                <div class="sidebar-menu">
+                <div class="sidebar-menu mt-2">
                     <ul>
-                        <li class="">
+                        <li class="lista">
                             <a class="btn  text-left home">Home</a>
                         </li>
-                        <li class="">
+                        <!-- <li class="lista">
                             <a class="btn produtos-adm text-left produtos-cliente">Produtos</a>
-                        </li>
-                        <li class="">
-                            <a class="btn text-left comprarProduto-cliente">Compra</a>
+                        </li> -->
+                        <li class="lista">
+                            <a class="btn text-left comprarProduto-cliente">Comprar</a>
                         </li>
             
                         <li class="">
                             <a class="btn fornecedor-adm text-left historico-cliente">Histórico</a>
                         </li>
-                        <li class="">
+                        <li class="lista">
                             <a class="btn historico-adm text-left credito-cliente">Crédito</a>
                         </li>
-                        <li class="">
+                        <!-- <li class="lista">
                             <a class="btn historico-adm text-left ctr-cliente">Perfil</a>
-                        </li>
+                        </li> -->
 
                         <li class="">
                             testes 
                         </li>
 
-                        <li class="">
+                        <li class="lista">
                             <a class="btn historico-adm text-left leitorQrProdutos">ler qr</a>
                         </li>
-                        
-                        <li class="">
                             <a class="btn historico-adm text-left leitorOfertas">ler ofertas</a>
                         </li>
 
@@ -96,6 +97,8 @@
                 </a>
             </div>
         </nav>
+        </div>
+       
         <div class="container">
             <div class="row text-center mt-4 saldo">
                 <div class="col-6 col-md-6">
@@ -111,8 +114,7 @@
             <div class="fixed-bottom">
                 <div class="menu">
                     <div class="row text-center">
-                        <div class="col-6 mt-3 border-right">
-                            <button class=" btn offer">
+                        <div class="col-6 mt-3 border-right offer">
                             <h1><i class="mdi mdi-check-decagram text-light"></i></h1>
                             <h5>Ofertas do dia</h5>
                         </div>

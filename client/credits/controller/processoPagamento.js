@@ -42,11 +42,11 @@ function validate_form() {
 
         if (!year_expression.test(CARTAO_VALIDADE_ANO)) {
             $('#CARTAO_VALIDADE_ANO').addClass('require');
-            $('#error_CARTAO_VALIDADE_ANO').error('Invalid Data');
+            $('#error_CARTAO_VALIDADE_ANO').text('Invalid Data');
             valid = false;
         } else {
             $('#CARTAO_VALIDADE_ANO').removeClass('require');
-            $('#error_CARTAO_VALIDADE_ANO').error('');
+            $('#error_CARTAO_VALIDADE_ANO').text('');
             valid = true;
         }
 

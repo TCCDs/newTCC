@@ -1,12 +1,12 @@
 <?php
-    /*session_start();
+/* session_start();
 
     if(!empty($_SESSION['ID_USUARIOS'])):
         //echo "<a href='sair.php'>Sair</a>";
     else:
-        header("Location: ./index.html");	
-    endif;*/
-?>
+        header("Location: ./index.html");
+        endif; */
+?> 
 
 
     <!DOCTYPE html>
@@ -83,6 +83,9 @@
                             </li>
                             <li class="">
                                 <a class="btn formUser-administration text-left">Cadastro User</a>
+                            </li>
+                            <li class="">
+                                <a class="btn formUser-administration text-left">Administradores</a>
                             </li>
 
                         </ul>

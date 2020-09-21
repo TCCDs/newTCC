@@ -44,35 +44,37 @@
                     </div>
                     <div id="conteudo">
                         <form action="" id="form-login">
-                            <div class="row col-12 col-md-12">
-                                <div class="row col-12 col-md-12">
+                            <div class="row">
+                                <div class="col-12 col-md-12">
                                     <div class=" form-group form">
                                         <input type="text" name="LOGIN_USUARIOS" id="LOGIN_USUARIOS" aria-autocomplete="off" required>
                                         <label for="LOGIN_USUARIOS" class="label-input">
-                                            <span class="content-input">Login do Usuário</span>
-                                        </label>
+                                                <span class="content-input">Login do Usuário</span>
+                                            </label>
                                     </div>
-                                </div>
-                                <div class="row col-12 col-md-12">
                                     <div class=" form-group form">
                                         <input type="password" name="SENHA_USUARIOS" id="SENHA_USUARIOS" aria-autocomplete="off" required>
                                         <label for="SENHA_USUARIOS" class="label-input">
-                                            <span class="content-input">Digite sua senha</span>
+                                                <span class="content-input">Digite sua senha</span>
                                         </label>
                                     </div>
                                 </div>
                             </div>
-
-                            <button class="btn btn-block btn-login">Verificar</button>
+                            <div class="row text-right">
+                                <div class="col-12 col-md-12">
+                                    <small><i id="show_password" name="show_password" class="show mdi mdi-eye ml-2"> Mostrar senha</i>
+                                    </small>
+                                </div>
+                            </div>
+                            <button class="btn btn-block btn-login mt-2">Verificar</button>
                     </div>
-                    </form>
+
                 </div>
+
+                </form>
             </div>
         </div>
     </div>
-
-
-
 
 
     <script src="components/js/jquery-3.4.1.min.js"></script>

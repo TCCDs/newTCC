@@ -17,6 +17,14 @@ $(document).ready(function() {
         $('.menu').hide();
     })
 
+    $('.consumo').click(function() {
+        $('#conteudo').load('client/customers/view/consumo.html')
+        $('.saldo').hide();
+        $('.menu').hide();
+
+    })
+
+
     $('.home').click(function() {
         $('body').load('customerPanel.php')
     })
@@ -48,13 +56,13 @@ $(document).ready(function() {
     $('.leitorQrProdutos').click(function() {
         $('#conteudo').load('client/leitorQr/view/leitorProdutos.html')
         $('.saldo').hide();
-        // $('.menu').hide();
+        $('.menu').hide();
     })
 
     $('.testeLeitor').click(function() {
         $('#conteudo').load('client/leitorQr/view/testeLeitor.html')
         $('.saldo').hide();
-        // $('.menu').hide();
+        $('.menu').hide();
     })
 
     $('.leitorOfertas').click(function() {
@@ -113,6 +121,9 @@ $(document).ready(function() {
         window.location.href = "index.html";
 
     })
+
+    $("#sidebar").hide();
+
     $(".sidebar-dropdown > a").click(function() {
         $(".sidebar-submenu").slideUp(200);
         if (
@@ -137,10 +148,22 @@ $(document).ready(function() {
 
     $("#close-sidebar").click(function() {
         $(".page-wrapper").removeClass("toggled");
+
     });
     $("#show-sidebar").click(function() {
         $(".page-wrapper").addClass("toggled");
+        $("#sidebar").show();
     });
 
+});
 
-})
+$('#show_password').hover(function(e) {
+    e.preventDefault();
+    if ($('#SENHA_USUARIOS').attr('type') == 'password') {
+        $('#SENHA_USUARIOS').attr('type', 'text');
+        $('#show_password').attr('class', 'mdi mdi-eye');
+    } else {
+        $('#SENHA_USUARIOS').attr('type', 'password');
+        $('#show_password').attr('class', 'mdi mdi-eye-off');
+    }
+});
