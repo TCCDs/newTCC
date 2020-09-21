@@ -6,6 +6,7 @@
     else:
         header("Location: ./index.html");	
     endif;  */
+    endif; */
 ?> 
 
 
