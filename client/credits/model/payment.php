@@ -1,7 +1,10 @@
 <?php
 	//payment.php
 	//include_once ('../../../server/Conn.php');
-	$conn = new PDO("mysql:host=localhost;dbname=new_supermercado", "root", "");
+
+use Stripe\Service\Terminal\TerminalServiceFactory;
+
+$conn = new PDO("mysql:host=localhost;dbname=new_supermercado", "root", "");
 	//$conn = new Conn();
 
 	session_start();

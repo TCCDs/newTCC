@@ -61,9 +61,7 @@
                         <li class="">
                             <a class="btn text-left comprarProduto-cliente">Compra</a>
                         </li>
-                        <!-- <li class="">
-                            <a class="btn text-left payment">Pagamento</a>
-                        </li> -->
+            
                         <li class="">
                             <a class="btn fornecedor-adm text-left historico-cliente">Histórico</a>
                         </li>
@@ -75,12 +73,17 @@
                         </li>
 
                         <li class="">
-                            testes
+                            testes 
                         </li>
 
                         <li class="">
                             <a class="btn historico-adm text-left leitorQrProdutos">ler qr</a>
                         </li>
+                        
+                        <li class="">
+                            <a class="btn historico-adm text-left leitorOfertas">ler ofertas</a>
+                        </li>
+
                         <li class="">
                             <a class="btn historico-adm text-left testeLeitor">ver Produtos</a>
                         </li>
@@ -153,16 +156,23 @@
         </div>
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="components/js/jquery-3.4.1.min.js"></script>
+        <script src="components/js/bootstrap.js"></script>
+        <script src="components/js/bootstrap.min.js"></script>
+        <script src="components/js/Chart.min.js"></script>
+
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
         <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
         <script src="components/libs/sweetalert2/dist/sweetalert2.js"></script>
+        <!--<script src="components/js/Chart.min.js"></script>-->
+
         <script src="controller/js/function-menu.js"></script>
         <script src="client/navUsers/controller/nav.js"></script>
         <script src="client/customers/controller/saldoClientePrincipal.js"></script>
 
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
 </body>
 
 </html>

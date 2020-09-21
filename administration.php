@@ -23,6 +23,7 @@
         <link rel="stylesheet" href="components/libs/sweetalert2/dist/sweetalert2.css">
         <link rel="stylesheet" href="components/css/adm.css">
         <link rel="stylesheet" href="components/css/menuslide.css">
+        <link rel="stylesheet" href="components/css/graficos.css">
 
     </head>
 
@@ -161,25 +162,19 @@
                 </div>
 
                 <div class="row mt-3 text-center">
-                    <div class="col-12 col-md-4">
-                        <h5>Lucro Semanal</h5>
-                        <img class="img-fluid" src="img/graficos.png" alt="">
-                        <hr>
-                        <small class="text-right">42%</small>
+
+                   <div class="col-12 col-md-6">
+                        <h5>Vendas</h5>
+                            <div id="chart-container">
+                            <canvas id="graphCanvasVendas"></canvas>
+                        </div>
                     </div>
 
-                    <div class="col-12 col-md-4">
-                        <h5>Lucro Mensal</h5>
-                        <img class="img-fluid" src="img/graficos.png" alt="">
-                        <hr>
-                        <small class="text-right">42%</small>
-                    </div>
-
-                    <div class="col-12 col-md-4">
-                        <h5>Lucro Anual</h5>
-                        <img class="img-fluid" src="img/graficos.png" alt="">
-                        <hr>
-                        <small class="text-right">42%</small>
+                    <div class="col-12 col-md-6">
+                        <h5>Moedas</h5>
+                            <div id="chart-container">
+                            <canvas id="graphCanvasMoedas"></canvas>
+                        </div>
                     </div>
                 </div>
 
@@ -340,6 +335,8 @@
             <script src="components/libs/jQuery-Mask-Plugin-master/jquery-mask/dist/jquery.mask.js"></script>
             <script src="components/libs/jQuery-cep-Plugin/jquery.cep.min.js"></script>
             <script src="components/libs/sweetalert2/dist/sweetalert2.js"></script>
+            <script src="components/js/Chart.min.js"></script>
+
             <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
             <script src="controller/js/function-menu-adm.js"></script>
 
@@ -352,6 +349,9 @@
             <script src="administration/dadosPanelAdministration/controller/ultimaVenda.js"></script>
             <script src="administration/dadosPanelAdministration/controller/listaClienteRapido.js"></script>
             <script src="administration/dadosPanelAdministration/controller/listaFornecedoresRapido.js"></script>
+
+            <script src="administration/graficos/controller/graficoVenda.js"></script>
+            <script src="administration/graficos/controller/graficoMoedas.js"></script>
     </body>
 
     </html>

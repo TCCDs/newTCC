@@ -14,29 +14,21 @@ $(document).ready(function() {
             success: function(data) {
                 var i = 0;
                 while (data[i]) {
-                    let listarProdutos = `
-                    <ul class='screens animate'>
-                    <li class='screen active'>
-                        <div class="col-12 col-md-12">
-                            <div class="card1">
-                                <img class="img-fluid img-card1" src="img/camil.png" alt=" Arroz Camil">
+                    let produtos = `
+                        <div class="col-md-4" style="margin-top:12px;">
+                            <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px; height:350px;" align="center">
+                                <h4 class="text-info"> ` + data[i].NOME_PRODUTOS + ` </h4>
+                                <h4 class="text-danger"> R$` + data[i].PRECO_OFERTA + ` </h4>
+
+                                <input type="text"  name="quantity" id="quantity` + data[i].ID_OFERTA + `" class="form-control" value="1" />
+                                <input type="hidden" name="hidden_name" id="name` + data[i].ID_OFERTA + `" value="` + data[i].NOME_PRODUTOS + `" />
+                                <input type="hidden" name="hidden_price" id="price` + data[i].ID_OFERTA + `" value="` + data[i].PRECO_OFERTA + `" />
+                                <input type="button" name="add_to_cart" id="` + data[i].ID_OFERTA + `" style="margin-top:5px;" class="btn btn-warning form-control add_to_cart" value="Add to Cart" />
                             </div>
-
-                            <h3 class="mt-4 text-light text-product">
-                                ` + data[i].NOME_PRODUTOS + `
-                            </h3>
-
-                            <h5 class="mt-4 text-light text-price"> R$ ` + data[i].PRECO_VENDA_PRODUTOS + ` </h5>
-                            <input type="text"  name="quantity" id="quantity` + data[i].ID_PRODUTOS + `" class="form-control" value="1" />
-                            <input type="hidden" name="hidden_name" id="name` + data[i].ID_PRODUTOS + `" value="` + data[i].NOME_PRODUTOS + `" />
-                            <input type="hidden" name="hidden_price" id="price` + data[i].ID_PRODUTOS + `" value="` + data[i].PRECO_VENDA_PRODUTOS + `" />
-                            <button name="add_to_cart" id="` + data[i].ID_PRODUTOS + `" class="btn btn-block mt-4 btn-offer">Adicionar ao carrinho</button>
                         </div>
-                    </li>
-                </ul>
                         `
 
-                    $('#display_item_ofertas').append(listarProdutos)
+                    $('#display_item_ofertas').append(produtos)
                     i++;
                 }
             }

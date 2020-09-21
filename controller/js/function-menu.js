@@ -9,7 +9,12 @@ $(document).ready(function() {
         $('#conteudo').load('client/customers/view/customers.html')
         $('.saldo').hide();
         $('.menu').hide();
+    })
 
+    $('.consumo').click(function() {
+        $('#conteudo').load('client/customers/view/consumo.html')
+        $('.saldo').hide();
+        $('.menu').hide();
     })
 
     $('.home').click(function() {
@@ -48,6 +53,18 @@ $(document).ready(function() {
 
     $('.testeLeitor').click(function() {
         $('#conteudo').load('client/leitorQr/view/testeLeitor.html')
+        $('.saldo').hide();
+        // $('.menu').hide();
+    })
+
+    $('.leitorOfertas').click(function() {
+        $('#conteudo').load('client/leitorQr/view/leitorOfertas.html')
+        $('.saldo').hide();
+        // $('.menu').hide();
+    })
+    
+    $('.grafico').click(function() {
+        $('#conteudo').load('graficos/graficoMoedas.php')
         $('.saldo').hide();
         // $('.menu').hide();
     })
