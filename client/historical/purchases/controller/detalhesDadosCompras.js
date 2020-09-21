@@ -10,7 +10,7 @@ $(document).ready(function() {
         async: true,
         success: function(dados) {
             for (var i = 0; i < dados.length; i++) {
-                let historicoCompras = `
+                let detalhesDadosCompras = `
                 <div class="row">
                 <div class="mt-3 ml-2 mr-2 col-12 col-sm-6 col-md-4">
                     <div class="card" style="width: 18rem;">
@@ -28,7 +28,7 @@ $(document).ready(function() {
                 </div>
             </div>
                 `
-                $('.listaDadosCompras').append(historicoCompras)
+                $('.listaDadosCompras').append(detalhesDadosCompras)
             }
         }
     })

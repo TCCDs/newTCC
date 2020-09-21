@@ -2,7 +2,7 @@
     include_once ('../../../../server/Conn.php');
     $conn = new Conn();
 
-    $codigos_itens = 2059952836;
+    $codigos_itens = 1026437604;
 
     $sql = 'SELECT 
         compras_pagamentos.NOME_CARTAO,
@@ -13,7 +13,7 @@
         compras.CODIGO_COMPRAS,
         compras.VALOR_COMPRAS,
         compras.STATUS_COMPRAS,
-        compras.DATA_CAD,
+        compras.DATA_CAD_COMPRAS,
         
         clientes.NOME_CLIENTES,
         clientes.CEP_CLIENTES,

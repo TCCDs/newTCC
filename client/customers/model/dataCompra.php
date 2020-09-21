@@ -6,7 +6,7 @@
 
     $ID_USUARIOS = $_SESSION['ID_USUARIOS'];
 
-    $sql = "SELECT MAX(DATE_FORMAT(compras.DATA_CAD, '%d/%m/%Y'))  AS DATA_CAD FROM compras
+    $sql = "SELECT MAX(DATE_FORMAT(compras.DATA_CAD_COMPRAS, '%d/%m/%Y'))  AS DATA_CAD FROM compras
     INNER JOIN clientes ON compras.ID_CLIENTES_COMPRAS = clientes.ID_CLIENTES
     WHERE clientes.ID_USUARIOS = :ID_USUARIOS
     ORDER BY clientes.NOME_CLIENTES ASC ";
