@@ -17,13 +17,6 @@ $(document).ready(function() {
         $('.menu').hide();
     })
 
-    $('.consumo').click(function() {
-        $('#conteudo').load('client/customers/view/consumo.html')
-        $('.saldo').hide();
-        $('.menu').hide();
-
-    })
-
 
     $('.home').click(function() {
         $('body').load('customerPanel.php')
@@ -63,18 +56,6 @@ $(document).ready(function() {
         $('#conteudo').load('client/leitorQr/view/testeLeitor.html')
         $('.saldo').hide();
         $('.menu').hide();
-    })
-
-    $('.leitorOfertas').click(function() {
-        $('#conteudo').load('client/leitorQr/view/leitorOfertas.html')
-        $('.saldo').hide();
-        // $('.menu').hide();
-    })
-    
-    $('.grafico').click(function() {
-        $('#conteudo').load('graficos/graficoMoedas.php')
-        $('.saldo').hide();
-        // $('.menu').hide();
     })
 
     $('.credito-pagamento').click(function() {

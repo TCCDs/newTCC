@@ -48,8 +48,9 @@ $(document).ready(function() {
                 var i = 0;
                 while (data[i]) {
                     let listarProdutos = `
-                                    <div class="card" style="width: 18rem;">
+                            <div class="card" style="width: 18rem;">
                                 <div class="card-body">
+                                     <h6 class="text-center"> ` + data[i].DESCRICAO + ` </h6>
                                     <h4 class="text-center"> ` + data[i].NOME_PRODUTOS + ` </h4>
                                     <h5 class="text-center mt-2"> R$` + data[i].PRECO_VENDA_PRODUTOS + ` </h5>
                                 </div>
