@@ -3,7 +3,7 @@
     include_once ('../../../server/Conn.php');
     $conn = new Conn();
 
-    $sql = "SELECT  produtos.NOME_PRODUTOS AS NOME_PRODUTOS,
+    $sql = "SELECT  produtos.NOME_PRODUTOS,
                     produtos.QR_CODE_PRODUTOS,
                     ofertas.PRECO_OFERTA
             FROM ofertas
