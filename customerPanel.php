@@ -83,6 +83,10 @@
                             <a class="btn historico-adm text-left leitorQrProdutos">ler qr</a>
                         </li>
 
+                        </li>
+                            <a class="btn historico-adm text-left leitorOfertas">ler ofertas</a>
+                        </li>
+
                         <li class="">
                             <a class="btn historico-adm text-left testeLeitor">ver Produtos</a>
                         </li>

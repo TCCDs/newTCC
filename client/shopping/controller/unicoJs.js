@@ -50,6 +50,7 @@ $(document).ready(function() {
                     let listarProdutos = `
                             <div class="col-md-4" style="margin-top:12px;">
                                 <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px; height:350px;" align="center">
+                                    <h6 class="text-info"> ` + data[i].DESCRICAO + ` </h6>
                                     <h4 class="text-info"> ` + data[i].NOME_PRODUTOS + ` </h4>
                                     <h4 class="text-danger"> R$` + data[i].PRECO_VENDA_PRODUTOS + ` </h4>
                                     <input type="text"  name="quantity" id="quantity` + data[i].ID_PRODUTOS + `" class="form-control" value="1" />
