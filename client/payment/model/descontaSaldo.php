@@ -37,7 +37,6 @@
         $descontoSaldoCliente = $_SESSION['saldo_clientes'] - $totalCompraCliente;
     }
 
-
     // -- -- //
 
     $codigo_compras = mt_rand();
@@ -100,14 +99,13 @@
         }
     }
 
-    
     /* UPDATE ATUALIZAR SALDO */
     try {
         $sql = "UPDATE saldo_clientes SET SALDO_CLIENTES = :SALDO_CLIENTES  WHERE ID_CLIENTE = :ID_CLIENTE";
 
         $resultado = $conn->getConn()->prepare($sql);
         $resultado->bindParam(':SALDO_CLIENTES', $descontoSaldoCliente);
-        $resultado->bindParam(':ID_CLIENTE', $id_clientes_compras);
+        $resultado->bindParam(':ID_CLIENTE', $ID_USUARIOS);
         $resultado->execute();
             
         $data = array('return' => true);

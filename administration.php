@@ -166,17 +166,24 @@
 
                 <div class="row mt-3 text-center">
 
-                   <div class="col-12 col-md-6">
+                   <div class="col-12 col-md-4">
                         <h5>Vendas</h5>
                             <div id="chart-container">
                             <canvas id="graphCanvasVendas"></canvas>
                         </div>
                     </div>
 
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-4">
                         <h5>Moedas</h5>
                             <div id="chart-container">
                             <canvas id="graphCanvasMoedas"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <h5>Lucro Bruto</h5>
+                            <div id="chart-container">
+                            <canvas id="graphCanvasLucro"></canvas>
                         </div>
                     </div>
                 </div>
@@ -355,6 +362,7 @@
 
             <script src="administration/graficos/controller/graficoVenda.js"></script>
             <script src="administration/graficos/controller/graficoMoedas.js"></script>
+            <script src="administration/graficos/controller/graficoLucro.js"></script>
     </body>
 
     </html>
