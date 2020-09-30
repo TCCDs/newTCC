@@ -70,7 +70,7 @@ $(document).ready(function() {
         $('.saldo').hide();
         // $('.menu').hide();
     })
-    
+
     $('.grafico').click(function() {
         $('#conteudo').load('graficos/graficoMoedas.php')
         $('.saldo').hide();
