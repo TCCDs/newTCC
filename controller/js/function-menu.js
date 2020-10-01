@@ -17,13 +17,6 @@ $(document).ready(function() {
         $('.menu').hide();
     })
 
-    $('.consumo').click(function() {
-        $('#conteudo').load('client/customers/view/consumo.html')
-        $('.saldo').hide();
-        $('.menu').hide();
-
-    })
-
 
     $('.home').click(function() {
         $('body').load('customerPanel.php')
