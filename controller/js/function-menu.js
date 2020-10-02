@@ -78,11 +78,11 @@ $(document).ready(function() {
 
     })
 
-    /*$('.offer').click(function() {
-        $('#conteudo').load('administration/offer/view/offerday.html')
+    $('.receitas').click(function() {
+        $('#conteudo').load('public/index.php')
         $('.saldo').hide();
         $('.menu').hide();
-    })*/
+    })
 
     $('.offer').click(function() {
         $('#conteudo').load('administration/offer/view/ofertas.html')
