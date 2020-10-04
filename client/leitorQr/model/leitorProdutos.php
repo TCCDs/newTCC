@@ -5,28 +5,7 @@
 
     $qr_code = $_POST['qrcode'];
 
-    $sql = "SELECT  
-                ofertas.ID_PRODUTOS,
-                produtos.NOME_PRODUTOS,
-                produtos.QR_CODE_PRODUTOS,
-                ofertas.PRECO_OFERTA AS PRECO_VENDA_PRODUTOS,
-                ofertas.DESCRICAO
-            FROM 
-                 ofertas
-            INNER JOIN produtos ON ofertas.ID_PRODUTOS = produtos.ID_PRODUTOS
-            WHERE produtos.QR_CODE_PRODUTOS = :QR_CODE AND ofertas.STATUS_OFERTA = 'A'
-                            
-            UNION 
-                                        
-            SELECT 
-                produtos.ID_PRODUTOS,
-                produtos.NOME_PRODUTOS,
-                produtos.QR_CODE_PRODUTOS,
-                produtos.PRECO_VENDA_PRODUTOS,
-                NULL
-            FROM 
-                produtos 
-            WHERE produtos.QR_CODE_PRODUTOS = :QR_CODE and produtos.STATUS_PRODUTOS = 'A'";
+    $sql = "SELECT * FROM produtos WHERE produtos.QR_CODE_PRODUTOS = :QR_CODE and produtos.STATUS_PRODUTOS = 'A'";
 
     $resultado = $conn->getConn()->prepare($sql);
     $resultado->bindParam(':QR_CODE', $qr_code, PDO::PARAM_INT);
@@ -36,7 +15,7 @@
         $produtos[] = array_map('utf8_encode', $resultado_user);
     }
 
-    $_SESSION['testeProdutos'] = json_encode($produtos,  JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+   $_SESSION['testeProdutos'] = json_encode($produtos,  JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 
-    header('Location: ../view/testeLeitor.html');
+   Header( "Location: ../view/testeLeitor.html" );
 ?>
