@@ -35,20 +35,22 @@
 			$id_clientes_compras = $_SESSION['ID_USUARIOS'];
 			$total_desconto_compras = 0;
 			$status_compras = 'F';
+			$tipo_pagamento = 'Cartão de Credito';
 						
 			$order_compras = array (
 				':ID_CLIENTES_COMPRAS'		=> $id_clientes_compras,
 				':CODIGO_COMPRAS'			=> $codigo_compras,
 				':VALOR_COMPRAS'			=> $amount,
 				':TOTAL_DESCONTO_COMPRAS'	=> $total_desconto_compras,
-				':STATUS_COMPRAS'			=> $status_compras
+				':STATUS_COMPRAS'			=> $status_compras,
+				':TIPO_PAGAMENTO'			=> $tipo_pagamento
 			);
 						
 			$sql =  "
 				INSERT INTO compras
-					(ID_CLIENTES_COMPRAS, CODIGO_COMPRAS, VALOR_COMPRAS, TOTAL_DESCONTO_COMPRAS, STATUS_COMPRAS) 
+					(ID_CLIENTES_COMPRAS, CODIGO_COMPRAS, VALOR_COMPRAS, TOTAL_DESCONTO_COMPRAS, STATUS_COMPRAS, TIPO_PAGAMENTO) 
 				VALUES 
-					(:ID_CLIENTES_COMPRAS, :CODIGO_COMPRAS, :VALOR_COMPRAS, :TOTAL_DESCONTO_COMPRAS, :STATUS_COMPRAS)
+					(:ID_CLIENTES_COMPRAS, :CODIGO_COMPRAS, :VALOR_COMPRAS, :TOTAL_DESCONTO_COMPRAS, :STATUS_COMPRAS, :TIPO_PAGAMENTO)
 			";
 						
 			$statement = $connect->prepare($sql);
@@ -111,8 +113,7 @@
 			unset($_SESSION["shopping_cart"]);
 
 			$_SESSION["success_message"] = "O pagamento foi concluído com sucesso. O ID TXN é " . $response["balance_transaction"] . "";
-			header('location:../../../customerPanel.php');
-
+			header('location: ../../../customerPanel.php');
 		}
 	}
 

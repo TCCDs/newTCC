@@ -87,10 +87,14 @@
                             <li class="">
                                 <a class="btn formUser-administration text-left">Administradores</a>
                             </li>
-
+                            
+                            <li class="">
+                                <a class="btn tex-left verificarCompra-adm">Verificar Compra </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
+
                 <div class="sidebar-footer logout">
                     <a href="#">
                         <i class="mdi mdi-power"></i>

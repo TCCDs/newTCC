@@ -40,23 +40,27 @@
     // -- -- //
 
     $codigo_compras = mt_rand();
+    $_SESSION["CODIGO_COMPRAS"] = $codigo_compras;
+
     $total_desconto_compras = 0;
     $status_compras = 'F';
+    $tipo_pagamento = 'Moeda Virtual';
             
     try {
         $sql =  "
             INSERT INTO compras
-                (ID_CLIENTES_COMPRAS, CODIGO_COMPRAS, VALOR_COMPRAS, TOTAL_DESCONTO_COMPRAS, STATUS_COMPRAS) 
+                (ID_CLIENTES_COMPRAS, CODIGO_COMPRAS, VALOR_COMPRAS, TOTAL_DESCONTO_COMPRAS, STATUS_COMPRAS, TIPO_PAGAMENTO) 
             VALUES 
-                (:ID_CLIENTES_COMPRAS, :CODIGO_COMPRAS, :VALOR_COMPRAS, :TOTAL_DESCONTO_COMPRAS, :STATUS_COMPRAS)
+                (:ID_CLIENTES_COMPRAS, :CODIGO_COMPRAS, :VALOR_COMPRAS, :TOTAL_DESCONTO_COMPRAS, :STATUS_COMPRAS, :TIPO_PAGAMENTO)
         ";
                 
         $resultado = $conn->getConn()->prepare($sql);
         $resultado->bindParam(':ID_CLIENTES_COMPRAS', $ID_USUARIOS);
-        $resultado->bindParam(':CODIGO_COMPRAS', $codigo_compras);
+        $resultado->bindParam(':CODIGO_COMPRAS', $_SESSION["CODIGO_COMPRAS"]);
         $resultado->bindParam(':VALOR_COMPRAS', $totalCompraCliente);
         $resultado->bindParam(':TOTAL_DESCONTO_COMPRAS', $total_desconto_compras);
         $resultado->bindParam(':STATUS_COMPRAS', $status_compras);
+        $resultado->bindParam(':TIPO_PAGAMENTO', $tipo_pagamento);
         $resultado->execute();
         $id_compras = $conn->getConn()->lastInsertId();
 
@@ -70,6 +74,7 @@
     #itens da compras 
     $qr_code = mt_rand();
     $codigo_itens = mt_rand();
+
 
     $_SESSION["CODIGO_ITENS"] = $codigo_itens;
     $_SESSION["QR_CODE"] = $qr_code;
@@ -115,4 +120,7 @@
     }
     
     echo json_encode($data);
+
+    header('Location: ../view/tax.html');
+
 ?>

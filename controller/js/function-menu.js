@@ -90,17 +90,25 @@ $(document).ready(function() {
 
     })
 
-    /*$('.offer').click(function() {
-        $('#conteudo').load('administration/offer/view/offerday.html')
+    $('.receitas').click(function() {
+        $('#conteudo').load('receitas/public/index.php')
         $('.saldo').hide();
         $('.menu').hide();
-    })*/
+    })
 
     $('.offer').click(function() {
         $('#conteudo').load('administration/offer/view/ofertas.html')
         $('.saldo').hide();
         $('.menu').hide();
     })
+
+    /*cupom */
+    $('.tax').click(function() {
+        $('#conteudo').load('client/payment/view/tax.html')
+        $('.saldo').hide();
+        $('.menu').hide();
+    })
+
 
     $('.inscreva').click(function() {
         $('#conteudo').load('administration/form/formUsuario/view/formUsers.html')
