@@ -35,7 +35,7 @@ $(document).ready(function() {
                                 Data da Compra
                             </div>
                             <div class="row">
-                                12/05/2020
+                            ` + dados[i].DATA_CAD_COMPRAS + `
                             </div>
                         </small>
                     </div>
@@ -47,7 +47,7 @@ $(document).ready(function() {
                             <h5>Pagamento</h5>
                         </div>
                         <div class="col-6 col-md-6">
-                            <h6>Moedas Virtuais</h6>
+                            <h6>` + dados[i].TIPO_PAGAMENTO + `</h6>
                         </div>
                     </div>
 
