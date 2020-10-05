@@ -15,10 +15,10 @@ $(document).ready(function() {
                     <div class="mt-3 mr-2 col-12 col-md-2">
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
-                                    <h5 class="card-title text-dark">` + dados[i].NOME_PRODUTOS + `</h5>
+                                    <h5 class="card-title text-dark"><div class="row mt-2">` + dados[i].NOME_PRODUTOS + `</h5>
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">` + dados[i].QUANTIDADE_PRODUTOS + `</li>
-                                        <li class="list-group-item">` + dados[i].PRECO_PRODUTOS + `</li>
+                                        <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Quantidade<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].QUANTIDADE_PRODUTOS + `</div></div></li>
+                                        <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Preço<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].PRECO_PRODUTOS + `</div></div></li>
                                     </ul>
                             </div>
                         </div>
