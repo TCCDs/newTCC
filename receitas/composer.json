@@ -1,0 +1,17 @@
+{
+    "name": "lucas/my-receitas",
+    "authors": [
+        {
+            "name": "LucasGabriel623",
+            "email": "gabrieloliveira.uru@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    }
+}

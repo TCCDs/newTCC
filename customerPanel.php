@@ -71,6 +71,7 @@
                         <li class="lista">
                             <a class="btn historico-adm text-left credito-cliente">Crédito</a>
                         </li>
+
                         <!-- <li class="lista">
                             <a class="btn historico-adm text-left ctr-cliente">Perfil</a>
                         </li> -->
@@ -80,13 +81,13 @@
                         </li>
 
                         <li class="lista">
+                            <a class="btn historico-adm text-left tax"> cupom</a>
+                        </li>
+
+                        <li class="lista">
                             <a class="btn historico-adm text-left leitorQrProdutos">ler qr</a>
                         </li>
-
-                        </li>
-                            <a class="btn historico-adm text-left leitorOfertas">ler ofertas</a>
-                        </li>
-
+                        
                         <li class="">
                             <a class="btn historico-adm text-left testeLeitor">ver Produtos</a>
                         </li>
