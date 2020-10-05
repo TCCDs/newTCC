@@ -17,12 +17,12 @@ $(document).ready(function() {
                             <div class="card-body">
                             <h5 class="card-title text-dark">` + dados[i].NOME_CLIENTES + `</h5>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">` + dados[i].CODIGOS + `</li>
-                                    <li class="list-group-item">` + dados[i].VALOR_MOEDAS + `</li>
-                                    <li class="list-group-item">` + dados[i].DATA_CAD_MOEDAS + `</li>
-                                    <li class="list-group-item">` + dados[i].NOME_CARTAO + `</li>
-                                    <li class="list-group-item">` + dados[i].NUMERO_CARTAO + `</li>
-                                    <li class="list-group-item"> <button id="` + dados[i].ID_MOEDAS + `" class="btn btn-outline-primary btn-sm btn-view-credito"> <i class="mdi mdi-eye mdi-18px"></i> </button>
+                                    <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Código<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].CODIGOS + `</div></div></li>
+                                    <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Valor de Moedas<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].VALOR_MOEDAS + `</div></div></li>
+                                    <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Data de cadastro<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].DATA_CAD_MOEDAS + `</div></div></li>
+                                    <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Nome do cartão<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].NOME_CARTAO + `</div></div></li>
+                                    <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Número do cartão<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].NUMERO_CARTAO + `</div></div></li>
+                                    <li class="list-group-item"> <button id="` + dados[i].ID_MOEDAS + `" class="btn btn-block btn-outline-primary btn-sm btn-view-credito"> <i class="mdi mdi-eye mdi-18px"></i> </button>
                                     </li>
                                 </ul>
                             </div>

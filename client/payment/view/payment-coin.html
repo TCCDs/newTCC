@@ -3,37 +3,38 @@
         <div class="row" id="listaProdutosCards">
 
         </div>
+    </div>
+</div>
 
-        <div class="row mt-3  mb-7 pay">
-            <div class="col-6 col-md-6">
-                <div class="row text-danger">
-                    <small> Valor Compra </small>
-                </div>
+<div class="row mt-3 pay">
+    <div class="col-6 col-md-6">
+        <div class="row">
+            <small> Valor Compra </small>
+        </div>
 
-                <div class="row">
-                    <h3 class="listaTotalProdutos">R$ 45,00</h3>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-6">
-                <div class="row ">
-                    <small> Saldo Total </small>
-                </div>
-
-                <div class="row">
-                    <h3 class="totalSaldo">R$ 58,00</h3>
-                </div>
-            </div>
+        <div class="row">
+            <h3 class="listaTotalProdutos">R$ 45,00</h3>
         </div>
     </div>
 
-
-    <form action="client/payment/model/descontaSaldo.php" method="POST">
-        <div align="center">
-            <input type="hidden" name="SALDO_CLIENTES" value="" />
-            <input type="submit" class="btn btn-success btn-sm" value="Finaliza" />
+    <div class="col-6 col-md-6">
+        <div class="row">
+            <small> Saldo Total </small>
         </div>
-    </form>
+
+        <div class="row">
+            <h3 class="totalSaldo">R$ 58,00</h3>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 col-md-12">
+        <form id="PayClient">
+            <input type="hidden" name="SALDO_CLIENTES" value="" />
+            <input type="submit" class="btn btn-block btn-info btn-sm finalizar" value="Finaliza compra" />
+        </form>
+    </div>
 </div>
 
 <div class="modal fade" id="modalContato" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -55,6 +56,7 @@
 </div>
 
 <!-- <script src="client/payment/controller/payment-coin.js"></script> -->
+<script src="client/payment/controller/PayClient.js"></script>
 <script src="client/payment/controller/totalSaldo.js"></script>
 <script src="client/payment/controller/listaProdutos.js"></script>
 <script src="client/payment/controller/listaTotalProdutos.js"></script>

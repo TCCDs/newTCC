@@ -20,17 +20,14 @@
 </script>
 
 <div class="row">
-    <div class="col-12 offset-md-2 col-md-8 shadow p-3 mb-5 p-2 bg-white rounder">
-        <h4 class="text-info text-center">Leitor de Qr-Cde</h4>
-        <form class="mt-3" action="client/leitorQr/model/leitorProdutos.php" method="POST">
-            <div class=" form-group form">
-                <input type="text" name="qrcode" id="testeQRcode" aria-autocomplete="off" required>
-                <label for="testeQRcode" class="label-input">
-                <span class="content-input">Qr-code</span>
-            </label>
+    <div class="col-12 offset-md-2 col-md-8 shadow p-3 mb-5 bg-white rounder">
+        <h4 class="text-danger text-center"></h4>
+        <form class="mt-3" action="client/leitorQr/model/leitorOfertas.php" method="POST">
+            <div class="form-group">
+                <input class="form-control" type="text" name="qrcode" id="testeQRcode"  value="">
             </div>
 
-            <input class="btn btn-block btn-success btn-adicionar mt-3" type="submit" value="Buscar">
+            <input class="btn btn-outline-success btn-adicionar mt-3" type="submit" value="Buscar">
         </form>
     </div>
 </div>
