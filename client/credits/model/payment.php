@@ -9,6 +9,8 @@ $conn = new PDO("mysql:host=localhost;dbname=new_supermercado", "root", "");
 
 	session_start();
 
+	$saldoTotalClientes = $_SESSION['saldo_clientes'];
+
 if(isset($_POST["token"])) {
 	require_once '../../../vendor/autoload.php';
 
@@ -37,11 +39,11 @@ if(isset($_POST["token"])) {
 		$amount = $response["amount"]/100;
 
 		$codigos = mt_rand();
-		$id_clientes_produtos = 1;
+		$ID_USUARIOS = $_SESSION['ID_USUARIOS'];
 
 		$order_item_data = array(
 			':CODIGOS'				=>	$codigos,
-			':ID_CLIENTES_MOEDAS'	=>	$id_clientes_produtos,
+			':ID_CLIENTES_MOEDAS'	=>	$ID_USUARIOS,
 			':VALOR_MOEDAS'			=>	$amount
 		);
 
@@ -80,12 +82,11 @@ if(isset($_POST["token"])) {
 		$statement->execute($order_data);
 		
 		$_SESSION["success_message"] = "O pagamento foi concluído com sucesso. O ID TXN é " . $response["balance_transaction"] . "";
-		
 
-		$addMoedas = $amount + $_SESSION['saldo_clientes'];
+		$addMoedas = $amount + $saldoTotalClientes;
 
 		$order_saldo = array(
-			':ID_CLIENTE' => $id_clientes_produtos,
+			':ID_CLIENTE' => $ID_USUARIOS,
 			':SALDO_CLIENTES' => $addMoedas
 		);
 

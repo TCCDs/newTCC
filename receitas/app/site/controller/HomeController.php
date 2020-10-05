@@ -12,9 +12,9 @@ class HomeController extends Controller
         $receitaModel = new ReceitaModel();
 
         $receitas = [
-            $receitaModel->lerPorCategoriaLimit(1, 10),
-            $receitaModel->lerPorCategoriaLimit(2, 10),
-            $receitaModel->lerPorCategoriaLimit(3, 10)
+            $receitaModel->lerPorCategoriaLimit(1, 5),
+            $receitaModel->lerPorCategoriaLimit(2, 5),
+            $receitaModel->lerPorCategoriaLimit(3, 5)
         ];
         $this->load('home/main', ['listaReceitas' => $receitas]);
     }

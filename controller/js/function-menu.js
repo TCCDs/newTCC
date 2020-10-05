@@ -79,7 +79,7 @@ $(document).ready(function() {
     })
 
     $('.receitas').click(function() {
-        $('#conteudo').load('public/index.php')
+        $('#conteudo').load('receitas/public/index.php')
         $('.saldo').hide();
         $('.menu').hide();
     })
@@ -89,6 +89,14 @@ $(document).ready(function() {
         $('.saldo').hide();
         $('.menu').hide();
     })
+
+    /*cupom */
+    $('.tax').click(function() {
+        $('#conteudo').load('client/payment/view/tax.html')
+        $('.saldo').hide();
+        $('.menu').hide();
+    })
+
 
     $('.inscreva').click(function() {
         $('#conteudo').load('administration/form/formUsuario/view/formUsers.html')

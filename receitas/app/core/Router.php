@@ -19,11 +19,12 @@ class Router
         $uri = str_replace('?', '/', $uri);
 
         $ex = explode('/', $uri);
-        
+
         $ex = array_values(array_filter($ex));
+
         for ($i = 0; $i < UNSET_COUNT; $i++)
             unset($ex[$i]);
-            
+
         $this->uriEx = $ex = array_values(array_filter($ex));
     }
 

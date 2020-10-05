@@ -1,0 +1,35 @@
+<div id="dadosCupom">
+    <div class="jumbotron mt-2">
+        <h1 class="display-4">Cupom fiscal</h1>
+        <hr class="my-4">
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-12">
+            <div class="card text-center">
+                <div class="card-header supermercado"> 
+
+                </div>
+            
+                <div class="card-body" >
+                    <ul class="list-group list-group-flush" id="cupomProdutos">
+
+                    </ul>
+
+                    <hr class="mt-2">
+
+                    <div id="cupomClientes">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<input type="button" value="Download" onclick="funcao_pdf()">
+
+<script src="client/payment/controller/taxSupermarket.js"></script>
+<script src="client/payment/controller/cupomProdutos.js"></script>
+<script src="client/payment/controller/cupomClient.js"></script>
+<script src="client/payment/controller/gerarPdf.js"></script>
