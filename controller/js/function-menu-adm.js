@@ -44,6 +44,10 @@ $(document).ready(function() {
     })
 
 
+    $('.receitas').click(function() {
+        $('#conteudo').load('administration/receitas/public/index.php')
+    })
+
     $(".sidebar-dropdown > a").click(function() {
         $(".sidebar-submenu").slideUp(200);
         if (

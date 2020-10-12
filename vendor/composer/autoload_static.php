@@ -19,6 +19,7 @@ class ComposerStaticInit5f40fd3280ccba0ea58b0d06327d3856
         ),
         'a' => 
         array (
+            'apps\\' => 5,
             'app\\' => 4,
         ),
         'T' => 
@@ -42,9 +43,13 @@ class ComposerStaticInit5f40fd3280ccba0ea58b0d06327d3856
         array (
             0 => __DIR__ . '/..' . '/chillerlan/php-qrcode/src',
         ),
+        'apps\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/administration/receitas/apps',
+        ),
         'app\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/app',
+            0 => __DIR__ . '/../..' . '/client/receitas/app',
         ),
         'Twig\\' => 
         array (

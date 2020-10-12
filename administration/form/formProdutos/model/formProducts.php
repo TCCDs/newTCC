@@ -1,10 +1,12 @@
 <?php
 
-$connect = new PDO("mysql:host=localhost;dbname=new_supermercado", "root", "");
+//$connect = new PDO("mysql:host=localhost;dbname=new_supermercado", "root", "");
+include_once('../../../../server/Conn.php');
+$conn = new Conn();
 
 if(isset($_POST["NOME_PRODUTOS"])) {
     try{
-    $query = "INSERT INTO produtos (NOME_PRODUTOS, PRECO_CUSTO_PRODUTOS, PRECO_VENDA_PRODUTOS, PESO_PRODUTOS, VALIDADE_PRODUTOS, DESCRICAO_PRODUTOS, ID_FORNECEDORES_PRODUTOS, ID_MARCAS_PRODUTOS, QR_CODE_PRODUTOS, ESTOQUE_PRODUTOS, CATEGORIAS_PRODUTOS, CORREDOR_PRODUTOS, PRATILEIRA_PRODUTOS, LOTE_PRODUTOS, STATUS_PRODUTOS)
+    $sql = "INSERT INTO produtos (NOME_PRODUTOS, PRECO_CUSTO_PRODUTOS, PRECO_VENDA_PRODUTOS, PESO_PRODUTOS, VALIDADE_PRODUTOS, DESCRICAO_PRODUTOS, ID_FORNECEDORES_PRODUTOS, ID_MARCAS_PRODUTOS, QR_CODE_PRODUTOS, ESTOQUE_PRODUTOS, CATEGORIAS_PRODUTOS, CORREDOR_PRODUTOS, PRATILEIRA_PRODUTOS, LOTE_PRODUTOS, STATUS_PRODUTOS)
                 VALUES (:NOME_PRODUTOS, :PRECO_CUSTO_PRODUTOS, :PRECO_VENDA_PRODUTOS, :PESO_PRODUTOS, :VALIDADE_PRODUTOS, :DESCRICAO_PRODUTOS, :ID_FORNECEDORES_PRODUTOS, :ID_MARCAS_PRODUTOS, :QR_CODE_PRODUTOS, :ESTOQUE_PRODUTOS, :CATEGORIAS_PRODUTOS, :CORREDOR_PRODUTOS, :PRATILEIRA_PRODUTOS, :LOTE_PRODUTOS, :STATUS_PRODUTOS)
     ";
 
@@ -26,8 +28,11 @@ if(isset($_POST["NOME_PRODUTOS"])) {
         ':STATUS_PRODUTOS'              => $_POST["STATUS_PRODUTOS"]
     );
 
-    $statement = $connect->prepare($query);
-    $statement->execute($user_data);
+    /*$statement = $connect->prepare($query);
+    $statement->execute($user_data);*/
+
+    $resultado = $conn->getConn()->prepare($sql);
+    $resultado->execute($user_data);
 
         $data = array('return' => true);
 

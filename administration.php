@@ -91,6 +91,10 @@
                             <li class="">
                                 <a class="btn tex-left verificarCompra-adm">Verificar Compra </a>
                             </li>
+
+                            <li class="">
+                                <a class="btn tex-left receitas">receitas </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

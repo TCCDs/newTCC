@@ -1,16 +1,21 @@
 <?php
 	session_start();
-	include_once("../../server/conexao.php");
+	include_once("../../server/Connect.php");
+	$conn = new Conn();
 
 	$usuario = $_POST['LOGIN_USUARIOS'];
 	$senha = $_POST['SENHA_USUARIOS'];
 		
 	if((!empty($usuario)) AND (!empty($senha))):
-		$result_usuario = "SELECT * FROM login_usuarios WHERE LOGIN_USUARIOS='$usuario' LIMIT 1";
-		$resultado_usuario = mysqli_query($conn, $result_usuario);
+		$sql = "SELECT * FROM login_usuarios WHERE LOGIN_USUARIOS = :LOGIN_USUARIOS LIMIT 1";
+		$result_usuario = $conn->getConn()->prepare($sql);
+		$result_usuario->bindParam(':LOGIN_USUARIOS', $usuario);
+		$result_usuario->execute();
+		//$resultado_usuario = mysqli_query($conn, $result_usuario);
 
-		if($resultado_usuario):
-			$row_usuario = mysqli_fetch_assoc($resultado_usuario);
+		if($result_usuario):
+			$row_usuario = $result_usuario->fetch(PDO::FETCH_ASSOC);
+			//$row_usuario = mysqli_fetch_assoc($resultado_usuario);
 			if(password_verify($senha, $row_usuario['SENHA_USUARIOS'])):
 				$_SESSION['ID_USUARIOS'] = $row_usuario['ID_USUARIOS'];
 				$_SESSION['LOGIN_USUARIOS'] = $row_usuario['LOGIN_USUARIOS'];

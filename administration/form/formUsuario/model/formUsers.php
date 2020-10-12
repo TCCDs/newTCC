@@ -1,13 +1,15 @@
 <?php
 session_start();
-    $connect = new PDO("mysql:host=localhost;dbname=new_supermercado", "root", "");
+    //$connect = new PDO("mysql:host=localhost;dbname=new_supermercado", "root", "");
+    include_once('../../../../server/Conn.php');
+    $conn = new Conn();
 
     $tipoUsuarios = 1;
 
     if(isset($_POST["LOGIN_USUARIOS"]) && isset($_POST["SENHA_USUARIOS"])) {
 
         try{
-        $query = "INSERT INTO login_usuarios (LOGIN_USUARIOS, SENHA_USUARIOS, TIPO_USUARIOS)
+        $sql = "INSERT INTO login_usuarios (LOGIN_USUARIOS, SENHA_USUARIOS, TIPO_USUARIOS)
                     VALUES (:LOGIN_USUARIOS, :SENHA_USUARIOS, :TIPO_USUARIOS)
         ";
 
@@ -19,9 +21,13 @@ session_start();
             ':TIPO_USUARIOS'   => $tipoUsuarios
         );
 
-        $statement = $connect->prepare($query);
+        /*$statement = $connect->prepare($query);
         $statement->execute($user_data);
-        $idUsuario = $connect->lastInsertId();
+        $idUsuario = $connect->lastInsertId();*/
+
+        $resultado = $conn->getConn()->prepare($sql);
+        $resultado->execute($user_data);
+        $idUsuario = $conn->getConn()->lastInsertId();
 
         $_SESSION['idUsuario'] = $idUsuario;
 

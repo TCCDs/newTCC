@@ -20,7 +20,8 @@
 
     "autoload": {
         "psr-4": {
-            "app\\": "app/"
+            "app\\": "client/receitas/app/",
+            "apps\\": "administration/receitas/apps/"
         }
     }
 }
