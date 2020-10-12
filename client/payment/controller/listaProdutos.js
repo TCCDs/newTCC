@@ -14,7 +14,7 @@ $(document).ready(function() {
                     <div class="mt-3 col-12 col-sm-6 col-md-4">
                         <div class="card">
                             <div class="card-header">
-                                <div class="col-12 col-md-6">
+                                <div class="col-12 col-md-12">
                                     ` + dados[i].product_name + `
                                 </div>
                             </div>
@@ -25,7 +25,7 @@ $(document).ready(function() {
                                         Quantidade
                                     </div>
 
-                                    <div class="col-12 col-md-6">
+                                    <div class="col-12 col-md-6>
                                         <small>` + dados[i].product_quantity + `</small>
                                     </div>
                                 </li>

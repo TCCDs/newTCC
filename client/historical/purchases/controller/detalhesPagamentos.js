@@ -17,10 +17,10 @@ $(document).ready(function() {
                         <div class="card-body">
                                 <h5 class="card-title text-dark">Detalhes do pagamento</h5>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">` + dados[i].NOME_CARTAO + `</li>
-                                    <li class="list-group-item">` + dados[i].NUMERO_CARTAO + `</li>
-                                    <li class="list-group-item">` + dados[i].STATUS_PAGAMENTO + `</li>
-                                    <li class="list-group-item">` + dados[i].CODIGO_PAGAMENTO + `</li>
+                                    <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Nome do cartão<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].NOME_CARTAO + `</div></div></li>
+                                    <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Número do cartão<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].NUMERO_CARTAO + `</div></div></li>
+                                    <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Status do pagamento<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].STATUS_PAGAMENTO + `</div></div></li>
+                                    <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Código do pagamento<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].CODIGO_PAGAMENTO + `</div></div></li>
                                 </ul>
                         </div>
                     </div>

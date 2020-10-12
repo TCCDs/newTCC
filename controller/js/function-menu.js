@@ -58,6 +58,18 @@ $(document).ready(function() {
         $('.menu').hide();
     })
 
+    $('.leitorOfertas').click(function() {
+        $('#conteudo').load('client/leitorQr/view/leitorOfertas.html')
+        $('.saldo').hide();
+        // $('.menu').hide();
+    })
+
+    $('.grafico').click(function() {
+        $('#conteudo').load('graficos/graficoMoedas.php')
+        $('.saldo').hide();
+        // $('.menu').hide();
+    })
+
     $('.credito-pagamento').click(function() {
         $('#conteudo').load('client/shopping/model/order_process.php')
         $('.saldo').hide();
