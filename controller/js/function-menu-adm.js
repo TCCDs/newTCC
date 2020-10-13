@@ -1,4 +1,11 @@
 $(document).ready(function() {
+    $('.logout').click(function() {
+        window.location.href = "index.html";
+
+    })
+    $('.home').click(function() {
+        $('body').load('administration.php')
+    })
     $('.produtos-adm').click(function() {
         $('#conteudo').load('administration/products/view/administrationProducts.html')
     })
@@ -43,10 +50,12 @@ $(document).ready(function() {
         $('#conteudo').load('administration/purchaseCheck/view/verificarCompra.html')
     })
 
-
     $('.receitas').click(function() {
         $('#conteudo').load('administration/receitas/public/index.php')
     })
+
+    $("#sidebar").hide();
+
 
     $(".sidebar-dropdown > a").click(function() {
         $(".sidebar-submenu").slideUp(200);
@@ -72,9 +81,11 @@ $(document).ready(function() {
 
     $("#close-sidebar").click(function() {
         $(".page-wrapper").removeClass("toggled");
+
     });
     $("#show-sidebar").click(function() {
         $(".page-wrapper").addClass("toggled");
+        $("#sidebar").show();
     });
 
     var atual_fs, next_fs, prev_fs;

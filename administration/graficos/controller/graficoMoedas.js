@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     showGraphMoedas();
 });
 
@@ -6,34 +6,34 @@ $(document).ready(function () {
 function showGraphMoedas() {
     {
         $.post("administration/graficos/model/graficoMoedas.php",
-        function (data) {
-            console.log(data);
-             var name = [];
-             var marks = [];
+            function(data) {
+                console.log(data);
+                var name = [];
+                var marks = [];
 
-            for (var i in data) {
-                name.push(data[i].data_);
-                marks.push(data[i].total_moedas);
-            }
+                for (var i in data) {
+                    name.push(data[i].data_);
+                    marks.push(data[i].total_moedas);
+                }
 
-            var chartdata = {
-                labels: name,
-                datasets: [{
+                var chartdata = {
+                    labels: name,
+                    datasets: [{
                         label: 'Moedas',
-                        backgroundColor: '#49e2ff',
-                        borderColor: 'black',
-                        hoverBackgroundColor: '#CCCCCC',
-                        hoverBorderColor: '#666666',
+                        backgroundColor: 'rgba(82, 230, 205, 0.575)',
+                        borderColor: 'rgb(13, 202, 171)',
+                        hoverBackgroundColor: 'white',
+                        hoverBorderColor: 'white',
                         data: marks
-                }]
-            };
+                    }]
+                };
 
-            var graphTarget = $("#graphCanvasMoedas");
+                var graphTarget = $("#graphCanvasMoedas");
 
-            var barGraph = new Chart(graphTarget, {
-                type: 'line',
-                data: chartdata
+                var barGraph = new Chart(graphTarget, {
+                    type: 'line',
+                    data: chartdata
+                });
             });
-        });
     }
 }
