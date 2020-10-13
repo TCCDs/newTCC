@@ -1,11 +1,11 @@
 <?php
-/* session_start();
+    session_start();
 
     if(!empty($_SESSION['ID_USUARIOS'])):
         //echo "<a href='sair.php'>Sair</a>";
     else:
         header("Location: ./index.html");
-        endif; */
+        endif; 
 ?> 
 
 
@@ -331,6 +331,8 @@
             <script src="administration/graficos/controller/graficoVenda.js"></script>
             <script src="administration/graficos/controller/graficoMoedas.js"></script>
             <script src="administration/graficos/controller/graficoLucro.js"></script>
+
+            <script src="administration/navAdmin/controller/nav.js"></script>
     </body>
 
     </html>

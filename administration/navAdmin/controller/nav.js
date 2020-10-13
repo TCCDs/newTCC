@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('#sidebar-header').empty()
 
-    var url = "client/navUsers/model/nav.php"
+    var url = "administration/navAdmin/model/nav.php"
 
     $.ajax({
         type: 'POST',
@@ -14,13 +14,13 @@ $(document).ready(function() {
                         <div class="row mt-3 text-white">
                             <div class="col-12 col-md-12">
                                 <span class="user-name">
-                                    <strong> ` + dados[i].NOME_CLIENTES + ` </strong>
+                                    <strong> ` + dados[i].NOME_ADMINISTRADOR + ` </strong>
                                 </span>
                             </div>
                         </div>
                         <div class="row mt-3 text-white">
                             <div class="col-6 col-md-6">
-                                <span class="user-role">Cliente</span>
+                                <span class="user-role">Administrador</span>
                             </div>
                         
                             <div class="col-6 col-md-6">

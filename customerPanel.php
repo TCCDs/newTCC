@@ -39,17 +39,17 @@
         <nav id="sidebar" class="sidebar-wrapper">
         <div class="sidebar-content">
             <div class="menu-superior">
-                    <div class="sidebar-brand">
-                        <div id="close-sidebar">
-                            <i class="mdi mdi-close text-white"></i>
-                        </div>
+                <div class="sidebar-brand">
+                    <div id="close-sidebar">
+                        <i class="mdi mdi-close text-white"></i>
                     </div>
+                </div>
 
-                    <div class="sidebar-header" id="sidebar-header">
-                        <div class="col-12 col md-12 text-center">
-                            <img class="img-fluid  avatar-menu" src="img/avatar.png" alt="">
-                        </div>
+                <div class="sidebar-header" id="sidebar-header">
+                    <div class="col-12 col md-12 text-center">
+                        <img class="img-fluid  avatar-menu" src="img/avatar.png" alt="">
                     </div>
+                </div>
             </div>
             
                 <div class="sidebar-menu mt-2">
