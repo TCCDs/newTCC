@@ -69,9 +69,10 @@ $(document).ready(function() {
             success: function(data) {
                 var i = 0;
                 while (data[i]) {
-                    let listarProdutos = `
-                                    <div class="card" style="width: 18rem;">
+                    let listaProdutos = `
+                            <div class="card" style="width: 18rem;">
                                 <div class="card-body">
+                                    <h5 class="text-center">  ` + data[i].DESCRICAO + ` </h5>
                                     <h4 class="text-center"> ` + data[i].NOME_PRODUTOS + ` </h4>
                                     <h5 class="text-center mt-2"> R$` + data[i].PRECO_VENDA_PRODUTOS + ` </h5>
                                 </div>
@@ -84,7 +85,7 @@ $(document).ready(function() {
                             </div>
                         `
 
-                    $('#display_item').append(listarProdutos)
+                    $('#display_item').append(listaProdutos)
                     i++;
                 }
             }
