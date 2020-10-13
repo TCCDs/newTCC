@@ -20,9 +20,6 @@
         $saldoAtualCliente = $saldoAtual["saldo_clientes"];
     }
 
-    $_SESSION['saldo_clientes'] = $saldoAtualCliente;
-
-
     /* TOTAL DA COMPRA */
     $totalCompraCliente = 0;
     if(!empty($_SESSION["shopping_cart"])) {
@@ -34,9 +31,9 @@
     if ($totalCompraCliente > $saldoAtualCliente) {
         echo "saldo insuficiente";
     } else {
-        $descontoSaldoCliente = $_SESSION['saldo_clientes'] - $totalCompraCliente;
+        $descontoSaldoCliente = $saldoAtualCliente - $totalCompraCliente;
     }
-
+    
     // -- -- //
 
     $codigo_compras = mt_rand();

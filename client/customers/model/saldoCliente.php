@@ -20,8 +20,6 @@
     while($resultadoSaldo = $resultado->fetch(PDO::FETCH_ASSOC)) {
         $saldoCliente[] = array_map('utf8_encode', $resultadoSaldo);
     }
-
-    //$_SESSION['saldo_clientes'] =  $saldoCliente;
     
     echo json_encode($saldoCliente);
 
