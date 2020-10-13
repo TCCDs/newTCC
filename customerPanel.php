@@ -50,9 +50,8 @@
                             <img class="img-fluid  avatar-menu" src="img/avatar.png" alt="">
                         </div>
                     </div>
-             </div>
-     
-
+            </div>
+            
                 <div class="sidebar-menu mt-2">
                     <ul>
                         <li class="lista">
@@ -65,7 +64,7 @@
                             <a class="btn text-left comprarProduto-cliente">Comprar</a>
                         </li>
             
-                        <li class="">
+                        <li class="lista">
                             <a class="btn fornecedor-adm text-left historico-cliente">Histórico</a>
                         </li>
                         <li class="lista">

@@ -29,204 +29,245 @@
 
     <body>
         <div class="page-wrapper chiller-theme toggled">
-            <nav class="navbar navbar-dark bg-menu">
-                <button class="navbar-toggler" id="show-sidebar" type="button">
+            <div class="page-wrapper chiller-theme toggled">
+        <nav class="navbar navbar-dark bg-menu-adm">
+            <button class="navbar-toggler" id="show-sidebar" type="button">
                 <span class="navbar-toggler-icon "></span>
             </button>
-                <a class="navbar-brand md-block" href="#">
-                    <img src="img/caravelas.png" width="30" height="30" class="d-inline-block align-top img-user" alt="" loading="lazy">
-                </a>
-            </nav>
-            <nav id="sidebar" class="sidebar-wrapper">
-                <div class="sidebar-content">
+            <a class="navbar-brand md-block" href="#">
+                <img src="img/caravelas.png" width="30" height="30" class="d-inline-block align-top img-user" alt="" loading="lazy">
+            </a>
+        </nav>
+        <div class="hiden">
+        <nav id="sidebar" class="sidebar-wrapper">
+        <div class="sidebar-content">
+            <div class="menu-superior">
                     <div class="sidebar-brand">
-                        <a href="#">Painel do cliente</a>
                         <div id="close-sidebar">
-                            <i class="mdi mdi-close"></i>
+                            <i class="mdi mdi-close text-white"></i>
                         </div>
                     </div>
 
                     <div class="sidebar-header" id="sidebar-header">
-                        <div class="user-pic">
-                            <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" alt="User picture">
-                        </div>
-                        <div class="user-info">
-                            <span class="user-name">Nome
-                            <strong>User</strong>
-                        </span>
-                            <span class="user-role">Administrator</span>
-                            <span class="user-status">
-                            <i class="mdi mdi-circle"></i>
-                            <span>Online</span>
-                            </span>
+                        <div class="col-12 col md-12 text-center">
+                            <img class="img-fluid  avatar-menu" src="img/avatar.png" alt="">
                         </div>
                     </div>
-                    <div class="sidebar-menu">
-                        <ul>
-                            <li class="">
+            </div>
+            
+                <div class="sidebar-menu mt-2">
+                    <ul>
+                            <li class="lista">
                                 <a class="btn  text-left home">Home</a>
                             </li>
-                            <li class="">
+                            <li class="lista">
                                 <a class=" btn produtos-adm text-left">Produtos</a>
                             </li>
-                            <li class="">
+                            <li class="lista">
                                 <a class="btn ctr-adm text-left">Clientes</a>
                             </li>
-                            <li class="">
+                            <li class="lista">
                                 <a class="btn fornecedor-adm text-left">Fornecedores</a>
                             </li>
-                            <li class="">
+                            <li class="lista">
                                 <a class="btn marca-adm text-left">Marcas</a>
                             </li>
-                            <li class="">
+                            <li class="lista">
                                 <a class="btn historico-adm text-left">Histórico</a>
                             </li>
-                            <li class="">
+                            <li class="lista">
                                 <a class="btn formUser-administration text-left">Cadastro User</a>
                             </li>
-                            <li class="">
+                            <li class="lista">
                                 <a class="btn formUser-administration text-left">Administradores</a>
                             </li>
                             
-                            <li class="">
-                                <a class="btn tex-left verificarCompra-adm">Verificar Compra </a>
+                            <li class="lista">
+                                <a class="btn verificarCompra-adm text-left">Verificar Compra </a>
                             </li>
                         </ul>
-                    </div>
                 </div>
+            </div>
+            <div class="sidebar-footer logout">
+                <a href="#">
+                    <i class="mdi mdi-power"></i>
+                </a>
+            </div>
+        </nav>
+        </div>
 
-                <div class="sidebar-footer logout">
-                    <a href="#">
-                        <i class="mdi mdi-power"></i>
-                    </a>
-                </div>
-            </nav>
 
             <!-- sidebar-wrapper  -->
             <div id="conteudo" class="container mt-4 text-center">
                 <div class="row">
-                    <div class="col-12 div col-md-4">
-                        <div class="card">
+                    <div class="col-6 div col-md-4 mt-2">
+                        <div class="card dados3 ">
                             <div class="card-body">
-                                <h5 class="card-title">Total Clientes</h5>
+                                <div class="row">
+                                    <div class="col-12 col-md-6  d-none d-sm-block">
+                                    <h1 class="display-4 icone bg-secondary text-light"><i class="mdi mdi-account"></i></h1>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                    <h4 class="totalClientes">605</h4>
                                 <hr>
-                                <small class="totalClientes">605</small>
+                                <h6 class="card-title">Clientes</h6>
+                                    </div>
+                                </div>
+       
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 div col-md-4 mt-2">
+                        <div class="card dados3 ">
+                            <div class="card-body">
+                            <div class="row">
+                                    <div class="col-12 col-md-6  d-none d-sm-block">
+                                    <h1 class="display-4 icone bg-primary text-light"><i class="mdi mdi-truck"></i></h1>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                    <h4 class="totalFornecedores">45</h4>
+                                <hr>
+                                <h6 class="card-title">Fornecedores</h6>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-12 div col-md-4">
-                        <div class="card">
+                    <div class="col-6 div col-md-4 mt-2">
+                        <div class="card dados3">
                             <div class="card-body">
-                                <h5 class="card-title">Total Fornecedores</h5>
+                            <div class="row align-items-center">
+                                    <div class="col-12 col-md-6  d-none d-sm-block">
+                                    <h1 class="display-4 icone  bg-success text-light"><i class="mdi mdi-cash"></i></h1>
+                                    </div>
+                                    <div class="col-12 col-md-6 ">
+                                    <h4 class="totalVendas">26</h4>
                                 <hr>
-                                <small class="totalFornecedores">45</small>
+                                <h6 class="card-title">Vendas</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-6 div col-md-4 mt-2 menuNav">
+                        <div class="card dados3">
+                            <div class="card-body">
+                                <div class="row align-items-center ">
+                                    <div class="col-12 col-md-6 d-none d-sm-block">
+                                        <h1 class="display-4 icone bg-danger text-light"><i class="mdi mdi-hamburger"></i></h1>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <h5 class="totalProdutos">605</h5>
+                                        <hr>
+                                        <h6 class="card-title">Produtos</h6>
+                                    </div>
+                                </div>          
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-12 div col-md-4">
-                        <div class="card">
+                    <div class="col-6 div col-md-4 mt-2 menuNav">
+                        <div class="card dados3">
                             <div class="card-body">
-                                <h5 class="card-title">Total Vendas</h5>
+                                <div class="row align-items-center" >
+                                    <div class="col-12 col-md-6 d-none d-sm-block  ">
+                                        <h1 class="display-4 icone bg-warning text-light"><i class="mdi mdi-tag-heart "></i></h1>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                    <h5 class="totalMarca">605</h5>
+                                    <hr>
+                                    <h6 class="card-title">Marcas</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 div col-md-4 mt-2 menuNav ">
+                        <div class="card dados3">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 d-none d-sm-block ">
+                                    <h1 class="display-4 icone bg-info text-light"><i class="mdi mdi-clock"></i></h1>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                    <h5 class="ultimaVendas">26/08/2020 15:05:15</h5>
                                 <hr>
-                                <small class="totalVendas">26</small>
+                                <h6 class="card-title">Última Venda</h6>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-12 div col-md-4 menuNav">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Total Produtos</h5>
-                                <hr>
-                                <small class="totalProdutos">605</small>
-                            </div>
+                <div class="row mt-3 text-center grafico2">
+                        <div class="col-12 col-md-12 text-left text-white">
+                            <h4>Contabilidade</h4>
+                            <hr class="bg-white-50">
                         </div>
-                    </div>
-
-                    <div class="col-12 div col-md-4 menuNav">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Total Marca</h5>
-                                <hr>
-                                <small class="totalMarca">605</small>
+                        <div class="col-12 col-md-4 mt-2 ">
+                                    <div class="graficos" id="chart-container">
+                                    <canvas id="graphCanvasVendas"></canvas>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 div col-md-4 menuNav">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Última Venda</h5>
-                                <hr>
-                                <small class="ultimaVendas">26/08/2020 15:05:15</small>
+                            <div class="col-12 col-md-4 mt-2 ">
+                                    <div class="graficos" id="chart-container">
+                                    <canvas id="graphCanvasMoedas"></canvas>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+
+                            <div class="col-12 col-md-4 mt-2">
+                                    <div  class="graficos"id="chart-container">
+                                    <canvas id="graphCanvasLucro"></canvas>
+                                </div>
+                            </div>
                 </div>
 
-                <div class="row mt-3 text-center">
-
-                   <div class="col-12 col-md-4">
-                        <h5>Vendas</h5>
-                            <div id="chart-container">
-                            <canvas id="graphCanvasVendas"></canvas>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-4">
-                        <h5>Moedas</h5>
-                            <div id="chart-container">
-                            <canvas id="graphCanvasMoedas"></canvas>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-4">
-                        <h5>Lucro Bruto</h5>
-                            <div id="chart-container">
-                            <canvas id="graphCanvasLucro"></canvas>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row mt-4">
+                <div class="container">
+                <div class="row mt-4 dados5">
                     <div class="col-12 col-md-6">
-                        <h4>Fornecedores Cadastrados</h4>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Nome </th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Celular</th>
-                                </tr>
-                            </thead>
-                            <tbody class="listaFornecedoresRapido">
-                                <tr>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="col-12-col-md-6">
+                        <h4 class="text-left text-white">Fornecedores Cadastrados</h4>
+                        <hr>
+                        </div>
+                        <div class="table-responsive">
+                        <table class="table table-borderless">
+                            <thead class="thead">
+                                    <tr>
+                                        <th scope="col">Nome </th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Celular</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="listaFornecedoresRapido">
+                                    <tr>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
                     <div class="col-12 col-md-6">
-                        <h4>Clientes Cadastrados</h4>
-                        <table class="table">
-                            <thead>
+                        <h4 class="text-left text-white">Clientes Cadastrados</h4>
+                        <hr>
+                        <div class="table-responsive">
+                        <table class="table table-borderless">
+                        <thead class="thead">
                                 <tr>
                                     <th scope="col">Nome </th>
                                     <th scope="col">Email</th>
@@ -252,93 +293,12 @@
                             </tbody>
                         </table>
                     </div>
-                </div>
-                <!-- <div class="conteudo">
-                <div class="row border-bottom">
-                    <div class="col-12">
-                        <h3 class="text-dark">Painel do Administrador</h3>
                     </div>
                 </div>
 
-                <div class="row mt-3">
-                    <div class="col-6 col-md-4 mt-2">
-                        <button class="btn btn-dark btn-block text-center produtos-adm">
-                            <h1> <i class="mdi mdi-hamburger"> </i> </h1>
-                            <p>Produtos</p>
-                        </button>
-                    </div>
+    </div>
+    </div>
 
-                    <div class="col-6 col-md-4 mt-2">
-                        <button class="btn btn-dark btn-block text-center ctr-adm">
-                            <h1> <i class="mdi mdi-account"> </i> </h1>
-                            <p>Clientes</p>
-                        </button>
-                    </div>
-
-                    <div class="col-6 col-md-4 mt-2">
-                        <button class="btn btn-dark btn-block text-center historico-adm">
-                            <h1> <i class="mdi mdi-file-document-box-outline"> </i> </h1>
-                            <p>Histórico</p>
-                        </button>
-                    </div>
-
-                    <div class="col-6 col-md-4 mt-2">
-                        <button class="btn btn-dark btn-block text-center marca-adm">
-                            <h1> <i class="mdi mdi-file-document-box-outline"> </i> </h1>
-                            <p>Marca</p>
-                        </button>
-                    </div>
-
-                    <div class="col-6 col-md-4 mt-2">
-                        <button class="btn btn-dark btn-block text-center fornecedores-adm">
-                            <h1> <i class="mdi mdi-file-document-box-outline"> </i> </h1>
-                            <p>Fornecedores</p>
-                        </button>
-                    </div>
-
-                    <div class="col-6 col-md-4 mt-2">
-                        <button class="btn btn-dark btn-block text-center formProviders-administration">
-                            <h1> <i class="mdi mdi-car-estate"> </i> </h1>
-                            <p>Formulario Fornecedor</p>
-                        </button>
-                    </div>
-
-                    <div class="col-6 col-md-4 mt-2">
-                        <button class="btn btn-dark btn-block text-center formClient-administration">
-                            <h1> <i class="mdi mdi-file-document-box-outline"> </i> </h1>
-                            <p>Formulario Clientes</p>
-                        </button>
-                    </div>
-
-                    <div class="col-6 col-md-4 mt-2">
-                        <button class="btn btn-dark btn-block text-center formProducts-administration">
-                            <h1> <i class="mdi mdi-car-estate"> </i> </h1>
-                            <p>Formulario Produtos</p>
-                        </button>
-                    </div>
-
-                    <div class="col-6 col-md-4 mt-2">
-                        <button class="btn btn-dark btn-block text-center formBrands-administration">
-                            <h1> <i class="mdi mdi-briefcase-edit-outline"> </i> </h1>
-                            <p>Formulario Marca</p>
-                        </button>
-                    </div>
-
-                    <div class="col-6 col-md-4 mt-2">
-                        <button class="btn btn-dark btn-block text-center formUser-administration">
-                            <h1> <i class="mdi mdi-briefcase-edit-outline"> </i> </h1>
-                            <p>Formulario Usuarios</p>
-                        </button>
-                    </div>
-
-                    <div class="col-6 col-md-4 mt-2">
-                        <button class="btn btn-dark btn-block text-center verificarCompra-adm">
-                            <h1> <i class="mdi mdi-briefcase-edit-outline"> </i> </h1>
-                            <p>Verificar Compra</p>
-                        </button>
-                    </div>
-                </div>
-            </div> -->
             </div>
 
 

@@ -75,7 +75,7 @@ h2 {
 }
 
 .btn-anterior {
-    background: rgb(30, 108, 106);
+    background: rgb(49, 117, 114);
     color: white;
 }
 
@@ -395,7 +395,7 @@ form input:valid+.label-input .content-input {
     flex-direction: column;
     flex: 0 0 auto;
     font-size: 14px;
-    height: 480px;
+    height: 75vh;
     overflow: hidden;
     transition: opacity 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     width: 100%;
@@ -478,7 +478,7 @@ form input:valid+.label-input .content-input {
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-top: 1em;
+    margin-top: 10em;
     margin-bottom: 2em;
 }
 

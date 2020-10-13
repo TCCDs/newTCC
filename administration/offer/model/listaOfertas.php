@@ -8,7 +8,7 @@
                     ofertas.PRECO_OFERTA
             FROM ofertas
             INNER JOIN produtos ON ofertas.ID_PRODUTOS = produtos.ID_PRODUTOS
-            WHERE produtos.QR_CODE_PRODUTOS = 15962370 AND ofertas.STATUS_OFERTA = 'A'
+            WHERE ofertas.STATUS_OFERTA = 'A'
             ORDER BY produtos.NOME_PRODUTOS ASC";
 
     $resultado = $conn->getConn()->prepare($sql);
