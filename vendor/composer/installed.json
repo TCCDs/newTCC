@@ -6,29 +6,29 @@
         "source": {
             "type": "git",
             "url": "https://github.com/chillerlan/php-qrcode.git",
-            "reference": "d7572f097967c0ab145f3d9fd4464e6edf834db5"
+            "reference": "1972af7af51b203bc239d8fb94243f6ed2a1067a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/chillerlan/php-qrcode/zipball/d7572f097967c0ab145f3d9fd4464e6edf834db5",
-            "reference": "d7572f097967c0ab145f3d9fd4464e6edf834db5",
+            "url": "https://api.github.com/repos/chillerlan/php-qrcode/zipball/1972af7af51b203bc239d8fb94243f6ed2a1067a",
+            "reference": "1972af7af51b203bc239d8fb94243f6ed2a1067a",
             "shasum": ""
         },
         "require": {
-            "chillerlan/php-settings-container": "^2.0",
+            "chillerlan/php-settings-container": "^2.1",
             "ext-mbstring": "*",
-            "php": "^7.4"
+            "php": "^7.4 || ^8.0"
         },
         "require-dev": {
-            "phan/phan": "^3.0",
-            "phpunit/phpunit": "^9.2",
+            "phan/phan": "^3.2.2",
+            "phpunit/phpunit": "^9.4",
             "setasign/fpdf": "^1.8.2"
         },
         "suggest": {
             "chillerlan/php-authenticator": "Yet another Google authenticator! Also creates URIs for mobile apps.",
             "setasign/fpdf": "Required to use the QR FPDF output."
         },
-        "time": "2020-06-14T14:55:01+00:00",
+        "time": "2020-10-07T14:41:07+00:00",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -73,28 +73,28 @@
     },
     {
         "name": "chillerlan/php-settings-container",
-        "version": "2.0.0",
-        "version_normalized": "2.0.0.0",
+        "version": "2.1.0",
+        "version_normalized": "2.1.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/chillerlan/php-settings-container.git",
-            "reference": "75888345532373074fba482a6642c0f8cda996f0"
+            "reference": "90ab24a3dc09569bfa0f3dbc3d44bab3aaa2a6c5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/chillerlan/php-settings-container/zipball/75888345532373074fba482a6642c0f8cda996f0",
-            "reference": "75888345532373074fba482a6642c0f8cda996f0",
+            "url": "https://api.github.com/repos/chillerlan/php-settings-container/zipball/90ab24a3dc09569bfa0f3dbc3d44bab3aaa2a6c5",
+            "reference": "90ab24a3dc09569bfa0f3dbc3d44bab3aaa2a6c5",
             "shasum": ""
         },
         "require": {
             "ext-json": "*",
-            "php": "^7.4"
+            "php": "^7.4 || ^8.0"
         },
         "require-dev": {
-            "phan/phan": "^2.6",
-            "phpunit/phpunit": "^9.1"
+            "phan/phan": "^3.2.2",
+            "phpunit/phpunit": "9.4"
         },
-        "time": "2020-04-16T16:56:44+00:00",
+        "time": "2020-10-07T13:18:35+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -120,6 +120,12 @@
             "Settings",
             "container",
             "helper"
+        ],
+        "funding": [
+            {
+                "url": "https://ko-fi.com/codemasher",
+                "type": "ko_fi"
+            }
         ]
     },
     {

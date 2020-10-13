@@ -1,10 +1,14 @@
 <?php
-    include_once ("../../../server/conexao.php");
+    include_once ("../../../server/Conn.php");
+    $conn = new Conn();
 
-    $query = mysqli_query ($conn, " SELECT * FROM produtos ORDER BY ID_PRODUTOS ASC");
+    $sql = " SELECT * FROM produtos ORDER BY ID_PRODUTOS ASC";
 
-    while($resultado = mysqli_fetch_assoc($query)) {
-        $listarProdutos[] = array_map('utf8_encode', $resultado);
+    $resultado = $conn->getConn()->prepare();
+    $resultado->execute();
+
+    while($resultadoData = $resultado->fetch(PDO::FETCH_ASSOC)) {
+        $listarProdutos[] = array_map('utf8_encode', $resultadoData);
     }
 
     echo json_encode($listarProdutos);

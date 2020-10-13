@@ -50,8 +50,12 @@ $(document).ready(function() {
         $('#conteudo').load('administration/purchaseCheck/view/verificarCompra.html')
     })
 
+    $('.receitas').click(function() {
+        $('#conteudo').load('administration/receitas/public/index.php')
+    })
 
     $("#sidebar").hide();
+
 
     $(".sidebar-dropdown > a").click(function() {
         $(".sidebar-submenu").slideUp(200);

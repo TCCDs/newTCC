@@ -1,12 +1,17 @@
 <?php
-    include_once('../../../server/conexao.php');
+    include_once('../../../server/Conn.php');
+    $conn = new Conn();
 
     $ID_MOEDAS = $_POST['ID_MOEDAS'];
 
-    $sql = mysqli_query($conn, "SELECT * FROM moedas WHERE ID_MOEDAS = ".$ID_MOEDAS."");
+    $sql = "SELECT * FROM moedas WHERE ID_MOEDAS = :ID_MOEDAS";
 
-    while($resultado = mysqli_fetch_assoc($sql)) {
-        $historicoMoedas[] = array_map('utf8_encode', $resultado);
+    $resultado = $conn->getConn()->prepare($sql);
+    $resultado->bindPram(':ID_MOEDAS', $ID_MOEDAS, PDO::PARAM_INT);
+    $resultado->execute();
+
+    while($resultadoHistoricoMoedas = $resultado->fetch(PDO::FETCH_ASSOC)) {
+        $historicoMoedas[] = array_map('utf8_encode', $resultadoHistoricoMoedas);
     }
 
     echo json_encode($historicoMoedas);

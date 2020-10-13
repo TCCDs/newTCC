@@ -1,11 +1,10 @@
 <?php
 	//payment.php
-	//include_once ('../../../server/Conn.php');
+	use Stripe\Service\Terminal\TerminalServiceFactory;
 
-use Stripe\Service\Terminal\TerminalServiceFactory;
-
-$conn = new PDO("mysql:host=localhost;dbname=new_supermercado", "root", "");
-	//$conn = new Conn();
+	include_once ('../../../server/Conn.php');
+	//$conn = new PDO("mysql:host=localhost;dbname=new_supermercado", "root", "");
+	$conn = new Conn();
 
 	session_start();
 
@@ -47,16 +46,20 @@ if(isset($_POST["token"])) {
 			':VALOR_MOEDAS'			=>	$amount
 		);
 
-		$query = "
+		$sql = "
 			INSERT INTO moedas
 				(CODIGOS, ID_CLIENTES_MOEDAS, VALOR_MOEDAS) 
 			VALUES 
 				(:CODIGOS, :ID_CLIENTES_MOEDAS, :VALOR_MOEDAS)
 		";
 
-		$statement = $conn->prepare($query);
+		/*$statement = $conn->prepare($query);
 		$statement->execute($order_item_data);
-		$id_moedas = $conn->lastInsertId();
+		$id_moedas = $conn->lastInsertId();*/
+
+		$resultado = $conn->getConn()->prepare($sql);
+		$resultado->execute($order_item_data);
+		$id_moedas = $conn->getConn()->lastInsertId();
 
 		$order_data = array(
 			':ORDER_NUMBER'			=>	$order_number,
@@ -71,15 +74,18 @@ if(isset($_POST["token"])) {
 			':ID_MOEDAS'			=> 	$id_moedas
 		);
 
-		$query = "
+		$sql = "
 			INSERT INTO cliente_pagamentos 
     			(ORDER_NUMBER, ORDER_TOTAL_AMOUNT, TRANSACAO, CODIGO_CARTAO, CARTAO_VALIDADE_MES, CARTAO_VALIDADE_ANO, ORDER_STATUS, NUMERO_CARTAO,  NOME_CARTAO, ID_MOEDAS) 
 			VALUES 
 				(:ORDER_NUMBER, :ORDER_TOTAL_AMOUNT, :TRANSACAO, :CODIGO_CARTAO, :CARTAO_VALIDADE_MES, :CARTAO_VALIDADE_ANO, :ORDER_STATUS, :NUMERO_CARTAO, :NOME_CARTAO, :ID_MOEDAS)
 		";
 
-		$statement = $conn->prepare($query);
-		$statement->execute($order_data);
+		/*$statement = $conn->prepare($query);
+		$statement->execute($order_data);*/
+
+		$resultado = $conn->getConn()->prepare($sql);
+		$resultado->execute($order_data);
 		
 		$_SESSION["success_message"] = "O pagamento foi concluído com sucesso. O ID TXN é " . $response["balance_transaction"] . "";
 
@@ -91,8 +97,11 @@ if(isset($_POST["token"])) {
 		);
 
 		$sql = "UPDATE saldo_clientes SET SALDO_CLIENTES = :SALDO_CLIENTES  WHERE ID_CLIENTE = :ID_CLIENTE";
-		$statement = $conn->prepare($sql);
-		$statement->execute($order_saldo);
+		/*$statement = $conn->prepare($sql);
+		$statement->execute($order_saldo);*/
+
+		$resultado = $conn->getConn()->prepare($sql);
+		$resultado->execute($order_saldo);
 
 		header('location:../../../customerPanel.php');
 	}

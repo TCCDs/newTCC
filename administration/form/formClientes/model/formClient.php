@@ -1,11 +1,14 @@
 <?php
 session_start();
 
-$connect = new PDO("mysql:host=localhost;dbname=new_supermercado", "root", "");
+//$connect = new PDO("mysql:host=localhost;dbname=new_supermercado", "root", "");
+include_once('../../../../server/Conn.php');
+$conn = new Conn();
+
 if(isset($_POST["NOME_CLIENTES"])) {
 
     try {
-    $query = "INSERT INTO clientes (ID_USUARIOS, NOME_CLIENTES, RG_CLIENTES, CPF_CLIENTES, SEXO_CLIENTES, DATA_NASCIMENTO_CLIENTES, EMAIL_CLIENTES, CELULAR_CLIENTES, CEP_CLIENTES, CIDADE_CLIENTES, ESTADO_CLIENTES, ENDERECO_CLIENTES, NUMERO_CLIENTES, BAIRRO_CLIENTES, NACIONALIDADE_CLIENTES, COMPLEMENTO_CLIENTES)
+        $sql = "INSERT INTO clientes (ID_USUARIOS, NOME_CLIENTES, RG_CLIENTES, CPF_CLIENTES, SEXO_CLIENTES, DATA_NASCIMENTO_CLIENTES, EMAIL_CLIENTES, CELULAR_CLIENTES, CEP_CLIENTES, CIDADE_CLIENTES, ESTADO_CLIENTES, ENDERECO_CLIENTES, NUMERO_CLIENTES, BAIRRO_CLIENTES, NACIONALIDADE_CLIENTES, COMPLEMENTO_CLIENTES)
                 VALUES (:ID_USUARIOS, :NOME_CLIENTES, :RG_CLIENTES, :CPF_CLIENTES, :SEXO_CLIENTES, :DATA_NASCIMENTO_CLIENTES, :EMAIL_CLIENTES, :CELULAR_CLIENTES, :CEP_CLIENTES, :CIDADE_CLIENTES, :ESTADO_CLIENTES, :ENDERECO_CLIENTES, :NUMERO_CLIENTES, :BAIRRO_CLIENTES, :NACIONALIDADE_CLIENTES, :COMPLEMENTO_CLIENTES)
     ";
 
@@ -28,8 +31,11 @@ if(isset($_POST["NOME_CLIENTES"])) {
         ':COMPLEMENTO_CLIENTES'         => $_POST["COMPLEMENTO_CLIENTES"]
     );
 
-    $statement = $connect->prepare($query);
-    $statement->execute($user_data);
+    /*$statement = $connect->prepare($query);
+    $statement->execute($user_data);*/
+
+    $resultado = $conn->getConn()->prepare($sql);
+    $resultado->execute($user_data);
 
         $data = array('return' => true);
 

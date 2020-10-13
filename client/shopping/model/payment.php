@@ -1,5 +1,7 @@
 <?php
-	$connect = new PDO("mysql:host=localhost;dbname=new_supermercado", "root", "");
+	//$connect = new PDO("mysql:host=localhost;dbname=new_supermercado", "root", "");
+	include_once('../../../server/Conn.php');
+	$conn = new Conn();
 
 	session_start();
 
@@ -53,9 +55,13 @@
 					(:ID_CLIENTES_COMPRAS, :CODIGO_COMPRAS, :VALOR_COMPRAS, :TOTAL_DESCONTO_COMPRAS, :STATUS_COMPRAS, :TIPO_PAGAMENTO)
 			";
 						
-			$statement = $connect->prepare($sql);
+			/*$statement = $connect->prepare($sql);
 			$statement->execute($order_compras);
-			$id_compras = $connect->lastInsertId();
+			$id_compras = $connect->lastInsertId();*/
+
+			$resultado = $conn->getConn()->prepare($sql);
+			$resultado->execute($order_compras);
+			$id_compras = $conn->getConn()->lastInsertId();
 
 			#itens da compras 
 			$qr_code = mt_rand();
@@ -74,16 +80,21 @@
 					':ID_COMPRAS'			=>	$id_compras
 				);
 			
-				$query = "
+				$sql = "
 					INSERT INTO compras_itens
 						(CODIGO_ITENS, NOME_PRODUTOS, QUANTIDADE_PRODUTOS, PRECO_PRODUTOS, QR_CODE, ID_COMPRAS) 
 					VALUES 
 						(:CODIGO_ITENS, :NOME_PRODUTOS, :QUANTIDADE_PRODUTOS, :PRECO_PRODUTOS, :QR_CODE, :ID_COMPRAS)
 				";
 			
-				$statement = $connect->prepare($query);
+				/*$statement = $connect->prepare($query);
 				$statement->execute($order_item_data);
-				$id_compras_itens = $connect->lastInsertId();
+				$id_compras_itens = $connect->lastInsertId();*/
+
+				$resultado = $conn->getConn()->prepare($sql);
+				$resultado->execute($order_item_data);
+				$id_compras_itens = $conn->getConn()->lastInsertId();
+
 			}
 			
 			# compras pagamento 
@@ -100,15 +111,18 @@
 				':ID_COMPRAS_ITENS' 	=>  $id_compras_itens
 			);
 
-			$query = "
+			$sql = "
 				INSERT INTO compras_pagamentos 
 					(CODIGO_PAGAMENTO, TOTAL_COMPRA, TRANSACAO, CODIGO_CARTAO, CARTAO_VALIDADE_MES, CARTAO_VALIDADE_ANO, STATUS_PAGAMENTO, NUMERO_CARTAO, NOME_CARTAO, ID_COMPRAS_ITENS) 
 				VALUES 
 					(:CODIGO_PAGAMENTO, :TOTAL_COMPRA, :TRANSACAO, :CODIGO_CARTAO, :CARTAO_VALIDADE_MES, :CARTAO_VALIDADE_ANO, :STATUS_PAGAMENTO, :NUMERO_CARTAO, :NOME_CARTAO, :ID_COMPRAS_ITENS)
 			";
 
-			$statement = $connect->prepare($query);
-			$statement->execute($order_data);
+			/*$statement = $connect->prepare($query);
+			$statement->execute($order_data);*/
+
+			$resultado = $conn->getConn()->prepare($sql);
+			$resultado->execute($order_data);
 
 			unset($_SESSION["shopping_cart"]);
 
