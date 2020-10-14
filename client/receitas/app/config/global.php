@@ -1,6 +1,6 @@
 <?php
 
-define('BASE', '/dev_tcc/newTCC/client/receitas/');
+define('BASE', '/tcc2/newTCC/client/receitas/');
 define('UNSET_COUNT', 4);
 
 define('DB_HOST', 'localhost');
