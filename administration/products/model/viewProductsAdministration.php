@@ -1,5 +1,5 @@
 <?php
-    include_once ('../../../server/Conn.php');
+    include_once('../../../server/Connect.php');
     $conn = new Conn();
 
     $ID_PRODUTOS = $_POST['ID_PRODUTOS'];
@@ -13,5 +13,5 @@
         $produtos[] = array_map('utf8_encode', $resultadoProdutos);
     }
 
-    echo json_encode($produtos);
+    echo json_encode($produtos, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 ?>

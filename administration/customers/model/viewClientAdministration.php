@@ -1,5 +1,5 @@
 <?php
-    include_once ('../../../server/Conn.php');
+    include_once('../../../server/Connect.php');
     session_start();
     $conn = new Conn();
 
@@ -14,5 +14,5 @@
         $clientes[] = array_map('utf8_encode', $resultado_user);
     }
 
-    echo json_encode($clientes);
+    echo json_encode($clientes, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 ?>

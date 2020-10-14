@@ -1,5 +1,5 @@
 <?php
-    include_once("../../../server/Conn.php");
+    include_once('../../../server/Connect.php');
     $conn = new Conn();
 
     $sql = "SELECT COUNT(compras.ID_COMPRAS) AS ultima_venda, compras.DATA_CAD_COMPRAS AS datas_vendas FROM compras
@@ -11,4 +11,4 @@
         $ultimaVendas[] = array_map('utf8_encode', $resultadoProdutos);
     }
 
-    echo json_encode($ultimaVendas);
+    echo json_encode($ultimaVendas, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);

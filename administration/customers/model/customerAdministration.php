@@ -1,5 +1,5 @@
 <?php
-    include_once('../../../server/Conn.php');
+    include_once('../../../server/Connect.php');
     $conn = new Conn();
 
     $sql = "SELECT * FROM clientes";
@@ -11,7 +11,7 @@
 
     }
 
-    echo json_encode($cliente);
+    echo json_encode($cliente, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 
 ?>
 

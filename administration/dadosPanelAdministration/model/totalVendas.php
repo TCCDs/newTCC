@@ -1,5 +1,5 @@
 <?php
-    include_once("../../../server/Conn.php");
+    include_once('../../../server/Connect.php');
     $conn = new Conn();
 
     $sql = "SELECT COUNT(compras.ID_COMPRAS) AS total_vendas FROM compras";
@@ -10,4 +10,4 @@
         $totalVendas[] = array_map('utf8_encode', $resultadoProdutos);
     }
 
-    echo json_encode($totalVendas);
+    echo json_encode($totalVendas, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);

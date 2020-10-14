@@ -1,5 +1,5 @@
 <?php
-    include_once ("../../../server/Conn.php");
+    include_once ('../../../server/Connect.php');
     $conn = new Conn();
 
     $sql = " SELECT * FROM produtos ORDER BY ID_PRODUTOS ASC";
@@ -11,5 +11,5 @@
         $listarProdutos[] = array_map('utf8_encode', $resultadoData);
     }
 
-    echo json_encode($listarProdutos);
+    echo json_encode($listarProdutos, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 ?>

@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    include_once ('../../../server/Conn.php');
+    include_once('../../../server/Connect.php');
     $conn = new Conn();
 
     $ID_USUARIOS_ADMINISTRATION = $_SESSION['ID_USUARIOS'];
@@ -16,7 +16,7 @@
 
     }
 
-    echo json_encode($nav);
+    echo json_encode($nav, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 
 ?>
 

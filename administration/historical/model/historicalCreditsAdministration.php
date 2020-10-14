@@ -1,5 +1,5 @@
 <?php
-    include_once('../../../server/Conn.php');
+    include_once('../../../server/Connect.php');
     $conn = new Conn();
 
     $sql = "SELECT 
@@ -17,5 +17,5 @@
         $historicoMoedas[] = array_map('utf8_encode', $resultadoHistoricoMoedas);
     endwhile;
 
-    echo json_encode($historicoMoedas);
+    echo json_encode($historicoMoedas, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 ?>

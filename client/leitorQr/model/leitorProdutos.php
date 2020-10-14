@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once ('../../../server/Conn.php');
+    include_once ('../../../server/Connect.php');
     $conn = new Conn();
 
     $qr_code = $_POST['qrcode'];
@@ -14,7 +14,7 @@
             FROM 
                 ofertas
             INNER JOIN produtos ON ofertas.ID_PRODUTOS = produtos.ID_PRODUTOS
-            WHERE produtos.QR_CODE_PRODUTOS = :QR_CODE AND ofertas.STATUS_OFERTA = 'A'
+            WHERE produtos.QR_CODE_PRODUTOS = :QR_CODE_OFERTAS AND ofertas.STATUS_OFERTA = 'A'
                             
             UNION 
                                         
@@ -30,6 +30,7 @@
 
     $resultado = $conn->getConn()->prepare($sql);
     $resultado->bindParam(':QR_CODE', $qr_code, PDO::PARAM_INT);
+    $resultado->bindParam(':QR_CODE_OFERTAS', $qr_code, PDO::PARAM_INT);
     $resultado->execute();
 
     while($resultado_user = $resultado->fetch(PDO::FETCH_ASSOC)) {

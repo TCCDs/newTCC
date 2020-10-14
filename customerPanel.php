@@ -35,6 +35,7 @@
                 <img src="img/caravelas.png" width="30" height="30" class="d-inline-block align-top img-user" alt="" loading="lazy">
             </a>
         </nav>
+        
         <div class="hiden">
         <nav id="sidebar" class="sidebar-wrapper">
         <div class="sidebar-content">
@@ -174,7 +175,7 @@
 
         <script src="controller/js/function-menu.js"></script>
         <script src="client/navUsers/controller/nav.js"></script>
-        <script src="client/customers/controller/saldoClientePrincipal.js"></script>
+        <script src="client/dadosPainelPrincipal/controller/saldoCliente.js"></script>
 
         <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
 </body>
