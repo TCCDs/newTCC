@@ -1,5 +1,5 @@
 <?php
-    include_once("../../../server/Conn.php");
+    include_once('../../../server/Connect.php');
     $conn = new Conn();
 
 
@@ -11,6 +11,6 @@
         $totalClientes[] = array_map('utf8_encode', $resultadoProdutos);
     }
 
-    echo json_encode($totalClientes);
+    echo json_encode($totalClientes, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 
 ?>

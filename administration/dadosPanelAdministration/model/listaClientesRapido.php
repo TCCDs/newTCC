@@ -1,5 +1,5 @@
 <?php
-    include_once("../../../server/Conn.php");
+    include_once('../../../server/Connect.php');
     $conn = new Conn();
 
     $sql = "SELECT 
@@ -18,6 +18,6 @@
         $listaClientesRapido[] = array_map('utf8_encode', $resultadoListaClientes);
     endwhile;
 
-    echo json_encode($listaClientesRapido);
+    echo json_encode($listaClientesRapido, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 
 ?>

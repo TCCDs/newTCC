@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    include_once ('../../../server/Conn.php');
+    include_once ('../../../server/Connect.php');
     $conn = new Conn();
 
     $sql = 'SELECT 
@@ -20,6 +20,6 @@
         $supermercado[] = array_map('utf8_encode', $resultadoSaldo);
     }
     
-    echo json_encode($supermercado);
+    echo json_encode($supermercado, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 
 

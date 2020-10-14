@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    include_once ('../../../server/Conn.php');
+    include_once ('../../../server/Connect.php');
     $conn = new Conn();
     $codigoCompra = $_SESSION["CODIGO_COMPRAS"];
     $sql = 'SELECT 
@@ -26,6 +26,6 @@
         $cupomSupermercadoCliente[] = array_map('utf8_encode', $resultadoSaldo);
     }
     
-    echo json_encode($cupomSupermercadoCliente);
+    echo json_encode($cupomSupermercadoCliente, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 
 

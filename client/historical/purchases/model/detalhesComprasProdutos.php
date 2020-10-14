@@ -1,5 +1,5 @@
 <?php
-    include_once ('../../../../server/Conn.php');
+    include_once ('../../../../server/Connect.php');
     $conn = new Conn();
 
     $codigos_itens = 1026437604;
@@ -13,5 +13,5 @@
         $detalhesComprasProdutos[] = array_map('utf8_encode', $resultadoProdutos);
     }
 
-    echo json_encode($detalhesComprasProdutos);
+    echo json_encode($detalhesComprasProdutos, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 ?>

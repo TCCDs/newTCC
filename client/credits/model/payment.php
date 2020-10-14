@@ -2,7 +2,7 @@
 	//payment.php
 	use Stripe\Service\Terminal\TerminalServiceFactory;
 
-	include_once ('../../../server/Conn.php');
+	include_once ('../../../server/Connect.php');
 	$conn = new Conn();
 
 	session_start();

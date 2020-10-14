@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-include_once('../../../server/Conn.php');
+include_once ('../../../server/Connect.php');
 $conn = new Conn();
 
 $sql = "SELECT 
@@ -24,5 +24,5 @@ foreach ($resultado as $row) {
 }
 
 
-echo json_encode($data);
+echo json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 ?>

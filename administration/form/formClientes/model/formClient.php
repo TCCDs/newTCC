@@ -2,7 +2,7 @@
 session_start();
 
 //$connect = new PDO("mysql:host=localhost;dbname=new_supermercado", "root", "");
-include_once('../../../../server/Conn.php');
+include_once('../../../../server/Connect.php');
 $conn = new Conn();
 
 if(isset($_POST["NOME_CLIENTES"])) {

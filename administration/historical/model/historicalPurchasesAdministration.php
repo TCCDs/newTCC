@@ -1,5 +1,5 @@
 <?php
-    include_once('../../../server/Conn.php');
+    include_once('../../../server/Connect.php');
     $conn = new Conn();
 
     $sql = "SELECT 
@@ -17,5 +17,5 @@
         $historicoCompras[] = array_map('utf8_encode', $resultadoHistoricoCompras);
     }
 
-    echo json_encode($historicoCompras);
+    echo json_encode($historicoCompras, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 ?>

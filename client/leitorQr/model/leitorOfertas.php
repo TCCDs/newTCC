@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once ('../../../server/Conn.php');
+    include_once ('../../../server/Connect.php');
     $conn = new Conn();
 
     $qr_code = $_POST['qrcode'];

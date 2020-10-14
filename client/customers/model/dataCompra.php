@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    include_once ('../../../server/Conn.php');
+    include_once ('../../../server/Connect.php');
     $conn = new Conn();
 
     $ID_USUARIOS = $_SESSION['ID_USUARIOS'];
@@ -19,7 +19,7 @@
         $dataCompra[] = array_map('utf8_encode', $resultadoData);
     }
 
-    echo json_encode($dataCompra);
+    echo json_encode($dataCompra, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 
 
 ?>
