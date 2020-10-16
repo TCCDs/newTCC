@@ -318,7 +318,6 @@
             <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
             <script src="controller/js/function-menu-adm.js"></script>
 
-
             <script src="administration/dadosPanelAdministration/controller/totalClientes.js"></script>
             <script src="administration/dadosPanelAdministration/controller/totalFornecedores.js"></script>
             <script src="administration/dadosPanelAdministration/controller/totalMarca.js"></script>
@@ -327,11 +326,9 @@
             <script src="administration/dadosPanelAdministration/controller/ultimaVenda.js"></script>
             <script src="administration/dadosPanelAdministration/controller/listaClienteRapido.js"></script>
             <script src="administration/dadosPanelAdministration/controller/listaFornecedoresRapido.js"></script>
-
             <script src="administration/graficos/controller/graficoVenda.js"></script>
             <script src="administration/graficos/controller/graficoMoedas.js"></script>
             <script src="administration/graficos/controller/graficoLucro.js"></script>
-
             <script src="administration/navAdmin/controller/nav.js"></script>
     </body>
 
