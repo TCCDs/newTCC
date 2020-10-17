@@ -1,7 +1,7 @@
 <?php
 
-define('BASE', '/dev_tcc/newTCC/client/receitas/');
-define('UNSET_COUNT', 4);
+define('BASE', '/public/client/receitas/');
+define('UNSET_COUNT', 3);
 
 define('DB_HOST', 'mysql669.umbler.com');
 define('DB_USER', 'supercaravelas');

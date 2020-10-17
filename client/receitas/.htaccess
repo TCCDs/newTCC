@@ -1,6 +1,6 @@
 RewriteEngine On
 RewriteBase /
 
-RewriteEngine On
-RewriteCond %{HTTPS} !=on
-RewriteRule ^/?(.*) http://supermercadocaravelas.com.br/$1 [R,L]
+RewriteCond %{THE_REQUEST} public/([^\s?]*) [NC]
+RewriteRule ^ %1 [L,NE,R=302]
+RewriteRule ^((?!public/).*)$ public/client/receitas/public/$1 [L,NC]
