@@ -1,6 +1,6 @@
 <?php
 
-define('BASE', '/www.supermercadocaravelas.com.br/');
+define('BASE', '/https://supermercadocaravelas.com.br/');
 define('UNSET_COUNT', 1);
 
 define('DB_HOST', 'mysql669.umbler.com');
