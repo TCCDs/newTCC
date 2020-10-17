@@ -3,4 +3,4 @@ RewriteBase /
 
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
-RewriteRule ^/?(.*) http://supermercadocaravelas.com.br/public/$1 [R,L]
+RewriteRule ^/?(.*) http://supermercadocaravelas.com.br/$1 [R,L]
