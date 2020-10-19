@@ -49,7 +49,7 @@
 		$('.form').submit(function(){
 			$('.loading').html("<img src='loading.gif' width='45'>");
 			$.ajax({
-				url: 'recuperarSenha.php',
+				url: 'send-form.php',
 				type: 'POST',
 				data: $('.form').serialize(),
 				success: function(data){
