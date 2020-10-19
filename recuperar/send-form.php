@@ -1,7 +1,10 @@
 <?php
-	require_once('phpmailer/PHPMailer/class.phpmailer.php');
+    include_once("../server/Connect.php");
+    require_once('phpmailer/PHPMailer/class.phpmailer.php');
+    $conn = new Conn();
 	$email = utf8_decode($_POST['email']);
 
+	if(empty($email)){
 
 		$sql = "SELECT EMAIL_CLIENTES FROM clientes WHERE EMAIL_CLIENTES = :EMAIL_CLIENTES";
 		$resultado = $conn->getConn()->prepare($sql);
@@ -33,6 +36,9 @@
 				echo "<script> alert('Falha ao enviar o Formulário.'); </script>";
 			}
 		}
+	} else {
+		echo "preencher campo email";
+	}
 
 
 
