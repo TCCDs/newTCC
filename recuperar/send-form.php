@@ -39,9 +39,9 @@
                 $resultado->bindParam(':ID_USUARIOS', $id);
                 $resultado->execute();
 
-                /*if ($resultado):
-                    $erro[] = "Senha alterada com sucesso";
-				endif;*/
+                if ($resultado):
+                    echo "Senha alterada com sucesso";
+				endif;
 				
 				echo "<script> alert('Formulário enviado com sucesso!'); </script>";
 			} else {
