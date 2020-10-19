@@ -27,7 +27,7 @@ if($_POST){
 
 		$corpo = "Formulário enviado\n";
 		$corpo .= "Email: " . $email . "\n";
-		$corpo .= "Comentários: " . $novasenha . "\n";
+		$corpo .= "Sua nova senha : " . $novasenha . "\n";
 
 		$email_to = $email;
 		//não esqueça de substituir este email pelo seu.
