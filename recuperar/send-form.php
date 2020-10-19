@@ -17,6 +17,7 @@
 			echo  "O e-mail informado não existe no banco de dados.";
 		} else {
 			$novasenha = substr(md5(time()), 0, 8);
+			$nscriptografada = md5(md5($novasenha));
 			$assunto 	= 'Recuperar senha';
 
 			$myEmail = "lucasgabriel@supermercadocaravelas.com.br";
