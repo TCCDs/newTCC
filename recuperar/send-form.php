@@ -17,7 +17,7 @@
 			echo  "O e-mail informado não existe no banco de dados.";
 		} else {
 			$novasenha = substr(md5(time()), 0, 8);
-			$nscriptografada = md5(md5($novasenha));
+			$password_hash = password_hash($novasenha, PASSWORD_DEFAULT);
 			$assunto 	= 'Recuperar senha';
 
 			$myEmail = "lucasgabriel@supermercadocaravelas.com.br";
@@ -35,7 +35,7 @@
 				$id = 1;
 				$sql = "UPDATE login_usuarios SET SENHA_USUARIOS = :SENHA_USUARIOS WHERE  ID_USUARIOS = :ID_USUARIOS";
                 $resultado = $conn->getConn()->prepare($sql);
-                $resultado->bindParam(':SENHA_USUARIOS', $nscriptografada);
+                $resultado->bindParam(':SENHA_USUARIOS', $password_hash);
                 $resultado->bindParam(':ID_USUARIOS', $id);
                 $resultado->execute();
 
