@@ -6,23 +6,17 @@
     if(isset($_POST['ok'])):
         $email = $_POST['email'];
 
-        print_r($email);
-
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)):
             $erro[] = "E-mail invalidao";
         endif;
 
-        $sql = "SELECT LOGIN_USUARIOS FROM login_usuarios WHERE LOGIN_USUARIOS = :LOGIN_USUARIOS";
+        $sql = "SELECT EMAIL_CLIENTES FROM clientes WHERE EMAIL_CLIENTES = :EMAIL_CLIENTES";
 		$resultado = $conn->getConn()->prepare($sql);
-		$resultado->bindParam(':LOGIN_USUARIOS', $email);
+		$resultado->bindParam(':EMAIL_CLIENTES', $email);
         $resultado->execute();
-        while ($resultadoRs = $resultado->fetch(PDO::FETCH_ASSOC)):
-            echo $resultadoRs['LOGIN_USUARIOS'];
-        endwhile;
-        
+        $resultadoRs = $resultado->fetch(PDO::FETCH_ASSOC);
         $total = $resultado->fetchColumn();
 
-        print_r($total);
 
         if ($total == 0):
             $erro[] = "O e-mail informado não existe no banco de dados.";
