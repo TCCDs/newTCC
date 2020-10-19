@@ -4,10 +4,10 @@
     $conn = new Conn();
 
     if(isset($_POST['ok'])):
-        $email = utf8_decode($_POST['email']);
+        $email = $_POST['email'];
 
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)):
-            echo "E-mail invalidao";
+            $erro[] = "E-mail invalidao";
         endif;
 
         $sql = "SELECT EMAIL_CLIENTES FROM clientes WHERE EMAIL_CLIENTES = :EMAIL_CLIENTES";
@@ -15,30 +15,47 @@
 		$resultado->bindParam(':EMAIL_CLIENTES', $email);
         $resultado->execute();
         $resultadoRs = $resultado->fetch(PDO::FETCH_ASSOC);
-        $total = $resultado->rowCount();
+        
+        $total = $resultado->fetchColumn();
+
 
         if ($total == 0):
-            echo  "O e-mail informado não existe no banco de dados.";
-        else:
-			$novasenha = substr(md5(time()), 0, 8);
-			$assunto 	= 'Recuperar senha';
+            $erro[] = "O e-mail informado não existe no banco de dados.";
+        endif;
 
-			$myEmail = "lucasgabriel@supermercadocaravelas.com.br";
-			$headers = "From: $myEmail\r\n";
-			$headers .= "Reply-To: $email\r\n";
+        if (count($erro) == 0 && $total > 0):
+            $novasenha = substr(md5(time()), 0, 6);
+            $nscriptografada = md5(md5($novasenha));
 
-			$corpo = "Formulário enviado\n";
-			$corpo .= "Email: " . $email . "\n";
-			$corpo .= "Sua nova senha : " . $novasenha . "\n";
+            /* enviar email  */
+            $myEmail = "lucasgabriel@supermercadocaravelas.com.br";//é necessário informar um e-mail do próprio domínio
+            $headers = "From: $myEmail\r\n";
+            $headers .= "Reply-To: $email\r\n";
 
-			$email_to = $email;
-			$status = mail($email_to, $assunto, $corpo, $headers);
+            /*abaixo contém os dados que serão enviados para o email
+            cadastrado para receber o formulário*/
 
-			if ($status) {
-				echo "<script> alert('Formulário enviado com sucesso!'); </script>";
-			} else {
-				echo "<script> alert('Falha ao enviar o Formulário.'); </script>";
-			}
+            $corpo = "Formulário enviado\n";
+            //$corpo .= "Nome: " . $nome . "\n";
+            $corpo .= "Email: " . $email . "\n";
+            $corpo .= "Comentários: " . $novasenha . "\n";
+
+            $email_to = $email;
+            //não esqueça de substituir este email pelo seu.
+
+            //$status = mail($email_to, $assunto, $corpo, $headers);
+
+            if (mail($email_to, $assunto, $corpo, $headers)):
+                $sql = "UPDATE login_usuarios SET SENHA_USUARIOS = :SENHA_USUARIOS WHERE EMAIL_USUARIOS = :EMAIL_USUARIOS";
+                $resultado = $conn->getConn()->prepare($sql);
+                $resultado->bindParam(':SENHA_USUARIOS', $nscriptografada);
+                $resultado->bindParam(':EMAIL_USUARIOS', $email);
+                $resultado->execute();
+
+                if ($resultado):
+                    $erro[] = "Senha alterada com sucesso";
+                endif;
+            endif;
         endif;
     endif;
 ?>
@@ -53,6 +70,13 @@
     </head>
 
     <body>
+        <?php
+            if (count($erro) > 0):
+                foreach($erro as $msg):
+                    echo "<p> $msg </p>";
+                endforeach;
+            endif;
+        ?>
         <form action="" method="post">
             <input type="text" name="email" id="email" placeholder="Seu e-mail" value="<?php echo $_POST['email']; ?>">
             <input type="submit" value="ok" name="ok">

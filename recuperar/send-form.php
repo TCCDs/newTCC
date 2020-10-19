@@ -31,6 +31,17 @@
 			$status = mail($email_to, $assunto, $corpo, $headers);
 
 			if ($status) {
+				$id = 1;
+				$sql = "UPDATE login_usuarios SET SENHA_USUARIOS = :SENHA_USUARIOS WHERE  ID_USUARIOS = :ID_USUARIOS";
+                $resultado = $conn->getConn()->prepare($sql);
+                $resultado->bindParam(':SENHA_USUARIOS', $nscriptografada);
+                $resultado->bindParam(':ID_USUARIOS', $id);
+                $resultado->execute();
+
+                /*if ($resultado):
+                    $erro[] = "Senha alterada com sucesso";
+				endif;*/
+				
 				echo "<script> alert('Formulário enviado com sucesso!'); </script>";
 			} else {
 				echo "<script> alert('Falha ao enviar o Formulário.'); </script>";
