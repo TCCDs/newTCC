@@ -16,7 +16,7 @@ if($_POST){
 		
 		
 		require_once('phpmailer/PHPMailer/class.phpmailer.php');
-		require_once('phpmailer/PHPMailer/class.smtp');
+		//require_once('phpmailer/PHPMailer/class.smtp');
 
 		$Email = new PHPMailer();
 		$Email->SetLanguage("br");
