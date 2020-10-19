@@ -22,6 +22,8 @@
         
         $total = $resultado->fetchColumn();
 
+        print_r($total);
+
         if ($total == 0):
             $erro[] = "O e-mail informado não existe no banco de dados.";
         endif;
