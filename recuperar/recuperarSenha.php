@@ -41,9 +41,9 @@
             $email_to = $email;
             //não esqueça de substituir este email pelo seu.
 
-            $status = mail($email_to, $assunto, $corpo, $headers);
+            //$status = mail($email_to, $assunto, $corpo, $headers);
 
-            if ($status):
+            if (mail($email_to, $assunto, $corpo, $headers)):
                 $sql = "UPDATE login_usuarios SET SENHA_USUARIOS = :SENHA_USUARIOS WHERE EMAIL_USUARIOS = :EMAIL_USUARIOS";
                 $resultado = $conn->getConn()->prepare($sql);
                 $resultado->bindParam(':SENHA_USUARIOS', $nscriptografada);
@@ -58,26 +58,3 @@
     endif;
 ?>
 
-
-<!--<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-
-    <body>
-        <?php
-            /*if (count($erro) > 0):
-                foreach($erro as $msg):
-                    echo "<p> $msg </p>";
-                endforeach;
-            endif;*/
-        ?>
-        <form action="" method="post">
-            <input type="text" name="email" id="email" placeholder="Seu e-mail" value="<?php //echo $_POST['email']; ?>">
-            <input type="submit" value="ok" name="ok">
-        </form> 
-    </body>
-</html>-->
