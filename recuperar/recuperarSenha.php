@@ -10,12 +10,16 @@
             $erro[] = "E-mail invalidao";
         endif;
 
-        $sql = "SELECT * FROM login_usuarios WHERE LOGIN_USUARIOS = :LOGIN_USUARIOS LIMIT 1";
+        $sql = "SELECT LOGIN_USUARIOS FROM login_usuarios WHERE LOGIN_USUARIOS = :LOGIN_USUARIOS";
 		$resultado = $conn->getConn()->prepare($sql);
 		$resultado->bindParam(':LOGIN_USUARIOS', $email);
         $resultado->execute();
         $resultadoRs = $resultado->fetch(PDO::FETCH_ASSOC);
         $total = $resultado->rowCount();
+
+        print_r($resultadoRs);
+        print_r($total);
+        exit;
 
         if ($total == 0):
             $erro[] = "O e-mail informado não existe no banco de dados.";
