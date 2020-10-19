@@ -2,7 +2,7 @@
 	require_once('phpmailer/PHPMailer/class.phpmailer.php');
 	$email = utf8_decode($_POST['email']);
 
-	if(empty($email)){
+	if(isset($email)){
 
 		$sql = "SELECT EMAIL_CLIENTES FROM clientes WHERE EMAIL_CLIENTES = :EMAIL_CLIENTES";
 		$resultado = $conn->getConn()->prepare($sql);
