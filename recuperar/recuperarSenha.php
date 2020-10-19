@@ -7,7 +7,7 @@
         $email = utf8_decode($_POST['email']);
 
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)):
-            $erro[] = "E-mail invalidao";
+            echo "E-mail invalidao";
         endif;
 
         $sql = "SELECT EMAIL_CLIENTES FROM clientes WHERE EMAIL_CLIENTES = :EMAIL_CLIENTES";
@@ -18,7 +18,7 @@
         $total = $resultado->rowCount();
 
         if ($total == 0):
-            $erro[] = "O e-mail informado não existe no banco de dados.";
+            echo  "O e-mail informado não existe no banco de dados.";
         else:
 			$novasenha = substr(md5(time()), 0, 8);
 			$assunto 	= 'Recuperar senha';
@@ -53,13 +53,6 @@
     </head>
 
     <body>
-        <?php
-            if (count($erro) > 0):
-                foreach($erro as $msg):
-                    echo "<p> $msg </p>";
-                endforeach;
-            endif;
-        ?>
         <form action="" method="post">
             <input type="text" name="email" id="email" placeholder="Seu e-mail" value="<?php echo $_POST['email']; ?>">
             <input type="submit" value="ok" name="ok">
