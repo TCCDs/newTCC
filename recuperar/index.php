@@ -26,30 +26,18 @@
 		
 		<form action="" method="post" enctype="multipart/form-data" class="form">
 			<div class="form-group row">
-			  <label for="example-text-input" class="col-xs-2 col-form-label">Nome*</label>
-			  <div class="col-xs-10">
-				<input class="form-control" name="nome" type="text" value="" id="example-text-input" required>
-			  </div>
-			</div>
-			<div class="form-group row">
-			  <label for="example-search-input" class="col-xs-2 col-form-label">Email*</label>
-			  <div class="col-xs-10">
-				<input class="form-control" name="email" type="email" value="" id="example-search-input" >
-			  </div>
-			</div>
-			<div class="form-group row">
-			  <label for="example-url-input" class="col-xs-2 col-form-label">Mensagem*</label>
-			  <div class="col-xs-10">
-				  <textarea class="form-control" name="mensagem" id="" rows="10"></textarea>
-			  </div>
+			  	<label for="example-search-input" class="col-xs-2 col-form-label">Email*</label>
+				<div class="col-xs-10">
+					<input class="form-control" name="email" type="email" value="" id="example-search-input" >
+				</div>
 			</div>
 
 			<div class="form-group row">
-			  <label class="col-xs-2 col-form-label"></label>
-			  <div class="col-xs-10">
-				  <button type="submit" class="btn btn-primary pull-left" id="btn-contato">Enviar mensagem</button>
-				  <div class="loading" style="float: left;margin-left:20px;"></div>
-			  </div>
+				<label class="col-xs-2 col-form-label"></label>
+				<div class="col-xs-10">
+					<button type="submit" name="ok" id="ok" class="btn btn-primary pull-left" id="btn-contato">Enviar mensagem</button>
+					<div class="loading" style="float: left;margin-left:20px;"></div>
+				</div>
 			</div>
 		</form>		
 	
@@ -61,7 +49,7 @@
 		$('.form').submit(function(){
 			$('.loading').html("<img src='loading.gif' width='45'>");
 			$.ajax({
-				url: 'send-form.php',
+				url: 'recuperarSenha.php',
 				type: 'POST',
 				data: $('.form').serialize(),
 				success: function(data){
