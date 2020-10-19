@@ -15,7 +15,7 @@ if($_POST){
 		$assunto 	= 'Contato enviado pelo site';
 		
 		
-		require_once('phpmailer/PHPMailer/class.phpmailer.php');
+		/*require_once('phpmailer/PHPMailer/class.phpmailer.php');
 		//require_once('phpmailer/PHPMailer/class.smtp');
 
 		$Email = new PHPMailer();
@@ -66,7 +66,38 @@ if($_POST){
 			});
 		</script>';
 
-		}		
+		}*/
+
+		$myEmail = "lucasgabriel@supermercadocaravelas.com.br";//é necessário informar um e-mail do próprio domínio
+		$headers = "From: $myEmail\r\n";
+		$headers .= "Reply-To: $email\r\n";
+
+		/*abaixo contém os dados que serão enviados para o email
+		cadastrado para receber o formulário*/
+
+		$corpo = "Formulário enviado\n";
+		$corpo .= "Nome: " . $nome . "\n";
+		$corpo .= "Email: " . $email . "\n";
+		$corpo .= "Comentários: " . $mensagem . "\n";
+
+		$email_to = $email;
+		//não esqueça de substituir este email pelo seu.
+
+		$status = mail($email_to, $assunto, $corpo, $headers);
+		//enviando o email.
+
+		if ($status) {
+		echo "<script> alert('Formulário enviado com sucesso!'); </script>";
+		
+		//mensagem de form enviado com sucesso.
+
+		} else {
+		echo "<script> alert('Falha ao enviar o Formulário.'); </script>";
+		
+		//mensagem de erro no envio. 
+
+		}
+
 	}
 }
 
