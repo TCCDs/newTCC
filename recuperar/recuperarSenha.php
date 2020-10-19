@@ -14,7 +14,7 @@
 		$resultado->bindParam(':EMAIL_CLIENTES', $email);
         $resultado->execute();
         $resultadoRs = $resultado->fetch(PDO::FETCH_ASSOC);
-        $total = $resultado->fetchColumn();
+        $total = $resultado->rowCount();
 
         echo $resultadoRs['EMAIL_CLIENTES'];
         echo '<br>';
