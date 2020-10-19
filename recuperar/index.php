@@ -38,12 +38,6 @@
 			  </div>
 			</div>
 			<div class="form-group row">
-			  <label for="example-email-input" class="col-xs-2 col-form-label">Telefone</label>
-			  <div class="col-xs-10">
-				<input class="form-control" name="telefone" type="text" value="" id="example-email-input">
-			  </div>
-			</div>
-			<div class="form-group row">
 			  <label for="example-url-input" class="col-xs-2 col-form-label">Mensagem*</label>
 			  <div class="col-xs-10">
 				  <textarea class="form-control" name="mensagem" id="" rows="10"></textarea>
