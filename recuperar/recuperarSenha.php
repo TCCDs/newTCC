@@ -4,7 +4,7 @@
     $conn = new Conn();
 
     if(isset($_POST['ok'])):
-        $email = $_POST['email'];
+        $email = utf8_decode($_POST['email']);
 
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)):
             $erro[] = "E-mail invalidao";
@@ -17,14 +17,9 @@
         $resultadoRs = $resultado->fetch(PDO::FETCH_ASSOC);
         $total = $resultado->rowCount();
 
-        echo $resultadoRs['EMAIL_CLIENTES'];
-        echo '<br>';
-        echo $total;
-
         if ($total == 0):
             $erro[] = "O e-mail informado não existe no banco de dados.";
         else:
-            $email 		= utf8_decode($_POST['email']);
 			$novasenha = substr(md5(time()), 0, 8);
 			$assunto 	= 'Recuperar senha';
 
