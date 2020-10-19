@@ -4,8 +4,6 @@
     $conn = new Conn();
 	$email = utf8_decode($_POST['email']);
 
-	if(empty($email)){
-
 		$sql = "SELECT EMAIL_CLIENTES FROM clientes WHERE EMAIL_CLIENTES = :EMAIL_CLIENTES";
 		$resultado = $conn->getConn()->prepare($sql);
 		$resultado->bindParam(':EMAIL_CLIENTES', $email);
@@ -36,9 +34,4 @@
 				echo "<script> alert('Falha ao enviar o Formulário.'); </script>";
 			}
 		}
-	} else {
-		echo "preencher campo email";
-	}
-
-
 
