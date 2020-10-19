@@ -1,6 +1,5 @@
 <?php
     include_once("../server/Connect.php");
-    require_once('phpmailer/PHPMailer/class.phpmailer.php');
     $conn = new Conn();
 
     if(isset($_POST['ok'])):
@@ -17,7 +16,7 @@
         $resultadoRs = $resultado->fetch(PDO::FETCH_ASSOC);
         $total = $resultado->fetchColumn();
 
-        echo $resultadoRs;
+        echo $resultadoRs['EMAIL_CLIENTES'];
         echo '<br>';
         echo $total;
 
