@@ -1,7 +1,7 @@
 <?php
 if($_POST){
 	
-	if(empty(empty($_POST['email']))){
+	if(empty($_POST['email'])){
 		echo '<script>
 			$(document).ready(function(){
 				swal("Ops...","Preencha todos os campos obrigatórios!","warning");
