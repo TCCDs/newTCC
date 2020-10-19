@@ -1,53 +1,35 @@
 <?php
-if($_POST){
-	
-	if(empty($_POST['email'])){
-		echo '<script>
-			$(document).ready(function(){
-				swal("Ops...","Preencha todos os campos obrigatórios!","warning");
-			});
-			</script>';
-	}else{
-		//$nome 		= utf8_decode($_POST['nome']);
-		$email 		= utf8_decode($_POST['email']);
-		//$telefone 	= utf8_decode($_POST['telefone']);
-		$novasenha = substr(md5(time()), 0, 6);
-		//$mensagem 	= utf8_decode($_POST['mensagem']);
-		$assunto 	= 'Contato enviado pelo site';
-		
-		
-		require_once('phpmailer/PHPMailer/class.phpmailer.php');
+	require_once('phpmailer/PHPMailer/class.phpmailer.php');
 
-		$myEmail = "lucasgabriel@supermercadocaravelas.com.br";//é necessário informar um e-mail do próprio domínio
-		$headers = "From: $myEmail\r\n";
-		$headers .= "Reply-To: $email\r\n";
+	if($_POST){
+		if(empty($_POST['email'])){
+			echo '<script>
+					$(document).ready(function(){
+						swal("Ops...","Preencha todos os campos obrigatórios!","warning");
+					});
+				</script>';
+		}else{
+			$email 		= utf8_decode($_POST['email']);
+			$novasenha = substr(md5(time()), 0, 8);
+			$assunto 	= 'Recuperar senha';
 
-		/*abaixo contém os dados que serão enviados para o email
-		cadastrado para receber o formulário*/
+			$myEmail = "lucasgabriel@supermercadocaravelas.com.br";
+			$headers = "From: $myEmail\r\n";
+			$headers .= "Reply-To: $email\r\n";
 
-		$corpo = "Formulário enviado\n";
-		$corpo .= "Email: " . $email . "\n";
-		$corpo .= "Sua nova senha : " . $novasenha . "\n";
+			$corpo = "Formulário enviado\n";
+			$corpo .= "Email: " . $email . "\n";
+			$corpo .= "Sua nova senha : " . $novasenha . "\n";
 
-		$email_to = $email;
-		//não esqueça de substituir este email pelo seu.
+			$email_to = $email;
+			$status = mail($email_to, $assunto, $corpo, $headers);
 
-		$status = mail($email_to, $assunto, $corpo, $headers);
-		//enviando o email.
-
-		if ($status) {
-		echo "<script> alert('Formulário enviado com sucesso!'); </script>";
-		
-		//mensagem de form enviado com sucesso.
-
-		} else {
-		echo "<script> alert('Falha ao enviar o Formulário.'); </script>";
-		
-		//mensagem de erro no envio. 
-
+			if ($status) {
+				echo "<script> alert('Formulário enviado com sucesso!'); </script>";
+			} else {
+				echo "<script> alert('Falha ao enviar o Formulário.'); </script>";
+			}
 		}
-
 	}
-}
 
 
