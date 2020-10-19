@@ -37,7 +37,7 @@ if($_POST){
 		$Email->FromName = ($nome);
 		// Endereço de destino do emaail, ou seja, pra onde você quer que a mensagem do formulário vá?
 		$Email->AddReplyTo($email, $nome);
-		$Email->AddAddress($email); //  para quem será enviada a mensagem
+		$Email->AddAddress('tccdesenvolvimento2020@gmail.com'); //  para quem será enviada a mensagem
 		//$Email->AddCC('email@hotmail.com', 'Nome da pessoa'); // Copia
 		//$Email->AddBCC('email@hotmail.com.br', 'Nome da pessoa'); // Cópia Oculta
 		// informando no email, o assunto da mensagem
