@@ -6,6 +6,8 @@
     if(isset($_POST['ok'])):
         $email = $_POST['email'];
 
+        print_r($email);
+
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)):
             $erro[] = "E-mail invalidao";
         endif;
@@ -36,7 +38,7 @@
             $corpo = "Formulário enviado\n";
             //$corpo .= "Nome: " . $nome . "\n";
             $corpo .= "Email: " . $email . "\n";
-            $corpo .= "Comentários: " . $nscriptografada . "\n";
+            $corpo .= "Comentários: " . $novasenha . "\n";
 
             $email_to = $email;
             //não esqueça de substituir este email pelo seu.
