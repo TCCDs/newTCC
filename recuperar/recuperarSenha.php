@@ -16,7 +16,10 @@
 		$resultado = $conn->getConn()->prepare($sql);
 		$resultado->bindParam(':LOGIN_USUARIOS', $email);
         $resultado->execute();
-        $resultadoRs = $resultado->fetch(PDO::FETCH_ASSOC);
+        while ($resultadoRs = $resultado->fetch(PDO::FETCH_ASSOC)):
+            echo $resultadoRs['LOGIN_USUARIOS'];
+        endwhile;
+        
         $total = $resultado->fetchColumn();
 
         if ($total == 0):
