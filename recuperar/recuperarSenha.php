@@ -15,7 +15,7 @@
 		$resultado->bindParam(':LOGIN_USUARIOS', $email);
         $resultado->execute();
         $resultadoRs = $resultado->fetch(PDO::FETCH_ASSOC);
-        $total = $resultado->rowCount();
+        $total = $resultado->fetchColumn();
 
         print_r($resultadoRs);
         print_r($total);
