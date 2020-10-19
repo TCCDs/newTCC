@@ -1,17 +1,18 @@
 <?php
 if($_POST){
 	
-	if(empty($_POST['nome']) || empty($_POST['email']) || empty($_POST['mensagem'])){
+	if(empty(empty($_POST['email']))){
 		echo '<script>
 			$(document).ready(function(){
 				swal("Ops...","Preencha todos os campos obrigatórios!","warning");
 			});
 			</script>';
 	}else{
-		$nome 		= utf8_decode($_POST['nome']);
+		//$nome 		= utf8_decode($_POST['nome']);
 		$email 		= utf8_decode($_POST['email']);
-		$telefone 	= utf8_decode($_POST['telefone']);
-		$mensagem 	= utf8_decode($_POST['mensagem']);
+		//$telefone 	= utf8_decode($_POST['telefone']);
+		$novasenha = substr(md5(time()), 0, 6);
+		//$mensagem 	= utf8_decode($_POST['mensagem']);
 		$assunto 	= 'Contato enviado pelo site';
 		
 		
@@ -25,9 +26,8 @@ if($_POST){
 		cadastrado para receber o formulário*/
 
 		$corpo = "Formulário enviado\n";
-		$corpo .= "Nome: " . $nome . "\n";
 		$corpo .= "Email: " . $email . "\n";
-		$corpo .= "Comentários: " . $mensagem . "\n";
+		$corpo .= "Comentários: " . $novasenha . "\n";
 
 		$email_to = $email;
 		//não esqueça de substituir este email pelo seu.
