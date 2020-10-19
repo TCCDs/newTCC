@@ -16,6 +16,7 @@ if($_POST){
 		
 		
 		require_once('phpmailer/PHPMailer/class.phpmailer.php');
+		require_once('phpmailer/PHPMailer/class.smtp');
 
 		$Email = new PHPMailer();
 		$Email->SetLanguage("br");
@@ -30,14 +31,13 @@ if($_POST){
 		$Email->IsHTML(true); 
 		// email do remetente da mensagem
 		$Email->CharSet = 'iso-8859-1';
-
 		$Email->From = $email;
 		//$Email->SMTPDebug = 2; //mostra erros mais detalhados caso houver
 		// nome do remetente do email
 		$Email->FromName = ($nome);
 		// Endereço de destino do emaail, ou seja, pra onde você quer que a mensagem do formulário vá?
 		$Email->AddReplyTo($email, $nome);
-		$Email->AddAddress("qq2515720@gmail.com"); //  para quem será enviada a mensagem
+		$Email->AddAddress($email); //  para quem será enviada a mensagem
 		//$Email->AddCC('email@hotmail.com', 'Nome da pessoa'); // Copia
 		//$Email->AddBCC('email@hotmail.com.br', 'Nome da pessoa'); // Cópia Oculta
 		// informando no email, o assunto da mensagem
