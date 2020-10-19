@@ -22,14 +22,6 @@
 		<br><br>
 		<h3 id="textual-inputs">Formulário em Ajax</h3>
 
-		<?php
-            if (count($erro) > 0):
-                foreach($erro as $msg):
-                    echo "<p> $msg </p>";
-                endforeach;
-            endif;
-        ?>
-		
 		<br><br>
 		
 		<form action="" method="post" enctype="multipart/form-data" class="form">

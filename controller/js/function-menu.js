@@ -115,7 +115,7 @@ $(document).ready(function() {
     })
 
     $('.recuperar').click(function() {
-        $('#conteudo').load('recuperar/index.php')
+        $('#conteudo').load('recuperar/recuperarSenha.php')
     })
 
     $('.login').click(function() {
