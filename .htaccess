@@ -1,4 +1,3 @@
 RewriteEngine On
-RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} !^www\.supermercadocaravelas\.com.br$ [NC]
-RewriteRule ^(.*)$ https://www.supermercadocaravelas.com.br/ [L,R=301]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^/?(.*) https://www.supermercadocaravelas.com.br/$1 [R,L]
