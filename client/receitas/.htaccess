@@ -1,4 +1,4 @@
 RewriteEngine On
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
-RewriteCond %{REQUEST_URI} client
-RewriteRule ^(.*)$ https://supermercadocaravelas.com.br/client/$1 [R,L]
+RewriteCond %{REQUEST_URI} client/receitas/public
+RewriteRule ^(.*)$ https://supermercadocaravelas.com.br/client/receitas/public/$1 [R,L]
