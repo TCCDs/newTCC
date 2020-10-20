@@ -34,11 +34,6 @@ $(document).ready(function() {
         $('.menu').hide();
     })
 
-    /*$('.payment').click(function() {
-        $('#conteudo').load('client/payment/view/payment-select.html')
-        $('.saldo').hide();
-        $('.menu').hide();
-    })*/
 
     $('.payment-coin').click(function() {
         $('#conteudo').load('client/payment/view/payment-coin.html')
@@ -119,11 +114,11 @@ $(document).ready(function() {
     })
 
     $('.login').click(function() {
-        $('body').load('index.html')
+        $('body').load('index.php')
     })
 
     $('.logout').click(function() {
-        window.location.href = "index.html";
+        window.location.href = "index.php";
 
     })
 
