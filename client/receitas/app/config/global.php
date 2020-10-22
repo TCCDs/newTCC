@@ -1,7 +1,7 @@
 <?php
 
-define('BASE', '/https://supermercadocaravelas.com.br/');
-define('UNSET_COUNT', 1);
+define('BASE', '/https://supermercadocaravelas.com.br/client/receitas/public/');
+define('UNSET_COUNT', 4);
 
 define('DB_HOST', 'mysql669.umbler.com');
 define('DB_USER', 'supercaravelas');
