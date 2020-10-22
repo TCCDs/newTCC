@@ -4,8 +4,3 @@ RewriteBase /
 RewriteCond %{THE_REQUEST} public/([^\s?]*) [NC]
 RewriteRule ^ %1 [L,NE,R=302]
 RewriteRule ^((?!public/).*)$ public/administration/receitas/public/$1 [L,NC]
-
-# CONFIGURAR UTILIZAÇÃO DO HTTPS
-# RewriteEngine On
-# RewriteCond %{HTTP:X-Forwarded-Proto} !https
-# RewriteRule ^(.*)$ https://supermercadocaravelas.com.br/client/receitas/ [R,L]
