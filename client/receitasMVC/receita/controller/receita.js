@@ -15,7 +15,7 @@ $(document).ready(function() {
                         <td> ` + dados[i].id + `</td>
                         <td> ` + dados[i].titulo + `</td>
                         <td> ` + dados[i].slug + `</td>
-                        <td> ` + dados[i].categoriaTitulo + `</td>
+                        <td> ` + dados[i].cattitulo + `</td>
                         <td> ` + dados[i].data|date('d/m/Y H:i:s') + `</td>
                         <td>
                             <a href="{{BASE}}receita/editar/` + dados[i].id + `" class="btn btn-warning">Editar</a>
