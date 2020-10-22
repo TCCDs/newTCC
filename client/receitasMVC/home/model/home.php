@@ -10,7 +10,7 @@
                 r.*, 
                 c.titulo as cattitulo 
             FROM receita r 
-            INNER JOIN categoria c ON c.id = r.categoria_id 
+            INNER JOIN receita_categoria c ON c.id = r.categoria_id 
             WHERE r.categoria_id = :categoriaid 
             ORDER BY r.data DESC LIMIT :limit
             ";
