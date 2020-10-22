@@ -91,6 +91,12 @@ $(document).ready(function() {
         $('.menu').hide();
     })
 
+    $('.receitasMVC').click(function() {
+        $('#conteudo').load('client/receitasMVC/partials/view/index.html')
+        $('.saldo').hide();
+        $('.menu').hide();
+    })
+
     $('.offer').click(function() {
         $('#conteudo').load('administration/offer/view/ofertas.html')
         $('.saldo').hide();
