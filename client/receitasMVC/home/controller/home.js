@@ -15,10 +15,10 @@ $(document).ready(function() {
                         <div class="card border-info mb-3">
                             <div class="card-header"> ` + dados[i].titulo + `</div>
                             <div class="card-body">
-                                <a href="{{BASE}}receita/ver/ ` + dados[i].slug + `">
+                                <a href="client/receitasMVC/receita/view/ver.html ` + dados[i].slug + `">
                                     <img src=" ` + dados[i].thumb + `" alt=" ` + dados[i].titulo + `" class="w-100 img-thumb" />
                                 </a>
-                                <a href="{{BASE}}receita/ver/ ` + dados[i].slug + `" class="btn btn-info w-100 mt-2">Acessar</a>
+                                <a href="client/receitasMVC/receita/view/ver.html ` + dados[i].slug + `" class="btn btn-info w-100 mt-2">Acessar</a>
                             </div>
                         </div>
                     </div>
