@@ -91,6 +91,10 @@
                         <li class="">
                             <a class="btn historico-adm text-left testeLeitor">ver Produtos</a>
                         </li>
+
+                        <li class="">
+                            <a class="btn historico-adm text-left receitasMVC">receitasMVC</a>
+                        </li>
                     </ul>
                 </div>
             </div>
