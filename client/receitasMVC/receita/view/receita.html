@@ -8,9 +8,9 @@
     <div class="row">
         <div class="col-md-8">
             <select name="slCategoria" id="slCategoria" class="form-control">
-                {% for categoria in listaCategorias %}
+                <!-- {% for categoria in listaCategorias %} -->
                 <option value="{{categoria.id}}" {{categoria.id == categoriaId ? 'selected' : ''}}>{{categoria.titulo}}</option>
-                {% endfor %}
+                <!-- {% endfor %} -->
             </select>
         </div>
         <div class="col-md-4">
@@ -33,7 +33,7 @@
                 <th></th>
             </tr>
         </thead>
-        <tbody class="receita">
+        <tbody>
 
         </tbody>
     </table>
