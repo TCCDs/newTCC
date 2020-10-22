@@ -1,6 +1,6 @@
 
 <h1>Receitas</h1>
-<a href="./adicionar.html" class="btn btn-primary">Nova Receitas</a>
+<a class="btn btn-primary novaReceitas">Nova Receitas</a>
 
 <hr>
 
@@ -33,18 +33,10 @@
                 <th></th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>{{ receita.id }}</td>
-                <td>{{ receita.titulo }}</td>
-                <td>{{ receita.slug }}</td>
-                <td>{{ receita.categoriaTitulo }}</td>
-                <td>{{ receita.data|date('d/m/Y H:i:s') }}</td>
-                <td>
-                    <a href="{{BASE}}receita/editar/{{ receita.id }}" class="btn btn-warning">Editar</a>
-                    <a href="{{BASE}}receita/ver/{{ receita.slug }}" class="btn btn-info ml-2">Ver</a>
-                </td>
-            </tr>
+        <tbody class="receita">
+
         </tbody>
     </table>
 </div>
+
+<script src="client/receitasMVC/receita/controller/receita.js"></script>
