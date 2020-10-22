@@ -1,13 +1,17 @@
 $(document).ready(function() {
     $('.sobre').click(function() {
-        $('#conteudo').load('receitas/view/sobre/view/sobre.html');
+        $('#conteudo').load('client/receitasMVC/sobre/view/sobre.html');
     })
 
     $('.receita').click(function() {
-        $('#conteudo').load('receitas/view/receita/view/receita.html')
+        $('#conteudo').load('client/receitasMVC/receita/view/receita.html')
     })
 
     $('.categoria').click(function() {
-        $('#conteudo').load('receitas/view/categoria/view/categoria.html')
+        $('#conteudo').load('client/receitasMVC/categoria/view/categoria.html')
+    })
+
+    $('.home').click(function() {
+        $('#conteudo').load('client/receitasMVC/home/view/home.html')
     })
 })
