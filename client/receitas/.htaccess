@@ -1,6 +1,4 @@
+# CONFIGURAR UTILIZAÇÃO DO HTTPS
 RewriteEngine On
-RewriteBase /
-
-RewriteCond %{THE_REQUEST} public/([^\s?]*) [NC]
-RewriteRule ^ %1 [L,NE,R=302]
-RewriteRule ^((?!public/).*)$ https://supermercadocaravelas.com.br/client/receitas/public/$1 [L,NC]
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://supermercadocaravelas.com.br/client/receitas/ [R,L]
