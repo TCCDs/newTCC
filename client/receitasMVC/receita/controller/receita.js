@@ -31,7 +31,7 @@
 
 
 $(document).ready(function() {
-    $('.receitas').empty()
+    $('.receitasPrincipal').empty()
 
     var url = "client/receitasMVC/receita/model/receita.php"
 
@@ -42,7 +42,7 @@ $(document).ready(function() {
         async: true,
         success: function(dados) {
             for (var i = 0; i < dados.length; i++) {
-                let receita = `
+                let receitaPrincipal = `
                 <div class="row ml-2">
                     <div class="mt-3 mr-2 col-12 col-md-2">
                         <div class="card" style="width: 18rem;  height: 20rem;">
@@ -81,8 +81,6 @@ $(document).ready(function() {
                                         <h5> ` + dados[i].data|date('d/m/Y H:i:s') + `</h5>
                                     </li>
 
-                                   
-
                                     <li class="list-group-item">
                                         <button id="` + dados[i].id + `" class="btn btn-warning btn-receitaEditar"> 
                                             Editar
@@ -98,7 +96,7 @@ $(document).ready(function() {
                     </div>
                 </div>
                 `
-                $('.receitas').append(receita)
+                $('.receitasPrincipal').append(receitaPrincipal)
             }
 
             $('body').append('<script src="client/receitasMVC/receita/controller/receitaEditar.js"></script>')
