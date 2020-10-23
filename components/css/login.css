@@ -25,6 +25,27 @@ h2 {
     color: #cccccc;
 }
 
+.recuperar:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: hsl(207, 68%, 39%);
+    content: "";
+    transition: width 0.2s;
+}
+
+.recuperar:hover {
+    color: hsl(207, 68%, 39%);
+}
+
+.recuperar:hover:after {
+    width: 100%;
+}
+
+
+
 .inscreva:after {
     display: block;
     left: 0;

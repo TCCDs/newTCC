@@ -11,10 +11,10 @@
         public function __construct() {
             $this->debug = true;
 
-            $this->server   =  'localhost';
-            $this->user     =  'root';
-            $this->password =  '';
-            $this->database =  'new_supermercado';
+            $this->server   =  'mysql669.umbler.com';
+            $this->user     =  'supercaravelas';
+            $this->password =  'tccdesenvolvimento2020';
+            $this->database =  'caravelas';
         }
 
         private function getConnection() {

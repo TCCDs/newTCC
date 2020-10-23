@@ -1,9 +1,11 @@
 <?php
 
-define('BASE', '/tcc2/newTCC/client/receitas/');
+
+define('BASE', '/https://supermercadocaravelas.com.br/client/receitas/public/');
+
 define('UNSET_COUNT', 4);
 
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'new_supermercado');
+define('DB_HOST', 'mysql669.umbler.com');
+define('DB_USER', 'supercaravelas');
+define('DB_PASS', 'tccdesenvolvimento2020');
+define('DB_NAME', 'caravelas');
