@@ -2,7 +2,9 @@
     include_once('../../../server/Connect.php');
     $conn = new Conn();
 
-    $qr_code = $_POST['qrcode'];
+    $qr_code = 1399495777;
+
+    // $qr_code = $_POST['qrcode'];
 
     $sql = "SELECT 
                 compras_pagamentos.NOME_CARTAO,
@@ -13,7 +15,7 @@
                 compras.CODIGO_COMPRAS,
                 compras.VALOR_COMPRAS,
                 compras.STATUS_COMPRAS,
-                compras.DATA_CAD,
+                compras.DATA_CAD_COMPRAS,
                 
                 clientes.NOME_CLIENTES,
                 clientes.CEP_CLIENTES,
