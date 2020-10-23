@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('receitaCate').empty()
+    $('.receitaCate').empty()
 
     var url = "client/receitasMVC/receita/model/receitaCate.php"
 
@@ -17,7 +17,7 @@ $(document).ready(function() {
                         </select>
                     </div>
                 `
-                $('receitaCate').append(receitaCate)
+                $('.receitaCate').append(receitaCate)
             }
         }
     })
