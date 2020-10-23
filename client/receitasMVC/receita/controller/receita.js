@@ -31,7 +31,7 @@
 
 
 $(document).ready(function() {
-    $('.receita').empty()
+    $('.receitas').empty()
 
     var url = "client/receitasMVC/receita/model/receita.php"
 
@@ -98,7 +98,7 @@ $(document).ready(function() {
                     </div>
                 </div>
                 `
-                $('.receita').append(receita)
+                $('.receitas').append(receita)
             }
 
             $('body').append('<script src="client/receitasMVC/receita/controller/receitaEditar.js"></script>')
