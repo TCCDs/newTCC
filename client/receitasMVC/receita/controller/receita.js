@@ -33,7 +33,7 @@
 $(document).ready(function() {
     $('.receita').empty()
 
-    var url = "client/products/model/customersProducts.php"
+    var url = "client/receitasMVC/receita/model/receita.php"
 
     $.ajax({
         type: 'POST',

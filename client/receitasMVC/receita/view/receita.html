@@ -5,14 +5,15 @@
 <hr>
 
 <form action="{{BASE}}receita/" method="post">
-    <div class="row receitaCate">
-        <!-- <div class="col-md-8">
-            <select name="slCategoria" id="slCategoria" class="form-control">
+    <div class="row">
+        <div class="col-md-8">
+            <select name="slCategoria" id="slCategoria" class="form-control receitaCate">
                
-                <option value="{{categoria.id}}" {{categoria.id == categoriaId ? 'selected' : ''}}>{{categoria.titulo}}</option>
+                <!-- <option value="{{categoria.id}}" {{categoria.id == categoriaId ? 'selected' : ''}}>{{categoria.titulo}}</option> -->
                
             </select>
-        </div>-->
+        </div>
+
         <div class="col-md-4">
             <input type="submit" value="Buscar" class="btn btn-success w-100" />
         </div>
