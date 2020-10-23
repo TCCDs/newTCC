@@ -76,10 +76,6 @@
                             <a class="btn historico-adm text-left ctr-cliente">Perfil</a>
                         </li> -->
 
-                        <li class="">
-                            testes 
-                        </li>
-
                         <li class="lista">
                             <a class="btn historico-adm text-left tax"> cupom</a>
                         </li>
@@ -88,7 +84,7 @@
                             <a class="btn historico-adm text-left leitorQrProdutos">ler qr</a>
                         </li>
                         
-                        <li class="">
+                        <li class="lista">
                             <a class="btn historico-adm text-left testeLeitor">ver Produtos</a>
                         </li>
                     </ul>
