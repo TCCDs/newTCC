@@ -11,10 +11,10 @@
     $resultado->execute();
 
     while($resultadoReceitaCate = $resultado->fetch(PDO::FETCH_ASSOC)) {
-        $receitaCate[] = array_map('utf8_encode', $resultadoReceitaCate);
+        $receitaCategoria[] = array_map('utf8_encode', $resultadoReceitaCate);
     }
 
-    echo json_encode($receitaCate,  JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+    echo json_encode($receitaCategoria,  JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 
 
 ?>
