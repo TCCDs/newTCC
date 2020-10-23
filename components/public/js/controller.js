@@ -4,7 +4,7 @@ $(document).ready(function() {
     })
 
     $('.receita').click(function() {
-        $('#conteudo').load('client/receitasMVC/receita/view/receita.html')
+        $('#conteudo').load('client/receitasMVC/receita/view/receitaTeste.html')
     })
 
     $('.categoria').click(function() {
