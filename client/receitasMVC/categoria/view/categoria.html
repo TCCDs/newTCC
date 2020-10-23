@@ -15,16 +15,9 @@
             </tr>
         </thead>
         <tbody>
-            {% for categoria in listaCategoria %}
-            <tr>
-                <td>{{ categoria.id }}</td>
-                <td>{{ categoria.titulo }}</td>
-                <td>{{ categoria.slug }}</td>
-                <td>
-                    <a href="{{BASE}}categoria/editar/{{ categoria.id }}" class="btn btn-warning">Editar</a>
-                </td>
-            </tr>
-            {% endfor %}
+
         </tbody>
     </table>
 </div>
+
+<script src="client/receitasMVC/categoria/controller/categoria.js"></script>

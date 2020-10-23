@@ -3,8 +3,6 @@
     include_once ('../../../../server/Connect.php');
     $conn = new Conn();
 
-    $categoriaid = 5;
-
     $sql = "SELECT * FROM categoria ORDER BY titulo ASC ";
 
     $resultado = $conn->getConn()->prepare($sql);
