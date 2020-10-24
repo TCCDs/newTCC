@@ -24,6 +24,8 @@
         <link rel="stylesheet" href="components/css/adm.css">
         <link rel="stylesheet" href="components/css/menuslide.css">
         <link rel="stylesheet" href="components/css/graficos.css">
+        <link rel="icon" href="img/caravelas.png" type="image/icon type">
+
 
     </head>
 
