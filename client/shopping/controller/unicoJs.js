@@ -139,24 +139,48 @@ $(document).ready(function() {
         }
     });
 
+
+
     $(document).on('click', '.delete', function() {
         var product_id = $(this).attr('id');
         var action = 'remove';
-        if (confirm("Tem certeza de que deseja remover este produto?")) {
-            $.ajax({
-                url: "client/shopping/model/action.php",
-                method: "POST",
-                data: { product_id: product_id, action: action },
-                success: function(data) {
-                    load_cart_data();
-                    $('#cart-popover').popover('hide');
-                    alert("O item foi removido do carrinho");
-                }
-            })
-        } else {
-            return false;
-        }
+        Swal.fire({
+            icon: 'question',
+            title: 'Supermercado Caravelas!',
+            text: 'Deseja excluir um item?',
+            type: 'warning',
+            showCancelButton: true,
+            cancelButtonText: 'Desistir da exclusão',
+            confirmButtonText: 'Confirmar a exclusão'
+        }).then((result) => {
+            if (result.value) {
+                $.ajax({
+                    url: "client/shopping/model/action.php",
+                    method: "POST",
+                    data: { product_id: product_id, action: action },
+                    success: function(data) {
+                        load_cart_data();
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Supermercado Caravelas!',
+                            text: 'Exclusão efetuada com sucesso',
+                            type: 'success',
+                            confirmButtonText: 'Feito!'
+                        })
+                    }
+                })
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Supermercado Caravelas!',
+                    text: 'Operação cancelada com sucesso',
+                    type: 'success',
+                    confirmButtonText: 'Feito!'
+                })
+            }
+        });
     });
+
 
     $(document).on('click', '#clear_cart', function() {
         var action = 'empty';
@@ -166,8 +190,13 @@ $(document).ready(function() {
             data: { action: action },
             success: function() {
                 load_cart_data();
-                $('#cart-popover').popover('hide');
-                alert("Seu carrinho foi limpo");
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Supermercado Caravelas!',
+                    text: 'Carrinho limpo!!',
+                    type: 'success',
+                    confirmButtonText: 'Feito!'
+                })
             }
         })
     });
