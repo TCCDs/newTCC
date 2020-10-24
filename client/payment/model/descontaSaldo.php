@@ -118,7 +118,4 @@
     
     unset($_SESSION["shopping_cart"]);
     echo json_encode($data);
-
-    header('Location: ../view/tax.html');
-
 ?>

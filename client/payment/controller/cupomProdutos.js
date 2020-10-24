@@ -12,7 +12,7 @@ $(document).ready(function() {
             for (var i = 0; i < dados.length; i++) {
                 let cupomSupermercado = `
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
+                    <li class="list-group-item text-center">
                         <div class="row">
                             <div class="col-12 col-md-12">
                                 <h6>
