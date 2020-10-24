@@ -19,10 +19,10 @@
     $resultado->execute();
 
     while($resultadoReceita = $resultado->fetch(PDO::FETCH_ASSOC)) {
-        $receitaPrincipal[] = array_map('utf8_encode', $resultadoReceita);
+        $receita[] = array_map('utf8_encode', $resultadoReceita);
     }
 
-    echo json_encode($receitaPrincipal,  JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+    echo json_encode($receita,  JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 
 
 ?>
