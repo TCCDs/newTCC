@@ -34,11 +34,6 @@ $(document).ready(function() {
         $('.menu').hide();
     })
 
-    /*$('.payment').click(function() {
-        $('#conteudo').load('client/payment/view/payment-select.html')
-        $('.saldo').hide();
-        $('.menu').hide();
-    })*/
 
     $('.payment-coin').click(function() {
         $('#conteudo').load('client/payment/view/payment-coin.html')
@@ -91,7 +86,13 @@ $(document).ready(function() {
     })
 
     $('.receitas').click(function() {
-        $('#conteudo').load('client/receitas/public/index.php')
+        $('#conteudo').load('client/receitas/index.php')
+        $('.saldo').hide();
+        $('.menu').hide();
+    })
+
+    $('.receitasMVC').click(function() {
+        $('#conteudo').load('client/receitasMVC/partials/view/index.html')
         $('.saldo').hide();
         $('.menu').hide();
     })
@@ -112,14 +113,18 @@ $(document).ready(function() {
 
     $('.inscreva').click(function() {
         $('#conteudo').load('administration/form/formUsuario/view/formUsers.html')
-
     })
+
+    $('.recuperar').click(function() {
+        $('#conteudo').load('recuperar/index.php')
+    })
+
     $('.login').click(function() {
-        $('body').load('index.html')
+        $('body').load('index.php')
     })
 
     $('.logout').click(function() {
-        window.location.href = "index.html";
+        window.location.href = "index.php";
 
     })
 

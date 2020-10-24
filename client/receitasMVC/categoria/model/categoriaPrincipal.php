@@ -1,0 +1,18 @@
+<?php
+    session_start();
+    include_once ('../../../../server/Connect.php');
+    $conn = new Conn();
+
+    $sql = "SELECT * FROM categoria ORDER BY titulo ASC";
+
+    $resultado = $conn->getConn()->prepare($sql);
+    $resultado->execute();
+
+    while($resultadoCategoria = $resultado->fetch(PDO::FETCH_ASSOC)) {
+        $categoria[] = array_map('utf8_encode', $resultadoCategoria);
+    }
+
+    echo json_encode($categoria,  JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+
+
+?>
