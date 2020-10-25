@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="components/libs/sweetalert2/dist/sweetalert2.css">
     <link rel="stylesheet" href="components/css/login.css">
     <link rel="stylesheet" href="components/css/menuslide.css">
+    <link rel="icon" href="img/caravelas.png" type="image/icon type">
 
 </head>
 

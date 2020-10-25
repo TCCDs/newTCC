@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="components/libs/MaterialDesign/css/materialdesignicons.css">
     <link rel="stylesheet" href="components/libs/sweetalert2/dist/sweetalert2.css">
     <link rel="stylesheet" href="components/css/login.css">
+    <link rel="icon" href="img/caravelas.png" type="image/icon type">
+
 
     <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
