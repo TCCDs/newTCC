@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once ('../../../../server/Connect.php');
+    include_once ('../../../../server/Conn.php');
     $conn = new Conn();
 
     $sql = "SELECT * FROM categoria ORDER BY titulo ASC ";
