@@ -9,18 +9,12 @@
 			<div class="form-cad">
 				<div class="row">
 					<div class="col-12 col md-12">
-					<div class=" form-group form">
-                            <input type="text" name="example-search-input" id="example-search-input" aria-autocomplete="off" required>
-                            <label for="example-search-input" class="label-input">
-                            <span class="content-input">Email</span>
-                        </label>
-                        </div>
-					<label for="example-search-input" class="col-xs-2 col-form-label">Email*</label>
-					</div>
-				<div class="col-12 col-md-12">
-					<input class="btn btn-block btn-success" name="email" type="email" value="" id="example-search-input" >
-				</div>
-			</div>
+						<div class=" form-group form">
+							<div class="col-12 col-md-12">
+								<input class="btn btn-block btn-success" name="email" type="email" value="" id="example-search-input" >
+								</div>
+							</div>
+						</div>
 
 			<div class="form-group row">
 				<label class="col-xs-2 col-form-label"></label>
