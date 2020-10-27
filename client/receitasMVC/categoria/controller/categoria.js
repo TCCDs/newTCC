@@ -16,12 +16,15 @@ $(document).ready(function() {
                         <td> ` + dados[i].titulo + `</td>
                         <td> ` + dados[i].slug + `</td>
                         <td>
-                            <a href="receita/editar/` + dados[i].id + `" class="btn btn-warning">Editar</a>
+                            <button id="` + dados[i].id + `" class="btn btn-warning btn-categoriaEditar"> 
+                                Editar
+                            </button>
                         </td>
                     </tr>
                 `
                 $('tbody').append(categoria)
             }
+            //$('body').append('<script src="site/categoria/controller/editar_categoria.js"></script>')
         }
     })
 })

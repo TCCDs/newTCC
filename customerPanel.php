@@ -1,11 +1,11 @@
 <?php
     session_start();
 
-    if(!empty($_SESSION['ID_USUARIOS'])):
+    /*if(!empty($_SESSION['ID_USUARIOS'])):
         //echo "<a href='sair.php'>Sair</a>";
     else:
         header("Location: ./index.html");	
-    endif;
+    endif;*/
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="components/css/login.css">
     <link rel="stylesheet" href="components/css/menuslide.css">
     <link rel="icon" href="img/caravelas.png" type="image/icon type">
+
+
+    <link rel="stylesheet" href="public/vendor/summernote/summernote-bs4.min.css">
 
 </head>
 
@@ -167,7 +170,9 @@
         <script src="components/js/bootstrap.min.js"></script>
         <script src="components/js/Chart.min.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="public/vendor/summernote/summernote-bs4.min.js"></script>
+
         <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
         <script src="components/libs/sweetalert2/dist/sweetalert2.js"></script>
 

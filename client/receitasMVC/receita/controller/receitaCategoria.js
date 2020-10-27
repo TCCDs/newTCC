@@ -10,11 +10,11 @@ $(document).ready(function() {
         async: true,
         success: function(dados) {
             for (var i = 0; i < dados.length; i++) {
-                let receitaCategoria = `
-                    <option value=" ` + dados[i].id + `"  ` + dados[i].id + ` == categoriaId ? 'selected' : ''}}> ` + dados[i].titulo + `</option>
+                receitaCategoria = `
+                    <option value=" ` + dados[i].id + `"> ` + dados[i].titulo + `</option>
                 `
                 $('.receitaCate').append(receitaCategoria)
             }
-        }
+        } 
     })
 })

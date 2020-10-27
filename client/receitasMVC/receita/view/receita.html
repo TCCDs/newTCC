@@ -4,28 +4,19 @@
 
 <hr>
 
-<form action="{{BASE}}receita/" method="post">
+<form action="" method="POST">
     <div class="row">
         <div class="col-md-8">
             <select name="slCategoria" id="slCategoria" class="form-control receitaCate">
-               
-                <!-- <option value="{{categoria.id}}" {{categoria.id == categoriaId ? 'selected' : ''}}>{{categoria.titulo}}</option> -->
-               
-            </select>
-        </div>
-
-        <div class="col-md-4">
-            <input type="submit" value="Buscar" class="btn btn-success w-100" />
+        
+            </select> 
         </div>
     </div>
 </form>
 
 <hr>
 
-<div class="row receitas">
-
-</div>
-<!-- 
+<span class="carregando">Aguarde, pesquisando...</span>
 <div class="overflow-auto">
     <table class="table table-hover">
         <thead>
@@ -43,6 +34,8 @@
         </tbody>
     </table>
 </div>
--->
+
+<script src="public/js/controller.js"></script>
 <script src="client/receitasMVC/receita/controller/receita.js"></script>
 <script src="client/receitasMVC/receita/controller/receitaCategoria.js"></script>
+<script src="client/receitasMVC/receita/controller/receitaPesquisaCategoria.js"></script>

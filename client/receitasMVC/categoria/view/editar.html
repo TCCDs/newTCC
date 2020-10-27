@@ -3,17 +3,17 @@
 
 <hr>
 
-<form action="{{BASE}}categoria/alterar/{{categoriaId}}" onsubmit="return validar(true);" method="post">
+<form class="form" id="form-cliente" name="form-cliente">
     <div class="row">
         <div class="col-md-6">
             <label for="txtTitulo">Título</label>
-            <input type="hidden" value="{{categoriaId}}" id="txtId">
-            <input type="text" id="txtTitulo" name="txtTitulo" class="form-control" placeholder="Título aqui" value="{{categoria.titulo}}" />
+            <input type="hidden" name="txtId" id="txtId">
+            <input type="text" id="txtTitulo" name="txtTitulo" class="form-control" placeholder="Título aqui" />
         </div>
 
         <div class="col-md-6">
             <label for="txtSlug">Slug</label>
-            <input type="text" id="txtSlug" name="txtSlug" class="form-control" placeholder="titulo-aqui" value="{{categoria.slug}}" />
+            <input type="text" id="txtSlug" name="txtSlug" class="form-control" placeholder="titulo-aqui" />
         </div>
     </div>
 
@@ -23,10 +23,6 @@
                 <div class="alert alert-info">Preencha corretamente todos os campos</div>
             </div>
         </div>
-
-        <div class="col-md-2 text-right">
-            <input type="submit" value="Editar" class="btn btn-success w-100">
-        </div>
     </div>
 </form>
-<script src="{{BASE}}js/categoria.js"></script>
+

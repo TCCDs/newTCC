@@ -3,6 +3,8 @@
 <a href="{{BASE}}receita/ver/{{receita.slug}}" class="btn btn-info">Ver receita</a>
 
 <hr>
+<span id="formEditar"></span>
+
 
 <form action="{{BASE}}receita/alterar/{{receitaId}}" onsubmit="return validar(true);" method="post">
     <div class="row">
@@ -19,10 +21,8 @@
 
         <div class="col-md-3 mt-3">
             <label for="slCategoria">Categoria</label>
-            <select name="slCategoria" id="slCategoria" class="form-control">
-                {% for categoria in listaCategorias %}
-                <option value="{{categoria.id}}" {{categoria.id == receita.categoriaId ? 'selected' : ''}}>{{categoria.titulo}}</option>
-                {% endfor %}
+            <select name="slCategoria" id="slCategoria" class="form-control receitaCate">
+                
             </select>
         </div>
     </div>
@@ -56,12 +56,26 @@
         </div>
 
         <div class="col-md-2 text-right">
-            <input type="submit" value="Alterar" class="btn btn-success w-100">
+            <button class="btn btn-block btn-primary btn-update"> <i class="mdi mdi-content-save"></i> Salvar </button>
         </div>
     </div>
 </form>
-<script src="{{BASE}}js/receita.js"></script>
-<script src="{{BASE}}vendor/ckeditor/ckeditor.js"></script>
+
+<script src="client/receitasMVC/receita/controller/receitaCategoria.js"></script>
+<script src="client/receitasMVC/receita/controller/editar_receitas.js"></script>
 <script>
-    CKEDITOR.replace('txtDescricao');
+    $('#txtDescricao').summernote({
+        placeholder: 'Hello stand alone ui',
+        tabsize: 2,
+        height: 120,
+        toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'fontname', 'fontsize', 'italic', 'underline', 'clear']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['hr', 'link', 'picture', 'video']],
+            ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+    });
 </script>
