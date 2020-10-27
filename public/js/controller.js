@@ -4,7 +4,7 @@ $(document).ready(function() {
     })
 
     $('.receita').click(function() {
-        $('#conteudo').load('client/receitasMVC/receita/view/receitaTeste.html')
+        $('#conteudo').load('client/receitasMVC/receita/view/receita.html')
     })
 
     $('.categoria').click(function() {
@@ -13,5 +13,14 @@ $(document).ready(function() {
 
     $('.home').click(function() {
         $('#conteudo').load('client/receitasMVC/home/view/home.html')
+    })
+
+
+    $('.novaReceitas').click(function() {
+        $('body').load('client/receitasMVC/receita/view/adicionar.html')
+    })
+
+    $('.novaCategoria').click(function() {
+        $('body').load('client/receitasMVC/categoria/view/adicionar.html')
     })
 })

@@ -3,7 +3,7 @@
 
 <hr>
 
-<form action="{{BASE}}categoria/insert" onsubmit="return validar(false);" method="post">
+<form action="site/categoria/model/adicionarCategoria.php" id='register_form'  method="post">
     <div class="row">
         <div class="col-md-6">
             <label for="txtTitulo">Título</label>
@@ -24,8 +24,9 @@
         </div>
 
         <div class="col-md-2 text-right">
-            <input type="submit" value="Adicionar" class="btn btn-success w-100">
+            <input type="submit" name="registrar" value="Adicionar" class=" registrar btn btn-success w-100">
         </div>
     </div>
 </form>
-<script src="{{BASE}}js/categoria.js"></script>
+
+<script src="client/receitasMVC/categoria/controller/adicionar_categoria.js"></script>

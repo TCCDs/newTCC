@@ -1,9 +1,8 @@
-
 <h1>Nova Receita</h1>
 
 <hr>
 
-<form action="{{BASE}}receita/inserir" onsubmit="return validar(false);" method="post">
+<form action="client/receitasMVC/receita/model/adicionar.php" id="register_form" method="post">
     <div class="row">
         <div class="col-md-5 mt-3">
             <label for="txtTitulo">Título</label>
@@ -15,14 +14,14 @@
             <input type="text" id="txtSlug" name="txtSlug" class="form-control" placeholder="titulo-aqui" />
         </div>
 
-        <div class="col-md-3 mt-3">
+        <!--<div class="col-md-3 mt-3">
             <label for="slCategoria">Categoria</label>
             <select name="slCategoria" id="slCategoria" class="form-control">
                 {% for categoria in listaCategorias %}
                 <option value="{{categoria.id}}">{{categoria.titulo}}</option>
                 {% endfor %}
             </select>
-        </div>
+        </div> -->
     </div>
 
     <div class="row">
@@ -54,12 +53,25 @@
         </div>
 
         <div class="col-md-2 text-right">
-            <input type="submit" value="Adicionar" class="btn btn-success w-100">
+            <input type="submit" name="registrar" value="Adicionar" class=" registrar btn btn-success w-100">
         </div>
     </div>
 </form>
-<script src="{{BASE}}js/receita.js"></script>
-<script src="{{BASE}}vendor/ckeditor/ckeditor.js"></script>
+
+<script src="client/receitasMVC/receita/controller/adicionar_receitas.js"></script>
 <script>
-    CKEDITOR.replace('txtDescricao');
+    $('#txtDescricao').summernote({
+        placeholder: 'Hello stand alone ui',
+        tabsize: 2,
+        height: 120,
+        toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'fontname', 'fontsize', 'italic', 'underline', 'clear']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['hr', 'link', 'picture', 'video']],
+            ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+    });
 </script>

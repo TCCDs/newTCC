@@ -3,7 +3,7 @@
     include_once ('../../../../server/Conn.php');
     $conn = new Conn();
 
-    $sql = "SELECT * FROM categoria ORDER BY titulo ASC ";
+    $sql = "SELECT * FROM receita_categoria ORDER BY titulo ASC ";
 
     $resultado = $conn->getConn()->prepare($sql);
     $resultado->execute();
