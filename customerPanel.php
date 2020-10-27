@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="components/css/menuslide.css">
     <link rel="icon" href="img/caravelas.png" type="image/icon type">
 
+
+    <link rel="stylesheet" href="public/vendor/summernote/summernote-bs4.min.css">
+
 </head>
 
 <body>
@@ -166,6 +169,8 @@
         <script src="components/js/bootstrap.js"></script>
         <script src="components/js/bootstrap.min.js"></script>
         <script src="components/js/Chart.min.js"></script>
+        
+        <script src="public/vendor/summernote/summernote-bs4.min.js"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
