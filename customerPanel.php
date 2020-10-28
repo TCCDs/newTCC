@@ -25,7 +25,7 @@
     <link rel="icon" href="img/caravelas.png" type="image/icon type">
 
 
-    <link rel="stylesheet" href="public/vendor/summernote/summernote-bs4.min.css">
+   <link rel="stylesheet" href="public/vendor/summernote/summernote-bs4.min.css">
 
 </head>
 
