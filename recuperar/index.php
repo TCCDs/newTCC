@@ -7,13 +7,13 @@
 	<form action="" method="post" enctype="multipart/form-data" class="form">
 			<div class="form-group row">
 			  	<label for="example-search-input" class="col-xs-2 col-form-label">Email*</label>
-				<div class="col-xs-10">
+				<div class="col-12 col-md-12">
 					<input class="form-control" name="email" type="email" value="" id="example-search-input" >
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-xs-2 col-form-label"></label>
-				<div class="col-xs-10">
+				<label class="col-12 col-md-12 col-form-label"></label>
+				<div class="col-12 col-md-12">
 					<button type="submit" name="ok" id="ok" class="btn btn-primary pull-left" id="btn-contato">Enviar mensagem</button>
 					<div class="loading" style="float: left;margin-left:20px;"></div>
 				</div>
