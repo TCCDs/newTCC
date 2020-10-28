@@ -1,4 +1,3 @@
-<div class="container">
 	<div class="row">
 		<div class="col-12 col-md-12">
 		<h3 id="textual-inputs">Recuperar senha</h3>
