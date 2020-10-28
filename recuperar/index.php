@@ -11,8 +11,6 @@
 			<div class="row">
 				<div class="col-12 col-md-12">
 					<div class=" form-group form">
-					<button type="submit">oi</button>
-
 						<input type="text" name="email" id="example-search-input" aria-autocomplete="off" required>
 						<label for="email" class="label-input">
 							<span class="content-input">Digite seu email</span>
@@ -21,7 +19,7 @@
 				</div>
 			</div>
 			<button type="submit" name="ok" id="ok" class="btn btn-primary pull-left" id="btn-contato">Enviar mensagem</button>
-			<div class="loading" style="float: left;margin-left:20px;"></div>
+			<!-- <div class="loading" style="float: left;margin-left:20px;"></div> -->
 			</div>	
 		</form>		
 	
