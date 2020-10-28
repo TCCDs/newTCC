@@ -32,7 +32,7 @@
 			<div class="form-group row">
 				<label class="col-xs-2 col-form-label"></label>
 				<div class="col-xs-10">
-					<button type="submit" name="ok" id="ok" class="btn btn-primary pull-left" id="btn-contato">Enviar mensagem</button>
+					<button type="submit" name="ok" id="ok" class="btn btn-primary" id="btn-contato">Enviar mensagem</button>
 					<div class="loading" style="float: left;margin-left:20px;"></div>
 				</div>
 			</div>
