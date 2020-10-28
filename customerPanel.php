@@ -25,7 +25,7 @@
     <link rel="icon" href="img/caravelas.png" type="image/icon type">
 
 
-    <link rel="stylesheet" href="public/vendor/summernote/summernote-bs4.min.css">
+   <link rel="stylesheet" href="public/vendor/summernote/summernote-bs4.min.css">
 
 </head>
 
@@ -172,6 +172,7 @@
 
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="public/vendor/summernote/summernote-bs4.min.js"></script>
+        <!-- <script src="[folder where script is located]/[plugin script].js"></script> -->
 
         <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
         <script src="components/libs/sweetalert2/dist/sweetalert2.js"></script>
