@@ -17,10 +17,10 @@
 						</label>
 					</div>
 				</div>
+				<button type="submit">oi</button>
 			</div>
 			<button type="submit" name="ok" id="ok" class="btn btn-primary pull-left" id="btn-contato">Enviar mensagem</button>
 			<div class="loading" style="float: left;margin-left:20px;"></div>
-
 			</div>	
 		</form>		
 	
