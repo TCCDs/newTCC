@@ -43,7 +43,7 @@
                     <div class="mt-2 text-center">
                         <h2 class="login"> Login </h2>
                         <h2 class="inscreva">Inscreva-se</h2>
-                        <!-- <h2 class="recuperar">Recuperar Senha</h2> -->
+                        <h2 class="recuperar">Recuperar Senha</h2>
                         <a href="recuperar/index.php">Recuperar Senha</a>
                     </div>
                     <div id="conteudo">
