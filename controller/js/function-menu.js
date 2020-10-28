@@ -115,9 +115,9 @@ $(document).ready(function() {
         $('#conteudo').load('administration/form/formUsuario/view/formUsers.html')
     })
 
-    $('.recuperar').click(function() {
-        $('#conteudo').load('recuperar/index.php')
-    })
+    // $('.recuperar').click(function() {
+    //     $('#conteudo').load('recuperar/index.php')
+    // })
 
     $('.login').click(function() {
         $('body').load('index.php')
