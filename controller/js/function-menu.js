@@ -116,7 +116,7 @@ $(document).ready(function() {
     })
 
     $('.recuperar').click(function() {
-        $('#conteudo').load('recuperar/view/recuperar.html')
+        $('#conteudo').load('recuperar/index.php')
     })
 
     $('.login').click(function() {
