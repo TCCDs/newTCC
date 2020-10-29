@@ -26,7 +26,7 @@
 			e.preventDefault()
 			$('.loading').html("<img src='loading.gif' width='45'>");
 			$.ajax({
-				url: 'send-form.php',
+				url: 'recuperar/send-form.php',
 				type: 'POST',
 				data: $('.formF').serialize(),
 				success: function(data){
