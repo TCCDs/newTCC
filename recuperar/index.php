@@ -5,9 +5,16 @@
                         <span class="content-input">Email*</span>
                     </label>
 			</div>
+			<div class="form-group form">
+			<input type="text" name="email" id="example-search-input" aria-autocomplete="off" required>
+                <label for="example-search-input" class="label-input">
+                        <span class="content-input">Email*</span>
+                    </label>
+			</div>
 
+<!-- 
 					<button type="submit" name="ok" id="ok" class="btn btn-primary" id="btn-contato">Enviar mensagem</button>
-					<div class="loading" style="float: left;margin-left:20px;"></div>
+					<div class="loading" style="float: left;margin-left:20px;"></div> -->
 			</div>
 		</form>		
 	
