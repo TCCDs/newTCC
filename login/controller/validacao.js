@@ -30,7 +30,7 @@ $(document).ready(function() {
                         confirmButtonText: 'Tentar novamente....',
                     })
 
-                    let url = 'index.html'
+                    let url = 'index.php'
                     $(location).attr('href', url)
 
                     $('#form-login input').val("")

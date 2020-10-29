@@ -14,7 +14,13 @@
 		$total = $resultado->rowCount();
 		
 		if ($total == 0){
-			echo  "O e-mail informado não existe no banco de dados.";
+			echo  "<script>  Swal.fire({
+				icon: 'error',
+				title: 'Supermercado Caravelas!',
+				text: 'O e-mail informado não existe no banco de dados.',
+				type: 'error',
+				confirmButtonText: 'Tente novamente...!'
+			}) </script>";
 		} else {
 			$novasenha = substr(md5(time()), 0, 8);
 			$password_hash = password_hash($novasenha, PASSWORD_DEFAULT);
