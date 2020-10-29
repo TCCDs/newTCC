@@ -26,13 +26,13 @@
 			e.preventDefault()
 			$('.loading').html("<img src='recuperar/loading.gif' width='45'>");
 			$.ajax({
-				url: '../send-form.php',
+				url: 'recuperar/send-form.php',
 				type: 'POST',
 				data: $('.formF').serialize(),
 				success: function(data){
 					$('.mostrar').html(data);
 					$('.loading').hide();
-					$('.form')[0].reset();
+					$('.formF')[0].reset();
 				}
 			});
 			return false;
