@@ -8,7 +8,7 @@
 						</label>
 			</div>
 			<button type="submit" name="ok" id="ok" class="btn btn-primary" id="btn-contato">Enviar mensagem</button>
-			<div class="loading" style="float: left;margin-left:20px;"></div> -->
+			<div class="loading" style="float: left;margin-left:20px;"></div>
 
 			</div>
 
@@ -24,9 +24,9 @@
 	$(function(){
 		$('.formF').submit(function(e){
 			e.preventDefault()
-			$('.loading').html("<img src='loading.gif' width='45'>");
+			$('.loading').html("<img src='recuperar/loading.gif' width='45'>");
 			$.ajax({
-				url: 'send-form.php',
+				url: 'recuperar/send-form.php',
 				type: 'POST',
 				data: $('.form').serialize(),
 				success: function(data){
