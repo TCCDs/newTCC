@@ -19,8 +19,11 @@
 		</form>		
 	
 		<div class="mostrar"></div>
+
+
+		<script src="recuperar\controller\recuperar.js"></script>
 	
-<script>
+<!-- <script>
 	$(function(){
 		$('.formF').submit(function(e){
 			e.preventDefault()
@@ -38,4 +41,4 @@
 			return false;
 		});
 	});
-</script>	
+</script>	 -->
