@@ -23,21 +23,19 @@
 		<br><br>
 		
 		<form action="" method="post" enctype="multipart/form-data" class="form">
-		<div id="formCad">
-			<div class="form-group form">
-			<label for="example-search-input" class="col-xs-2 col-form-label">Email*</label>
+			<div class="form-group row">
+			  	<label for="example-search-input" class="col-xs-2 col-form-label">Email*</label>
 				<div class="col-xs-10">
 					<input class="form-control" name="email" type="email" value="" id="example-search-input" >
 				</div>
 			</div>
-			<div class="form-group form">
+			<div class="form-group row">
 				<label class="col-xs-2 col-form-label"></label>
 				<div class="col-xs-10">
 					<button type="submit" name="ok" id="ok" class="btn btn-primary" id="btn-contato">Enviar mensagem</button>
 					<div class="loading" style="float: left;margin-left:20px;"></div>
 				</div>
 			</div>
-		</div>
 		</form>		
 	
 		<div class="mostrar"></div>
