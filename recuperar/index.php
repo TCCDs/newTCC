@@ -2,7 +2,7 @@
 <div class="row">
         <div class="col-12 col-md-12">
 			<div class="form-group form">
-				<input type="text" name="email" id="example-search-input" aria-autocomplete="off" required>
+				<input type="email" name="email" id="example-search-input" aria-autocomplete="off" required>
 					<label for="example-search-input" class="label-input">
 							<span class="content-input">Email*</span>
 						</label>
