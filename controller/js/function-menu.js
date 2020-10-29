@@ -17,7 +17,6 @@ $(document).ready(function() {
         $('.menu').hide();
     })
 
-
     $('.home').click(function() {
         $('body').load('customerPanel.php')
     })
@@ -109,7 +108,6 @@ $(document).ready(function() {
         $('.saldo').hide();
         $('.menu').hide();
     })
-
 
     $('.inscreva').click(function() {
         $('#conteudo').load('administration/form/formUsuario/view/formUsers.html')
