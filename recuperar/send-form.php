@@ -14,7 +14,7 @@
 		$total = $resultado->rowCount();
 		
 		if ($total == 0){
-			echo  "O e-mail informado não existe no banco de dados.";
+			echo  '<h2 class="text-danger mt-2">O e-mail informado não existe no banco de dados.</h2>';
 		} else {
 			$novasenha = substr(md5(time()), 0, 8);
 			$password_hash = password_hash($novasenha, PASSWORD_DEFAULT);
