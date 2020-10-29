@@ -1,6 +1,6 @@
 <?php
-    include_once("server/Connect.php");
-    require_once('recuperar/phpmailer/PHPMailer/class.phpmailer.php');
+    include_once("../server/Connect.php");
+    require_once('phpmailer/PHPMailer/class.phpmailer.php');
     $conn = new Conn();
 	$email = utf8_decode($_POST['email']);
 
