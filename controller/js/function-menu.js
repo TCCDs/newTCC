@@ -114,8 +114,7 @@ $(document).ready(function() {
     })
 
     $('.recuperar').click(function() {
-        window.location.href = "recuperar/index.php";
-        // $('#conteudo').load('recuperar/index.php')
+        $('#conteudo').load('recuperar/index.php')
     })
 
     $('.login').click(function() {

@@ -43,13 +43,31 @@
                     echo "Senha alterada com sucesso";
 				endif;
 				
-				echo "<script> alert('Formulário enviado com sucesso!'); </script>";
+				echo "<script>  Swal.fire({
+					icon: 'success',
+					title: 'Supermercado Caravelas!',
+					text: 'Formulário enviado com sucesso',
+					type: 'success',
+					confirmButtonText: 'Feito...!'
+				}); </script>";
 			} else {
-				echo "<script> alert('Falha ao enviar o Formulário.'); </script>";
+				echo "<script>  Swal.fire({
+					icon: 'error',
+					title: 'Supermercado Caravelas!',
+					text: dados.return,
+					type: 'error',
+					confirmButtonText: 'Tente novamente...!'
+				}) </script>";
 			}
 		}
 	} else {
-		echo "preencher campo email";
+		echo "<script>  Swal.fire({
+			icon: 'error',
+			title: 'Supermercado Caravelas!',
+			text: 'Preencha o campo',
+			type: 'error',
+			confirmButtonText: 'Tente novamente...!'
+		}) </script>";
 	}
 
 

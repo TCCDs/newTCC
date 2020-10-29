@@ -30,6 +30,28 @@
 				type: 'POST',
 				data: $('.formF').serialize(),
 				success: function(data){
+					let timerInterval
+                    Swal.fire({
+                        title: 'Supermercado Caravelas!',
+                        html: 'Realizando recuperação em <b></b> milisegundos.',
+                        timer: 2000,
+                        timerProgressBar: true,
+                        willOpen: () => {
+                            Swal.showLoading()
+                            timerInterval = setInterval(() => {
+                                const content = Swal.getContent()
+                                if (content) {
+                                    const b = content.querySelector('b')
+                                    if (b) {
+                                        b.textContent = Swal.getTimerLeft()
+                                    }
+                                }
+                            }, 100)
+                        },
+                        onClose: () => {
+                            clearInterval(timerInterval)
+                        }
+                    })
 					$('.mostrar').html(data);
 					$('.loading').hide();
 					$('.formF')[0].reset();
