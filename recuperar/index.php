@@ -28,7 +28,7 @@
 			$.ajax({
 				url: 'recuperar/send-form.php',
 				type: 'POST',
-				data: $('.form').serialize(),
+				data: $('.formF').serialize(),
 				success: function(data){
 					$('.mostrar').html(data);
 					$('.loading').hide();
