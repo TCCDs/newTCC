@@ -1,15 +1,18 @@
 <form action="" method="post" enctype="multipart/form-data" class="form">
+<div class="row">
+        <div class="col-12 col-md-12">
 			<div class="form-group form">
-			<input type="text" name="email" id="example-search-input" aria-autocomplete="off" required>
-                <label for="example-search-input" class="label-input">
-                        <span class="content-input">Email*</span>
-                    </label>
+				<input type="text" name="email" id="example-search-input" aria-autocomplete="off" required>
+					<label for="example-search-input" class="label-input">
+							<span class="content-input">Email*</span>
+						</label>
 			</div>
+		</div>
 			<div class="form-group form">
-			<input type="text" name="email" id="example-search-input" aria-autocomplete="off" required>
-                <label for="example-search-input" class="label-input">
-                        <span class="content-input">Email*</span>
-                    </label>
+				<input type="text" name="email" id="example-search-input" aria-autocomplete="off" required>
+					<label for="example-search-input" class="label-input">
+							<span class="content-input">Email*</span>
+						</label>
 			</div>
 
 <!-- 
@@ -19,7 +22,6 @@
 		</form>		
 	
 		<div class="mostrar"></div>
-	</div>
 	
 <script>
 	$(function(){
