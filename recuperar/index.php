@@ -7,12 +7,8 @@
 							<span class="content-input">Email*</span>
 						</label>
 			</div>
-		</div>
-			<div class="form-group form">
-				<input type="text" name="email" id="example-search-input" aria-autocomplete="off" required>
-					<label for="example-search-input" class="label-input">
-							<span class="content-input">Email*</span>
-						</label>
+			<button type="submit" name="ok" id="ok" class="btn btn-primary" id="btn-contato">Enviar mensagem</button>
+
 			</div>
 
 <!-- 
