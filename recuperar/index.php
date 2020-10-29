@@ -1,4 +1,4 @@
-<form action="" method="post" enctype="multipart/form-data" class="form">
+<form action="" method="post" enctype="multipart/form-data" >
 <div class="row">
         <div class="col-12 col-md-12">
 			<div class="form-group form">
