@@ -1,14 +1,14 @@
-<form action="" method="post" enctype="multipart/form-data" id="formF" class="formF">
+<form action="" method="post" enctype="multipart/form-data" class="formF" >
 <div class="row">
         <div class="col-12 col-md-12">
 			<div class="form-group form">
-				<input type="email" name="email" id="example-search-input" aria-autocomplete="off" required>
+				<input type="text" name="email" id="example-search-input" aria-autocomplete="off" required>
 					<label for="example-search-input" class="label-input">
 							<span class="content-input">Email*</span>
 						</label>
 			</div>
-			<button name="ok" id="ok" class="btn btn-primary" id="btn-contato">Enviar mensagem</button>
-			<div class="loading" style="float: left;margin-left:20px;"></div>
+			<button type="submit" name="ok" id="ok" class="btn btn-primary" id="btn-contato">Enviar mensagem</button>
+			<div class="loading" style="float: left;margin-left:20px;"></div> -->
 
 			</div>
 
@@ -19,17 +19,14 @@
 		</form>		
 	
 		<div class="mostrar"></div>
-
-
-		<script src="recuperar\controller\recuperar.js"></script>
 	
-<!-- <script>
+<script>
 	$(function(){
 		$('.formF').submit(function(e){
 			e.preventDefault()
-			$('.loading').html("<img src='recuperar/loading.gif' width='45'>");
+			$('.loading').html("<img src='loading.gif' width='45'>");
 			$.ajax({
-				url: 'recuperar/send-form.php',
+				url: 'send-form.php',
 				type: 'POST',
 				data: $('.formF').serialize(),
 				success: function(data){
@@ -41,4 +38,4 @@
 			return false;
 		});
 	});
-</script>	 -->
+</script>	
