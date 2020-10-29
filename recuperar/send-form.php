@@ -40,7 +40,13 @@
                 $resultado->execute();
 
                 if ($resultado):
-                    echo "Senha alterada com sucesso";
+                    echo "<script>  Swal.fire({
+						icon: 'success',
+						title: 'Supermercado Caravelas!',
+						text: 'Senha alterada com sucesso',
+						type: 'success',
+						confirmButtonText: 'Feito...!'
+					}); </script>";
 				endif;
 				
 				echo "<script>  Swal.fire({
