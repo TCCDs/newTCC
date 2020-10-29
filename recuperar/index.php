@@ -52,7 +52,7 @@
                             clearInterval(timerInterval)
                         }
                     })
-					// $('.mostrar').html(data);
+					$('.mostrar').html(data);
 					// $('.loading').hide();
 					$('.formF')[0].reset();
 				}
