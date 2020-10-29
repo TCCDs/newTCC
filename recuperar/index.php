@@ -1,4 +1,4 @@
-<form action="" method="post" enctype="multipart/form-data" class="form" >
+<form action="" method="post" enctype="multipart/form-data" class="formF" >
 <div class="row">
         <div class="col-12 col-md-12">
 			<div class="form-group form">
@@ -22,7 +22,7 @@
 	
 <script>
 	$(function(){
-		$('.form').submit(function(e){
+		$('.formF').submit(function(e){
 			e.preventDefault()
 			$('.loading').html("<img src='loading.gif' width='45'>");
 			$.ajax({
