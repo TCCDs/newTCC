@@ -1,4 +1,4 @@
-<form action="" method="post" enctype="multipart/form-data" >
+<form action="" method="post" enctype="multipart/form-data" class="form" >
 <div class="row">
         <div class="col-12 col-md-12">
 			<div class="form-group form">
@@ -8,6 +8,7 @@
 						</label>
 			</div>
 			<button type="submit" name="ok" id="ok" class="btn btn-primary" id="btn-contato">Enviar mensagem</button>
+			<div class="loading" style="float: left;margin-left:20px;"></div> -->
 
 			</div>
 
@@ -21,7 +22,8 @@
 	
 <script>
 	$(function(){
-		$('.form').submit(function(){
+		$('.form').submit(function(e){
+			e.preventDefault()
 			$('.loading').html("<img src='loading.gif' width='45'>");
 			$.ajax({
 				url: 'send-form.php',
