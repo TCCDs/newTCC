@@ -1,4 +1,4 @@
-<form action="" method="post" enctype="multipart/form-data" class="formF" >
+<form action="" method="post" enctype="multipart/form-data" id="formF" class="formF">
 <div class="row">
         <div class="col-12 col-md-12">
 			<div class="form-group form">
@@ -7,7 +7,7 @@
 							<span class="content-input">Email*</span>
 						</label>
 			</div>
-			<button type="submit" name="ok" id="ok" class="btn btn-primary" id="btn-contato">Enviar mensagem</button>
+			<button name="ok" id="ok" class="btn btn-primary" id="btn-contato">Enviar mensagem</button>
 			<div class="loading" style="float: left;margin-left:20px;"></div>
 
 			</div>
