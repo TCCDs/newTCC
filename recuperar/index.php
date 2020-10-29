@@ -7,7 +7,7 @@
 							<span class="content-input">Email*</span>
 						</label>
 			</div>
-			<button type="submit" name="ok" id="ok" class="btn btn-primary" id="btn-contato">Enviar mensagem</button>
+			<button type="submit" name="ok" id="ok" class="btn btn-block btn-info" id="btn-contato">Enviar mensagem</button>
 			<!-- <div class="loading" style="float: left;margin-left:20px;"></div> -->
 
 			</div>
