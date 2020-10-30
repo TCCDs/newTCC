@@ -125,6 +125,10 @@ h2 {
     outline: none;
 }
 
+.form input:focus {
+    background: #c66c66;
+}
+
 .form label {
     position: absolute;
     bottom: 0px;
@@ -163,7 +167,6 @@ form input:valid+.label-input .content-input {
 .form input:focus+.label-input::after,
 .form input:valid+.label-input::after {
     transform: translateX(0%);
-    background: #c66c66;
 }
 
 #register_form {
