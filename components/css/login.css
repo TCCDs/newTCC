@@ -113,7 +113,6 @@ h2 {
     position: relative;
     height: 50px;
     overflow: hidden;
-    background: rgb(214, 213, 213);
 }
 
 .form input {
@@ -124,10 +123,6 @@ h2 {
     padding-bottom: 10px;
     border: none;
     outline: none;
-}
-
-.form input:focus {
-    background: #c66c66;
 }
 
 .form label {
