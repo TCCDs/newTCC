@@ -113,6 +113,7 @@ h2 {
     position: relative;
     height: 50px;
     overflow: hidden;
+    background: rgb(214, 213, 213);
 }
 
 .form input {
