@@ -135,6 +135,10 @@ h2 {
     border-bottom: 1px solid black;
 }
 
+.form::before {
+    background: none;
+}
+
 .form label::after {
     content: "";
     position: absolute;
