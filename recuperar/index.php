@@ -18,7 +18,9 @@
 			</div>
 		</form>		
 	
-		<div class="mostrar"></div>
+		<div class="mostrar">
+		
+		</div>
 	
 <script>
 	$(function(){
