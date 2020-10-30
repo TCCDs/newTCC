@@ -162,6 +162,7 @@ form input:valid+.label-input .content-input {
     transform: translateY(-150%);
     font-size: 12px;
     color: #5fa8d3;
+    background: #c66c66;
 }
 
 .form input:focus+.label-input::after,
