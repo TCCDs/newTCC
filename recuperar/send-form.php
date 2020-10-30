@@ -14,7 +14,7 @@
 		$total = $resultado->rowCount();
 		
 		if ($total == 0){
-			echo  "O e-mail informado não existe no banco de dados.";
+			echo  "<h2 class='text-danger mt-2'>O e-mail informado não existe no banco de dados.</h2>";
 		} else {
 			$novasenha = substr(md5(time()), 0, 8);
 			$password_hash = password_hash($novasenha, PASSWORD_DEFAULT);
@@ -40,14 +40,41 @@
                 $resultado->execute();
 
                 if ($resultado):
-                    echo "Senha alterada com sucesso";
+                    echo "<script>  Swal.fire({
+						icon: 'success',
+						title: 'Supermercado Caravelas!',
+						text: 'Senha alterada com sucesso',
+						type: 'success',
+						confirmButtonText: 'Feito...!'
+					}); </script>";
 				endif;
 				
-				echo "<script> alert('Formulário enviado com sucesso!'); </script>";
+				echo "<script>  Swal.fire({
+					icon: 'success',
+					title: 'Supermercado Caravelas!',
+					text: 'Formulário enviado com sucesso',
+					type: 'success',
+					confirmButtonText: 'Feito...!'
+				}); </script>";
 			} else {
-				echo "<script> alert('Falha ao enviar o Formulário.'); </script>";
+				echo "<script>  Swal.fire({
+					icon: 'error',
+					title: 'Supermercado Caravelas!',
+					text: dados.return,
+					type: 'error',
+					confirmButtonText: 'Tente novamente...!'
+				}) </script>";
 			}
 		}
 	} else {
-		echo "preencher campo email";
+		echo "<script>  Swal.fire({
+			icon: 'error',
+			title: 'Supermercado Caravelas!',
+			text: 'Preencha o campo',
+			type: 'error',
+			confirmButtonText: 'Tente novamente...!'
+		}) </script>";
 	}
+
+
+
