@@ -89,7 +89,7 @@
                             </li>
 
                             <li class="lista">
-                                <a class="btn tex-left receitas">receitas </a>
+                                <a class="btn text-left receitas">receitas </a>
                             </li>
                         </ul>
                 </div>
