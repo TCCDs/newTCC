@@ -88,7 +88,7 @@
                                 <a class="btn verificarCompra-adm text-left">Verificar Compra </a>
                             </li>
 
-                            <li class="">
+                            <li class="lista">
                                 <a class="btn tex-left receitas">receitas </a>
                             </li>
                         </ul>
