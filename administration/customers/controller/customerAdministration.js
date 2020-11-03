@@ -13,7 +13,7 @@ $(document).ready(function() {
                 let cliente = `
                 <div class="row ml-2">
                     <div class="mt-3 mr-2 col-12 col-md-2">
-                        <div class="card" style="width: 100%;  height: 35rem;">
+                        <div class="card" style="width: 20em;  height: 35rem;">
                             <div class="card-body">
                                     <h5 class="card-title text-dark">` + dados[i].NOME_CLIENTES + `</h5>
                                     <ul class="list-group list-group-flush">
