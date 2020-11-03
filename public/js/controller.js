@@ -15,7 +15,11 @@ $(document).ready(function() {
         $('#conteudo').load('client/receitasMVC/home/view/home.html')
     })
 
+    $('.pesquisar').click(function() {
+        $('#conteudo').load('client/receitasMVC/pesquisa/view/pesquisa.html')
+    })
 
+    
     $('.novaReceitas').click(function() {
         $('body').load('client/receitasMVC/receita/view/adicionar.html')
     })

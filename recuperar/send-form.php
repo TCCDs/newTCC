@@ -32,11 +32,10 @@
 			$status = mail($email_to, $assunto, $corpo, $headers);
 
 			if ($status) {
-				$id = 1;
-				$sql = "UPDATE login_usuarios SET SENHA_USUARIOS = :SENHA_USUARIOS WHERE  ID_USUARIOS = :ID_USUARIOS";
+				$sql = "UPDATE login_usuarios SET SENHA_USUARIOS = :SENHA_USUARIOS WHERE  LOGIN_USUARIOS = :LOGIN_USUARIOS";
                 $resultado = $conn->getConn()->prepare($sql);
                 $resultado->bindParam(':SENHA_USUARIOS', $password_hash);
-                $resultado->bindParam(':ID_USUARIOS', $id);
+                $resultado->bindParam(':LOGIN_USUARIOS', $email);
                 $resultado->execute();
 
                 if ($resultado):

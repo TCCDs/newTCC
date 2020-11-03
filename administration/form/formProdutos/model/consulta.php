@@ -2,7 +2,7 @@
     function Conectar(){
         try{
             $opcoes = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES UTF8');
-            $con = new PDO("mysql:host=localhost; dbname=new_supermercado;", "root", "", $opcoes);
+            $con = new PDO("mysql:host=mysql669.umbler.com; dbname=caravelas;", "supercaravelas", "tccdesenvolvimento2020", $opcoes);
             return $con;
         } catch (Exception $e){
             echo 'Erro: '.$e->getMessage();
