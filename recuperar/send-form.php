@@ -39,41 +39,14 @@
                 $resultado->execute();
 
                 if ($resultado):
-                    echo "<script>  Swal.fire({
-						icon: 'success',
-						title: 'Supermercado Caravelas!',
-						text: 'Senha alterada com sucesso',
-						type: 'success',
-						confirmButtonText: 'Feito...!'
-					}); </script>";
+                    echo "Senha alterada com sucesso";
 				endif;
 				
-				echo "<script>  Swal.fire({
-					icon: 'success',
-					title: 'Supermercado Caravelas!',
-					text: 'Formulário enviado com sucesso',
-					type: 'success',
-					confirmButtonText: 'Feito...!'
-				}); </script>";
+				echo "<script> alert('Formulário enviado com sucesso!'); </script>";
 			} else {
-				echo "<script>  Swal.fire({
-					icon: 'error',
-					title: 'Supermercado Caravelas!',
-					text: dados.return,
-					type: 'error',
-					confirmButtonText: 'Tente novamente...!'
-				}) </script>";
+				echo "<script> alert('Falha ao enviar o Formulário.'); </script>";
 			}
 		}
 	} else {
-		echo "<script>  Swal.fire({
-			icon: 'error',
-			title: 'Supermercado Caravelas!',
-			text: 'Preencha o campo',
-			type: 'error',
-			confirmButtonText: 'Tente novamente...!'
-		}) </script>";
+		echo "preencher campo email";
 	}
-
-
-

@@ -355,7 +355,6 @@ form input:valid+.label-input .content-input {
         background: white;
     }
     .tudo {
-        background: rgba(252, 252, 252, 0.979);
         border-radius: 8px;
         box-shadow: 0 0 1em rgb(40, 46, 44);
     }

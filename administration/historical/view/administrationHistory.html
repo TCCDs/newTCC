@@ -1,48 +1,22 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<div id="conteudo" class="container mt-5">
+    <div class="jumbotron">
+        <h1 class="display-4">Histórico</h1>
+        <hr class="my-4">
+    </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Agenda de contatos</title>
-
-    <link rel="stylesheet" href="../../../components/css/bootstrap.css">
-    <link rel="stylesheet" href="../../../components/libs/MaterialDesign/css/materialdesignicons.css">
-    <link rel="stylesheet" href="../../../components/libs/sweetalert2/dist/sweetalert2.css">
-    <link rel="stylesheet" href="../../../components/css/agenda.css">
-</head>
-
-<body>
-
-    <div id="conteudo" class="container mt-5">
-        <div class="jumbotron jumbotron-fluid">
-            <h1 class="display-4">Histórico</h1>
-            <hr class="my-4">
-        </div>
-
-        <div class="row mt-3">
-            <div class="col-4 col-md-2">
-                <button class="btn btn-primary btn-block text-center historico-compra">
+    <div class="row mt-3">
+        <div class="col-12 col-md-6">
+            <button class="btn btn-info btn-block text-center historico-compra">
                     <h1><i class="mdi mdi-check-decagram text-light"></i></h1>
                     <h5>Ofertas do dia</h5>
                 </button>
-            </div>
-            <div class="col-4 col-md-2">
-                <button class="btn btn-primary btn-block text-center historico-credito">
-                    <h2> <i class="mdi mdi-view-list"> </i> </h2>
-                    <p>Credito</p>
+        </div>
+        <div class="col-12 col-md-6">
+            <button class="btn btn-info btn-block text-center historico-credito">
+                    <h1> <i class="mdi  mdi-cash-usd-outline"> </i> </h1>
+                    <h5>Crédito</h5>
                 </button>
-            </div>
         </div>
     </div>
-
-
-
-    <script src="../../../components/js/jquery-3.4.1.min.js"></script>
-    <script src="../../../components/js/bootstrap.js"></script>
-    <script src="../../../components/libs/sweetalert2/dist/sweetalert2.js"></script>
-    <script src="administration/historical/controller/administrationHistory.js"></script>
-</body>
-
-</html>
+</div>
+<script src="administration/historical/controller/administrationHistory.js"></script>
