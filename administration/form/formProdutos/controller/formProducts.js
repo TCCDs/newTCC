@@ -65,7 +65,7 @@ $(document).ready(function() {
         $('#btnfornecedores').hide();
         $('#mensagem').html('<span class="mensagem">Aguarde, carregando ...</span>');
 
-        $.getJSON('administration/form/formProdutos/model/consulta.php?opcao=fornecedores', function(dados) {
+        $.getJSON('administration/form/formProdutos/model/consulta.php', function(dados) {
             if (dados.length > 0) {
                 var option = '<option>Selecione o Fornecedores </option>';
                 $.each(dados, function(i, obj) {
