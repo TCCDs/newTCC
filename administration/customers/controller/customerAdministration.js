@@ -13,7 +13,7 @@ $(document).ready(function() {
                 let cliente = `
                 <div class="row ml-2">
                     <div class="mt-3 mr-2 col-12 col-md-2">
-                        <div class="card" style="width: 20em;  height: 45rem;">
+                        <div class="card" style="width: 20em;  height: 47rem;">
                             <div class="card-body">
                                     <h5 class="card-title text-dark">` + dados[i].NOME_CLIENTES + `</h5>
                                     <ul class="list-group list-group-flush">
@@ -22,7 +22,7 @@ $(document).ready(function() {
                                         <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span><strong>Data de nascimento</strong><span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].DATA_NASCIMENTO_CLIENTES + `</div></div></li>
                                         <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span><strong>Celular</strong><span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].CELULAR_CLIENTES + `</div></div></li>
                                         <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span><strong>Email do cliente</strong><span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].EMAIL_CLIENTES + `</div></div></li>
-                                        <li class="list-group-item"><button id="` + dados[i].ID_CLIENTES + `" class="btn  btn-block btn--primary btn-sm btn-view-clientes"> <i class="mdi mdi-eye mdi-18px "></i> </button>
+                                        <li class="list-group-item"><button id="` + dados[i].ID_CLIENTES + `" class="btn  btn-block btn-primary btn-sm btn-view-clientes"> <i class="mdi mdi-eye mdi-18px "></i> </button>
                                         </li>
                                         <li class="list-group-item"> <button id="` + dados[i].ID_CLIENTES + `" class="btn btn-block btn-warning btn-sm btn-edit-clientes"> <i class="mdi mdi-pencil mdi-18px"></i> </button>
                                         </li>
