@@ -18,7 +18,7 @@ $(document).ready(function() {
                                 <h5 class="card-title text-dark">Dados do cliente</h5>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Nome do cliente<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].NOME_CLIENTES + `</div></div></li>
-                                    <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>CPF<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].CEP_CLIENTES + `</div></div></li>
+                                    <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>CEP<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].CEP_CLIENTES + `</div></div></li>
                                     <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Cidade<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].CIDADE_CLIENTES + `</div></div></li>
                                     <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Estado<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].ESTADO_CLIENTES + `</div></div></li>
                                     <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Endereço<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].ENDERECO_CLIENTES + `</div></div></li>
