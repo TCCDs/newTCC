@@ -1,14 +1,14 @@
 
 <h1>Pesquisa</h1>
 
-<form method="POST" id="form-pesquisa" action="">
-    Pesquisar: <input type="text" name="pesquisa" id="pesquisa" placeholder="O que você está procurando?">
-    <input type="submit" name="enviar" value="Pesquisar">
-</form>
+<form action="" method="POST">
+    <label>Pesquisar:</label>
+    <input type="text" name="pesquisa" id="pesquisa">
+  </form>
 
-<p>Exibindo <span class="font-weight-bold">{{quantidadeResultado}}</span> resultado(s) para o termo <span class="font-weight-bold">{{termo}}</span>.</p>
 <hr>
 
+<span class="carregando">Aguarde, pesquisando...</span>
 
 <div class="overflow-auto">
     <table class="table table-hover">
@@ -29,3 +29,4 @@
 </div>
 
 <script src="client/receitasMVC/pesquisa/controller/pesquisa.js"></script>
+<script src="client/receitasMVC/pesquisa/controller/palavra.js"></script>
