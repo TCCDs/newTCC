@@ -1,6 +1,5 @@
     body {
-        background-image: url("../../img/fundo.png") no-repeat center center;
-        background-size: cover;
+        background: #1e4757;
     }
     
     .bg-menu-adm {
