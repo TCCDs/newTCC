@@ -33,7 +33,13 @@ $(document).ready(function() {
     $('.formProducts-administration').click(function() {
         $('#conteudo').load('administration/form/formProdutos/view/formProducts.html')
     })
+    $('.formAdm-Adm').click(function() {
+        $('#conteudo').load('administration/form/formAdm/view/formAdm.html')
+    })
 
+    $('.formProducts-administration').click(function() {
+        $('#conteudo').load('administration/form/formProdutos/view/formProducts.html')
+    })
     $('.formBrands-administration').click(function() {
         $('#conteudo').load('administration/form/formMarca/view/formBrands.html')
     })
@@ -43,7 +49,7 @@ $(document).ready(function() {
     })
 
     $('.formClient-administration').click(function() {
-        $('#conteudo').load('administration/form/formAdm/view/formAdm.html')
+        $('#conteudo').load('administration/form/formClientes/view/formClient.html')
     })
 
     $('.verificarCompra-adm').click(function() {

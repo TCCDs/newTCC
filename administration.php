@@ -81,7 +81,7 @@
                                 <a class="btn formUser-administration text-left">Cadastro User</a>
                             </li>
                             <li class="lista">
-                                <a class="btn formUser-administration text-left">Administradores</a>
+                                <a class="btn formAdm-Adm text-left">Administradores</a>
                             </li>
                             
                             <li class="lista">
