@@ -86,38 +86,72 @@ $(document).ready(function() {
                     </div>
                 </div>
 
+                <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class=" form-group form">
+                        <input type="text" name="CEP_CLIENTES" id="CEP_CLIENTES" aria-autocomplete="off" value="` + dados[i].CEP_CLIENTES + `">
+                        <label for="CEP_CLIENTES" class="label-input">
+                            <span class="content-input">Gêreno</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class=" form-group form">
+                        <input type="text" name="ESTADO_CLIENTES" id="ESTADO_CLIENTES" aria-autocomplete="off" value="` + dados[i].ESTADO_CLIENTES + `">
+                        <label for="ESTADO_CLIENTES" class="label-input">
+                            <span class="content-input">Gêreno</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class=" form-group form">
+                        <input type="text" name="CIDADE_CLIENTES" id="CIDADE_CLIENTES" aria-autocomplete="off" value="` + dados[i].CIDADE_CLIENTES + `">
+                        <label for="CIDADE_CLIENTES" class="label-input">
+                            <span class="content-input">Gêreno</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class=" form-group form">
+                        <input type="text" name="ENDERECO_CLIENTES" id="ENDERECO_CLIENTES" aria-autocomplete="off" value="` + dados[i].ENDERECO_CLIENTES + `">
+                        <label for="ENDERECO_CLIENTES" class="label-input">
+                            <span class="content-input">Gêreno</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class=" form-group form">
+                        <input type="text" name="BAIRRO_CLIENTES" id="BAIRRO_CLIENTES" aria-autocomplete="off" value="` + dados[i].BAIRRO_CLIENTES + `">
+                        <label for="BAIRRO_CLIENTES" class="label-input">
+                            <span class="content-input">Gêreno</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class=" form-group form">
+                        <input type="text" name="NACIONALIDADE_CLIENTES" id="NACIONALIDADE_CLIENTES" aria-autocomplete="off" value="` + dados[i].NACIONALIDADE_CLIENTES + `">
+                        <label for="NACIONALIDADE_CLIENTES" class="label-input">
+                            <span class="content-input">Gêreno</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-12 col-md-12">
+                <div class=" form-group form">
+                    <input type="text" name="COMPLEMENTO_CLIENTES" id="COMPLEMENTO_CLIENTES" aria-autocomplete="off" value="` + dados[i].COMPLEMENTO_CLIENTES + `">
+                    <label for="COMPLEMENTO_CLIENTES" class="label-input">
+                        <span class="content-input">Gêreno</span>
+                    </label>
+                </div>
+            </div>
+        </div>
 
-                            <div class="form-group row">
-                                <div class="col-4">
-                                    <label>CEP</label>
-                                    <input class="form-control" type="text" name="CEP_CLIENTES" value="` + dados[i].CEP_CLIENTES + `">
-                                </div>
-                                <div class="col-4">
-                                    <label>ESTADOS</label>
-                                    <input class="form-control" type="text" name="ESTADO_CLIENTES" value="` + dados[i].ESTADO_CLIENTES + `">
-                                </div>
-                                <div class="col-4">
-                                    <label>BAIRRO</label>
-                                    <input class="form-control" type="text" name="BAIRRO_CLIENTES" value="` + dados[i].BAIRRO_CLIENTES + `">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label>ENDERECO</label>
-                                <input class="form-control" type="text" name="ENDERECO_CLIENTES" value="` + dados[i].ENDERECO_CLIENTES + `">
-                            </div>
-
-                            <div class="form-group">
-                                <label>COMPLEMENTO</label>
-                                <input class="form-control" type="text" name="COMPLEMENTO_CLIENTES" value="` + dados[i].COMPLEMENTO_CLIENTES + `">
-                            </div>
-
-                            <div class="form-group">
-                                <label>NACIONALIDADE</label>
-                                <input class="form-control" type="text" name="NACIONALIDADE_CLIENTES" value="` + dados[i].NACIONALIDADE_CLIENTES + `">
-                            </div>
-
-                            <button class="btn btn-outline-warning btn-update"> <i class="mdi mdi-content-save"></i> Salvar </button>
+                            <button class="btn btn-info btn-block btn-update"> Salvar </button>
                         </form>
                     `
 
