@@ -4,7 +4,7 @@
     if(!empty($_SESSION['ID_USUARIOS'])):
         //echo "<a href='sair.php'>Sair</a>";
     else:
-        header("Location: ./index.html");
+        header("Location: ./index.php");
     endif; 
 ?> 
 
