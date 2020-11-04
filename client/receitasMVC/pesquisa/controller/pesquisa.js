@@ -2,6 +2,7 @@ $(function(){
 	$('.carregando').hide();
 	$('#pesquisa').change(function(){
 		if( $(this).val() ) {
+			$("#conteudo").load("client/receitasMVC/pesquisa/view/pesquisa.html");
 			$('tbody').hide();
 			$('.carregando').show();
 			$.getJSON('client/receitasMVC/pesquisa/model/pesquisa.php?search=',{pesquisa: $(this).val(), ajax: 'true'}, function(dados){

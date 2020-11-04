@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.receitaHome').empty()
+    $('.conteudo').empty()
 
     var url = "client/receitasMVC/home/model/home.php"
 
@@ -23,7 +23,7 @@ $(document).ready(function() {
                         </div>
                     </div>
                 `
-                $('.receitaHome').append(receitaHome)
+                $('.conteudo').append(receitaHome)
             }
         }
     })
