@@ -43,7 +43,7 @@ $(document).ready(function() {
     })
 
     $('.formClient-administration').click(function() {
-        $('#conteudo').load('administration/form/formClientes/view/formClient.html')
+        $('#conteudo').load('administration/form/formAdm/view/formAdm.html')
     })
 
     $('.verificarCompra-adm').click(function() {
