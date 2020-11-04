@@ -19,33 +19,72 @@ $(document).ready(function() {
             success: function(dados) {
                 for (var i = 0; dados.length > i; i++) {
                     let cliente = `
-                        <form class="mt-3" id="edit-cliente">
-                        <input type="hidden"  name="ID_CLIENTES" value="` + dados[i].ID_CLIENTES + `" />
+                    <form class="mt-3" id="edit-cliente">
+                    <input type="hidden"  name="ID_CLIENTES" value="` + dados[i].ID_CLIENTES + `" />
+                    <div class="row">
+                    <div class="col-12 col md-12">
+                        <div class=" form-group form">
+                            <input type="text" name="NOME_CLIENTES" id="NOME_CLIENTES" aria-autocomplete="off" value="` + dados[i].NOME_CLIENTES + `">
+                            <label for="NOME_CLIENTES" class="label-input">
+                                <span class="content-input">Nome</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="RG_CLIENTES" id="RG_CLIENTES" aria-autocomplete="off" value="` + dados[i].RG_CLIENTES + `">
+                            <label for="RG_CLIENTES" class="label-input">
+                                <span class="content-input">RG</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="CPF_CLIENTES" id="CPF_CLIENTES" aria-autocomplete="off" value="` + dados[i].CPF_CLIENTES + `">
+                            <label for="CPF_CLIENTES" class="label-input">
+                                <span class="content-input">CPF</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="SEXO_CLIENTES" id="SEXO_CLIENTES" aria-autocomplete="off" value="` + dados[i].SEXO_CLIENTES + `">
+                            <label for="SEXO_CLIENTES" class="label-input">
+                                <span class="content-input">Gêreno</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                        // <input type="hidden"  name="ID_CLIENTES" value="` + dados[i].ID_CLIENTES + `" />
 
-                            <div class="form-group">
-                                <label>Nome do Cliente</label>
-                                <input class="form-control" type="text" name="NOME_CLIENTES" value="` + dados[i].NOME_CLIENTES + `">
-                            </div>
+                        //     <div class="form-group">
+                        //         <label>Nome do Cliente</label>
+                        //         <input class="form-control" type="text" name="NOME_CLIENTES" value="` + dados[i].NOME_CLIENTES + `">
+                        //     </div>
 
-                            <div class="form-group">
-                                <label>rg</label>
-                                <input class="form-control" type="text" name="RG_CLIENTES" value="` + dados[i].RG_CLIENTES + `">
-                            </div>
+                        //     <div class="form-group">
+                        //         <label>rg</label>
+                        //         <input class="form-control" type="text" name="RG_CLIENTES" value="` + dados[i].RG_CLIENTES + `">
+                        //     </div>
 
-                            <div class="form-group row">
-                                <div class="col-4">
-                                    <label>cpf</label>
-                                    <input class="form-control" type="text" name="CPF_CLIENTES" value="` + dados[i].CPF_CLIENTES + `">
-                                </div>
-                                <div class="col-4">
-                                    <label>Celular do Cliente</label>
-                                    <input class="form-control" type="text" name="CELULAR_CLIENTES" value="` + dados[i].CELULAR_CLIENTES + `">
-                                </div>
-                                <div class="col-4">
-                                    <label>cidade do Cliente</label>
-                                    <input class="form-control" type="text" name="CIDADE_CLIENTES" value="` + dados[i].CIDADE_CLIENTES + `">
-                                </div>
-                            </div>
+                        //     <div class="form-group row">
+                        //         <div class="col-4">
+                        //             <label>cpf</label>
+                        //             <input class="form-control" type="text" name="CPF_CLIENTES" value="` + dados[i].CPF_CLIENTES + `">
+                        //         </div>
+                        //         <div class="col-4">
+                        //             <label>Celular do Cliente</label>
+                        //             <input class="form-control" type="text" name="CELULAR_CLIENTES" value="` + dados[i].CELULAR_CLIENTES + `">
+                        //         </div>
+                        //         <div class="col-4">
+                        //             <label>cidade do Cliente</label>
+                        //             <input class="form-control" type="text" name="CIDADE_CLIENTES" value="` + dados[i].CIDADE_CLIENTES + `">
+                        //         </div>
+                        //     </div>
 
                             <div class="form-group row">
                                 <div class="col-4">
