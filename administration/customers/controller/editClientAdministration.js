@@ -58,48 +58,34 @@ $(document).ready(function() {
                             </label>
                         </div>
                     </div>
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="DATA_NASCIMENTO_CLIENTES" id="DATA_NASCIMENTO_CLIENTES" aria-autocomplete="off" value="` + dados[i].DATA_NASCIMENTO_CLIENTES + `">
+                            <label for="DATA_NASCIMENTO_CLIENTES" class="label-input">
+                                <span class="content-input">Gêreno</span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
-                        // <input type="hidden"  name="ID_CLIENTES" value="` + dados[i].ID_CLIENTES + `" />
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="CELULAR_CLIENTES" id="CELULAR_CLIENTES" aria-autocomplete="off" value="` + dados[i].CELULAR_CLIENTES + `">
+                            <label for="CELULAR_CLIENTES" class="label-input">
+                                <span class="content-input">Gêreno</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="EMAIL_CLIENTES" id="EMAIL_CLIENTES" aria-autocomplete="off" value="` + dados[i].EMAIL_CLIENTES + `">
+                            <label for="EMAIL_CLIENTES" class="label-input">
+                                <span class="content-input">Gêreno</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
 
-                        //     <div class="form-group">
-                        //         <label>Nome do Cliente</label>
-                        //         <input class="form-control" type="text" name="NOME_CLIENTES" value="` + dados[i].NOME_CLIENTES + `">
-                        //     </div>
-
-                        //     <div class="form-group">
-                        //         <label>rg</label>
-                        //         <input class="form-control" type="text" name="RG_CLIENTES" value="` + dados[i].RG_CLIENTES + `">
-                        //     </div>
-
-                        //     <div class="form-group row">
-                        //         <div class="col-4">
-                        //             <label>cpf</label>
-                        //             <input class="form-control" type="text" name="CPF_CLIENTES" value="` + dados[i].CPF_CLIENTES + `">
-                        //         </div>
-                        //         <div class="col-4">
-                        //             <label>Celular do Cliente</label>
-                        //             <input class="form-control" type="text" name="CELULAR_CLIENTES" value="` + dados[i].CELULAR_CLIENTES + `">
-                        //         </div>
-                        //         <div class="col-4">
-                        //             <label>cidade do Cliente</label>
-                        //             <input class="form-control" type="text" name="CIDADE_CLIENTES" value="` + dados[i].CIDADE_CLIENTES + `">
-                        //         </div>
-                        //     </div>
-
-                            <div class="form-group row">
-                                <div class="col-4">
-                                    <label>DATA_NASCIMENTO</label>
-                                    <input class="form-control" type="text" name="DATA_NASCIMENTO_CLIENTES" value="` + dados[i].DATA_NASCIMENTO_CLIENTES + `">
-                                </div>
-                                <div class="col-4">
-                                    <label>SEXO</label>
-                                    <input class="form-control" type="text" name="SEXO_CLIENTES" value="` + dados[i].SEXO_CLIENTES + `">
-                                </div>
-                                <div class="col-4">
-                                    <label>E-Mail</label>
-                                    <input class="form-control" type="text" name="EMAIL_CLIENTES" value="` + dados[i].EMAIL_CLIENTES + `">
-                                </div>
-                            </div>
 
                             <div class="form-group row">
                                 <div class="col-4">
