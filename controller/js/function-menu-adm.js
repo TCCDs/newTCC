@@ -33,7 +33,13 @@ $(document).ready(function() {
     $('.formProducts-administration').click(function() {
         $('#conteudo').load('administration/form/formProdutos/view/formProducts.html')
     })
+    $('.formAdm-Adm').click(function() {
+        $('#conteudo').load('administration/form/formAdm/view/formAdm.html')
+    })
 
+    $('.formProducts-administration').click(function() {
+        $('#conteudo').load('administration/form/formProdutos/view/formProducts.html')
+    })
     $('.formBrands-administration').click(function() {
         $('#conteudo').load('administration/form/formMarca/view/formBrands.html')
     })
