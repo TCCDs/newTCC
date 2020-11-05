@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="sidebar-header" id="sidebar-header">
-                    <div class="col-12 col md-12 text-center">
+                    <div class="col-12 col-md-12 text-center">
                         <img class="img-fluid  avatar-menu" src="img/avatar.png" alt="">
                     </div>
                 </div>

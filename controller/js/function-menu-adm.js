@@ -31,10 +31,14 @@ $(document).ready(function() {
     })
 
     $('.formProducts-administration').click(function() {
-        $('#conteudo').load('administration/form/formProdutos/view/formProducts.html')
-    })
+            $('#conteudo').load('administration/form/formProdutos/view/formProducts.html')
+        })
+        // $('.formAdm-Adm').click(function() {
+        //     $('#conteudo').load('administration/form/formAdm/view/formAdm.html')
+        // })
+
     $('.formAdm-Adm').click(function() {
-        $('#conteudo').load('administration/form/formAdm/view/formAdm.html')
+        $('#conteudo').load('administration/adm/view/admAdministration.html')
     })
 
     $('.formProducts-administration').click(function() {
