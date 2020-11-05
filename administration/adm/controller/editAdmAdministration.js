@@ -7,7 +7,7 @@ $(document).ready(function() {
         $('.modal.footer').empty()
         $('.modal.title').append('Edição de registro cadastrado')
 
-        var url = "administration/customers/model/viewAdmAdministration.php"
+        var url = "administration/adm/model/viewAdmAdministration.php"
         var dados = 'ID_ADMINISTRADOR='
         dados += $(this).attr('id')
 
