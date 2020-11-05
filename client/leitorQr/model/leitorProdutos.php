@@ -42,8 +42,8 @@
 ?>
 
 <script>
-    $(document).ready(function() {
+    /*$(document).ready(function() {
         $('#conteudo').load('client/leitorQr/view/testeLeitor.html')
         //window.location.replace("http://newpage.php/");
-    })
+    })*/
 </script>
