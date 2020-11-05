@@ -7,9 +7,15 @@
     if(!empty($_SESSION["shopping_cart"])) {
 		foreach($_SESSION["shopping_cart"] as $keys => $values) {  
 			$total_price = $total_price + ($values["product_quantity"] * $values["product_price"]);
-			$item_details .= $values["product_name"] . ', ';
+            $item_details .= $values["product_name"] . ', ';
         }      
     }    
+
+
+
+    $teste =  $_SESSION['moedas_clientes'];
+    print_r($teste);
+    exit;
 ?>
 
 <!DOCTYPE html>
