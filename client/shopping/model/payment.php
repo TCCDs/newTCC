@@ -127,7 +127,7 @@
 			unset($_SESSION["shopping_cart"]);
 
 			$_SESSION["success_message"] = "O pagamento foi concluído com sucesso. O ID TXN é " . $response["balance_transaction"] . "";
-			header('location: ../model/qrCode.php');
+			header('location: ../../../customerPanel.php');
 		}
 	}
 

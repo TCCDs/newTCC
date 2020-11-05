@@ -7,6 +7,7 @@ $(document).ready(function() {
     var dados = 'id=' 
     dados += $(this).attr('id')
 
+    console.log(dados)
     $.ajax({
         type: 'POST',
         dataType: 'json',
