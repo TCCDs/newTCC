@@ -38,10 +38,12 @@
     }
 
    $_SESSION['testeProdutos'] = json_encode($produtos,  JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
-
    //Header( "Location: ../view/testeLeitor.html" );
 ?>
 
 <script>
-    $('#conteudo').load('client/leitorQr/view/testeLeitor.html')
+    $(document).ready(function() {
+        $('#conteudo').load('client/leitorQr/view/testeLeitor.html')
+        //window.location.replace("http://newpage.php/");
+    })
 </script>
