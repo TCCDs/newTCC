@@ -17,11 +17,11 @@ $(document).ready(function() {
                             <div class="card-body">
                                     <h5 class="card-title text-dark">` + dados[i].NOME_ADMINISTRADOR + `</h5>
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span><strong>Nome do cliente</strong><span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].NOME_ADMINISTRADOR + `</div></div></li>
-                                        <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span><strong>CPF do cliente</strong><span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].CPF_ADMINISTRADOR + `</div></div></li>
+                                        <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span><strong>Nome do Admistrador</strong><span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].NOME_ADMINISTRADOR + `</div></div></li>
+                                        <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span><strong>CPF do Admistrador</strong><span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].CPF_ADMINISTRADOR + `</div></div></li>
                                         <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span><strong>Data de nascimento</strong><span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].DATA_NASCIMENTO_ADMINISTRADOR + `</div></div></li>
                                         <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span><strong>Celular</strong><span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].CELULAR_ADMINISTRADOR + `</div></div></li>
-                                        <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span><strong>Email do cliente</strong><span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].EMAIL_ADMINISTRADOR + `</div></div></li>
+                                        <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span><strong>Email do Admistrador</strong><span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].EMAIL_ADMINISTRADOR + `</div></div></li>
                                         <li class="list-group-item"><button id="` + dados[i].ID_ADMINISTRADOR + `" class="btn  btn-block btn-primary btn-sm btn-view-adm"> <i class="mdi mdi-eye mdi-18px "></i> </button>
                                         </li>
                                         <li class="list-group-item"> <button id="` + dados[i].ID_ADMINISTRADOR + `" class="btn btn-block btn-warning btn-sm btn-edit-adm"> <i class="mdi mdi-pencil mdi-18px"></i> </button>
@@ -39,7 +39,7 @@ $(document).ready(function() {
             $('body').append('<script src="administration/customers/controller/viewClientAdministration.js"></script>')
             $('body').append('<script src="administration/customers/controller/editClientAdministration.js"></script>')
             $('body').append('<script src="administration/customers/controller/deleteClientAdministration.js"></script>')
-            $('body').append('<script>$(".adm-add").click(function(){ $("#conteudo").load("administration/form/formAdm/view/formAdm.html")})</script>')
+            $('body').append('<script>$(".clientes-add").click(function(){ $("#conteudo").load("administration/form/formClientes/view/formClient.html")})</script>')
 
         }
     })
