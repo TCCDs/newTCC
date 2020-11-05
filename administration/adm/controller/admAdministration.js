@@ -34,11 +34,11 @@ $(document).ready(function() {
                     </div>
                 </div>
                 `
-                $('.customers').append(administration)
+                $('.administration').append(administration)
             }
-            $('body').append('<script src="administration/customers/controller/viewClientAdministration.js"></script>')
-            $('body').append('<script src="administration/customers/controller/editClientAdministration.js"></script>')
-            $('body').append('<script src="administration/customers/controller/deleteClientAdministration.js"></script>')
+            $('body').append('<script src="administration/adm/controller/viewClientAdministration.js"></script>')
+            $('body').append('<script src="administration/adm/controller/editClientAdministration.js"></script>')
+            $('body').append('<script src="administration/adm/controller/deleteClientAdministration.js"></script>')
             $('body').append('<script>$(".clientes-add").click(function(){ $("#conteudo").load("administration/form/formClientes/view/formClient.html")})</script>')
 
         }
