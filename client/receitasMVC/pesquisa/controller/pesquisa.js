@@ -30,7 +30,7 @@ $(function(){
 			});
 		} else {
 			$('.carregando').hide();
-			$('tbody').html('Nenhuma empresa encontrada');
+			$('tbody').html('Nenhuma dados encontrada');
 		}
 	});
 });

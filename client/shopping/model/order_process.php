@@ -7,9 +7,10 @@
     if(!empty($_SESSION["shopping_cart"])) {
 		foreach($_SESSION["shopping_cart"] as $keys => $values) {  
 			$total_price = $total_price + ($values["product_quantity"] * $values["product_price"]);
-			$item_details .= $values["product_name"] . ', ';
+            $item_details .= $values["product_name"] . ', ';
         }      
     }    
+
 ?>
 
 <!DOCTYPE html>
@@ -90,7 +91,7 @@
                     </div>
                                     
                     <div class="processPayment" align="center">
-                        <input type="hidden" name="total_amount" value="<?php echo $_SESSION['moedas_clientes']; ?>" />
+                        <input type="hidden" name="total_amount" value="<?php echo $total_price //$_SESSION['moedas_clientes']; ?>" />
                         <input type="hidden" name="currency_code" value="BRL" />
                         <input type="button" name="button_action" id="button_action" class="btn btn-success btn-block btn-md" onclick="stripePay(event)" value="Pagar agora" />
                     </div>
