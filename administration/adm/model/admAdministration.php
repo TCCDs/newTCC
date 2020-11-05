@@ -14,6 +14,3 @@
     echo json_encode($administration, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 
 ?>
-
-
-
