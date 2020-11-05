@@ -7,10 +7,10 @@
     $resultado->execute();
 
     while($resultadoAdm = $resultado->fetch(PDO::FETCH_ASSOC)) {
-        $administration[] = array_map('utf8_encode', $resultadoAdm);
+        $adm[] = array_map('utf8_encode', $resultadoAdm);
 
     }
 
-    echo json_encode($administration, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+    echo json_encode($adm, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 
 ?>

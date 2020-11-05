@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.customers').empty()
+    $('.adm').empty()
 
     var url = "administration/adm/model/admAdministration.php"
 
@@ -34,12 +34,13 @@ $(document).ready(function() {
                     </div>
                 </div>
                 `
-                $('.customers').append(administration)
+                $('.adm').append(administration)
             }
-            $('body').append('<script src="administration/adm/controller/viewClientAdministration.js"></script>')
-            $('body').append('<script src="administration/adm/controller/editClientAdministration.js"></script>')
-            $('body').append('<script src="administration/adm/controller/deleteClientAdministration.js"></script>')
-            $('body').append('<script>$(".clientes-add").click(function(){ $("#conteudo").load("administration/form/formAdm/view/formAdm.html")})</script>')
+            $('body').append('<script src="administration/adm/controller/viewAdmAdministration.js"></script>')
+            $('body').append('<script src="administration/adm/controller/editAdmAdministration.js"></script>')
+            $('body').append('<script src="administration/adm/controller/deleteAdmAdministration.js"></script>')
+            $('body').append('<script>$(".adm-add").click(function(){ $("#conteudo").load("administration/form/formAdm/view/formAdm.html")})</script>')
+
         }
     })
 })
