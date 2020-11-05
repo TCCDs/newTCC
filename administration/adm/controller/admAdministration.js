@@ -34,7 +34,7 @@ $(document).ready(function() {
                     </div>
                 </div>
                 `
-                $('.administration').append(administration)
+                $('.customers').append(administration)
             }
             $('body').append('<script src="administration/adm/controller/viewClientAdministration.js"></script>')
             $('body').append('<script src="administration/adm/controller/editClientAdministration.js"></script>')
