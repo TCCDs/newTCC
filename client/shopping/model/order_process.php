@@ -11,11 +11,6 @@
         }      
     }    
 
-
-
-    $teste =  $_SESSION['moedas_clientes'];
-    print_r($teste);
-    exit;
 ?>
 
 <!DOCTYPE html>
@@ -94,6 +89,12 @@
                             </div>
                         </div>
                     </div>
+
+                    <?php
+    $teste =  $_SESSION['moedas_clientes'];
+    print_r($teste);
+    exit;
+                    ?>
                                     
                     <div class="processPayment" align="center">
                         <input type="hidden" name="total_amount" value="<?php echo $_SESSION['moedas_clientes']; ?>" />
