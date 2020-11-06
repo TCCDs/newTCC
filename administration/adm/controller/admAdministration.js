@@ -3,6 +3,9 @@ $(document).ready(function() {
 
     var url = "administration/adm/model/admAdministration.php"
 
+    let data = new Date("12/31/2019");
+    console.log(data)
+
     $.ajax({
         type: 'POST',
         dataType: 'json',
