@@ -2,8 +2,11 @@
     include_once('../../../server/Connect.php');
     $conn = new Conn();
 
-    $sql = "SELECT * FROM administrador";
+    $status = 'A'; 
+
+    $sql = "SELECT * FROM administrador where STATUS_ADMINISTRADOR = :STATUS_ADMINISTRADOR";
     $resultado = $conn->getConn()->prepare($sql);
+    $resultado->bindParam(':STATUS_ADMINISTRADOR', $status, PDO::PARAM_STR);
     $resultado->execute();
 
     while($resultadoAdm = $resultado->fetch(PDO::FETCH_ASSOC)) {
