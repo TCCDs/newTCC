@@ -2,15 +2,15 @@
     include_once('../../../server/Connect.php');
     $conn = new Conn();
 
-    $idProdutos = $_POST['ID_ADMINISTRADOR'];
-    $statusADMINISTRADOR = 'D';
+    $idAdministrador = $_POST['ID_ADMINISTRADOR'];
+    $statusAdministrador = 'D';
 
     try {
         //$sql = "DELETE FROM ADMINISTRADOR WHERE ID_ADMINISTRADOR = :ID_ADMINISTRADOR";
         $sql = "UPDATE ADMINISTRADOR SET STATUS_ADMINISTRADOR = :STATUS_ADMINISTRADOR WHERE ID_ADMINISTRADOR = :ID_ADMINISTRADOR";
         $resultado = $conn->getConn()->prepare($sql);
-        $resultado->bindParam(':ID_ADMINISTRADOR', $idADMINISTRADOR);
-        $resultado->bindParam(':STATUS_ADMINISTRADOR', $statusADMINISTRADOR);
+        $resultado->bindParam(':ID_ADMINISTRADOR', $idAdministrador);
+        $resultado->bindParam(':STATUS_ADMINISTRADOR', $statusAdministrador);
         $resultado->execute();
 
         $data = array('return' => true);
