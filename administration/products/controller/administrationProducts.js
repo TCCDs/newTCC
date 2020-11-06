@@ -25,7 +25,7 @@ $(document).ready(function() {
                 $('tbody').append(produtos)
             }
             $('body').append('<script src="administration/products/controller/viewProductsAdministration.js"></script>')
-                //$('body').append('<script src="administration/products/controller/edit-produto.js"></script>')
+            $('body').append('<script src="administration/products/controller/edit-produto.js"></script>')
             $('body').append('<script src="administration/products/controller/deleteProductsAdministration.js"></script>')
             $('body').append('<script>$(".produtos-add").click(function(){ $("#conteudo").load("administration/form/formProdutos/view/formProducts.html")})</script>')
 

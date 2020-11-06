@@ -45,7 +45,9 @@ $(document).ready(function() {
         $('#conteudo').load('administration/form/formProdutos/view/formProducts.html')
     })
     $('.formBrands-administration').click(function() {
-        $('#conteudo').load('administration/form/formMarca/view/formBrands.html')
+        // $('#conteudo').load('administration/form/formMarca/view/formBrands.html')
+        $('#conteudo').load('administration/marca/view/marcaAdministration.html')
+
     })
 
     $('.formProviders-administration').click(function() {
