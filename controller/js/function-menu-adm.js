@@ -18,7 +18,7 @@ $(document).ready(function() {
         $('#conteudo').load('administration/historical/view/administrationHistory.html')
     })
     $('.fornecedor-adm').click(function() {
-        $('#conteudo').load('administration/form/formFornecedores/view/formProviders.html ')
+        $('#conteudo').load('administration/fornecedores/view/fornecedorAdministration.html ')
     })
 
     $('.marca-adm').click(function() {
