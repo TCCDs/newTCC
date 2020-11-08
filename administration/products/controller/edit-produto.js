@@ -123,11 +123,13 @@ $(document).ready(function() {
                 </div>
             </div>
             <div class="row">
-                <div class=" form-group form">
-                    <input type="text" name="DESCRICAO_PRODUTOS" id="DESCRICAO_PRODUTOS" aria-autocomplete="off" value="` + dados[i].DESCRICAO_PRODUTOS + `">
-                    <label for="DESCRICAO_PRODUTOS" class="label-input">
-                        <span class="content-input">Descrição</span>
-                    </label>
+                <div class="col-12 col-md-6">
+                    <div class=" form-group form">
+                        <input type="text" name="DESCRICAO_PRODUTOS" id="DESCRICAO_PRODUTOS" aria-autocomplete="off" value="` + dados[i].DESCRICAO_PRODUTOS + `">
+                        <label for="DESCRICAO_PRODUTOS" class="label-input">
+                            <span class="content-input">Descrição</span>
+                        </label>
+                    </div>
                 </div>
             </div>
 
