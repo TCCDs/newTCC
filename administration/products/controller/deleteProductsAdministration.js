@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('.btn-delete').click(function(e) {
         e.preventDefault()
 
-        var dados = 'ID_PRODUTOS='
+        var dados = 'ID_MARCA='
         dados += $(this).attr('id')
 
         Swal.fire({
@@ -20,7 +20,7 @@ $(document).ready(function() {
                     type: 'POST',
                     dataType: 'json',
                     data: dados,
-                    url: 'administration/products/model/deleteProductsAdministration.php',
+                    url: 'administration/marca/model/deletemarcaAdministration.php',
                     success: function(dados) {
                         Swal.fire({
                             icon: 'success',
@@ -29,7 +29,7 @@ $(document).ready(function() {
                             type: 'success',
                             confirmButtonText: 'Feito!'
                         })
-                        $('#conteudo').load('administration/products/view/administrationProducts.html')
+                        $('#conteudo').load('administration/marca/view/marcaAdministration.html')
                     }
                 })
             } else {

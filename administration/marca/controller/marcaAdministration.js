@@ -21,7 +21,7 @@ $(document).ready(function() {
                 let marca = `
                 <div class="row ml-2">
                     <div class="mt-3 mr-2 col-12 col-md-2">
-                        <div class="card" style="width: 20em;  height: 47rem;">
+                        <div class="card" style="width: 20em;  height: 20rem;">
                             <div class="card-body">
                                     <h5 class="card-title text-dark">` + dados[i].NOME_MARCA + `</h5>
                                     <ul class="list-group list-group-flush">
@@ -43,7 +43,7 @@ $(document).ready(function() {
             $('body').append('<script src="administration/marca/controller/viewmarcaAdministration.js"></script>')
             $('body').append('<script src="administration/marca/controller/editmarcaAdministration.js"></script>')
             $('body').append('<script src="administration/marca/controller/deletemarcaAdministration.js"></script>')
-            $('body').append('<script>$(".marca-add").click(function(){ $("#conteudo").load("administration/form/formBrands/view/formBrands.html")})</script>')
+            $('body').append('<script>$(".marca-add").click(function(){ $("#conteudo").load("administration/form/formMarca/view/formBrands.html")})</script>')
 
         }
     })
