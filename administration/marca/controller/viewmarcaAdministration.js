@@ -4,7 +4,7 @@ $(document).ready(function() {
 
         $('.modal-title').empty()
         $('.modal-body').empty()
-        $('.modal.footer').empty()
+        $('.modal-footer').empty()
 
         var url = "administration/marca/model/viewmarcaAdministration.php"
         var dados = 'ID_MARCA='
