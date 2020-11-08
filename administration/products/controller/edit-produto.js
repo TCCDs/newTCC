@@ -123,7 +123,7 @@ $(document).ready(function() {
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-12">
                     <div class=" form-group form">
                         <input type="text" name="DESCRICAO_PRODUTOS" id="DESCRICAO_PRODUTOS" aria-autocomplete="off" value="` + dados[i].DESCRICAO_PRODUTOS + `">
                         <label for="DESCRICAO_PRODUTOS" class="label-input">
