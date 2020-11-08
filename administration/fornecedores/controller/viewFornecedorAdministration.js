@@ -7,14 +7,6 @@ $(document).ready(function() {
         $('.modal-footer').empty()
 
         var url = "administration/fornecedores/model/viewFornecedoresAdministration.php"
-
-        function adicionaZero(numero) {
-            if (numero <= 9)
-                return "0" + numero;
-            else
-                return numero;
-        }
-
         var dados = 'ID_FORNECEDORES='
         dados += $(this).attr('id')
 
@@ -25,11 +17,8 @@ $(document).ready(function() {
             url: url,
             success: function(dados) {
                 for (var i = 0; dados.length > i; i++) {
-                    let dataAtual2 = new Date(dados[i].data);
-                    let dataAtualFormatada2 = (adicionaZero(dataAtual2.getDate().toString()) + "/" + (adicionaZero(dataAtual2.getMonth() + 1).toString()) + "/" + dataAtual2.getFullYear());
-
                     let fornecedores = `
-                        <p> Data de nascimento: ` + dados[i].dataAtualFormatada2 + ` </p>
+                        <p> Data de nascimento: ` + dados[i].DATA_NASCIMENTO_FORNECEDORES + ` </p>
                         <p> Celular: ` + dados[i].CELULAR_FORNECEDORES + ` </p>
                         <p> Nacionalidade: ` + dados[i].NACIONALIDADE_FORNECEDORES + ` </p>
                         <p> Sexo: ` + dados[i].SEXO_FORNECEDORES + ` </p>
