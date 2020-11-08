@@ -2,7 +2,7 @@
     include_once('../../../server/Connect.php');
     $conn = new Conn();
 
-    $ID_MARCA = $_POST['ID_marca'];
+    $ID_MARCA = $_POST['ID_MARCA'];
 
     $sql = "SELECT * FROM marca WHERE ID_MARCA = :ID_MARCA";
     $resultado = $conn->getConn()->prepare($sql);
