@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('.fornecedores').empty()
 
-    var url = "administration/forecedor/model/fornecedorAdministration.php"
+    var url = "administration/fornecedores/model/fornecedorAdministration.php"
 
     function adicionaZero(numero) {
         if (numero <= 9)
