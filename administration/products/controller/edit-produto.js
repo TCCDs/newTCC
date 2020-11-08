@@ -140,7 +140,7 @@ $(document).ready(function() {
                     $('.modal-body').append(produto)
                 }
                 $('#modalContato').modal('show')
-                $('body').append('<script src="administration/adm/controller/updateAdmAdministration.js"></script>')
+                $('body').append('<script src="administration/products/controller/updateProdutosAdministration.js"></script>')
             }
         })
     })
