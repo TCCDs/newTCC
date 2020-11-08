@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once ("../../../../server/Connect.php");
+    include_once ("../../../../server/Conn.php");
     $conn = new Conn();
 
     $tipoUsuarios = 1;
@@ -77,10 +77,21 @@
     
             $_SESSION['idUsuario'] = $idUsuario;
     
-            $data = array('return' => true);
+            $mensagem = "Cadastro efetuado com sucesso!";
+
+            $data = array(
+                'return' => true,
+                'mensagem' => $mensagem
+            );
     
             } catch (Exception $ex){
-                $data = array('return' => $ex->getMessage());
+                //$data = array('return' => $ex->getMessage());
+                $mensagem = "Erro ao cadastrar usuario";
+                
+                $data = array(
+                    'mensagem' => $mensagem
+                );
+
             }
 
         else:
