@@ -3,7 +3,7 @@ $(document).ready(function() {
         e.preventDefault()
 
         var dados = $('#edit-produtos').serialize()
-        var url = "administration/products/model/updateProdutosAdministration.php"
+        var url = "administration/products/model/updateProductsAdministration.php"
 
         $.ajax({
             type: 'POST',
