@@ -17,7 +17,7 @@ $(document).ready(function() {
                     <td class="text-center" width="20%"> ` + dados[i].VALIDADE_PRODUTOS + ` </td>
                     <td class="text-center" width="15%">
                         <button id="` + dados[i].ID_PRODUTOS + `" class="btn btn-primary btn-sm btn-view-produtos"> <i class="mdi mdi-eye mdi-18px"></i> </button>
-                        <button id="` + dados[i].ID_PRODUTOS + `" class="btn btn-warning btn-sm btn-edit"> <i class="mdi mdi-pencil mdi-18px"></i> </button>
+                        <button id="` + dados[i].ID_PRODUTOS + `" class="btn btn-warning btn-sm btn-edit-produtos"> <i class="mdi mdi-pencil mdi-18px"></i> </button>
                         <button id="` + dados[i].ID_PRODUTOS + `" class="btn btn-danger btn-sm btn-delete"> <i class="mdi mdi-delete mdi-18px"></i> </button>
                     </td>
                 </tr>

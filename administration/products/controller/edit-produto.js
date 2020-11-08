@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.btn-edit-adm').click(function(e) {
+    $('.btn-edit-produtos').click(function(e) {
         e.preventDefault()
 
         $('.modal-title').empty()
@@ -7,8 +7,8 @@ $(document).ready(function() {
         $('.modal-footer').empty()
         $('.modal-title').append('Edição de registro cadastrado')
 
-        var url = "administration/adm/model/viewAdmAdministration.php"
-        var dados = 'ID_ADMINISTRADOR='
+        var url = "administration/products/model/viewProductsAdministration.php"
+        var dados = 'ID_PRODUTOS='
         dados += $(this).attr('id')
 
         $.ajax({
@@ -19,13 +19,13 @@ $(document).ready(function() {
             success: function(dados) {
                 for (var i = 0; dados.length > i; i++) {
                     let produto = `
-                    <form class="mt-3" id="edit-adm">
-                    <input type="hidden"  name="ID_ADMINISTRADOR" value="` + dados[i].ID_ADMINISTRADOR + `" />
+                    <form class="mt-3" id="edit-produtos">
+                    <input type="hidden"  name="ID_PRODUTOS" value="` + dados[i].ID_PRODUTOS + `" />
                     <div class="row">
                     <div class="col-12 col md-12">
                         <div class=" form-group form">
-                            <input type="text" name="NOME_ADMINISTRADOR" id="NOME_ADMINISTRADOR" aria-autocomplete="off" value="` + dados[i].NOME_ADMINISTRADOR + `">
-                            <label for="NOME_ADMINISTRADOR" class="label-input">
+                            <input type="text" name="NOME_PRODUTOS" id="NOME_PRODUTOS" aria-autocomplete="off" value="` + dados[i].NOME_PRODUTOS + `">
+                            <label for="NOME_PRODUTOS" class="label-input">
                                 <span class="content-input">Nome</span>
                             </label>
                         </div>
@@ -34,35 +34,17 @@ $(document).ready(function() {
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <div class=" form-group form">
-                            <input type="text" name="RG_ADMINISTRADOR" id="RG_ADMINISTRADOR" aria-autocomplete="off" value="` + dados[i].RG_ADMINISTRADOR + `">
-                            <label for="RG_ADMINISTRADOR" class="label-input">
-                                <span class="content-input">RG</span>
+                            <input type="text" name="PRECO_CUSTO_PRODUTOS" id="PRECO_CUSTO_PRODUTOS" aria-autocomplete="off" value="` + dados[i].PRECO_CUSTO_PRODUTOS + `">
+                            <label for="PRECO_CUSTO_PRODUTOS" class="label-input">
+                                <span class="content-input">Preço de custo</span>
                             </label>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class=" form-group form">
-                            <input type="text" name="CPF_ADMINISTRADOR" id="CPF_ADMINISTRADOR" aria-autocomplete="off" value="` + dados[i].CPF_ADMINISTRADOR + `">
-                            <label for="CPF_ADMINISTRADOR" class="label-input">
-                                <span class="content-input">CPF</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class=" form-group form">
-                            <input type="text" name="SEXO_ADMINISTRADOR" id="SEXO_ADMINISTRADOR" aria-autocomplete="off" value="` + dados[i].SEXO_ADMINISTRADOR + `">
-                            <label for="SEXO_ADMINISTRADOR" class="label-input">
-                                <span class="content-input">Gêreno</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class=" form-group form">
-                            <input type="text" name="DATA_NASCIMENTO_ADMINISTRADOR" id="DATA_NASCIMENTO_ADMINISTRADOR" aria-autocomplete="off" value="` + dados[i].DATA_NASCIMENTO_ADMINISTRADOR + `">
-                            <label for="DATA_NASCIMENTO_ADMINISTRADOR" class="label-input">
-                                <span class="content-input">Data nascimento</span>
+                            <input type="text" name="PRECO_VENDA_PRODUTOS" id="PRECO_VENDA_PRODUTOS" aria-autocomplete="off" value="` + dados[i].PRECO_VENDA_PRODUTOS + `">
+                            <label for="PRECO_VENDA_PRODUTOS" class="label-input">
+                                <span class="content-input">Preço de venda</span>
                             </label>
                         </div>
                     </div>
@@ -70,17 +52,35 @@ $(document).ready(function() {
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <div class=" form-group form">
-                            <input type="text" name="CELULAR_ADMINISTRADOR" id="CELULAR_ADMINISTRADOR" aria-autocomplete="off" value="` + dados[i].CELULAR_ADMINISTRADOR + `">
-                            <label for="CELULAR_ADMINISTRADOR" class="label-input">
-                                <span class="content-input">Celular</span>
+                            <input type="text" name="VALIDADE_PRODUTOS" id="VALIDADE_PRODUTOS" aria-autocomplete="off" value="` + dados[i].VALIDADE_PRODUTOS + `">
+                            <label for="VALIDADE_PRODUTOS" class="label-input">
+                                <span class="content-input">Validade</span>
                             </label>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class=" form-group form">
-                            <input type="text" name="EMAIL_ADMINISTRADOR" id="EMAIL_ADMINISTRADOR" aria-autocomplete="off" value="` + dados[i].EMAIL_ADMINISTRADOR + `">
-                            <label for="EMAIL_ADMINISTRADOR" class="label-input">
-                                <span class="content-input">Email</span>
+                            <input type="text" name="PESO_PRODUTOS" id="PESO_PRODUTOS" aria-autocomplete="off" value="` + dados[i].PESO_PRODUTOS + `">
+                            <label for="PESO_PRODUTOS" class="label-input">
+                                <span class="content-input">Peso</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="LOTE_PRODUTOS" id="LOTE_PRODUTOS" aria-autocomplete="off" value="` + dados[i].LOTE_PRODUTOS + `">
+                            <label for="LOTE_PRODUTOS" class="label-input">
+                                <span class="content-input">Lote</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class=" form-group form">
+                            <input type="text" name="QR_CODE_PRODUTOS" id="QR_CODE_PRODUTOS" aria-autocomplete="off" value="` + dados[i].QR_CODE_PRODUTOS + `">
+                            <label for="QR_CODE_PRODUTOS" class="label-input">
+                                <span class="content-input">Qr-code</span>
                             </label>
                         </div>
                     </div>
@@ -89,17 +89,17 @@ $(document).ready(function() {
                 <div class="row">
                 <div class="col-12 col-md-6">
                     <div class=" form-group form">
-                        <input type="text" name="CEP_ADMINISTRADOR" id="CEP_ADMINISTRADOR" aria-autocomplete="off" value="` + dados[i].CEP_ADMINISTRADOR + `">
-                        <label for="CEP_ADMINISTRADOR" class="label-input">
-                            <span class="content-input">CEP</span>
+                        <input type="text" name="ESTOQUE_PRODUTOS" id="ESTOQUE_PRODUTOS" aria-autocomplete="off" value="` + dados[i].ESTOQUE_PRODUTOS + `">
+                        <label for="ESTOQUE_PRODUTOS" class="label-input">
+                            <span class="content-input">Estoque</span>
                         </label>
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
                     <div class=" form-group form">
-                        <input type="text" name="ESTADO_ADMINISTRADOR" id="ESTADO_ADMINISTRADOR" aria-autocomplete="off" value="` + dados[i].ESTADO_ADMINISTRADOR + `">
-                        <label for="ESTADO_ADMINISTRADOR" class="label-input">
-                            <span class="content-input">Estado</span>
+                        <input type="text" name="CATEGORIAS_PRODUTOS" id="CATEGORIAS_PRODUTOS" aria-autocomplete="off" value="` + dados[i].CATEGORIAS_PRODUTOS + `">
+                        <label for="CATEGORIAS_PRODUTOS" class="label-input">
+                            <span class="content-input">Categorias</span>
                         </label>
                     </div>
                 </div>
@@ -107,49 +107,29 @@ $(document).ready(function() {
             <div class="row">
                 <div class="col-12 col-md-6">
                     <div class=" form-group form">
-                        <input type="text" name="CIDADE_ADMINISTRADOR" id="CIDADE_ADMINISTRADOR" aria-autocomplete="off" value="` + dados[i].CIDADE_ADMINISTRADOR + `">
-                        <label for="CIDADE_ADMINISTRADOR" class="label-input">
-                            <span class="content-input">Cidade</span>
+                        <input type="text" name="CORREDOR_PRODUTOS" id="CORREDOR_PRODUTOS" aria-autocomplete="off" value="` + dados[i].CORREDOR_PRODUTOS + `">
+                        <label for="CORREDOR_PRODUTOS" class="label-input">
+                            <span class="content-input">Corredor</span>
                         </label>
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
                     <div class=" form-group form">
-                        <input type="text" name="ENDERECO_ADMINISTRADOR" id="ENDERECO_ADMINISTRADOR" aria-autocomplete="off" value="` + dados[i].ENDERECO_ADMINISTRADOR + `">
-                        <label for="ENDERECO_ADMINISTRADOR" class="label-input">
-                            <span class="content-input">Endereço</span>
+                        <input type="text" name="PRATILEIRA_PRODUTOS" id="PRATILEIRA_PRODUTOS" aria-autocomplete="off" value="` + dados[i].PRATILEIRA_PRODUTOS + `">
+                        <label for="PRATILEIRA_PRODUTOS" class="label-input">
+                            <span class="content-input">Pratileira</span>
                         </label>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-md-6">
-                    <div class=" form-group form">
-                        <input type="text" name="BAIRRO_ADMINISTRADOR" id="BAIRRO_ADMINISTRADOR" aria-autocomplete="off" value="` + dados[i].BAIRRO_ADMINISTRADOR + `">
-                        <label for="BAIRRO_ADMINISTRADOR" class="label-input">
-                            <span class="content-input">Bairro</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class=" form-group form">
-                        <input type="text" name="NACIONALIDADE_ADMINISTRADOR" id="NACIONALIDADE_ADMINISTRADOR" aria-autocomplete="off" value="` + dados[i].NACIONALIDADE_ADMINISTRADOR + `">
-                        <label for="NACIONALIDADE_ADMINISTRADOR" class="label-input">
-                            <span class="content-input">Nacionalidade</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-            <div class="col-12 col-md-12">
                 <div class=" form-group form">
-                    <input type="text" name="COMPLEMENTO_ADMINISTRADOR" id="COMPLEMENTO_ADMINISTRADOR" aria-autocomplete="off" value="` + dados[i].COMPLEMENTO_ADMINISTRADOR + `">
-                    <label for="COMPLEMENTO_ADMINISTRADOR" class="label-input">
-                        <span class="content-input">Complemento</span>
+                    <input type="text" name="DESCRICAO_PRODUTOS" id="DESCRICAO_PRODUTOS" aria-autocomplete="off" value="` + dados[i].DESCRICAO_PRODUTOS + `">
+                    <label for="DESCRICAO_PRODUTOS" class="label-input">
+                        <span class="content-input">Descrição</span>
                     </label>
                 </div>
             </div>
-        </div>
 
                             <button class="btn btn-info btn-block btn-update"> Salvar </button>
                         </form>
