@@ -21,7 +21,7 @@ $(document).ready(function() {
                 let fornecedor = `
                 <div class="row ml-2">
                     <div class="mt-3 mr-2 col-12 col-md-2">
-                        <div class="card" style="width: 20em;  height: 23rem;">
+                        <div class="card" style="width: 20em;  height: 32rem;">
                             <div class="card-body">
                                     <h5 class="card-title text-dark">` + dados[i].NOME_FANTASIA_FORNECEDORES + `</h5>
                                     <ul class="list-group list-group-flush">
