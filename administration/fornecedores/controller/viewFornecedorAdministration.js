@@ -17,7 +17,7 @@ $(document).ready(function() {
             url: url,
             success: function(dados) {
                 for (var i = 0; dados.length > i; i++) {
-                    let adm = `
+                    let fornecedores = `
                         <p> Data de nascimento: ` + dados[i].DATA_NASCIMENTO_FORNECEDORES + ` </p>
                         <p> Celular: ` + dados[i].CELULAR_FORNECEDORES + ` </p>
                         <p> Nacionalidade: ` + dados[i].NACIONALIDADE_FORNECEDORES + ` </p>
@@ -32,7 +32,7 @@ $(document).ready(function() {
                     `
 
                     $('.modal-title').append(dados[i].NOME_FANTASIA_FORNECEDORES)
-                    $('.modal-body').append(fornecedor)
+                    $('.modal-body').append(fornecedores)
                 }
                 $('#modalContato').modal('show')
             }
