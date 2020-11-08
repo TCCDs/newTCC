@@ -42,9 +42,9 @@ $(document).ready(function() {
                 `
                 $('.fornecedores').append(fornecedor)
             }
-            $('body').append('<script src="administration/fornecedor/controller/viewFornecedorAdministration.js"></script>')
-            $('body').append('<script src="administration/fornecedor/controller/editFornecedorAdministration.js"></script>')
-            $('body').append('<script src="administration/fornecedor/controller/deleteFornecedorAdministration.js"></script>')
+            $('body').append('<script src="administration/fornecedores/controller/viewFornecedorAdministration.js"></script>')
+            $('body').append('<script src="administration/fornecedores/controller/editFornecedorAdministration.js"></script>')
+            $('body').append('<script src="administration/fornecedores/controller/deleteFornecedorAdministration.js"></script>')
             $('body').append('<script>$(".fornecedor-add").click(function(){ $("#conteudo").load("administration/form/formFornecedores/view/formProviders.html")})</script>')
 
         }
