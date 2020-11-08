@@ -72,7 +72,7 @@
                                 <a class="btn fornecedor-adm text-left">Fornecedores</a>
                             </li>
                             <li class="lista">
-                                <a class="btn marrca-adm text-left">Marcas</a>
+                                <a class="btn marca-adm text-left">Marcas</a>
                             </li>
                             <li class="lista">
                                 <a class="btn historico-adm text-left">Histórico</a>
