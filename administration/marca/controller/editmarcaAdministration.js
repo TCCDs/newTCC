@@ -19,7 +19,7 @@ $(document).ready(function() {
             success: function(dados) {
                 for (var i = 0; dados.length > i; i++) {
                     let marca = `
-                    <form class="mt-3" id="edit-adm">
+                    <form class="mt-3" id="edit-marca">
                     <input type="hidden"  name="ID_MARCA" value="` + dados[i].ID_MARCA + `" />
                         <div class="row">
                             <div class="col-12 col-md-6">

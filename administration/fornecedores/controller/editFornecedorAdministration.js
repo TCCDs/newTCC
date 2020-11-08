@@ -19,7 +19,7 @@ $(document).ready(function() {
             success: function(dados) {
                 for (var i = 0; dados.length > i; i++) {
                     let fornecedores = `
-                    <form class="mt-3" id="edit-adm">
+                    <form class="mt-3" id="edit-fornecedor">
                     <input type="hidden"  name="ID_FORNECEDORES" value="` + dados[i].ID_FORNECEDORES + `" />
                         <div class="row">
                             <div class="col-12 col-md-12">
@@ -95,6 +95,70 @@ $(document).ready(function() {
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class=" form-group form">
+                                    <input type="text" name="CEP_FORNECEDORES" id="CEP_FORNECEDORES" aria-autocomplete="off" value="` + dados[i].CEP_FORNECEDORES + `">
+                                    <label for="CEP_FORNECEDORES" class="label-input">
+                                        <span class="content-input">CEP</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class=" form-group form">
+                                    <input type="text" name="CIDADE_FORNECEDORES" id="CIDADE_FORNECEDORES" aria-autocomplete="off" value="` + dados[i].CIDADE_FORNECEDORES + `">
+                                    <label for="CIDADE_FORNECEDORES" class="label-input">
+                                        <span class="content-input">Cidade</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class=" form-group form">
+                                    <input type="text" name="ENDERECO_FORNECEDORES" id="ENDERECO_FORNECEDORES" aria-autocomplete="off" value="` + dados[i].ENDERECO_FORNECEDORES + `">
+                                    <label for="ENDERECO_FORNECEDORES" class="label-input">
+                                        <span class="content-input">Endereço</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class=" form-group form">
+                                    <input type="text" name="ESTADO_FORNECEDORES" id="ESTADO_FORNECEDORES" aria-autocomplete="off" value="` + dados[i].ESTADO_FORNECEDORES + `">
+                                    <label for="ESTADO_FORNECEDORES" class="label-input">
+                                        <span class="content-input">Endereço</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class=" form-group form">
+                                    <input type="text" name="NUMERO_FORNECEDORES" id="NUMERO_FORNECEDORES" aria-autocomplete="off" value="` + dados[i].NUMERO_FORNECEDORES + `">
+                                    <label for="NUMERO_FORNECEDORES" class="label-input">
+                                        <span class="content-input">Número</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class=" form-group form">
+                                <input type="text" name="BAIRRO_FORNECEDORES" id="BAIRRO_FORNECEDORES" aria-autocomplete="off" value="` + dados[i].BAIRRO_FORNECEDORES + `">
+                                <label for="BAIRRO_FORNECEDORES" class="label-input">
+                                    <span class="content-input">Bairro</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class=" form-group form">
+                                <input type="text" name="COMPLEMENTO_FORNECEDORES" id="COMPLEMENTO_FORNECEDORES" aria-autocomplete="off" value="` + dados[i].COMPLEMENTO_FORNECEDORES + `">
+                                <label for="COMPLEMENTO_FORNECEDORES" class="label-input">
+                                    <span class="content-input">Complemento</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
                             <button class="btn btn-info btn-block btn-update"> Salvar </button>
                         </form>
                     `

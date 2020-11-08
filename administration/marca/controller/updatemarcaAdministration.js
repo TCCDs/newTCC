@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('.btn-update').click(function(e) {
         e.preventDefault()
 
-        var dados = $('#edit-adm').serialize()
+        var dados = $('#edit-marca').serialize()
         var url = "administration/marca/model/updatemarcaAdministration.php"
 
         $.ajax({
