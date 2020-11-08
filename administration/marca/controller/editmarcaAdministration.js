@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.btn-edit-marca').click(function(e) {
+    $('.btn-edit-marcas').click(function(e) {
         e.preventDefault()
 
         $('.modal-title').empty()

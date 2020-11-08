@@ -18,7 +18,7 @@ $(document).ready(function() {
             success: function(dados) {
                 for (var i = 0; dados.length > i; i++) {
                     let marcas = `
-                        <p> Estoque: ` + dados[i].CODIGO_MARCA + ` </p>
+                        <p> Código da marca: ` + dados[i].CODIGO_MARCA + ` </p>
                     `
 
                     $('.modal-title').append(dados[i].NOME_MARCA)
