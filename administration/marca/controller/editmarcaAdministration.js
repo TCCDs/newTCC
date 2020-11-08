@@ -7,7 +7,7 @@ $(document).ready(function() {
         $('.modal.footer').empty()
         $('.modal.title').append('Edição de registro cadastrado')
 
-        var url = "administration/adm/model/viewmarcaAdministration.php"
+        var url = "administration/marca/model/viewmarcaAdministration.php"
         var dados = 'ID_MARCA='
         dados += $(this).attr('id')
 
