@@ -28,9 +28,9 @@ $(document).ready(function() {
                                     <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span><strong>Razão social</strong><span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].RAZAO_SOCIAL_FORNECEDORES + `</div></div></li>
                                     <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span><strong>CNPJ</strong><span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].CNPJ_FORNECEDORES + `</div></div></li>
                                     <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span><strong>Email</strong><span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].EMAIL_FORNECEDORES + `</div></div></li>
-                                        <li class="list-group-item"><button id="` + dados[i].ID_FORNECEDORES + `" class="btn  btn-block btn-primary btn-sm btn-view-marcas"> <i class="mdi mdi-eye mdi-18px "></i> </button>
+                                        <li class="list-group-item"><button id="` + dados[i].ID_FORNECEDORES + `" class="btn  btn-block btn-primary btn-sm btn-view-fornecedores"> <i class="mdi mdi-eye mdi-18px "></i> </button>
                                         </li>
-                                        <li class="list-group-item"> <button id="` + dados[i].ID_FORNECEDORES + `" class="btn btn-block btn-warning btn-sm btn-edit-marcas"> <i class="mdi mdi-pencil mdi-18px"></i> </button>
+                                        <li class="list-group-item"> <button id="` + dados[i].ID_FORNECEDORES + `" class="btn btn-block btn-warning btn-sm btn-edit-fornecedores"> <i class="mdi mdi-pencil mdi-18px"></i> </button>
                                         </li>
                                         <li class="list-group-item"> <button id="` + dados[i].ID_FORNECEDORES + `" class="btn btn-block btn-danger btn-sm btn-delete"> <i class="mdi mdi-delete mdi-18px"></i> </button>
                                         </li>
