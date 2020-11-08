@@ -4,7 +4,7 @@ $(document).ready(function() {
         e.preventDefault()
 
         var dados = $('#register_form').serialize()
-        var url = "administration/form/formUsuario/model/formUsers.php"
+        var url = "administration/form/formUsuario/model/validacaoFormUser.php"
 
         $.ajax({
             type: 'POST',
