@@ -4,8 +4,8 @@ $(document).ready(function() {
 
         $('.modal-title').empty()
         $('.modal-body').empty()
-        $('.modal.footer').empty()
-        $('.modal.title').append('Edição de registro cadastrado')
+        $('.modal-footer').empty()
+        $('.modal-title').append('Edição de registro cadastrado')
 
         var url = "administration/adm/model/viewAdmAdministration.php"
         var dados = 'ID_ADMINISTRADOR='

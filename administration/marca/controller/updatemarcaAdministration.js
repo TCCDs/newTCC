@@ -3,7 +3,7 @@ $(document).ready(function() {
         e.preventDefault()
 
         var dados = $('#edit-adm').serialize()
-        var url = "administration/adm/model/updatemarcaAdministration.php"
+        var url = "administration/marca/model/updatemarcaAdministration.php"
 
         $.ajax({
             type: 'POST',
