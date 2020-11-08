@@ -42,9 +42,9 @@ $(document).ready(function() {
                             </div>
                             <div class="col-12 col-md-6">
                                 <div class=" form-group form">
-                                    <input type="text" name="CODIGO_MARCA" id="CODIGO_MARCA" aria-autocomplete="off" value="` + dados[i].CODIGO_MARCA + `">
-                                    <label for="CODIGO_MARCA" class="label-input">
-                                        <span class="content-input">Código da marca</span>
+                                    <input type="text" name="CNPJ_FORNECEDORES" id="CNPJ_FORNECEDORES" aria-autocomplete="off" value="` + dados[i].CNPJ_FORNECEDORES + `">
+                                    <label for="CNPJ_FORNECEDORES" class="label-input">
+                                        <span class="content-input">CNPJ</span>
                                     </label>
                                 </div>
                             </div>
@@ -55,6 +55,42 @@ $(document).ready(function() {
                                     <input type="text" name="EMAIL_FORNECEDORES" id="EMAIL_FORNECEDORES" aria-autocomplete="off" value="` + dados[i].EMAIL_FORNECEDORES + `">
                                     <label for="EMAIL_FORNECEDORES" class="label-input">
                                         <span class="content-input">Email</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class=" form-group form">
+                                    <input type="text" name="CELULAR_FORNECEDORES" id="CELULAR_FORNECEDORES" aria-autocomplete="off" value="` + dados[i].CELULAR_FORNECEDORES + `">
+                                    <label for="CELULAR_FORNECEDORES" class="label-input">
+                                        <span class="content-input">Celular</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class=" form-group form">
+                                    <input type="text" name="SEXO_FORNECEDORES" id="SEXO_FORNECEDORES" aria-autocomplete="off" value="` + dados[i].SEXO_FORNECEDORES + `">
+                                    <label for="SEXO_FORNECEDORES" class="label-input">
+                                        <span class="content-input">Gênero</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class=" form-group form">
+                                    <input type="text" name="DATA_NASCIMENTO_FORNECEDORES" id="DATA_NASCIMENTO_FORNECEDORES" aria-autocomplete="off" value="` + dados[i].DATA_NASCIMENTO_FORNECEDORES + `">
+                                    <label for="DATA_NASCIMENTO_FORNECEDORES" class="label-input">
+                                        <span class="content-input">Data de nascimento</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class=" form-group form">
+                                    <input type="text" name="NACIONALIDADE_FORNECEDORES" id="NACIONALIDADE_FORNECEDORES" aria-autocomplete="off" value="` + dados[i].NACIONALIDADE_FORNECEDORES + `">
+                                    <label for="NACIONALIDADE_FORNECEDORES" class="label-input">
+                                        <span class="content-input">Nacionalidade</span>
                                     </label>
                                 </div>
                             </div>
