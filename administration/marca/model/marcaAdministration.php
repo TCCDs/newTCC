@@ -7,10 +7,10 @@
     $resultado->execute();
 
     while($resultadoMarca = $resultado->fetch(PDO::FETCH_ASSOC)) {
-        $marcas[] = array_map('utf8_encode', $resultadoMarca);
+        $marca[] = array_map('utf8_encode', $resultadoMarca);
 
     }
 
-    echo json_encode($marcas, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+    echo json_encode($marca, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 
 ?>
