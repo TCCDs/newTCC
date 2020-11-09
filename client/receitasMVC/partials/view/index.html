@@ -1,80 +1,87 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<link rel="stylesheet" href="public/vendor/summernote/summernote-bs4.min.css">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="public/css/style.css">
 
-    <link rel="shortcut icon" href="public/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="public/vendor/summernote/summernote-bs4.min.css">
-    <link rel="stylesheet" href="public/css/style.css">
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#"> <img src="public/img/logo.png" alt="My Receitas" class="logo-top" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link home">Home <span class="sr-only">(página atual)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link categoria">Categorias</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link receita ">Receitas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link sobre">Sobre</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" action="" method="POST">
+            <input class="form-control mr-sm-2" type="text" name="pesquisa" id="pesquisa" placeholder="Pesquisar" minlength="2" required>
+            <button class="btn btn-secondary my-2 my-sm-0" type="button">Pesquisar</button>
+        </form>
+    </div>
+</nav>
 
-    <title>
-        <!-- os titulos da pagina entra aqui  -->
-    </title>
-</head>
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="max-width">
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="">
+                        <img src="public/img/logo.png" alt="My Receitas" class="logo-top" />
+                    </a>
+                </li>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="max-width">
-            <div class="collapse navbar-collapse" id="navbarColor01">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="">
-                            <img src="public/img/logo.png" alt="My Receitas" class="logo-top" />
-                        </a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link categoria">Categorias</a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link categoria">Categorias</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link receita">Receitas</a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link receita">Receitas</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link sobre">Sobre</a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link sobre">Sobre</a>
-                    </li>
-
-                    <!-- <li class="nav-item">
+                <li class="nav-item">
                             <a class="nav-link home">Home</a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link pesquisar">Pesquisar</a>
-                        </li> -->
-                </ul>
+                        </li>
+            </ul>
 
-                <form class="form-inline my-2 my-lg-0" action="" method="POST">
-                    <input class="form-control mr-sm-2" type="text" name="pesquisa" id="pesquisa" placeholder="Pesquisar" minlength="2" required>
-                    <button class="btn btn-secondary my-2 my-sm-0" type="button">Pesquisar</button>
-                </form>
-            </div>
+
         </div>
-    </nav>
-
-    <h1>Receitas</h1>
-
-    <hr>
-
-    <div class="row max-width conteudo" id="conteudo">
-
     </div>
+</nav> -->
 
-    <script src="components/js/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="public/vendor/summernote/summernote-bs4.min.js"></script>
-    <!-- <script src="[folder where script is located]/[plugin script].js"></script>-->
-    <script src="public/js/script.js"></script>
-    <script src="public/js/controller.js"></script>
+<h1>Receitas</h1>
+
+<hr>
+
+<div class="row max-width conteudo" id="conteudo">
+
+</div>
+
+<script src="components/js/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="public/vendor/summernote/summernote-bs4.min.js"></script>
+<!-- <script src="[folder where script is located]/[plugin script].js"></script>-->
+<script src="public/js/script.js"></script>
+<script src="public/js/controller.js"></script>
 
 
-    <script src="client/receitasMVC/home/controller/home.js"></script>
-    <script src="client/receitasMVC/pesquisa/controller/pesquisa.js"></script>
-
-</body>
-
-</html>
+<script src="client/receitasMVC/home/controller/home.js"></script>
+<script src="client/receitasMVC/pesquisa/controller/pesquisa.js"></script>
