@@ -12,7 +12,7 @@ $(document).ready(function() {
             for (var i = 0; i < dados.length; i++) {
                 let receitaHome = `
                     <div class="col-md-3">
-                        <div class="card border-info mb-3">
+                        <div class="card mb-3">
                             <div class="card-header"> ` + dados[i].titulo + `</div>
                             <div class="card-body">
                                 <a href="client/receitasMVC/receita/view/ver.html ` + dados[i].slug + `">
