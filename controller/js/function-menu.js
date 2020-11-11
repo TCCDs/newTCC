@@ -63,18 +63,24 @@ $(document).ready(function() {
     $('.leitorOfertas').click(function() {
         $('#conteudo').load('client/leitorQr/view/leitorOfertas.html')
         $('.saldo').hide();
+        $('#nav-receita').hide();
+
         // $('.menu').hide();
     })
 
     $('.grafico').click(function() {
         $('#conteudo').load('graficos/graficoMoedas.php')
         $('.saldo').hide();
+        $('#nav-receita').hide();
+
         // $('.menu').hide();
     })
 
     $('.credito-pagamento').click(function() {
         $('#conteudo').load('client/shopping/model/order_process.php')
         $('.saldo').hide();
+        $('#nav-receita').hide();
+
         // $('.menu').hide();
     })
 
@@ -83,12 +89,16 @@ $(document).ready(function() {
         $('#conteudo').load('client/historical/view/customersHistory.html')
         $('.saldo').hide();
         $('.menu').hide();
+        $('#nav-receita').hide();
+
     })
 
     $('.dados-usuario').click(function() {
         $('#conteudo').load('login/view/edit-usuario.html');
         $('.saldo').hide();
         $('.menu').hide();
+        $('#nav-receita').hide();
+
 
     })
 
