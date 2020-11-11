@@ -95,7 +95,7 @@ $(document).ready(function() {
         $('.saldo').hide();
         $('.menu').hide();
         $('.bg-menu').hide();
-        $('body').load('client/receitasMVC/partials/view/nav-receita.html')
+        $('#nav-receita').load('client/receitasMVC/partials/view/nav-receita.html')
     })
 
     $('.offer').click(function() {
