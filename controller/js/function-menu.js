@@ -3,18 +3,21 @@ $(document).ready(function() {
         $('#conteudo').load('client/products/view/customersProducts.html')
         $('.saldo').hide();
         $('.menu').hide();
+        $('#nav-receita').hide();
     })
 
     $('.ctr-cliente').click(function() {
         $('#conteudo').load('client/customers/view/customers.html')
         $('.saldo').hide();
         $('.menu').hide();
+        $('#nav-receita').hide();
     })
 
     $('.consumo').click(function() {
         $('#conteudo').load('client/customers/view/consumo.html')
         $('.saldo').hide();
         $('.menu').hide();
+        $('#nav-receita').hide();
     })
 
     $('.home').click(function() {
@@ -25,12 +28,14 @@ $(document).ready(function() {
         $('#conteudo').load('client/credits/view/creditsCustomers.html')
         $('.saldo').hide();
         $('.menu').hide();
+        $('#nav-receita').hide();
     })
 
     $('.comprarProduto-cliente').click(function() {
         $('#conteudo').load('client/shopping/view/shopping.html')
         $('.saldo').hide();
         $('.menu').hide();
+        $('#nav-receita').hide();
     })
 
 
@@ -38,18 +43,21 @@ $(document).ready(function() {
         $('#conteudo').load('client/payment/view/payment-coin.html')
         $('.saldo').hide();
         // $('.menu').hide();
+        $('#nav-receita').hide();
     })
 
     $('.leitorQrProdutos').click(function() {
         $('#conteudo').load('client/leitorQr/view/leitorProdutos.html')
         $('.saldo').hide();
         $('.menu').hide();
+        $('#nav-receita').hide();
     })
 
     $('.testeLeitor').click(function() {
         $('#conteudo').load('client/leitorQr/view/testeLeitor.html')
         $('.saldo').hide();
         $('.menu').hide();
+        $('#nav-receita').hide();
     })
 
     $('.leitorOfertas').click(function() {
@@ -102,6 +110,7 @@ $(document).ready(function() {
         $('#conteudo').load('administration/offer/view/ofertas.html')
         $('.saldo').hide();
         $('.menu').hide();
+        $('#nav-receita').hide();
     })
 
     /*cupom */
@@ -109,6 +118,7 @@ $(document).ready(function() {
         $('#conteudo').load('client/payment/view/tax.html')
         $('.saldo').hide();
         $('.menu').hide();
+        $('#nav-receita').hide();
     })
 
     $('.inscreva').click(function() {
