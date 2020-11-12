@@ -173,7 +173,7 @@ form input:valid+.label-input .content-input {
 #register_form h2,
 #register_form h3 {
     font: 22px "Trebuchet MS", tahoma, arial;
-    color: brown;
+    color: rgb(52, 165, 42);
     width: 100%;
     float: left;
     text-align: left;
@@ -231,7 +231,7 @@ form input:valid+.label-input .content-input {
 #register_form #progress li:after {
     content: '';
     width: 100%;
-    background: rgb(145, 26, 26);
+    background: rgb(26, 145, 62);
     height: 2px;
     position: absolute;
     top: 9px;
@@ -345,6 +345,10 @@ form input:valid+.label-input .content-input {
     background: #eeecec;
     border-radius: 6px;
     margin: 1em;
+}
+
+.jb-receita {
+    background: #055e6477 !important;
 }
 
 @media (max-width: 576px) {
