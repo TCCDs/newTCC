@@ -357,12 +357,21 @@ form input:valid+.label-input .content-input {
     padding: 10px;
 }
 
+.btn-categoriaEditar {
+    background: #116e75ef;
+    color: white;
+}
+
+.btn-categoriaEditar:hover {
+    background: #092b2eef;
+}
+
 @media (max-width: 576px) {
     .display-4 {
         font-size: 1.8rem;
     }
     body {
-        background: white;
+        background: rgb(214, 213, 213);
     }
     .tudo {
         border-radius: 8px;
