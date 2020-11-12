@@ -73,24 +73,24 @@
                         <div class="form-group">
                             <div id="fornecedores">
                                 <label>Selecione o Fornecedor:</label>
-                                <select name="ID_FORNECEDORES_PRODUTOS" id="cmbfornecedores" class="form-control">
-                                            <option>Carregar Fornecedores</option>
-                                        </select>
+                                <select name="ID_FORNECEDORES_PRODUTOS" id="ID_FORNECEDORES_PRODUTOS" class="form-control fornecedores">
+                                    <option>Carregar Fornecedores</option>
+                                </select>
 
-                                <input type="button" value="Carregar fornecedores" id="btnfornecedores" class="botao btn btn-secondary mt-2 btn-block" />
+                                <!--<input type="button" value="Carregar fornecedores" id="btnfornecedores" class="botao btn btn-secondary mt-2 btn-block" />-->
                             </div>
                         </div>
-
                     </div>
+
                     <div class="col-12 col-md-6">
                         <div class="form-group">
                             <div id="marca">
                                 <label>Selecione o Marca:</label>
-                                <select name="ID_MARCAS_PRODUTOS" id="cmbmarca" class="form-control">
-                                            <option>Carregar Marca</option>
-                                        </select>
+                                <select name="ID_MARCAS_PRODUTOS" id="ID_MARCAS_PRODUTOS" class="form-control marca">
+                                    <option>Carregar Marca</option>
+                                </select>
 
-                                <input type="button" value="Carregar Marca" id="btnmarca" class="botao btn btn-secondary mt-2 btn-block" />
+                                <!-- <input type="button" value="Carregar Marca" id="btnmarca" class="botao btn btn-secondary mt-2 btn-block" />-->
                             </div>
                         </div>
                     </div>
@@ -192,6 +192,10 @@
         </div>
     </div>
 </form>
+
 <script src="components/js/bootstrap.min.js"></script>
 <script src="administration/form/formProdutos/controller/formProducts.js"></script>
 <script src="controller/js/input.js"></script>
+
+<script src="administration/form/formProdutos/controller/formProductsMarca.js"></script>
+<script src="administration/form/formProdutos/controller/formProductsFornecedores.js"></script>

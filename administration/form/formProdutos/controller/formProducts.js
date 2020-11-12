@@ -24,7 +24,7 @@ $(document).ready(function() {
         e.preventDefault()
 
         var dados = $('#register_form').serialize()
-        var url = "administration/form/formProdutos/model/formProducts.php"
+        var url = "administration/form/formProdutos/model/validacaoFormProducts.php"
 
         $.ajax({
             type: 'POST',
