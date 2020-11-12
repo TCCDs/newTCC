@@ -354,12 +354,13 @@ form input:valid+.label-input .content-input {
 .tb-categoria {
     background: #116f7511;
     border-radius: 8px;
-    padding: 10px;
 }
 
 .tr-categoria {
-    background: #4c7375;
+    background: #61898b;
     color: white;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
 }
 
 .btn-categoriaEditar {
