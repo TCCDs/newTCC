@@ -353,6 +353,8 @@ form input:valid+.label-input .content-input {
 
 .tb-categoria {
     background: #116f7511;
+    border-radius: 8px;
+    padding: 10px;
 }
 
 @media (max-width: 576px) {
