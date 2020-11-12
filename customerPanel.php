@@ -30,7 +30,6 @@
 </head>
 
 <body>
-<div id="nav-receita"></div>
 
     <div class="page-wrapper chiller-theme toggled">
         <nav class="navbar navbar-dark bg-menu">
