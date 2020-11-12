@@ -357,6 +357,11 @@ form input:valid+.label-input .content-input {
     padding: 10px;
 }
 
+.tr-categoria {
+    background: #4c7375;
+    color: white;
+}
+
 .btn-categoriaEditar {
     background: #116e75ef;
     color: white;
@@ -364,6 +369,7 @@ form input:valid+.label-input .content-input {
 
 .btn-categoriaEditar:hover {
     background: #092b2eef;
+    color: white;
 }
 
 @media (max-width: 576px) {
