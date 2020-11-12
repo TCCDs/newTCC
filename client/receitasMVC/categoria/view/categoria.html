@@ -1,17 +1,21 @@
-
-<h1>Categorias</h1>
-<a class="btn btn-primary novaCategoria">Nova Categoria</a>
-
-<hr>
-
-<div class="overflow-auto">
-    <table class="table table-hover" id="table-cliente">
+<div class="jumbotron jb-receita mt-2">
+    <div class="row">
+        <div class="col-12 col-md-9">
+            <h3 class="text-light text-left">Nova Categoria</h3>
+        </div>
+        <div class="col-12 col-md-3">
+            <button class="btn btn-light btn-block novaCategoria"><i class="mdi mdi-plus"></i>Novo</button>
+        </div>
+        <hr class="mt-2">
+    </div>
+</div>
+<div class="overflow-auto mt-2 tb-categoria">
+    <table class="table table-borderless" id="table-cliente">
         <thead>
-            <tr>
-                <th>#ID</th>
+            <tr class="tr-categoria">
                 <th>Nome</th>
                 <th>Slug</th>
-                <th></th>
+                <th>Ação</th>
             </tr>
         </thead>
         <tbody>
@@ -29,21 +33,21 @@
 <!-- Modal -->
 <div class="modal fade" id="modal-cliente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary btn-save">Salvar</button>
+                <button type="button" class="btn btn-warning btn-update">Alterar</button>
+            </div>
         </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary btn-save">Salvar</button>
-          <button type="button" class="btn btn-warning btn-update">Alterar</button>
-        </div>
-      </div>
     </div>
-  </div>
+</div>

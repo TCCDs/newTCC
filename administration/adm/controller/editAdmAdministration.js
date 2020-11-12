@@ -4,8 +4,8 @@ $(document).ready(function() {
 
         $('.modal-title').empty()
         $('.modal-body').empty()
-        $('.modal.footer').empty()
-        $('.modal.title').append('Edição de registro cadastrado')
+        $('.modal-footer').empty()
+        $('.modal-title').append('Edição de registro cadastrado')
 
         var url = "administration/adm/model/viewAdmAdministration.php"
         var dados = 'ID_ADMINISTRADOR='
@@ -18,7 +18,7 @@ $(document).ready(function() {
             url: url,
             success: function(dados) {
                 for (var i = 0; dados.length > i; i++) {
-                    let cliente = `
+                    let administration = `
                     <form class="mt-3" id="edit-adm">
                     <input type="hidden"  name="ID_ADMINISTRADOR" value="` + dados[i].ID_ADMINISTRADOR + `" />
                     <div class="row">
@@ -155,7 +155,7 @@ $(document).ready(function() {
                         </form>
                     `
 
-                    $('.modal-body').append(cliente)
+                    $('.modal-body').append(administration)
                 }
                 $('#modalContato').modal('show')
                 $('body').append('<script src="administration/adm/controller/updateAdmAdministration.js"></script>')

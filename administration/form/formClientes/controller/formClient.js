@@ -36,7 +36,7 @@ $(document).ready(function() {
                 if (dados.return == true) {
                     Swal.fire({
                         icon: 'success',
-                        title: 'SysAgenda!',
+                        title: 'Supermercado Caravelas!',
                         text: 'Cadastro efetuado com sucesso!',
                         type: 'success',
                         confirmButtonText: 'Feito!'
@@ -46,7 +46,7 @@ $(document).ready(function() {
                 } else {
                     Swal.fire({
                         icon: 'error',
-                        title: 'SysAgenda!',
+                        title: 'Supermercado Caravelas!',
                         text: dados.return,
                         type: 'error',
                         confirmButtonText: 'Tente novamente...!'

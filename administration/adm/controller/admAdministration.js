@@ -3,11 +3,11 @@ $(document).ready(function() {
 
     var url = "administration/adm/model/admAdministration.php"
 
-    function adicionaZero(numero){
-        if (numero <= 9) 
+    function adicionaZero(numero) {
+        if (numero <= 9)
             return "0" + numero;
         else
-            return numero; 
+            return numero;
     }
 
 
@@ -19,12 +19,12 @@ $(document).ready(function() {
         success: function(dados) {
             for (var i = 0; i < dados.length; i++) {
                 let dataAtual2 = new Date(dados[i].data);
-                let dataAtualFormatada2 = (adicionaZero(dataAtual2.getDate().toString()) + "/" + (adicionaZero(dataAtual2.getMonth()+1).toString()) + "/" + dataAtual2.getFullYear());
+                let dataAtualFormatada2 = (adicionaZero(dataAtual2.getDate().toString()) + "/" + (adicionaZero(dataAtual2.getMonth() + 1).toString()) + "/" + dataAtual2.getFullYear());
 
                 let administration = `
                 <div class="row ml-2">
                     <div class="mt-3 mr-2 col-12 col-md-2">
-                        <div class="card" style="width: 20em;  height: 47rem;">
+                        <div class="card" style="width: 20em;  height: 44rem;">
                             <div class="card-body">
                                     <h5 class="card-title text-dark">` + dados[i].NOME_ADMINISTRADOR + `</h5>
                                     <ul class="list-group list-group-flush">

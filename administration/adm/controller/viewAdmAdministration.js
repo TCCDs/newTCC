@@ -4,7 +4,7 @@ $(document).ready(function() {
 
         $('.modal-title').empty()
         $('.modal-body').empty()
-        $('.modal.footer').empty()
+        $('.modal-footer').empty()
 
         var url = "administration/adm/model/viewAdmAdministration.php"
         var dados = 'ID_ADMINISTRADOR='
@@ -17,7 +17,7 @@ $(document).ready(function() {
             url: url,
             success: function(dados) {
                 for (var i = 0; dados.length > i; i++) {
-                    let ADMINISTRADOR = `
+                    let adm = `
                         <p> Sexo: ` + dados[i].SEXO_ADMINISTRADOR + ` </p>
                         <p> Cep: ` + dados[i].CEP_ADMINISTRADOR + ` </p>
                         <p> Estados: ` + dados[i].ESTADO_ADMINISTRADOR + ` </p>

@@ -173,7 +173,7 @@ form input:valid+.label-input .content-input {
 #register_form h2,
 #register_form h3 {
     font: 22px "Trebuchet MS", tahoma, arial;
-    color: brown;
+    color: rgb(52, 165, 42);
     width: 100%;
     float: left;
     text-align: left;
@@ -231,7 +231,7 @@ form input:valid+.label-input .content-input {
 #register_form #progress li:after {
     content: '';
     width: 100%;
-    background: rgb(145, 26, 26);
+    background: rgb(26, 145, 62);
     height: 2px;
     position: absolute;
     top: 9px;
@@ -347,12 +347,38 @@ form input:valid+.label-input .content-input {
     margin: 1em;
 }
 
+.jb-receita {
+    background: #055e6442 !important;
+}
+
+.tb-categoria {
+    background: #116f7511;
+    border-radius: 8px;
+}
+
+.tr-categoria {
+    background: #61898b;
+    color: white;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.btn-categoriaEditar {
+    background: #116e75ef;
+    color: white;
+}
+
+.btn-categoriaEditar:hover {
+    background: #092b2eef;
+    color: white;
+}
+
 @media (max-width: 576px) {
     .display-4 {
         font-size: 1.8rem;
     }
     body {
-        background: white;
+        background: rgb(214, 213, 213);
     }
     .tudo {
         border-radius: 8px;

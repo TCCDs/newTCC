@@ -12,11 +12,10 @@ $(document).ready(function() {
             for (var i = 0; i < dados.length; i++) {
                 let categoria = `
                     <tr>
-                        <td> ` + dados[i].id + `</td>
                         <td> ` + dados[i].titulo + `</td>
                         <td> ` + dados[i].slug + `</td>
                         <td>
-                            <button id="` + dados[i].id + `" class="btn btn-warning btn-categoriaEditar"> 
+                            <button id="` + dados[i].id + `" class="btn  btn-categoriaEditar"> 
                                 Editar
                             </button>
                         </td>

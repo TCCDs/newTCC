@@ -18,11 +18,11 @@ $(document).ready(function() {
         $('#conteudo').load('administration/historical/view/administrationHistory.html')
     })
     $('.fornecedor-adm').click(function() {
-        $('#conteudo').load('administration/form/formFornecedores/view/formProviders.html ')
+        $('#conteudo').load('administration/fornecedores/view/fornecedorAdministration.html ')
     })
 
     $('.marca-adm').click(function() {
-        $('#conteudo').load('administration/form/formMarca/view/formBrands.html')
+        $('#conteudo').load('administration/marca/view/marcaAdministration.html')
     })
 
     // formularios
@@ -45,8 +45,7 @@ $(document).ready(function() {
         $('#conteudo').load('administration/form/formProdutos/view/formProducts.html')
     })
     $('.formBrands-administration').click(function() {
-        // $('#conteudo').load('administration/form/formMarca/view/formBrands.html')
-        $('#conteudo').load('administration/marca/view/marcaAdministration.html')
+        $('#conteudo').load('administration/form/formMarca/view/formBrands.html')
 
     })
 

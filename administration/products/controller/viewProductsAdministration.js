@@ -4,7 +4,7 @@ $(document).ready(function() {
 
         $('.modal-title').empty()
         $('.modal-body').empty()
-        $('.modal.footer').empty()
+        $('.modal-footer').empty()
 
         var url = "administration/products/model/viewProductsAdministration.php"
         var dados = 'ID_PRODUTOS='
@@ -20,7 +20,7 @@ $(document).ready(function() {
                     let produtos = `
                         <p> Estoque: ` + dados[i].ESTOQUE_PRODUTOS + ` </p>
                         <p> Corredor: ` + dados[i].CORREDOR_PRODUTOS + ` </p>
-                        <p> Pratilheira: ` + dados[i].PRATILEIRA_PRODUTOS + ` </p>
+                        <p> Pratileira: ` + dados[i].PRATILEIRA_PRODUTOS + ` </p>
                         <p> Lote: ` + dados[i].LOTE_PRODUTOS + ` </p>
                         <p> Descrição: ` + dados[i].DESCRICAO_PRODUTOS + ` </p>
                         <p> Peso: ` + dados[i].PESO_PRODUTOS + ` </p>
