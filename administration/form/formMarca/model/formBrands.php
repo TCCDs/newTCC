@@ -1,6 +1,4 @@
 <?php
-
-    //$connect = new PDO("mysql:host=localhost;dbname=new_supermercado", "root", "");
     include_once('../../../../server/Connect.php');
     $conn = new Conn();
         

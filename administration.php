@@ -5,7 +5,7 @@
         //echo "<a href='sair.php'>Sair</a>";
     else:
         header("Location: ./index.php");
-    endif; 
+    endif;
 ?> 
 
 

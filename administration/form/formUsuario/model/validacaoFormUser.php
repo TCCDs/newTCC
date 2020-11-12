@@ -21,6 +21,14 @@
             $erro = true;
             $mensagem = "Necessário preencher todos os campos";
 
+        elseif (!preg_match("#[a-z]+#", $resultDados['EMAIL_CLIENTES'])):
+            $erro = true;
+            $mensagem = "O campo EMAIL CLIENTES precisa de pelo menos uma letra minuscula";
+        
+        elseif (stristr($resultDados['EMAIL_CLIENTES'], "'")):
+            $erro = true;
+            $mensagem = "Caracter ( ' ) utilizado no EMAIL CLIENTES é inválido";
+
         elseif ((!isset ($resultDados['LOGIN_USUARIOS']) || !filter_var($resultDados['LOGIN_USUARIOS'], FILTER_VALIDATE_EMAIL)) && !$erro):
             $erro = true;
             $mensagem = "O campo email precisa de um endereço valido";
