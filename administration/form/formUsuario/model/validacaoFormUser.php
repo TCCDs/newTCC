@@ -21,11 +21,11 @@
             $erro = true;
             $mensagem = "Necessário preencher todos os campos";
 
-        elseif (!preg_match("#[a-z]+#", $resultDados['EMAIL_CLIENTES'])):
+        elseif (!preg_match("#[a-z]+#", $resultDados['LOGIN_USUARIOS'])):
             $erro = true;
             $mensagem = "O campo EMAIL CLIENTES precisa de pelo menos uma letra minuscula";
         
-        elseif (stristr($resultDados['EMAIL_CLIENTES'], "'")):
+        elseif (stristr($resultDados['LOGIN_USUARIOS'], "'")):
             $erro = true;
             $mensagem = "Caracter ( ' ) utilizado no EMAIL CLIENTES é inválido";
 
