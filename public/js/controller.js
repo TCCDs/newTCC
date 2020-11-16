@@ -21,7 +21,7 @@ $(document).ready(function() {
 
 
     $('.novaReceitas').click(function() {
-        $('body').load('client/receitasMVC/receita/view/adicionar.html')
+        $('#conteudo').load('client/receitasMVC/receita/view/adicionar.html')
     })
 
     $('.novaCategoria').click(function() {
