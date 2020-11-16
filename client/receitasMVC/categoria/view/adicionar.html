@@ -1,30 +1,36 @@
-
-<h1>Nova Categoria</h1>
-
-<hr>
-
-<form action="site/categoria/model/adicionarCategoria.php" id='register_form'  method="post">
-    <div class="row">
-        <div class="col-md-6">
-            <label for="txtTitulo">Título</label>
-            <input type="text" id="txtTitulo" name="txtTitulo" class="form-control" placeholder="Título aqui" />
-        </div>
-
-        <div class="col-md-6">
-            <label for="txtSlug">Slug</label>
-            <input type="text" id="txtSlug" name="txtSlug" class="form-control" placeholder="titulo-aqui" />
-        </div>
+<div class="jumbotron jb-receita mt-2">
+    <div class="col-12 col-md-12">
+        <h3 class="text-light text-left">Nova Categoria</h3>
     </div>
+    <hr class="mt-2">
+</div>
 
-    <div class="row mt-3">
-        <div class="col-md-10">
-            <div id="dvAlert">
-                <div class="alert alert-info">Preencha corretamente todos os campos</div>
+<form id='register_form' method="post">
+    <div id="formCad">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class=" form-group form">
+                    <input type="text" name="txtTitulo" id="txtTitulo" aria-autocomplete="off" required>
+                    <label for="txtTitulo" class="label-input">
+                        <span class="content-input">Título aqui</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class=" form-group form">
+                    <input type="text" name="txtSlug" id="txtSlug" aria-autocomplete="off" required>
+                    <label for="txtSlug" class="label-input">
+                        <span class="content-input">Slug aqui</span>
+                    </label>
+                </div>
             </div>
         </div>
 
-        <div class="col-md-2 text-right">
-            <input type="submit" name="registrar" value="Adicionar" class=" registrar btn btn-success w-100">
+        <div class="row mt-3">
+            <div class="col-12 col-md-12 text-right">
+                <input type="submit" name="registrar" value="Adicionar" class=" registrar btn novaCategoria">
+            </div>
         </div>
     </div>
 </form>

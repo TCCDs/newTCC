@@ -385,7 +385,7 @@ form input:valid+.label-input .content-input {
         box-shadow: 0 0 1em rgb(40, 46, 44);
     }
     .ladoB {
-        background: none;
+        background: rgb(193, 206, 212);
         box-shadow: none;
         position: absolute;
         margin-top: 14em;
