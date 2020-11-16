@@ -19,12 +19,12 @@ $(document).ready(function() {
         $('#conteudo').load('client/receitasMVC/pesquisa/view/pesquisa.html')
     })
 
-    
+
     $('.novaReceitas').click(function() {
         $('body').load('client/receitasMVC/receita/view/adicionar.html')
     })
 
     $('.novaCategoria').click(function() {
-        $('body').load('client/receitasMVC/categoria/view/adicionar.html')
+        $('#conteudo').load('client/receitasMVC/categoria/view/adicionar.html')
     })
 })
