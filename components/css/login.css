@@ -663,3 +663,13 @@ form input:valid+.label-input .content-input {
     padding: 9px;
     background: white;
 }
+
+.btn-cat {
+    background: #116e75ef;
+    color: white;
+}
+
+.btn-cat:hover {
+    background: #092b2eef;
+    color: white;
+}
