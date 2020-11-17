@@ -347,32 +347,6 @@ form input:valid+.label-input .content-input {
     margin: 1em;
 }
 
-.jb-receita {
-    background: #055e6442 !important;
-}
-
-.tb-categoria {
-    background: #116f7511;
-    border-radius: 8px;
-}
-
-.tr-categoria {
-    background: #61898b;
-    color: white;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
-}
-
-.btn-categoriaEditar {
-    background: #116e75ef;
-    color: white;
-}
-
-.btn-categoriaEditar:hover {
-    background: #092b2eef;
-    color: white;
-}
-
 @media (max-width: 576px) {
     .display-4 {
         font-size: 1.8rem;
