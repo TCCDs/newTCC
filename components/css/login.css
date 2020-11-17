@@ -657,3 +657,9 @@ form input:valid+.label-input .content-input {
     padding: 1em;
     border-radius: 6px;
 }
+
+.receita_form {
+    border-radius: 8px;
+    padding: 9px;
+    background: white;
+}
