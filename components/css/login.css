@@ -378,14 +378,14 @@ form input:valid+.label-input .content-input {
         font-size: 1.8rem;
     }
     body {
-        background: rgb(214, 213, 213);
+        background: rgb(236, 236, 236);
     }
     .tudo {
         border-radius: 8px;
         box-shadow: 0 0 1em rgb(40, 46, 44);
     }
     .ladoB {
-        background: rgb(193, 206, 212);
+        background: rgb(255, 255, 255);
         box-shadow: none;
         position: absolute;
         margin-top: 14em;
