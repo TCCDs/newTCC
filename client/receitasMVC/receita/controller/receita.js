@@ -12,7 +12,6 @@ $(document).ready(function() {
             for (var i = 0; i < dados.length; i++) {
                 let receita = `
                     <tr>
-                        <td> ` + dados[i].id + `</td>
                         <td> ` + dados[i].titulo + `</td>
                         <td> ` + dados[i].slug + `</td>
                         <td> ` + dados[i].cattitulo + `</td>

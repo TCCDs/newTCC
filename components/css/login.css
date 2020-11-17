@@ -373,6 +373,16 @@ form input:valid+.label-input .content-input {
     color: white;
 }
 
+.btn-receitaEditar {
+    background: #116e75ef;
+    color: white;
+}
+
+.btn-receitaEditar:hover {
+    background: #092b2eef;
+    color: white;
+}
+
 @media (max-width: 576px) {
     .display-4 {
         font-size: 1.8rem;
