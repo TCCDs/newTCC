@@ -352,7 +352,7 @@ form input:valid+.label-input .content-input {
         font-size: 1.8rem;
     }
     body {
-        background: rgb(214, 213, 213);
+        background: rgb(255, 255, 255);
     }
     .tudo {
         border-radius: 8px;
