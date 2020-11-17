@@ -1,15 +1,20 @@
-
-<h1>Receitas</h1>
-<a class="btn btn-primary novaReceitas">Nova Receitas</a>
-
-<hr>
-
+<div class="jumbotron jb-receita mt-2">
+    <div class="row">
+        <div class="col-12 col-md-9">
+            <h3 class="text-light text-left">Nova Receitas</h3>
+        </div>
+        <div class="col-12 col-md-3">
+            <button class="btn btn-light btn-block novaReceitas"><i class="mdi mdi-plus"></i>Novo</button>
+        </div>
+        <hr class="mt-2">
+    </div>
+</div>
 <form action="" method="POST">
     <div class="row">
         <div class="col-md-8">
             <select name="slCategoria" id="slCategoria" class="form-control receitaCate">
         
-            </select> 
+            </select>
         </div>
     </div>
 </form>
@@ -17,8 +22,8 @@
 <hr>
 
 <span class="carregando">Aguarde, pesquisando...</span>
-<div class="overflow-auto">
-    <table class="table table-hover">
+<div class="overflow-auto mt-2 tb-categoria">
+    <table class="table table-borderless ">
         <thead>
             <tr>
                 <th>#ID</th>
@@ -35,7 +40,7 @@
     </table>
 </div>
 
-<script src="public/js/controller.js"></script>
-<script src="client/receitasMVC/receita/controller/receita.js"></script>
-<script src="client/receitasMVC/receita/controller/receitaCategoria.js"></script>
-<script src="client/receitasMVC/receita/controller/receitaPesquisaCategoria.js"></script>
+<script src="public/js/controller.js "></script>
+<script src="client/receitasMVC/receita/controller/receita.js "></script>
+<script src="client/receitasMVC/receita/controller/receitaCategoria.js "></script>
+<script src="client/receitasMVC/receita/controller/receitaPesquisaCategoria.js "></script>
