@@ -167,6 +167,7 @@ form input:valid+.label-input .content-input {
 
 #register_form {
     width: 100%;
+    margin: 50px auto;
     text-align: center;
 }
 
