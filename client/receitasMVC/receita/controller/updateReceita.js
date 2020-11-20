@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('.btn-update').click(function(e) {
         e.preventDefault()
 
-        var dados = $('#register_form').serialize()
+        var dados = $('#edit-receita').serialize()
         var url = "client/receitasMVC/receita/model/adicionar.php"
 
         $.ajax({
@@ -30,7 +30,7 @@ $(document).ready(function() {
                         confirmButtonText: 'Tente novamente...!'
                     })
                 }
-                $('#register_form input').val("")
+                $('#edit-receitainput').val("")
             }
         })
     })
