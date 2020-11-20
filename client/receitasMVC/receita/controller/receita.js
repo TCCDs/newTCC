@@ -30,7 +30,7 @@ $(document).ready(function() {
                 $('tbody').append(receita)
             }
             //$('body').append('<script src="site/receita/controller/receitaEditar.js"></script>')
-            // $('body').append('<script src="client/receitasMVC/receita/controller/controller.js"></script>')
+            $('body').append('<script src="client/receitasMVC/receita/controller/controller.js"></script>')
         }
     })
 })
