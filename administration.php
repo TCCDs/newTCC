@@ -1,11 +1,11 @@
 <?php
     session_start();
 
-    if(!empty($_SESSION['ID_USUARIOS'])):
+    /*if(!empty($_SESSION['ID_USUARIOS'])):
         //echo "<a href='sair.php'>Sair</a>";
     else:
         header("Location: ./index.php");
-    endif;
+    endif;*/
 ?> 
 
 

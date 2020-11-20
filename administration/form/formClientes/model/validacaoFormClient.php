@@ -1,7 +1,7 @@
 <?php
     session_start();
     include_once ("../../../../server/Connect.php");
-    include_once ("../model/validacaoCpf.php");
+    include_once ("../../../../validacao/validacaoCpf.php");
     $conn = new Conn();
 
     $requestData = $_REQUEST;
@@ -17,10 +17,27 @@
         $dados_strs = array_map('stripslashes', $dados_strc);
         $resultDados = array_map('trim', $dados_strs);
 
-        print_r($resultDados);
+        /* CPF */
+        $cpf = preg_replace("/[^0-9]/", "", $resultDados['CPF_CLIENTES']);
+        $resultDados['CPF_CLIENTES'] = str_pad($cpf, 11, '0', STR_PAD_LEFT);
+        /* RG */
+        $rg = preg_replace("/[^0-9]/", "", $resultDados['RG_CLIENTES']);
+        $resultDados['RG_CLIENTES'] = str_pad($rg, 9, '0', STR_PAD_LEFT);
+        /* CELULAR */
+        $celular = preg_replace("/[^0-9]/", "", $resultDados['CELULAR_CLIENTES']);
+        $resultDados['CELULAR_CLIENTES'] = str_pad($celular, 11, '0', STR_PAD_LEFT);
+        /* CEP */
+        $cep = preg_replace("/[^0-9]/", "", $resultDados['CEP_CLIENTES']);
+        $resultDados['CEP_CLIENTES'] = str_pad($cep, 8, '0', STR_PAD_LEFT);
+        /* IDADE */
+        $validade = explode('/', $resultDados['DATA_NASCIMENTO_CLIENTES']);
+        $dataImplode = implode("-",$validade);
+        $data = date_create($dataImplode);
+        $idade = date_format($data, "Y-m-d");
+        $data_atual = date('Y-m-d');
+        $resultDados['DATA_NASCIMENTO_CLIENTES'] = $data_atual - $idade;
+        /* CPF */
         $valida = validaCPF($resultDados['CPF_CLIENTES']);
-
-        exit;
 
         if (in_array('', $resultDados)):
             $erro = true;
@@ -82,10 +99,19 @@
             $erro = true;
             $mensagem = "Caracter ( ' ) utilizado no SEXO CLIENTES é inválido";
 
-        elseif ((strlen($resultDados['SENHA_USUARIOS'])) >= 8 && 9 <= strlen($resultDados['SENHA_USUARIOS'])):
+        elseif ((strlen($resultDados['SEXO_CLIENTES'])) >= 8 && 9 <= strlen($resultDados['SEXO_CLIENTES'])):
             $erro = true;
             $mensagem = "SEXO CLIENTES deve ter no minímo 8  e maximo 9";
-            
+        
+        /* DATA_NASCIMENTO_CLIENTES */
+        elseif (!checkdate($validade[1], $validade[0], $validade[2])):
+            $erro = true;
+            $mensagem = "DATA INVALIDA";
+
+        elseif ($resultDados['DATA_NASCIMENTO_CLIENTES'] < 18):
+            $erro = true;
+            $mensagem = "Somente para maiores de 18 anos";
+
         /* CELULAR CLIENTES */
         elseif (!preg_match("#[0-9]+#", $resultDados['CELULAR_CLIENTES'])):
             $erro = true;
@@ -99,7 +125,7 @@
             $erro = true;
             $mensagem = "CELULAR CLIENTES somente numeros";
         
-        elseif ((strlen($resultDados['CELULAR_CLIENTES'])) >= 11 && 11 <= strlen($resultDados['SENHA_USUARIOS'])):
+        elseif ((strlen($resultDados['CELULAR_CLIENTES'])) < 11):
             $erro = true;
             $mensagem = " CELULAR CLIENTES deve ter no maximo 11";
         
@@ -129,16 +155,125 @@
             $erro = true;
             $mensagem = "NACIONALIDADE CLIENTES deve ter no minímo 5";
         
+        /* COMPLEMENTO CLIENTES */
+        elseif (!preg_match("#[a-z]+#", $resultDados['COMPLEMENTO_CLIENTES'])):
+            $erro = true;
+            $mensagem = "O campo COMPLEMENTO CLIENTES precisa de pelo menos uma letra minuscula";
+        
+        elseif (stristr($resultDados['COMPLEMENTO_CLIENTES'], "'")):
+            $erro = true;
+            $mensagem = "Caracter ( ' ) utilizado no COMPLEMENTO CLIENTES é inválido";
+
+        elseif ((strlen($resultDados['COMPLEMENTO_CLIENTES'])) <= 3):
+            $erro = true;
+            $mensagem = "COMPLEMENTO CLIENTES deve ter no minímo 5";
+
+        /* CEP CLIENTES */
+        elseif (!preg_match("#[0-9]+#", $resultDados['CEP_CLIENTES'])):
+            $erro = true;
+            $mensagem = "O CEP CLIENTES deve incluir pelo menos um número!";
+        
+        elseif (stristr($resultDados['CEP_CLIENTES'], "'")):
+            $erro = true;
+            $mensagem = "Caracter ( ' ) utilizado no CEP CLIENTES é inválido";
+        
+        elseif(!is_numeric($resultDados['CEP_CLIENTES'])):
+            $erro = true;
+            $mensagem = "CEP CLIENTES somente numeros";
+        
+        elseif (((strlen($resultDados['CEP_CLIENTES'])) < 8)):
+            $erro = true;
+            $mensagem = " CEP CLIENTES deve ter no minímo 8 caracteres";
+        
+        /* CIDADE CLIENTES */
+        elseif (!preg_match("#[a-z]+#", $resultDados['CIDADE_CLIENTES'])):
+            $erro = true;
+            $mensagem = "O campo CIDADE CLIENTES precisa de pelo menos uma letra minuscula";
+        
+        elseif (stristr($resultDados['CIDADE_CLIENTES'], "'")):
+            $erro = true;
+            $mensagem = "Caracter ( ' ) utilizado no CIDADE CLIENTES é inválido";
+
+        elseif ((strlen($resultDados['CIDADE_CLIENTES'])) <= 2):
+            $erro = true;
+            $mensagem = "CIDADE CLIENTES deve ter no minímo 2";
+
+        /* ESTADO CLIENTES */
+        elseif (!preg_match("#[A-Z]+#", $resultDados['ESTADO_CLIENTES'])):
+            $erro = true;
+            $mensagem = "O campo ESTADO CLIENTES precisa de pelo menos uma letra minuscula";
+        
+        elseif (stristr($resultDados['ESTADO_CLIENTES'], "'")):
+            $erro = true;
+            $mensagem = "Caracter ( ' ) utilizado no ESTADO CLIENTES é inválido";
+
+        elseif ((strlen($resultDados['ESTADO_CLIENTES'])) < 2):
+            $erro = true;
+            $mensagem = "ESTADO CLIENTES deve ter no minímo 2";
+
+        /* ENDERECO CLIENTES */
+        elseif (!preg_match("#[a-z]+#", $resultDados['ENDERECO_CLIENTES'])):
+            $erro = true;
+            $mensagem = "O campo ENDERECO CLIENTES precisa de pelo menos uma letra minuscula";
+        
+        elseif (stristr($resultDados['ENDERECO_CLIENTES'], "'")):
+            $erro = true;
+            $mensagem = "Caracter ( ' ) utilizado no ENDERECO CLIENTES é inválido";
+
+        elseif ((strlen($resultDados['ENDERECO_CLIENTES'])) <= 5):
+            $erro = true;
+            $mensagem = "ENDERECO CLIENTES deve ter no minímo 5";
+
+        /* NUMERO CLIENTES */
+        elseif (!preg_match("#[0-9]+#", $resultDados['NUMERO_CLIENTES'])):
+            $erro = true;
+            $mensagem = "O NUMERO CLIENTES deve incluir pelo menos um número!";
+        
+        elseif (stristr($resultDados['NUMERO_CLIENTES'], "'")):
+            $erro = true;
+            $mensagem = "Caracter ( ' ) utilizado no NUMERO CLIENTES é inválido";
+        
+        elseif(!is_numeric($resultDados['NUMERO_CLIENTES'])):
+            $erro = true;
+            $mensagem = "NUMERO CLIENTES somente numeros";
+        
+        elseif (((strlen($resultDados['NUMERO_CLIENTES'])) < 1)):
+            $erro = true;
+            $mensagem = " NUMERO CLIENTES deve ter no minímo 1 caracteres";
+
+        /* BAIRRO CLIENTES */
+        elseif (!preg_match("#[a-z]+#", $resultDados['BAIRRO_CLIENTES'])):
+            $erro = true;
+            $mensagem = "O campo BAIRRO CLIENTES precisa de pelo menos uma letra minuscula";
+        
+        elseif (stristr($resultDados['BAIRRO_CLIENTES'], "'")):
+            $erro = true;
+            $mensagem = "Caracter ( ' ) utilizado no BAIRRO CLIENTES é inválido";
+
+        elseif ((strlen($resultDados['BAIRRO_CLIENTES'])) <= 5):
+            $erro = true;
+            $mensagem = "BAIRRO CLIENTES deve ter no minímo 5";
+        
         else:
-            $sql = "SELECT ID_USUARIOS FROM login_usuarios WHERE LOGIN_USUARIOS = :LOGIN_USUARIOS ";
+            $sql = "SELECT ID_CLIENTES FROM clientes WHERE clientes.CPF_CLIENTES = :CPF_CLIENTES ";
             $resultado = $conn->getConn()->prepare($sql);
-            $resultado->bindParam(':LOGIN_USUARIOS', $resultDados['LOGIN_USUARIOS']);
+            $resultado->bindParam(':CPF_CLIENTES', $resultDados['CPF_CLIENTES']);
             $resultado->execute();
 
-		    if(($resultado) AND ($resultado->rowCount() != 0)){
+		    if(($resultado) AND ($resultado->rowCount() != 0)):
 			    $erro = true;
-			    $mensagem = "Este e-mail já está cadastrado";
-            }
+			    $mensagem = "Este CPF já está sendo utilizado";
+            endif;
+
+            $sql = "SELECT ID_CLIENTES FROM clientes WHERE clientes.EMAIL_CLIENTES = :EMAIL_CLIENTES ";
+            $resultado = $conn->getConn()->prepare($sql);
+            $resultado->bindParam(':EMAIL_CLIENTES', $resultDados['EMAIL_CLIENTES']);
+            $resultado->execute();
+
+		    if(($resultado) AND ($resultado->rowCount() != 0)):
+			    $erro = true;
+			    $mensagem = "Este e-mail já está sendo utilizado";
+            endif;
         endif;
 
         if (!$erro):
@@ -146,8 +281,7 @@
                 $sql = "INSERT INTO clientes (ID_USUARIOS, NOME_CLIENTES, RG_CLIENTES, CPF_CLIENTES, SEXO_CLIENTES, DATA_NASCIMENTO_CLIENTES, EMAIL_CLIENTES, CELULAR_CLIENTES, CEP_CLIENTES, CIDADE_CLIENTES, ESTADO_CLIENTES, ENDERECO_CLIENTES, NUMERO_CLIENTES, BAIRRO_CLIENTES, NACIONALIDADE_CLIENTES, COMPLEMENTO_CLIENTES)
                 VALUES (:ID_USUARIOS, :NOME_CLIENTES, :RG_CLIENTES, :CPF_CLIENTES, :SEXO_CLIENTES, :DATA_NASCIMENTO_CLIENTES, :EMAIL_CLIENTES, :CELULAR_CLIENTES, :CEP_CLIENTES, :CIDADE_CLIENTES, :ESTADO_CLIENTES, :ENDERECO_CLIENTES, :NUMERO_CLIENTES, :BAIRRO_CLIENTES, :NACIONALIDADE_CLIENTES, :COMPLEMENTO_CLIENTES)
                     ";
-    
-            $password_hash = password_hash($resultDados['SENHA_USUARIOS'], PASSWORD_DEFAULT);
+
     
             $user_data = array(
                 ':ID_USUARIOS'                  => $_SESSION['idUsuario'],
@@ -179,7 +313,6 @@
             );
     
             } catch (Exception $ex){
-                //$data = array('return' => $ex->getMessage());
                 $mensagem = "Erro ao cadastrar usuario";
                 
                 $data = array(
