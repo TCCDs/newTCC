@@ -348,7 +348,7 @@ form input:valid+.label-input .content-input {
 }
 
 .jb-receita {
-    background: #055e6442 !important;
+    background: #055e648a !important;
 }
 
 .tb-categoria {
@@ -363,9 +363,10 @@ form input:valid+.label-input .content-input {
     border-top-left-radius: 8px;
 }
 
-.receitaCate{
+.receitaCate {
     background: #116f7511;
 }
+
 .btn-categoriaEditar {
     background: #116e75ef;
     color: white;
