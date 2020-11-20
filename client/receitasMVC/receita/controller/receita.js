@@ -12,12 +12,15 @@ $(document).ready(function() {
             for (var i = 0; i < dados.length; i++) {
                 let receita = `
                     <tr>
+                        <td> ` + dados[i].id + `</td>
                         <td> ` + dados[i].titulo + `</td>
                         <td> ` + dados[i].slug + `</td>
                         <td> ` + dados[i].cattitulo + `</td>
                         <td> ` + dados[i].data + `</td>
                         <td>
-                        <button id="` + dados[i].id + `" class="btn  btn-block btn-primary btn-sm .btn-receitaEditar> <i class="mdi mdi-eye mdi-18px "></i> </button>
+                            <button id="` + dados[i].id + `" class="btn btn-receitaEditar"> 
+                                Editar
+                            </button>
 
                             <button id="` + dados[i].id + `" class="btn btn-info ml-2 btn-receitaView"> 
                                 Ver
