@@ -3,7 +3,7 @@
     include_once ('../../../../server/Connect.php');
     $conn = new Conn();
 
-    $id = 24;
+    $id = $_POST['id'];
 
     $sql = "SELECT 
                 r.*, 
