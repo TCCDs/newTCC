@@ -1,11 +1,10 @@
 $(document).ready(function() {
     $('.btn-receitaEditar').click(function(e) {
         e.preventDefault()
-        alert('oii')
-            //     $('.modal-title').empty()
-            //     $('.modal-body').empty()
-            //     $('.modal-footer').empty()
-            //     $('.modal-title').append('Edição de registro cadastrado')
+        $('.modal-title').empty()
+        $('.modal-body').empty()
+        $('.modal-footer').empty()
+        $('.modal-title').append('Edição de registro cadastrado')
 
         //     var url = "client/receitasMVC/receita/model/receitaView.php"
         //     var dados = 'id='
