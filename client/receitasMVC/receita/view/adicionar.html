@@ -1,20 +1,32 @@
-<h1>Nova Receita</h1>
-
-<hr>
-
-<form action="client/receitasMVC/receita/model/adicionar.php" id="register_form" method="post">
+<div class="jumbotron jb-receita mt-2">
     <div class="row">
-        <div class="col-md-5 mt-3">
-            <label for="txtTitulo">Título</label>
-            <input type="text" id="txtTitulo" name="txtTitulo" class="form-control" placeholder="Título aqui" />
+        <div class="col-12 col-md-12">
+            <h3 class="text-light text-left">Nova Receita</h3>
         </div>
+        <hr class="mt-2">
+    </div>
+</div>
+<form id="register_form">
+    <div id="formCad">
+        <div class="row">
+            <div class="col-12 col-md-6 mt-3">
+                <div class=" form-group form">
+                    <input type="text" name="txtTitulo" id="txtTitulo" aria-autocomplete="off" required>
+                    <label for="txtTitulo" class="label-input">
+                        <span class="content-input">Título</span>
+                    </label>
+                </div>
+            </div>
 
-        <div class="col-md-4 mt-3">
-            <label for="txtSlug">Slug</label>
-            <input type="text" id="txtSlug" name="txtSlug" class="form-control" placeholder="titulo-aqui" />
-        </div>
-
-        <!--<div class="col-md-3 mt-3">
+            <div class="col-12 col-md-6 mt-3">
+                <div class=" form-group form">
+                    <input type="text" name="txtSlug" id="txtSlug" aria-autocomplete="off" required>
+                    <label for="txtSlug" class="label-input">
+                        <span class="content-input">Slug</span>
+                    </label>
+                </div>
+            </div>
+            <!--<div class="col-md-3 mt-3">
             <label for="slCategoria">Categoria</label>
             <select name="slCategoria" id="slCategoria" class="form-control">
                 {% for categoria in listaCategorias %}
@@ -22,38 +34,37 @@
                 {% endfor %}
             </select>
         </div> -->
-    </div>
-
-    <div class="row">
-        <div class="col-md-12 mt-3">
-            <label for="txtLinhaFina">Linha fina</label>
-            <input type="text" id="txtLinhaFina" name="txtLinhaFina" class="form-control" placeholder="Descreva a receita" minlength="10" maxlength="250" />
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-12 mt-3">
-            <label for="txtThumb">Thumbnail</label>
-            <input type="text" id="txtThumb" name="txtThumb" class="form-control" placeholder="https://mysite.com/img/img.jpg" minlength="1" maxlength="100" />
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12 mt-3">
-            <label for="txtDescricao">Conteúdo</label>
-            <textarea id="txtDescricao" name="txtDescricao"></textarea>
-        </div>
-    </div>
-
-    <div class="row mt-3">
-        <div class="col-md-10">
-            <div id="dvAlert">
-                <div class="alert alert-info">Preencha corretamente todos os campos</div>
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <label for="txtLinhaFina">Linha fina</label>
+                <input type="text" id="txtLinhaFina" name="txtLinhaFina" class="form-control" placeholder="Descreva a receita" minlength="10" maxlength="250" />
             </div>
         </div>
 
-        <div class="col-md-2 text-right">
-            <input type="submit" name="registrar" value="Adicionar" class=" registrar btn btn-success w-100">
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <label for="txtThumb">Thumbnail</label>
+                <input type="text" id="txtThumb" name="txtThumb" class="form-control" placeholder="https://mysite.com/img/img.jpg" minlength="1" maxlength="100" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <div class="form-group form">
+                    <textarea class="form-control" id="txtDescricao" name="txtDescricao" rows="3"></textarea>
+                </div>
+                <label for="txtDescricao" class="label-input">
+                    <span class="content-input">Descrição</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-12 col-md-12">
+                <input type="submit" name="registrar" value="Adicionar" class=" registrar btn btn-success ">
+            </div>
         </div>
     </div>
 </form>
