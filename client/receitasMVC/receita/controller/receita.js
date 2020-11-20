@@ -21,7 +21,7 @@ $(document).ready(function() {
                                 Editar
                             </button>
 
-                            <button id="` + dados[i].slug + `" class="btn btn-info ml-2 btn-receitaView"> 
+                            <button id="` + dados[i].id + `" class="btn btn-info ml-2 btn-receitaView"> 
                                 Ver
                             </button>
                         </td>
@@ -31,6 +31,8 @@ $(document).ready(function() {
             }
             //$('body').append('<script src="site/receita/controller/receitaEditar.js"></script>')
             $('body').append('<script src="client/receitasMVC/receita/controller/editar_receitas.js"></script>')
+            $('body').append('<script src="client/receitasMVC/receita/controller/receitaView.js"></script>')
+
         }
     })
 })

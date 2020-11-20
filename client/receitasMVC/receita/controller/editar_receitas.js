@@ -18,7 +18,7 @@ $(document).ready(function() {
             url: url,
             success: function(dados) {
                 for (var i = 0; dados.length > i; i++) {
-                    let receitas = `
+                    let receita = `
                     <form class="mt-3" id="edit-receita">
                     <div id="formCad">
                             <div class="row">
@@ -77,10 +77,10 @@ $(document).ready(function() {
                         </form>
                     `
 
-                    $('.modal-body').append(receitas)
+                    $('.modal-body').append(receita)
                 }
                 $('#modalReceita').modal('show')
-                $('body').append('<script src="administration/adm/controller/updateAdmAdministration.js"></script>')
+                $('body').append('<script src="client/receitasMVC/receita/controller/updateReceita.js"></script>')
             }
         })
     })
