@@ -8,7 +8,7 @@ $(document).ready(function() {
         $('.modal-title').append('Edição de registro cadastrado')
 
         var url = "client/receitasMVC/receita/model/receitaView.php"
-        var dados = 'ID_ADMINISTRADOR='
+        var dados = 'id='
         dados += $(this).attr('id')
 
         $.ajax({
@@ -18,9 +18,9 @@ $(document).ready(function() {
             url: url,
             success: function(dados) {
                 for (var i = 0; dados.length > i; i++) {
-                    let administration = `
+                    let receitas = `
                     <form class="mt-3" id="edit-adm">
-                    <input type="hidden"  name="ID_ADMINISTRADOR" value="` + dados[i].ID_ADMINISTRADOR + `" />
+                    <input type="hidden"  name="id" value="` + dados[i].id + `" />
                     <div class="row">
                     <div class="col-12 col md-12">
                         <div class=" form-group form">
