@@ -363,6 +363,9 @@ form input:valid+.label-input .content-input {
     border-top-left-radius: 8px;
 }
 
+.receitaCate{
+    background: #116f7511;
+}
 .btn-categoriaEditar {
     background: #116e75ef;
     color: white;
