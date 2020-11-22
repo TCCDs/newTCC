@@ -167,7 +167,7 @@ form input:valid+.label-input .content-input {
 
 #register_form {
     width: 100%;
-    margin: 50px;
+    margin: 50px auto;
     text-align: center;
 }
 
@@ -190,10 +190,12 @@ form input:valid+.label-input .content-input {
     background: rgb(255, 255, 255);
     border: 0 none;
     border-radius: 6px;
+    padding: 18px;
     box-shadow: rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
     /* Nao deixa o conteudo passar do tamanho do elemento pai  */
     margin: 0 10%;
+    margin-bottom: 5em;
 }
 
 #register_form #formCad:not(:first-of-type) {

@@ -38,28 +38,32 @@
         </div>
 
         <div class="row">
-            <div class="col-md-12 mt-3">
-                <label for="txtLinhaFina">Linha fina</label>
-                <input type="text" id="txtLinhaFina" name="txtLinhaFina" class="form-control" placeholder="Descreva a receita" minlength="10" maxlength="250" />
+            <div class="col-12 col-md-6  mt-3">
+                <div class=" form-group form">
+                    <input type="text" name="txtLinhaFina" id="txtLinhaFina" aria-autocomplete="off" required>
+                    <label for="txtLinhaFina" class="label-input">
+                        <span class="content-input">Descreva a receita</span>
+                    </label>
+                </div>
+            </div>
+            <div class="col-12 col-md-6  mt-3">
+                <div class=" form-group form">
+                    <input type="text" name="txtThumb" id="txtThumb" aria-autocomplete="off" required>
+                    <label for="txtThumb" class="label-input">
+                        <span class="content-input">Cole o link da imagem</span>
+                    </label>
+                </div>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-12 mt-3">
-                <label for="txtThumb">Thumbnail</label>
-                <input type="text" id="txtThumb" name="txtThumb" class="form-control" placeholder="https://mysite.com/img/img.jpg" minlength="1" maxlength="100" />
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12 mt-3">
-                <div class="form-group form">
-                    <label for="txtDescricao" class="label-input">
-                        Descrição
-                     </label>
+                <label for="txtDescricao" class="text-left">
+                    Descrição
+                 </label>
+                <div class="form-group">
                     <textarea class="form-control" id="txtDescricao" name="txtDescricao" rows="3"></textarea>
                 </div>
-
             </div>
         </div>
 
