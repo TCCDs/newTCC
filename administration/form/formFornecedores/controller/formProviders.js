@@ -23,7 +23,7 @@
             e.preventDefault()
 
             var dados = $('#register_form').serialize()
-            var url = "administration/form/formFornecedores/model/formProviders.php"
+            var url = "administration/form/formFornecedores/model/validacaoFormProviders.php"
 
             $.ajax({
                 type: 'POST',
