@@ -21,7 +21,6 @@ $(document).ready(function() {
                         <form class="mt-3" id="edit-receita">
                         <div id="formCad">
                                 <div class="row">
-                                <input type="hidden" id="txtId" value="` + dados[i].id + `" />
                                     <div class="col-md-5 mt-3">
                                         <div class=" form-group form">
                                             <input type="text" name="txtTitulo" id="txtTitulo" class="form-control" aria-autocomplete="off" value=" ` + dados[i].titulo + `" /> required>
