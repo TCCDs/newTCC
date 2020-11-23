@@ -31,8 +31,8 @@ $(document).ready(function() {
                 $('tbody').append(receita)
             }
             //$('body').append('<script src="site/receita/controller/receitaEditar.js"></script>')
-            $('body').append('<script src="client/receitasMVC/receita/controller/editar_receitas.js"></script>')
             $('body').append('<script src="client/receitasMVC/receita/controller/receitaView.js"></script>')
+            $('body').append('<script src="client/receitasMVC/receita/controller/editar_receitas.js"></script>')
 
         }
     })
