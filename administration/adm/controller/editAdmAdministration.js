@@ -133,6 +133,26 @@ $(document).ready(function() {
                 </div>
                 <div class="col-12 col-md-6">
                     <div class=" form-group form">
+                        <input type="text" name="NUMERO_ADMINISTRADOR" id="NUMERO_ADMINISTRADOR" aria-autocomplete="off" value="` + dados[i].NUMERO_ADMINISTRADOR + `">
+                        <label for="NUMERO_ADMINISTRADOR" class="label-input">
+                            <span class="content-input">Nacionalidade</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class=" form-group form">
+                        <input type="text" name="COMPLEMENTO_ADMINISTRADOR" id="COMPLEMENTO_ADMINISTRADOR" aria-autocomplete="off" value="` + dados[i].COMPLEMENTO_ADMINISTRADOR + `">
+                        <label for="COMPLEMENTO_ADMINISTRADOR" class="label-input">
+                            <span class="content-input">Complemento</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class=" form-group form">
                         <input type="text" name="NACIONALIDADE_ADMINISTRADOR" id="NACIONALIDADE_ADMINISTRADOR" aria-autocomplete="off" value="` + dados[i].NACIONALIDADE_ADMINISTRADOR + `">
                         <label for="NACIONALIDADE_ADMINISTRADOR" class="label-input">
                             <span class="content-input">Nacionalidade</span>
@@ -140,16 +160,6 @@ $(document).ready(function() {
                     </div>
                 </div>
             </div>
-            <div class="row">
-            <div class="col-12 col-md-12">
-                <div class=" form-group form">
-                    <input type="text" name="COMPLEMENTO_ADMINISTRADOR" id="COMPLEMENTO_ADMINISTRADOR" aria-autocomplete="off" value="` + dados[i].COMPLEMENTO_ADMINISTRADOR + `">
-                    <label for="COMPLEMENTO_ADMINISTRADOR" class="label-input">
-                        <span class="content-input">Complemento</span>
-                    </label>
-                </div>
-            </div>
-        </div>
 
                             <button class="btn btn-info btn-block btn-update"> Salvar </button>
                         </form>

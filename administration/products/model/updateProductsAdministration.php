@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once ("../../../../server/Connect.php");
+    include_once ("../../../server/Connect.php");
     $conn = new Conn();
 
     $requestData = $_REQUEST;
@@ -16,8 +16,6 @@
         $dados_strs = array_map('stripslashes', $dados_strc);
         $resultDados = array_map('trim', $dados_strs);
 
-        print_r($resultDados);
-        exit;
         /* validade */
         $validade = explode('/', $resultDados['VALIDADE_PRODUTOS']);
         $dataImplode = implode("-",$validade);

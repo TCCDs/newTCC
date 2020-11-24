@@ -1,7 +1,7 @@
 <?php
     session_start();
-    include_once ("../../../../server/Conn.php");
-    include_once ("../../../../validacao/validacaoCpf.php");
+    include_once ("../../../server/Connect.php");
+    include_once ("../../../validacao/validacaoCpf.php");
     $conn = new Conn();
 
     $requestData = $_REQUEST;
@@ -282,7 +282,7 @@
                 DATA_NASCIMENTO_ADMINISTRADOR = :DATA_NASCIMENTO_ADMINISTRADOR, SEXO_ADMINISTRADOR = :SEXO_ADMINISTRADOR, EMAIL_ADMINISTRADOR = :EMAIL_ADMINISTRADOR, CEP_ADMINISTRADOR = :CEP_ADMINISTRADOR, ESTADO_ADMINISTRADOR = :ESTADO_ADMINISTRADOR, BAIRRO_ADMINISTRADOR = :BAIRRO_ADMINISTRADOR, ENDERECO_ADMINISTRADOR = :ENDERECO_ADMINISTRADOR, COMPLEMENTO_ADMINISTRADOR = :COMPLEMENTO_ADMINISTRADOR, NACIONALIDADE_ADMINISTRADOR = :NACIONALIDADE_ADMINISTRADOR  WHERE ID_ADMINISTRADOR = :ID_ADMINISTRADOR";
 
                 $user_data = array(
-                    ':ID_ADMINISTRADOR'                  => $_SESSION['idAdministrador'],
+                    ':ID_ADMINISTRADOR'                  => $resultDados['ID_ADMINISTRADOR'],
                     ':NOME_ADMINISTRADOR'                => $resultDados["NOME_ADMINISTRADOR"],
                     ':RG_ADMINISTRADOR'                  => $resultDados["RG_ADMINISTRADOR"],
                     ':CPF_ADMINISTRADOR'                 => $resultDados["CPF_ADMINISTRADOR"],

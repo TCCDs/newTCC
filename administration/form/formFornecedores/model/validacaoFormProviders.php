@@ -280,21 +280,21 @@
                     ";
 
                 $user_data = array(
-                    ':NOME_FANTASIA_FORNECEDORES'       => $_POST["NOME_FANTASIA_FORNECEDORES"],
-                    ':RAZAO_SOCIAL_FORNECEDORES'        => $_POST["RAZAO_SOCIAL_FORNECEDORES"],
-                    ':CNPJ_FORNECEDORES'                => $_POST["CNPJ_FORNECEDORES"],
-                    ':EMAIL_FORNECEDORES'               => $_POST["EMAIL_FORNECEDORES"],
-                    ':CELULAR_FORNECEDORES'             => $_POST['CELULAR_FORNECEDORES'],
-                    ':SEXO_FORNECEDORES'                => $_POST["SEXO_FORNECEDORES"],
-                    ':DATA_NASCIMENTO_FORNECEDORES'     => $_POST["DATA_NASCIMENTO_FORNECEDORES"],
-                    ':NACIONALIDADE_FORNECEDORES'       => $_POST["NACIONALIDADE_FORNECEDORES"],
-                    ':CEP_FORNECEDORES'                 => $_POST["CEP_FORNECEDORES"],
-                    ':CIDADE_FORNECEDORES'              => $_POST["CIDADE_FORNECEDORES"],
-                    ':ESTADO_FORNECEDORES'              => $_POST["ESTADO_FORNECEDORES"],
-                    ':ENDERECO_FORNECEDORES'            => $_POST['ENDERECO_FORNECEDORES'],
-                    ':NUMERO_FORNECEDORES'              => $_POST["NUMERO_FORNECEDORES"],
-                    ':BAIRRO_FORNECEDORES'              => $_POST["BAIRRO_FORNECEDORES"],
-                    ':COMPLEMENTO_FORNECEDORES'         => $_POST["COMPLEMENTO_FORNECEDORES"]
+                    ':NOME_FANTASIA_FORNECEDORES'       => $resultDados["NOME_FANTASIA_FORNECEDORES"],
+                    ':RAZAO_SOCIAL_FORNECEDORES'        => $resultDados["RAZAO_SOCIAL_FORNECEDORES"],
+                    ':CNPJ_FORNECEDORES'                => $resultDados["CNPJ_FORNECEDORES"],
+                    ':EMAIL_FORNECEDORES'               => $resultDados["EMAIL_FORNECEDORES"],
+                    ':CELULAR_FORNECEDORES'             => $resultDados['CELULAR_FORNECEDORES'],
+                    ':SEXO_FORNECEDORES'                => $resultDados["SEXO_FORNECEDORES"],
+                    ':DATA_NASCIMENTO_FORNECEDORES'     => $resultDados["DATA_NASCIMENTO_FORNECEDORES"],
+                    ':NACIONALIDADE_FORNECEDORES'       => $resultDados["NACIONALIDADE_FORNECEDORES"],
+                    ':CEP_FORNECEDORES'                 => $resultDados["CEP_FORNECEDORES"],
+                    ':CIDADE_FORNECEDORES'              => $resultDados["CIDADE_FORNECEDORES"],
+                    ':ESTADO_FORNECEDORES'              => $resultDados["ESTADO_FORNECEDORES"],
+                    ':ENDERECO_FORNECEDORES'            => $resultDados['ENDERECO_FORNECEDORES'],
+                    ':NUMERO_FORNECEDORES'              => $resultDados["NUMERO_FORNECEDORES"],
+                    ':BAIRRO_FORNECEDORES'              => $resultDados["BAIRRO_FORNECEDORES"],
+                    ':COMPLEMENTO_FORNECEDORES'         => $resultDados["COMPLEMENTO_FORNECEDORES"]
                 );
     
                 $resultado = $conn->getConn()->prepare($sql);

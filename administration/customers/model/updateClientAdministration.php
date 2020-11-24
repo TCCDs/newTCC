@@ -1,6 +1,9 @@
 <?php
+    ini_set('display_errors', 0 );
+    error_reporting(0);
+
     session_start();
-    include_once ("../../../../server/Connect.php");
+    include_once ("../../../server/Connect.php");
     include_once ("../../../validacao/validacaoCpf.php");
     $conn = new Conn();
 
@@ -35,7 +38,8 @@
         $data = date_create($dataImplode);
         $idade = date_format($data, "Y-m-d");
         $data_atual = date('Y-m-d');
-        $resultDados['DATA_NASCIMENTO_CLIENTES'] = $data_atual - $idade;
+        $resultDados['DATA_NASCIMENTO_CLIENTES'] = ($data_atual - $idade);
+
         /* CPF */
         $valida = validaCPF($resultDados['CPF_CLIENTES']);
 
@@ -283,7 +287,7 @@
                 DATA_NASCIMENTO_CLIENTES = :DATA_NASCIMENTO_CLIENTES, SEXO_CLIENTES = :SEXO_CLIENTES, EMAIL_CLIENTES = :EMAIL_CLIENTES, CEP_CLIENTES = :CEP_CLIENTES, ESTADO_CLIENTES = :ESTADO_CLIENTES, BAIRRO_CLIENTES = :BAIRRO_CLIENTES, ENDERECO_CLIENTES = :ENDERECO_CLIENTES, COMPLEMENTO_CLIENTES = :COMPLEMENTO_CLIENTES, NACIONALIDADE_CLIENTES = :NACIONALIDADE_CLIENTES  WHERE ID_CLIENTES = :ID_CLIENTES";
 
                 $user_data = array(
-                    ':ID_USUARIOS'                  => $_SESSION['idUsuario'],
+                    ':ID_USUARIOS'                  => $resultDados['ID_USUARIOS'],
                     ':NOME_CLIENTES'                => $resultDados["NOME_CLIENTES"],
                     ':RG_CLIENTES'                  => $resultDados["RG_CLIENTES"],
                     ':CPF_CLIENTES'                 => $resultDados["CPF_CLIENTES"],

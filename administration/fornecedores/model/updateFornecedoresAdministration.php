@@ -1,7 +1,7 @@
 <?php
     session_start();
-    include_once ("../../../../server/Connect.php");
-    include_once ("../../../../validacao/validacaoCnpj.php");
+    include_once ("../../../server/Connect.php");
+    include_once ("../../../validacao/validacaoCnpj.php");
     $conn = new Conn();
 
     $requestData = $_REQUEST;
