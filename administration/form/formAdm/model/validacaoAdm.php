@@ -284,21 +284,21 @@
         
             $user_data = array(
                 ':ID_ADMINISTRADOR'                  => $_SESSION['idAdministrador'],
-                ':NOME_ADMINISTRADOR'                => $_POST["NOME_ADMINISTRADOR"],
-                ':RG_ADMINISTRADOR'                  => $_POST["RG_ADMINISTRADOR"],
-                ':CPF_ADMINISTRADOR'                 => $_POST["CPF_ADMINISTRADOR"],
-                ':SEXO_ADMINISTRADOR'                => $_POST["SEXO_ADMINISTRADOR"],
-                ':DATA_NASCIMENTO_ADMINISTRADOR'     => $_POST['DATA_NASCIMENTO_ADMINISTRADOR'],
-                ':EMAIL_ADMINISTRADOR'               => $_POST["EMAIL_ADMINISTRADOR"],
-                ':CELULAR_ADMINISTRADOR'             => $_POST["CELULAR_ADMINISTRADOR"],
-                ':CEP_ADMINISTRADOR'                 => $_POST["CEP_ADMINISTRADOR"],
-                ':CIDADE_ADMINISTRADOR'              => $_POST["CIDADE_ADMINISTRADOR"],
-                ':ESTADO_ADMINISTRADOR'              => $_POST["ESTADO_ADMINISTRADOR"],
-                ':ENDERECO_ADMINISTRADOR'            => $_POST["ENDERECO_ADMINISTRADOR"],
-                ':NUMERO_ADMINISTRADOR'              => $_POST['NUMERO_ADMINISTRADOR'],
-                ':BAIRRO_ADMINISTRADOR'              => $_POST["BAIRRO_ADMINISTRADOR"],
-                ':NACIONALIDADE_ADMINISTRADOR'       => $_POST["NACIONALIDADE_ADMINISTRADOR"],
-                ':COMPLEMENTO_ADMINISTRADOR'         => $_POST["COMPLEMENTO_ADMINISTRADOR"]
+                ':NOME_ADMINISTRADOR'                => $resultDados["NOME_ADMINISTRADOR"],
+                ':RG_ADMINISTRADOR'                  => $resultDados["RG_ADMINISTRADOR"],
+                ':CPF_ADMINISTRADOR'                 => $resultDados["CPF_ADMINISTRADOR"],
+                ':SEXO_ADMINISTRADOR'                => $resultDados["SEXO_ADMINISTRADOR"],
+                ':DATA_NASCIMENTO_ADMINISTRADOR'     => $resultDados['DATA_NASCIMENTO_ADMINISTRADOR'],
+                ':EMAIL_ADMINISTRADOR'               => $resultDados["EMAIL_ADMINISTRADOR"],
+                ':CELULAR_ADMINISTRADOR'             => $resultDados["CELULAR_ADMINISTRADOR"],
+                ':CEP_ADMINISTRADOR'                 => $resultDados["CEP_ADMINISTRADOR"],
+                ':CIDADE_ADMINISTRADOR'              => $resultDados["CIDADE_ADMINISTRADOR"],
+                ':ESTADO_ADMINISTRADOR'              => $resultDados["ESTADO_ADMINISTRADOR"],
+                ':ENDERECO_ADMINISTRADOR'            => $resultDados["ENDERECO_ADMINISTRADOR"],
+                ':NUMERO_ADMINISTRADOR'              => $resultDados['NUMERO_ADMINISTRADOR'],
+                ':BAIRRO_ADMINISTRADOR'              => $resultDados["BAIRRO_ADMINISTRADOR"],
+                ':NACIONALIDADE_ADMINISTRADOR'       => $resultDados["NACIONALIDADE_ADMINISTRADOR"],
+                ':COMPLEMENTO_ADMINISTRADOR'         => $resultDados["COMPLEMENTO_ADMINISTRADOR"]
             );
     
             $resultado = $conn->getConn()->prepare($sql);
