@@ -17,8 +17,16 @@ $(document).ready(function() {
             url: url,
             success: function(dados) {
                 for (var i = 0; dados.length > i; i++) {
+                    var totalDesconto = dados[i].TOTAL_DESCONTO_COMPRAS
+                    var confMoedas = {
+                        style: "currency",
+                        currency: "BRL"
+                    }
+                    var resultTotalDesconto = totalDesconto.toLocaleString('pt-BR', confMoedas)
+                    
+
                     let historicoCompras = `
-                        <p> Total Desconto: ` + dados[i].TOTAL_DESCONTO_COMPRAS + ` </p>
+                        <p> Total Desconto: ` + resultTotalDesconto + ` </p>
                         <p> Total Itens: ` + dados[i].TOTAL_ITENS_COMPRAS + ` </p>
                         <p> Status: ` + dados[i].STATUS_COMPRAS + ` </p>
                     `

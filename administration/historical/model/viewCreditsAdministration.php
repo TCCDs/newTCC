@@ -1,5 +1,5 @@
 <?php
-    include_once('../../../server/Connect.php');
+    include_once('../../../server/Conn.php');
     $conn = new Conn();
 
     $ID_MOEDAS = $_POST['ID_MOEDAS'];
