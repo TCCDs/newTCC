@@ -10,7 +10,6 @@ $(document).ready(function() {
             return numero;
     }
 
-
     $.ajax({
         type: 'POST',
         dataType: 'json',
