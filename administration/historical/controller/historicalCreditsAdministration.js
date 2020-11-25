@@ -12,14 +12,15 @@ $(document).ready(function() {
             for (var i = 0; i < dados.length; i++) {
                 var valorMoedas = dados[i].VALOR_MOEDAS
 
-                var confMoedas = {
+                /*var confMoedas = {
                     style: "currency",
                     currency: "BRL"
                 }
 
                 var resultValorMoedas = valorMoedas.toLocaleString('pt-BR', confMoedas)
 
-                console.log(resultValorMoedas)
+                console.log(resultValorMoedas)*/
+               var resultValorMoedas = parseFloat(valorMoedas).toFixed(2).replace('.', ',')
 
                 let historicoMoedas = `
                 <div class="row ml-2">
