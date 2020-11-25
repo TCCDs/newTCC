@@ -33,8 +33,8 @@ $(document).ready(function() {
                 } else {
                     Swal.fire({
                         icon: 'error',
-                        title: 'SysAgenda!',
-                        text: dados.return,
+                        title: 'SupermercadoCaravelas!',
+                        text: dados.mensagem,
                         type: 'error',
                         confirmButtonText: 'Tente novamente...!'
                     })
