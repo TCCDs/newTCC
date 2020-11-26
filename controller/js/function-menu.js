@@ -85,7 +85,7 @@ $(document).ready(function() {
     })
 
     $('.receitas').click(function() {
-        $('#conteudo').load('client/receitas/index.php')
+        $('#conteudo').load('client/receitasMVC/partials/view/index.html')
         $('.saldo').hide();
         $('.menu').hide();
     })
