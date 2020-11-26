@@ -11,6 +11,9 @@ $(document).ready(function() {
         success: function(data) {
             var i = 0;
             while (data[i]) {
+                var totalPrecoVenda = dados[i].PRECO_VENDA_PRODUTOS
+                var resultValorMoedas = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalPrecoVenda);
+
                 let produtos = `
                     <ul class='screens animate'>
                         <li class='screen active'>
@@ -23,7 +26,7 @@ $(document).ready(function() {
                                     ` + data[i].NOME_PRODUTOS + `
                                 </h3>
 
-                                <h5 class="mt-4 text-light text-price"> R$ ` + data[i].PRECO_VENDA_PRODUTOS + ` </h5>
+                                <h5 class="mt-4 text-light text-price"> R$ ` + resultValorMoedas + ` </h5>
                                 <input type="text"  name="quantity" id="quantity` + data[i].ID_PRODUTOS + `" class="form-control" value="1" />
                                 <input type="hidden" name="hidden_name" id="name` + data[i].ID_PRODUTOS + `" value="` + data[i].NOME_PRODUTOS + `" />
                                 <input type="hidden" name="hidden_price" id="price` + data[i].ID_PRODUTOS + `" value="` + data[i].PRECO_VENDA_PRODUTOS + `" />

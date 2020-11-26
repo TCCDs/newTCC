@@ -23,6 +23,7 @@ $(document).ready(function() {
 
                 var totalCompras = dados[i].VALOR_COMPRAS
                 var resultValorCompras = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalCompras);
+                
                 let cupomSupermercadoCliente = `
                     <hr class="mt-2">
 

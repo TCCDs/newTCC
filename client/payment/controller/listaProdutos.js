@@ -49,7 +49,7 @@ $(document).ready(function() {
                                     </div>
 
                                     <div class="col-12 col-md-6">
-                                        <small> ` + dados[i].product_quantity * resultValorPreco + `</small>
+                                        <small> R$: ` + dados[i].product_quantity * dados[i].product_price + `</small>
                                     </div>
                                 </li>
                             </ul>
