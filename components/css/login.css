@@ -374,8 +374,8 @@ form input:valid+.label-input .content-input {
 .tr-carrinho {
     background: #61838b;
     color: white;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
+    border-top-right-radius: 8px !important;
+    border-top-left-radius: 8px !important;
 }
 
 .receitaCate {
