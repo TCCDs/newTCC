@@ -6,7 +6,7 @@
         <div "overflow-auto mt-2 tb-carrinho"id="order_table">
             <table class="table table-borderless text-center">
             <thead class="">
-            <tr>
+            <tr class="tr-carrinho">
               <th scope="col">Check</th>
               <th scope="col">Nome do Produto</th>
               <th scope="col">Quantidade</th>
@@ -21,7 +21,7 @@
         foreach($_SESSION["shopping_cart"] as $keys => $values) {
             $output .= '
             <tbody>
-                <tr class="tr-carrinho"> 
+                <tr > 
                     <td ><input type="checkbox" id="" name=""></td>
                     <td >'.$values["product_name"].'</td>
                     <td >'.$values["product_quantity"].'</td>
