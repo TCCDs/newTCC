@@ -366,6 +366,18 @@ form input:valid+.label-input .content-input {
     border-top-left-radius: 8px;
 }
 
+.tb-carrinho {
+    background: #116f7511;
+    border-radius: 8px;
+}
+
+.tr-carrinho {
+    background: #61838b;
+    color: white;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
 .receitaCate {
     background: #116f7511;
 }
