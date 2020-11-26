@@ -10,6 +10,9 @@ $(document).ready(function() {
         async: true,
         success: function(dados) {
             for (var i = 0; i < dados.length; i++) {
+                var totalPreco = dados[i].PRECO_PRODUTOS
+                var resultValorPreco = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalPreco);
+
                 let cupomSupermercado = `
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item text-center">
@@ -39,7 +42,7 @@ $(document).ready(function() {
                                 </div>
                                 <div class="row mt-1">
                                     <h6>
-                                        R$ ` + dados[i].PRECO_PRODUTOS + `
+                                         ` + resultValorPreco + `
                                     </h6>
                                 </div>
                             </div>
@@ -50,7 +53,7 @@ $(document).ready(function() {
                                 </div>
                                 <div class="row mt-1">
                                     <h6>
-                                        R$ ` + dados[i].PRECO_PRODUTOS * dados[i].QUANTIDADE_PRODUTOS + `
+                                         ` + resultValorPreco * dados[i].QUANTIDADE_PRODUTOS + `
                                     </h6>
                                 </div>
                             </div>

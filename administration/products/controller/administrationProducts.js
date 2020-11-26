@@ -20,10 +20,12 @@ $(document).ready(function() {
                 let dataAtual2 = new Date(dados[i].VALIDADE_PRODUTOS);
                 let dataAtualFormatada2 = (adicionaZero(dataAtual2.getDate().toString()) + "/" + (adicionaZero(dataAtual2.getMonth() + 1).toString()) + "/" + dataAtual2.getFullYear());
 
+                var totalPrecoVenda = dados[i].PRECO_VENDA_PRODUTOS
+                    var resultPrecoVenda = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalPrecoVenda);
                 let produtos = `
                 <tr>
                     <td class="text-center" width="40%"> ` + dados[i].NOME_PRODUTOS + ` </td>
-                    <td class="text-center" width="20%"> ` + dados[i].PRECO_VENDA_PRODUTOS + ` </td>
+                    <td class="text-center" width="20%"> ` + resultPrecoVenda + ` </td>
                     <td class="text-center" width="20%"> ` + dataAtualFormatada2 + ` </td>
                     <td class="text-center" width="15%">
                         <button id="` + dados[i].ID_PRODUTOS + `" class="btn btn-primary btn-sm btn-view-produtos"> <i class="mdi mdi-eye mdi-18px"></i> </button>

@@ -21,6 +21,8 @@ $(document).ready(function() {
                 let dataAtual2 = new Date(dados[i].DATA_CAD_MOEDAS);
                 let dataAtualFormatada2 = (adicionaZero(dataAtual2.getDate().toString()) + "/" + (adicionaZero(dataAtual2.getMonth() + 1).toString()) + "/" + dataAtual2.getFullYear());
 
+                var totalCompras = dados[i].VALOR_COMPRAS
+                var resultValorCompras = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalCompras);
                 let cupomSupermercadoCliente = `
                     <hr class="mt-2">
 
@@ -32,7 +34,7 @@ $(document).ready(function() {
                         </div>
                         <div class="col-6 col-md-6">
                             <h4>
-                                ` + dados[i].VALOR_COMPRAS + `
+                                ` + resultValorCompras + `
                             </h4>
                         </div>
                     </div>

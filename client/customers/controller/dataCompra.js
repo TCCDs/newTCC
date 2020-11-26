@@ -22,7 +22,7 @@ $(document).ready(function() {
 
                 let dataCompra = `
 
-                <h6 class="text-left dataCompra-cliente">` + dados[i].dataAtualFormatada2 + `</h6>
+                <h6 class="text-left dataCompra-cliente">` + dataAtualFormatada2 + `</h6>
                 `
                 $('.dataCompra-cliente').append(dataCompra)
             }

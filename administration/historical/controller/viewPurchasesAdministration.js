@@ -18,15 +18,11 @@ $(document).ready(function() {
             success: function(dados) {
                 for (var i = 0; dados.length > i; i++) {
                     var totalDesconto = dados[i].TOTAL_DESCONTO_COMPRAS
-                    var confMoedas = {
-                        style: "currency",
-                        currency: "BRL"
-                    }
-                    var resultTotalDesconto = totalDesconto.toLocaleString('pt-BR', confMoedas)
+                    var resultValorMoedas = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalDesconto);
                     
 
                     let historicoCompras = `
-                        <p> Total Desconto: ` + resultTotalDesconto + ` </p>
+                        <p> Total Desconto: ` + resultValorMoedas + ` </p>
                         <p> Total Itens: ` + dados[i].TOTAL_ITENS_COMPRAS + ` </p>
                         <p> Status: ` + dados[i].STATUS_COMPRAS + ` </p>
                     `

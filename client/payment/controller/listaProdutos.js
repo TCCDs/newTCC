@@ -10,6 +10,9 @@ $(document).ready(function() {
         async: true,
         success: function(dados) {
             for (var i = 0; i < dados.length; i++) {
+                var totalPreco = dados[i].product_price
+                var resultValorPreco = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalPreco);
+
                 let listaProdutos = `
                     <div class="mt-3 col-12 col-sm-6 col-md-4">
                         <div class="card">
@@ -36,7 +39,7 @@ $(document).ready(function() {
                                     </div>
 
                                     <div class="col-12 col-md-6">
-                                        <small>R$ ` + dados[i].product_price + `</small>
+                                        <small> ` + resultValorPreco + `</small>
                                     </div>
                                 </li>
 
@@ -46,7 +49,7 @@ $(document).ready(function() {
                                     </div>
 
                                     <div class="col-12 col-md-6">
-                                        <small>R$ ` + dados[i].product_quantity * dados[i].product_price + `</small>
+                                        <small> ` + dados[i].product_quantity * resultValorPreco + `</small>
                                     </div>
                                 </li>
                             </ul>

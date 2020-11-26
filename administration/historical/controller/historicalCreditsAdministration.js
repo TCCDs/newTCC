@@ -11,15 +11,7 @@ $(document).ready(function() {
         success: function(dados) {
             for (var i = 0; i < dados.length; i++) {
                 var valorMoedas = dados[i].VALOR_MOEDAS
-
-                /*var confMoedas = {
-                    style: "currency",
-                    currency: "BRL"
-                }*/
-
-                
-               var resultValorMoedas = parseFloat(valorMoedas).toFixed(2).replace('.', ',')
-               //var teste = resultValorMoedas.toLocaleString('pt-BR', confMoedas)
+                var resultValorMoedas = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valorMoedas);
 
                 let historicoMoedas = `
                 <div class="row ml-2">
@@ -28,7 +20,7 @@ $(document).ready(function() {
                         <div class="card-body">
                                 <h5 class="card-title text-dark">` + dados[i].NOME_CLIENTES + `</h5>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">R$: ` + resultValorMoedas + `</li>
+                                    <li class="list-group-item"> ` + resultValorMoedas + `</li>
                                     <li class="list-group-item"> <button id="` + dados[i].ID_MOEDAS + `" class="btn btn-outline-primary btn-block btn-sm btn-view-credito"> <i class="mdi mdi-eye mdi-18px"></i> </button>
                                     </li>
                                 </ul>
