@@ -95,10 +95,12 @@ $(document).ready(function() {
         $('.saldo').hide();
         $('.menu').hide();
         $('.bg-menu').hide();
+        $('#nav-receita').show();
+
 
     })
 
-    $('.nav-receita').hide();
+    $('#nav-receita').hide();
 
     $('.offer').click(function() {
         $('#conteudo').load('administration/offer/view/ofertas.html')

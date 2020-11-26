@@ -136,6 +136,12 @@
     border-radius: 10px;
 }
 
+.nav-receita {
+    background-image: linear-gradient(to bottom right, #116e75ef, rgb(72, 138, 138));
+    box-shadow: 0 0 1em #3a3f3f;
+    border-radius: 10px;
+}
+
 
 /*--------------------sidebar-brand----------------------*/
 
