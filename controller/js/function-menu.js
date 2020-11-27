@@ -80,12 +80,11 @@ $(document).ready(function() {
     $('.dados-usuario').click(function() {
         $('#conteudo').load('login/view/edit-usuario.html');
         $('.saldo').hide();
-        $('.menu').hide();
 
     })
 
     $('.receitas').click(function() {
-        $('#conteudo').load('client/receitas/index.php')
+        $('#conteudo').load('client/receitasMVC/partials/view/index.html')
         $('.saldo').hide();
         $('.menu').hide();
     })
@@ -95,8 +94,12 @@ $(document).ready(function() {
         $('.saldo').hide();
         $('.menu').hide();
         $('.bg-menu').hide();
+        $('#nav-receita').show();
+
 
     })
+
+    $('#nav-receita').hide();
 
     $('.offer').click(function() {
         $('#conteudo').load('administration/offer/view/ofertas.html')

@@ -12,7 +12,7 @@ hr {
 }
 
 #conteudo {
-    margin-bottom: 5em;
+    margin-bottom: 5em !important;
 }
 
 h2 {
@@ -364,6 +364,18 @@ form input:valid+.label-input .content-input {
     color: white;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
+}
+
+.tb-carrinho {
+    background: #116f7511;
+    border-radius: 8px;
+}
+
+.tr-carrinho {
+    background: #61838b;
+    color: white;
+    border-top-right-radius: 8px !important;
+    border-top-left-radius: 8px !important;
 }
 
 .receitaCate {

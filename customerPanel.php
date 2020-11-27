@@ -32,7 +32,42 @@
 </head>
 
 <body>
+<nav class="navbar navbar-expand-lg nav-receita " id="nav-receita">
+<img src="public/img/logo.png" alt="My Receitas" width="30" height="30" />
+    <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="mdi mdi-menu text-light"></span>
+    </button>
+    <div id="my-nav" class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
 
+                <li class="nav-item">
+                    <a class="nav-link home">Voltar às compras</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link categoria">Categorias</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link receita">Receitas</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link sobre">Sobre</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link pesquisar">Pesquisar</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="" method="POST">
+                <input class="form-control mr-sm-2" type="text" name="pesquisa" id="pesquisa" placeholder="Pesquisar" minlength="2" required>
+                <button class="btn btn-secondary my-2 my-sm-0" type="button">Pesquisar</button>
+            </form>
+
+    </div>
+</nav>
     <div class="page-wrapper chiller-theme toggled">
         <nav class="navbar navbar-dark bg-menu">
             <button class="navbar-toggler" id="show-sidebar" type="button">
@@ -63,7 +98,7 @@
                 <div class="sidebar-menu mt-2">
                     <ul>
                         <li class="lista">
-                            <a class="btn  text-left home">Home</a>
+                            <a class="btn text-left home">Home</a>
                         </li>
                         <!-- <li class="lista">
                             <a class="btn produtos-adm text-left produtos-cliente">Produtos</a>
@@ -95,8 +130,8 @@
                             <a class="btn historico-adm text-left testeLeitor">ver Produtos</a>
                         </li>
 
-                        <li class="">
-                            <a class="btn historico-adm text-left receitasMVC">receitasMVC</a>
+                        <li class="lista">
+                            <a class="btn historico-adm text-left receitasMVC">Receitas</a>
                         </li>
                     </ul>
                 </div>
