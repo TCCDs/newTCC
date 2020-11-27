@@ -80,7 +80,6 @@ $(document).ready(function() {
     $('.dados-usuario').click(function() {
         $('#conteudo').load('login/view/edit-usuario.html');
         $('.saldo').hide();
-        $('.menu').hide();
 
     })
 

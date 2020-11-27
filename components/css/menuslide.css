@@ -137,9 +137,22 @@
 }
 
 .nav-receita {
-    background-image: linear-gradient(to bottom right, #116e75ef, rgb(72, 138, 138));
+    background-image: linear-gradient(to bottom right, #287a74ef, rgb(72, 138, 138));
     box-shadow: 0 0 1em #3a3f3f;
     border-radius: 10px;
+    padding: 20px;
+}
+
+.nav-receita a {
+    text-decoration: none;
+    color: #f3f3f3;
+    cursor: pointer;
+}
+
+.nav-receita a:hover {
+    text-decoration: none;
+    color: #c4c4c4;
+    cursor: pointer;
 }
 
 

@@ -41,6 +41,10 @@
     <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item">
+                    <a class="nav-link home">Voltar às compras</a>
+                </li>
+
+                <li class="nav-item">
                     <a class="nav-link categoria">Categorias</a>
                 </li>
 
@@ -52,9 +56,6 @@
                     <a class="nav-link sobre">Sobre</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link home">Home</a>
-                </li>
 
                 <li class="nav-item">
                     <a class="nav-link pesquisar">Pesquisar</a>
@@ -97,7 +98,7 @@
                 <div class="sidebar-menu mt-2">
                     <ul>
                         <li class="lista">
-                            <a class="btn  text-left home">Home</a>
+                            <a class="btn text-left home">Home</a>
                         </li>
                         <!-- <li class="lista">
                             <a class="btn produtos-adm text-left produtos-cliente">Produtos</a>
