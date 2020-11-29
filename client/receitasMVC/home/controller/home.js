@@ -18,7 +18,7 @@ $(document).ready(function() {
                                 <a href="client/receitasMVC/receita/view/ver.html ` + dados[i].slug + `">
                                     <img src=" ` + dados[i].thumb + `" alt=" ` + dados[i].titulo + `" class="w-100 img-thumb" />
                                 </a>
-                                <a href="client/receitasMVC/receita/view/ver.html ` + dados[i].slug + `" class="btn btn-info w-100 mt-2">Acessar</a>
+                                <a href="client/receitasMVC/receita/view/ver.html ` + dados[i].slug + `" class="btn btn-receita w-100 mt-2">Acessar</a>
                             </div>
                         </div>
                     </div>

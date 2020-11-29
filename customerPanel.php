@@ -56,14 +56,10 @@
                     <a class="nav-link sobre">Sobre</a>
                 </li>
 
-
-                <li class="nav-item">
-                    <a class="nav-link pesquisar">Pesquisar</a>
-                </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" action="" method="POST">
-                <input class="form-control mr-sm-2" type="text" name="pesquisa" id="pesquisa" placeholder="Pesquisar" minlength="2" required>
-                <button class="btn btn-secondary my-2 my-sm-0" type="button">Pesquisar</button>
+                <input class="form-pesquisa mr-2" type="text" name="pesquisa" id="pesquisa" placeholder="Pesquisar" minlength="2" required>
+                <button class="btn btn-pesquisar my-2 my-sm-0" type="button">Pesquisar</button>
             </form>
 
     </div>
@@ -100,9 +96,7 @@
                         <li class="lista">
                             <a class="btn text-left home">Home</a>
                         </li>
-                        <!-- <li class="lista">
-                            <a class="btn produtos-adm text-left produtos-cliente">Produtos</a>
-                        </li> -->
+
                         <li class="lista">
                             <a class="btn text-left comprarProduto-cliente">Comprar</a>
                         </li>
@@ -114,12 +108,8 @@
                             <a class="btn historico-adm text-left credito-cliente">Crédito</a>
                         </li>
 
-                        <!-- <li class="lista">
-                            <a class="btn historico-adm text-left ctr-cliente">Perfil</a>
-                        </li> -->
-
                         <li class="lista">
-                            <a class="btn historico-adm text-left tax"> cupom</a>
+                            <a class="btn historico-adm text-left tax">Cupom</a>
                         </li>
 
                         <li class="lista">
@@ -127,7 +117,7 @@
                         </li>
                         
                         <li class="lista">
-                            <a class="btn historico-adm text-left testeLeitor">ver Produtos</a>
+                            <a class="btn historico-adm text-left testeLeitor">Ver Produtos</a>
                         </li>
 
                         <li class="lista">
@@ -181,7 +171,7 @@
                         </div>
                     </div>
                 </div>
-                <div class=" row  menu-rodape text-center">
+                <div class=" row  menu-rodape text-center" id="menu-rodape">
                     <div class="col-3 col-md-3">
                         <h4><i class="mdi mdi-hamburger text-light produtos-cliente"></i></h4>
                         <small class="text-light"> Produtos</small>

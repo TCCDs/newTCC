@@ -454,6 +454,11 @@
     padding: 5px;
 }
 
+.menu-rodape2 {
+    background: #145f4c;
+    padding: 5px;
+}
+
 .bg-menu {
     background-image: linear-gradient(to bottom right, #1c5160, rgb(72, 117, 138));
     border-bottom-right-radius: 12px;

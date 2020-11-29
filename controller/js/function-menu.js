@@ -95,6 +95,8 @@ $(document).ready(function() {
         $('.menu').hide();
         $('.bg-menu').hide();
         $('#nav-receita').show();
+        $('#menu-rodape').hide();
+
 
 
     })

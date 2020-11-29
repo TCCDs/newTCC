@@ -20,5 +20,5 @@
 
 .img-thumb:hover {
     filter: grayscale(0);
-    box-shadow: 0 0 10px red;
+    box-shadow: 0 0 10px rgb(75, 75, 75);
 }

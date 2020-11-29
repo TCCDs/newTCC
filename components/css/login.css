@@ -408,8 +408,44 @@ form input:valid+.label-input .content-input {
 }
 
 .btn-receitaEditar:hover {
+    background: #0e474def;
+    color: white;
+}
+
+.btn-pesquisar {
+    background: #116e75ef;
+    color: white;
+}
+
+.btn-pesquisar:hover {
     background: #092b2eef;
     color: white;
+}
+
+.btn-receita {
+    background: #116e75ef;
+    color: white;
+}
+
+.btn-receita:hover {
+    background: #0e474def;
+    color: white;
+}
+
+.form-pesquisa {
+    background: transparent;
+    border: none;
+    color: white;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.form-pesquisa::placeholder {
+    color: white;
+}
+
+.form-pesquisa:focus {
+    border: none;
+    outline: none;
 }
 
 @media (max-width: 576px) {
