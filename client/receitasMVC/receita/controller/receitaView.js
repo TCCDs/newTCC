@@ -3,7 +3,7 @@ $(document).ready(function() {
 
         e.preventDefault()
 
-        $('#modalReceita').modal('show')
+        alert('oi')
             // $('.modal-title').empty()
             // $('.modal-body').empty()
             // $('.modal-footer').empty()
