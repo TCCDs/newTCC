@@ -18,7 +18,7 @@ $(document).ready(function() {
                         <td> ` + dados[i].cattitulo + `</td>
                         <td> ` + dados[i].data + `</td>
                         <td>
-                            <button " class="btn btn-receitaEditar" data-toggle="modal" data-target="modalReceita"> 
+                            <button " class="btn" data-toggle="modal" data-target="modalReceita"> 
                                 Editar
                             </button>
 
