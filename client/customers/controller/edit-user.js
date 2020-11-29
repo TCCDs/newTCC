@@ -4,8 +4,8 @@ $(document).ready(function() {
 
         $('.modal-title').empty()
         $('.modal-body').empty()
-        $('.modal.footer').empty()
-        $('.modal.title').append('Edição de registro cadastrado')
+        $('.modal-footer').empty()
+        $('.modal-title').append('Edição de registro cadastrado')
 
         var url = "client/customers/model/viewCustomers.php"
         var dados = 'ID_CLIENTES='
@@ -101,7 +101,7 @@ $(document).ready(function() {
                                 </div>
                             </div>
 
-                            <button class="btn btn-block btn-primary btn-update"> <i class="mdi mdi-content-save"></i> Salvar </button>
+                            <button class="btn btn-block btnEditar btn-update"> Salvar </button>
                         </form>
                     `
 

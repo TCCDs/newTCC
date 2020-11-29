@@ -382,6 +382,16 @@ form input:valid+.label-input .content-input {
     background: #116f7511;
 }
 
+.btnEditar {
+    background: #116e75ef;
+    color: white;
+}
+
+.btnEditar:hover {
+    background: #092b2eef;
+    color: white;
+}
+
 .btn-categoriaEditar {
     background: #116e75ef;
     color: white;
