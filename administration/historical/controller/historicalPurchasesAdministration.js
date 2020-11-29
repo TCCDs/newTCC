@@ -31,7 +31,7 @@ $(document).ready(function() {
                 `
                 $('tbody').append(historicoCompras)
             }
-            $('body').append('<script src="administration/historical/controller/viewCreditsAdministration.js"></script>')
+            $('body').append('<script src="administration/historical/controller/viewPurchasesAdministration.js"></script>')
         }
     })
 })
