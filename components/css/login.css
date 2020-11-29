@@ -432,6 +432,11 @@ form input:valid+.label-input .content-input {
     color: white;
 }
 
+.card-receita {
+    background: #5e7779ef;
+    color: white;
+}
+
 .form-pesquisa {
     background: transparent;
     border: none;
