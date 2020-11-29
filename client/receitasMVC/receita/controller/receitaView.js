@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $('.btn-receitaView').click(function(e) {
+
         e.preventDefault()
 
         $('.modal-title').empty()
