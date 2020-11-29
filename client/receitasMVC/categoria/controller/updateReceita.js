@@ -2,10 +2,8 @@ $(document).ready(function() {
     $('.btn-update').click(function(e) {
         e.preventDefault()
 
-        var dados = $('#form-cliente').serialize()
+        var dados = $('#edit-categoria').serialize()
         var url = "client/receitasMVC/categoria/model/editar.php"
-
-        console.log(dados)
 
         $.ajax({
             type: 'POST',
@@ -18,26 +16,22 @@ $(document).ready(function() {
                     Swal.fire({
                         icon: 'success',
                         title: 'Supermercado Caravelas!',
-                        text: 'Cadastro efetuado com sucesso!',
+                        text: 'Alteração efetuada com sucesso!',
                         type: 'success',
                         confirmButtonText: 'Feito!'
                     })
-                    $('#conteudo').load('client/receitasMVC/categoria/view/categoria.html')
+
                 } else {
                     Swal.fire({
                         icon: 'error',
-                        title: 'Supermercado Caravelas!',
-                        text: dados.return,
+                        title: 'SupermercadoCaravelas!',
+                        text: dados.mensagem,
                         type: 'error',
                         confirmButtonText: 'Tente novamente...!'
                     })
                 }
-                $('#register_form input').val("")
-
-                $('#modal-cliente').modal('hide')
-                $('#table-cliente').DataTable().ajax.reload()
+                $('#modal-categoria').modal('hide')
             }
         })
     })
-
-});
+})
