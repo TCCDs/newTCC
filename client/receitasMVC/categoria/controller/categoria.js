@@ -23,7 +23,7 @@ $(document).ready(function() {
                 `
                 $('tbody').append(categoria)
             }
-            //$('body').append('<script src="site/categoria/controller/editar_categoria.js"></script>')
+            $('body').append('<script src="client/receitasMVC/categoria/controller/editar_categoria.js"></script>')
         }
     })
 })
