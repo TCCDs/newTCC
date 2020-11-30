@@ -46,7 +46,7 @@
         /* NOME ADMINISTRADOR */
         elseif (!preg_match("#[a-z]+#", $resultDados['NOME_ADMINISTRADOR'])):
             $erro = true;
-            $mensagem = "O campo NOME ADMINISTRADOR precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo NOME ADMINISTRADOR precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['NOME_ADMINISTRADOR'], "'")):
             $erro = true;
@@ -67,7 +67,7 @@
         
         elseif(!is_numeric($resultDados['RG_ADMINISTRADOR'])):
             $erro = true;
-            $mensagem = "RG ADMINISTRADOR somente numeros";
+            $mensagem = "RG ADMINISTRADOR somente números";
         
         elseif (((strlen($resultDados['RG_ADMINISTRADOR'])) < 9)):
             $erro = true;
@@ -84,16 +84,16 @@
         
         elseif(!is_numeric($resultDados['CPF_ADMINISTRADOR'])):
             $erro = true;
-            $mensagem = "CPF ADMINISTRADOR somente numeros";
+            $mensagem = "CPF ADMINISTRADOR somente números";
         
         elseif ($valida === false):
             $erro = true;
-            $mensagem = " CPF ADMINISTRADOR invalido";
+            $mensagem = " CPF ADMINISTRADOR inválido";
         
         /* SEXO ADMINISTRADOR */
         elseif (!preg_match("#[a-z]+#", $resultDados['SEXO_ADMINISTRADOR'])):
             $erro = true;
-            $mensagem = "O campo SEXO ADMINISTRADOR precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo SEXO ADMINISTRADOR precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['SEXO_ADMINISTRADOR'], "'")):
             $erro = true;
@@ -101,7 +101,7 @@
 
         elseif ((strlen($resultDados['SEXO_ADMINISTRADOR'])) >= 8 && 9 <= strlen($resultDados['SEXO_ADMINISTRADOR'])):
             $erro = true;
-            $mensagem = "SEXO ADMINISTRADOR deve ter no minímo 8  e maximo 9";
+            $mensagem = "SEXO ADMINISTRADOR deve ter no minímo 8  e máximo 9";
         
         /* DATA_NASCIMENTO_ADMINISTRADOR */
         elseif (!checkdate($validade[1], $validade[0], $validade[2])):
@@ -123,16 +123,16 @@
         
         elseif(!is_numeric($resultDados['CELULAR_ADMINISTRADOR'])):
             $erro = true;
-            $mensagem = "CELULAR ADMINISTRADOR somente numeros";
+            $mensagem = "CELULAR ADMINISTRADOR somente números";
         
         elseif ((strlen($resultDados['CELULAR_ADMINISTRADOR'])) < 11):
             $erro = true;
-            $mensagem = " CELULAR ADMINISTRADOR deve ter no maximo 11";
+            $mensagem = " CELULAR ADMINISTRADOR deve ter no máximo 11";
         
         /* EMAIL ADMINISTRADOR */
         elseif (!preg_match("#[a-z]+#", $resultDados['EMAIL_ADMINISTRADOR'])):
             $erro = true;
-            $mensagem = "O campo EMAIL ADMINISTRADOR precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo EMAIL ADMINISTRADOR precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['EMAIL_ADMINISTRADOR'], "'")):
             $erro = true;
@@ -140,12 +140,12 @@
 
         elseif ((!isset ($resultDados['EMAIL_ADMINISTRADOR']) || !filter_var($resultDados['EMAIL_ADMINISTRADOR'], FILTER_VALIDATE_EMAIL)) && !$erro):
             $erro = true;
-            $mensagem = "O campo EMAIL ADMINISTRADOR precisa de um endereço valido";
+            $mensagem = "O campo EMAIL ADMINISTRADOR precisa de um endereço válido";
 
         /* NACIONALIDADE ADMINISTRADOR */
         elseif (!preg_match("#[a-z]+#", $resultDados['NACIONALIDADE_ADMINISTRADOR'])):
             $erro = true;
-            $mensagem = "O campo NACIONALIDADE ADMINISTRADOR precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo NACIONALIDADE ADMINISTRADOR precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['NACIONALIDADE_ADMINISTRADOR'], "'")):
             $erro = true;
@@ -158,7 +158,7 @@
         /* COMPLEMENTO ADMINISTRADOR */
         elseif (!preg_match("#[a-z]+#", $resultDados['COMPLEMENTO_ADMINISTRADOR'])):
             $erro = true;
-            $mensagem = "O campo COMPLEMENTO ADMINISTRADOR precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo COMPLEMENTO ADMINISTRADOR precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['COMPLEMENTO_ADMINISTRADOR'], "'")):
             $erro = true;
@@ -179,7 +179,7 @@
         
         elseif(!is_numeric($resultDados['CEP_ADMINISTRADOR'])):
             $erro = true;
-            $mensagem = "CEP ADMINISTRADOR somente numeros";
+            $mensagem = "CEP ADMINISTRADOR somente números";
         
         elseif (((strlen($resultDados['CEP_ADMINISTRADOR'])) < 8)):
             $erro = true;
@@ -188,7 +188,7 @@
         /* CIDADE ADMINISTRADOR */
         elseif (!preg_match("#[a-z]+#", $resultDados['CIDADE_ADMINISTRADOR'])):
             $erro = true;
-            $mensagem = "O campo CIDADE ADMINISTRADOR precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo CIDADE ADMINISTRADOR precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['CIDADE_ADMINISTRADOR'], "'")):
             $erro = true;
@@ -201,7 +201,7 @@
         /* ESTADO ADMINISTRADOR */
         elseif (!preg_match("#[A-Z]+#", $resultDados['ESTADO_ADMINISTRADOR'])):
             $erro = true;
-            $mensagem = "O campo ESTADO ADMINISTRADOR precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo ESTADO ADMINISTRADOR precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['ESTADO_ADMINISTRADOR'], "'")):
             $erro = true;
@@ -214,7 +214,7 @@
         /* ENDERECO ADMINISTRADOR */
         elseif (!preg_match("#[a-z]+#", $resultDados['ENDERECO_ADMINISTRADOR'])):
             $erro = true;
-            $mensagem = "O campo ENDERECO ADMINISTRADOR precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo ENDERECO ADMINISTRADOR precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['ENDERECO_ADMINISTRADOR'], "'")):
             $erro = true;
@@ -231,20 +231,20 @@
         
         elseif (stristr($resultDados['NUMERO_ADMINISTRADOR'], "'")):
             $erro = true;
-            $mensagem = "Caracter ( ' ) utilizado no NUMERO ADMINISTRADOR é inválido";
+            $mensagem = "Caracter ( ' ) utilizado no NÚMERO ADMINISTRADOR é inválido";
         
         elseif(!is_numeric($resultDados['NUMERO_ADMINISTRADOR'])):
             $erro = true;
-            $mensagem = "NUMERO ADMINISTRADOR somente numeros";
+            $mensagem = "NÚMERO ADMINISTRADOR somente números";
         
         elseif (((strlen($resultDados['NUMERO_ADMINISTRADOR'])) < 1)):
             $erro = true;
-            $mensagem = " NUMERO ADMINISTRADOR deve ter no minímo 1 caracteres";
+            $mensagem = " NÚMERO ADMINISTRADOR deve ter no minímo 1 caracteres";
 
         /* BAIRRO ADMINISTRADOR */
         elseif (!preg_match("#[a-z]+#", $resultDados['BAIRRO_ADMINISTRADOR'])):
             $erro = true;
-            $mensagem = "O campo BAIRRO ADMINISTRADOR precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo BAIRRO ADMINISTRADOR precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['BAIRRO_ADMINISTRADOR'], "'")):
             $erro = true;
@@ -311,7 +311,7 @@
                 );
         
                 } catch (Exception $ex){
-                    $mensagem = "Erro ao cadastrar usuario";
+                    $mensagem = "Erro ao cadastrar usuário";
                     
                     $data = array(
                         'mensagem' => $mensagem

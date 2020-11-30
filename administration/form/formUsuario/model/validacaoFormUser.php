@@ -23,7 +23,7 @@
 
         elseif (!preg_match("#[a-z]+#", $resultDados['LOGIN_USUARIOS'])):
             $erro = true;
-            $mensagem = "O campo EMAIL CLIENTES precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo EMAIL CLIENTES precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['LOGIN_USUARIOS'], "'")):
             $erro = true;
@@ -31,11 +31,11 @@
 
         elseif ((!isset ($resultDados['LOGIN_USUARIOS']) || !filter_var($resultDados['LOGIN_USUARIOS'], FILTER_VALIDATE_EMAIL)) && !$erro):
             $erro = true;
-            $mensagem = "O campo email precisa de um endereço valido";
+            $mensagem = "O campo email precisa de um endereço válido";
 
         elseif ((strlen($resultDados['SENHA_USUARIOS'])) >= 8 && 16 <= strlen($resultDados['SENHA_USUARIOS'])):
             $erro = true;
-            $mensagem = "A senha deve ter no minímo 8 caracteres e no maximo 16";
+            $mensagem = "A senha deve ter no minímo 8 caracteres e no máximo 16";
 
         elseif (stristr($resultDados['SENHA_USUARIOS'], "'")):
             $erro = true;
@@ -47,11 +47,11 @@
 
         elseif (!preg_match("#[a-z]+#", $resultDados['SENHA_USUARIOS'])):
             $erro = true;
-            $mensagem = "A senha deve incluir pelo menos uma letra minuscula!";
+            $mensagem = "A senha deve incluir pelo menos uma letra minúscula!";
                 
         elseif (!preg_match("#[A-Z]+#", $resultDados['SENHA_USUARIOS'])):
             $erro = true;
-            $mensagem = "A senha deve incluir pelo menos um letra maiuscula!";
+            $mensagem = "A senha deve incluir pelo menos um letra maiúscula!";
         
         else:
             $sql = "SELECT ID_USUARIOS FROM login_usuarios WHERE LOGIN_USUARIOS = :LOGIN_USUARIOS ";
@@ -94,7 +94,7 @@
     
             } catch (Exception $ex){
                 //$data = array('return' => $ex->getMessage());
-                $mensagem = "Erro ao cadastrar usuario";
+                $mensagem = "Erro ao cadastrar usuário";
                 
                 $data = array(
                     'mensagem' => $mensagem

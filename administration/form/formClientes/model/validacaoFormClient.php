@@ -46,7 +46,7 @@
         /* NOME CLIENTES */
         elseif (!preg_match("#[a-z]+#", $resultDados['NOME_CLIENTES'])):
             $erro = true;
-            $mensagem = "O campo NOME CLIENTES precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo NOME CLIENTES precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['NOME_CLIENTES'], "'")):
             $erro = true;
@@ -67,7 +67,7 @@
         
         elseif(!is_numeric($resultDados['RG_CLIENTES'])):
             $erro = true;
-            $mensagem = "RG CLIENTES somente numeros";
+            $mensagem = "RG CLIENTES somente números";
         
         elseif (((strlen($resultDados['RG_CLIENTES'])) < 9)):
             $erro = true;
@@ -84,16 +84,16 @@
         
         elseif(!is_numeric($resultDados['CPF_CLIENTES'])):
             $erro = true;
-            $mensagem = "CPF CLIENTES somente numeros";
+            $mensagem = "CPF CLIENTES somente números";
         
         elseif ($valida === false):
             $erro = true;
-            $mensagem = " CPF CLIENTES invalido";
+            $mensagem = " CPF CLIENTES inválido";
         
         /* SEXO CLIENTES */
         elseif (!preg_match("#[a-z]+#", $resultDados['SEXO_CLIENTES'])):
             $erro = true;
-            $mensagem = "O campo SEXO CLIENTES precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo SEXO CLIENTES precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['SEXO_CLIENTES'], "'")):
             $erro = true;
@@ -101,7 +101,7 @@
 
         elseif ((strlen($resultDados['SEXO_CLIENTES'])) >= 8 && 9 <= strlen($resultDados['SEXO_CLIENTES'])):
             $erro = true;
-            $mensagem = "SEXO CLIENTES deve ter no minímo 8  e maximo 9";
+            $mensagem = "SEXO CLIENTES deve ter no minímo 8  e máximo 9";
         
         /* DATA_NASCIMENTO_CLIENTES */
         elseif (!checkdate($validade[1], $validade[0], $validade[2])):
@@ -123,16 +123,16 @@
         
         elseif(!is_numeric($resultDados['CELULAR_CLIENTES'])):
             $erro = true;
-            $mensagem = "CELULAR CLIENTES somente numeros";
+            $mensagem = "CELULAR CLIENTES somente números";
         
         elseif ((strlen($resultDados['CELULAR_CLIENTES'])) < 11):
             $erro = true;
-            $mensagem = " CELULAR CLIENTES deve ter no maximo 11";
+            $mensagem = " CELULAR CLIENTES deve ter no máximo 11";
         
         /* EMAIL CLIENTES */
         elseif (!preg_match("#[a-z]+#", $resultDados['EMAIL_CLIENTES'])):
             $erro = true;
-            $mensagem = "O campo EMAIL CLIENTES precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo EMAIL CLIENTES precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['EMAIL_CLIENTES'], "'")):
             $erro = true;
@@ -140,12 +140,12 @@
 
         elseif ((!isset ($resultDados['EMAIL_CLIENTES']) || !filter_var($resultDados['EMAIL_CLIENTES'], FILTER_VALIDATE_EMAIL)) && !$erro):
             $erro = true;
-            $mensagem = "O campo EMAIL CLIENTES precisa de um endereço valido";
+            $mensagem = "O campo EMAIL CLIENTES precisa de um endereço válido";
 
         /* NACIONALIDADE CLIENTES */
         elseif (!preg_match("#[a-z]+#", $resultDados['NACIONALIDADE_CLIENTES'])):
             $erro = true;
-            $mensagem = "O campo NACIONALIDADE CLIENTES precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo NACIONALIDADE CLIENTES precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['NACIONALIDADE_CLIENTES'], "'")):
             $erro = true;
@@ -158,7 +158,7 @@
         /* COMPLEMENTO CLIENTES */
         elseif (!preg_match("#[a-z]+#", $resultDados['COMPLEMENTO_CLIENTES'])):
             $erro = true;
-            $mensagem = "O campo COMPLEMENTO CLIENTES precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo COMPLEMENTO CLIENTES precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['COMPLEMENTO_CLIENTES'], "'")):
             $erro = true;
@@ -179,7 +179,7 @@
         
         elseif(!is_numeric($resultDados['CEP_CLIENTES'])):
             $erro = true;
-            $mensagem = "CEP CLIENTES somente numeros";
+            $mensagem = "CEP CLIENTES somente números";
         
         elseif (((strlen($resultDados['CEP_CLIENTES'])) < 8)):
             $erro = true;
@@ -188,7 +188,7 @@
         /* CIDADE CLIENTES */
         elseif (!preg_match("#[a-z]+#", $resultDados['CIDADE_CLIENTES'])):
             $erro = true;
-            $mensagem = "O campo CIDADE CLIENTES precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo CIDADE CLIENTES precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['CIDADE_CLIENTES'], "'")):
             $erro = true;
@@ -201,7 +201,7 @@
         /* ESTADO CLIENTES */
         elseif (!preg_match("#[A-Z]+#", $resultDados['ESTADO_CLIENTES'])):
             $erro = true;
-            $mensagem = "O campo ESTADO CLIENTES precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo ESTADO CLIENTES precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['ESTADO_CLIENTES'], "'")):
             $erro = true;
@@ -214,7 +214,7 @@
         /* ENDERECO CLIENTES */
         elseif (!preg_match("#[a-z]+#", $resultDados['ENDERECO_CLIENTES'])):
             $erro = true;
-            $mensagem = "O campo ENDERECO CLIENTES precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo ENDEREÇO CLIENTES precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['ENDERECO_CLIENTES'], "'")):
             $erro = true;
@@ -235,7 +235,7 @@
         
         elseif(!is_numeric($resultDados['NUMERO_CLIENTES'])):
             $erro = true;
-            $mensagem = "NUMERO CLIENTES somente numeros";
+            $mensagem = "NUMERO CLIENTES somente números";
         
         elseif (((strlen($resultDados['NUMERO_CLIENTES'])) < 1)):
             $erro = true;
@@ -244,7 +244,7 @@
         /* BAIRRO CLIENTES */
         elseif (!preg_match("#[a-z]+#", $resultDados['BAIRRO_CLIENTES'])):
             $erro = true;
-            $mensagem = "O campo BAIRRO CLIENTES precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo BAIRRO CLIENTES precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['BAIRRO_CLIENTES'], "'")):
             $erro = true;
@@ -313,7 +313,7 @@
             );
     
             } catch (Exception $ex){
-                $mensagem = "Erro ao cadastrar usuario";
+                $mensagem = "Erro ao cadastrar usuário";
                 
                 $data = array(
                     'mensagem' => $mensagem

@@ -31,7 +31,7 @@
             /* NOME PRODUTOS*/
         elseif (!preg_match("#[a-z]+#", $resultDados['NOME_PRODUTOS'])):
             $erro = true;
-            $mensagem = "O campo nome produtos precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo nome produtos precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['NOME_PRODUTOS'], "'")):
             $erro = true;
@@ -52,7 +52,7 @@
         
         elseif (!is_numeric($resultDados['PRECO_CUSTO_PRODUTOS'])):
             $erro = true;
-            $mensagem = "PRECO CUSTO somente numeros";
+            $mensagem = "PRECO CUSTO somente números";
 
         /* PRECO VENDA */
         elseif (!preg_match("#[0-9]+#", $resultDados['PRECO_VENDA_PRODUTOS'])):
@@ -65,12 +65,12 @@
         
         elseif(!is_numeric($resultDados['PRECO_VENDA_PRODUTOS'])):
             $erro = true;
-            $mensagem = "PRECO VENDA somente numeros";
+            $mensagem = "PRECO VENDA somente números";
 
         /* PESO */
         elseif (!preg_match("#[a-z]+#", $resultDados['PESO_PRODUTOS'])):
             $erro = true;
-            $mensagem = "O campo peso precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo peso precisa de pelo menos uma letra minúscula";
             
         elseif (stristr($resultDados['PESO_PRODUTOS'], "'")):
             $erro = true;
@@ -83,18 +83,18 @@
         /* Validade */
         elseif (!checkdate($validade[1], $validade[0], $validade[2])):
             $erro = true;
-            $mensagem = "DATA INVALIDA";
+            $mensagem = "DATA INVÁLIDA";
         elseif (strtotime($resultDados['VALIDADE_PRODUTOS']) < strtotime($data_atual)):
             $erro = true;
             $mensagem = "PRODUTO VENCIDO";
         elseif (strtotime($resultDados['VALIDADE_PRODUTOS']) == strtotime($data_atual)):
             $erro = true;
-            $mensagem = "PRODUTO COM VENCIMENTO HJ";
+            $mensagem = "PRODUTO COM VENCIMENTO HOJE";
 
         /* DESCRICAO */
         elseif (!preg_match("#[a-z]+#", $resultDados['DESCRICAO_PRODUTOS'])):
             $erro = true;
-            $mensagem = "O campo descricao produtos precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo descrição produtos precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['DESCRICAO_PRODUTOS'], "'")):
             $erro = true;
@@ -102,7 +102,7 @@
 
         elseif ((strlen($dados['DESCRICAO_PRODUTOS'])) <= 5):
             $erro = true;
-            $mensagem = "descricao deve ter no minímo 3";
+            $mensagem = "descrição deve ter no minímo 3";
 
         /* QR CODE */
         elseif (!preg_match("#[0-9]+#", $resultDados['QR_CODE_PRODUTOS'])):
@@ -115,7 +115,7 @@
         
         elseif(!is_numeric($resultDados['QR_CODE_PRODUTOS'])):
             $erro = true;
-            $mensagem = "QR CODE somente numeros";
+            $mensagem = "QR CODE somente números";
         
         elseif (((strlen($resultDados['QR_CODE_PRODUTOS'])) < 8)):
             $erro = true;
@@ -132,7 +132,7 @@
         
         elseif(!is_numeric($resultDados['ESTOQUE_PRODUTOS'])):
             $erro = true;
-            $mensagem = "estoque somente numeros";
+            $mensagem = "estoque somente números";
         
         elseif ($resultDados['ESTOQUE_PRODUTOS'] < 50):
             $erro = true;
@@ -141,7 +141,7 @@
         /* CATEGORIAS PRODUTOS */
         elseif (!preg_match("#[a-z]+#", $resultDados['CATEGORIAS_PRODUTOS'])):
             $erro = true;
-            $mensagem = "O campo categorias produtos precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo categorias produtos precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['CATEGORIAS_PRODUTOS'], "'")):
             $erro = true;
@@ -149,12 +149,12 @@
 
         elseif ((strlen($dados['CATEGORIAS_PRODUTOS'])) <= 3):
             $erro = true;
-            $mensagem = "categorias produtos deve ter no minimo 3";
+            $mensagem = "categorias produtos deve ter no minímo 3";
 
         /* CORREDOR PRODUTOS */
         elseif (!preg_match("#[A-Z]+#", $resultDados['CORREDOR_PRODUTOS'])):
             $erro = true;
-            $mensagem = "O campo CORREDOR PRODUTOS precisa de pelo menos uma letra maiuscula";
+            $mensagem = "O campo CORREDOR PRODUTOS precisa de pelo menos uma letra maiúscula";
         
         elseif (stristr($resultDados['CORREDOR_PRODUTOS'], "'")):
             $erro = true;
@@ -167,7 +167,7 @@
         /* PRATILEIRA PRODUTOS */
         elseif (!preg_match("#[A-Z]+#", $resultDados['PRATILEIRA_PRODUTOS'])):
             $erro = true;
-            $mensagem = "O campo PRATILEIRA PRODUTOS precisa de pelo menos uma letra maiuscula";
+            $mensagem = "O campo PRATILEIRA PRODUTOS precisa de pelo menos uma letra maiúscula";
         
         elseif (stristr($resultDados['PRATILEIRA_PRODUTOS'], "'")):
             $erro = true;
@@ -175,12 +175,12 @@
 
         elseif ((strlen($dados['PRATILEIRA_PRODUTOS'])) > 1):
             $erro = true;
-            $mensagem = "PRATILEIRA PRODUTOS deve ter 1 letr";
+            $mensagem = "PRATILEIRA PRODUTOS deve ter 1 letra";
 
         /* LOTE */
         elseif ((strlen($resultDados['LOTE_PRODUTOS'])) >= 4 && 12 <= strlen($resultDados['LOTE_PRODUTOS'])):
             $erro = true;
-            $mensagem = "O LOTE deve ter no minímo 4 caracteres e no maximo 12";
+            $mensagem = "O LOTE deve ter no minímo 4 caracteres e no máximo 12";
 
         elseif (stristr($resultDados['LOTE_PRODUTOS'], "'")):
             $erro = true;
@@ -192,12 +192,12 @@
                 
         elseif (!preg_match("#[a-z]+#", $resultDados['LOTE_PRODUTOS'])):
             $erro = true;
-            $mensagem = "O LOTE deve incluir pelo menos um letra maiuscula!";
+            $mensagem = "O LOTE deve incluir pelo menos um letra maiúscula!";
 
         /* STATUS PRODUTOS */
         elseif (!preg_match("#[A-Z]+#", $resultDados['STATUS_PRODUTOS'])):
             $erro = true;
-            $mensagem = "O campo STATUS PRODUTOS precisa de pelo menos uma letra maiuscula";
+            $mensagem = "O campo STATUS PRODUTOS precisa de pelo menos uma letra maiúscula";
         
         elseif (stristr($resultDados['STATUS_PRODUTOS'], "'")):
             $erro = true;
@@ -205,7 +205,7 @@
 
         elseif ((strlen($dados['STATUS_PRODUTOS'])) > 1):
             $erro = true;
-            $mensagem = "STATUS PRODUTOS deve ter 1 letr";
+            $mensagem = "STATUS PRODUTOS deve ter 1 letra";
 
         else:
             $sql = "SELECT ID_PRODUTOS FROM produtos WHERE QR_CODE_PRODUTOS = :QR_CODE_PRODUTOS ";
@@ -258,7 +258,7 @@
                 );
     
             } catch (Exception $ex){
-                $mensagem = "Erro ao cadastrar usuario";
+                $mensagem = "Erro ao cadastrar usuário";
                 
                 $data = array(
                     'mensagem' => $mensagem

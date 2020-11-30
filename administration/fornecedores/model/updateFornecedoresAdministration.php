@@ -47,7 +47,7 @@
         /* NOME FANTASIA FORNECEDORES */
         elseif (!preg_match("#[a-z]+#", $resultDados['NOME_FANTASIA_FORNECEDORES'])):
             $erro = true;
-            $mensagem = "O campo NOME FANTASIA FORNECEDORES precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo NOME FANTASIA FORNECEDORES precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['NOME_FANTASIA_FORNECEDORES'], "'")):
             $erro = true;
@@ -60,11 +60,11 @@
         /* RAZAO SOCIAL FORNECEDORES */
         elseif (!preg_match("#[a-z]+#", $resultDados['RAZAO_SOCIAL_FORNECEDORES'])):
             $erro = true;
-            $mensagem = "O campo RAZAO SOCIAL FORNECEDORES precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo RAZÃO SOCIAL FORNECEDORES precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['RAZAO_SOCIAL_FORNECEDORES'], "'")):
             $erro = true;
-            $mensagem = "Caracter ( ' ) utilizado no RAZAO SOCIAL FORNECEDORES é inválido";
+            $mensagem = "Caracter ( ' ) utilizado no RAZÃO SOCIAL FORNECEDORES é inválido";
 
         elseif ((strlen($resultDados['RAZAO_SOCIAL_FORNECEDORES'])) <= 5):
             $erro = true;
@@ -81,16 +81,16 @@
         
         elseif(!is_numeric($resultDados['CNPJ_FORNECEDORES'])):
             $erro = true;
-            $mensagem = "CNPJ FORNECEDORES somente numeros";
+            $mensagem = "CNPJ FORNECEDORES somente números";
         
         elseif ($valida === false):
             $erro = true;
-            $mensagem = " CNPJ FORNECEDORES invalido";
+            $mensagem = " CNPJ FORNECEDORES inválido";
 
         /* EMAIL FORNECEDORES */
         elseif (!preg_match("#[a-z]+#", $resultDados['EMAIL_FORNECEDORES'])):
             $erro = true;
-            $mensagem = "O campo EMAIL FORNECEDORES precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo EMAIL FORNECEDORES precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['EMAIL_FORNECEDORES'], "'")):
             $erro = true;
@@ -111,16 +111,16 @@
         
         elseif(!is_numeric($resultDados['CELULAR_FORNECEDORES'])):
             $erro = true;
-            $mensagem = "CELULAR FORNECEDORES somente numeros";
+            $mensagem = "CELULAR FORNECEDORES somente números";
         
         elseif ((strlen($resultDados['CELULAR_FORNECEDORES'])) < 11):
             $erro = true;
-            $mensagem = " CELULAR FORNECEDORES deve ter no maximo 11";
+            $mensagem = " CELULAR FORNECEDORES deve ter no máximo 11";
         
         /* SEXO FORNECEDORES */
         elseif (!preg_match("#[a-z]+#", $resultDados['SEXO_FORNECEDORES'])):
             $erro = true;
-            $mensagem = "O campo SEXO FORNECEDORES precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo SEXO FORNECEDORES precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['SEXO_FORNECEDORES'], "'")):
             $erro = true;
@@ -128,7 +128,7 @@
 
         elseif ((strlen($resultDados['SEXO_FORNECEDORES'])) >= 8 && 9 <= strlen($resultDados['SEXO_FORNECEDORES'])):
             $erro = true;
-            $mensagem = "SEXO FORNECEDORES deve ter no minímo 8  e maximo 9";
+            $mensagem = "SEXO FORNECEDORES deve ter no minímo 8  e máximo 9";
         
         /* DATA_NASCIMENTO_FORNECEDORES */
         elseif (!checkdate($validade[1], $validade[0], $validade[2])):
@@ -142,7 +142,7 @@
         /* NACIONALIDADE FORNECEDORES */
         elseif (!preg_match("#[a-z]+#", $resultDados['NACIONALIDADE_FORNECEDORES'])):
             $erro = true;
-            $mensagem = "O campo NACIONALIDADE FORNECEDORES precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo NACIONALIDADE FORNECEDORES precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['NACIONALIDADE_FORNECEDORES'], "'")):
             $erro = true;
@@ -155,7 +155,7 @@
         /* COMPLEMENTO FORNECEDORES */
         elseif (!preg_match("#[a-z]+#", $resultDados['COMPLEMENTO_FORNECEDORES'])):
             $erro = true;
-            $mensagem = "O campo COMPLEMENTO FORNECEDORES precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo COMPLEMENTO FORNECEDORES precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['COMPLEMENTO_FORNECEDORES'], "'")):
             $erro = true;
@@ -176,7 +176,7 @@
         
         elseif(!is_numeric($resultDados['CEP_FORNECEDORES'])):
             $erro = true;
-            $mensagem = "CEP FORNECEDORES somente numeros";
+            $mensagem = "CEP FORNECEDORES somente números";
         
         elseif (((strlen($resultDados['CEP_FORNECEDORES'])) < 8)):
             $erro = true;
@@ -185,7 +185,7 @@
         /* CIDADE FORNECEDORES */
         elseif (!preg_match("#[a-z]+#", $resultDados['CIDADE_FORNECEDORES'])):
             $erro = true;
-            $mensagem = "O campo CIDADE FORNECEDORES precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo CIDADE FORNECEDORES precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['CIDADE_FORNECEDORES'], "'")):
             $erro = true;
@@ -198,7 +198,7 @@
         /* ESTADO FORNECEDORES */
         elseif (!preg_match("#[A-Z]+#", $resultDados['ESTADO_FORNECEDORES'])):
             $erro = true;
-            $mensagem = "O campo ESTADO FORNECEDORES precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo ESTADO FORNECEDORES precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['ESTADO_FORNECEDORES'], "'")):
             $erro = true;
@@ -211,11 +211,11 @@
         /* ENDERECO FORNECEDORES */
         elseif (!preg_match("#[a-z]+#", $resultDados['ENDERECO_FORNECEDORES'])):
             $erro = true;
-            $mensagem = "O campo ENDERECO FORNECEDORES precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo ENDERECO FORNECEDORES precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['ENDERECO_FORNECEDORES'], "'")):
             $erro = true;
-            $mensagem = "Caracter ( ' ) utilizado no ENDERECO FORNECEDORES é inválido";
+            $mensagem = "Caracter ( ' ) utilizado no ENDEREÇO FORNECEDORES é inválido";
 
         elseif ((strlen($resultDados['ENDERECO_FORNECEDORES'])) <= 5):
             $erro = true;
@@ -224,24 +224,24 @@
         /* NUMERO FORNECEDORES */
         elseif (!preg_match("#[0-9]+#", $resultDados['NUMERO_FORNECEDORES'])):
             $erro = true;
-            $mensagem = "O NUMERO FORNECEDORES deve incluir pelo menos um número!";
+            $mensagem = "O NÚMERO FORNECEDORES deve incluir pelo menos um número!";
         
         elseif (stristr($resultDados['NUMERO_FORNECEDORES'], "'")):
             $erro = true;
-            $mensagem = "Caracter ( ' ) utilizado no NUMERO FORNECEDORES é inválido";
+            $mensagem = "Caracter ( ' ) utilizado no NÚMERO FORNECEDORES é inválido";
         
         elseif(!is_numeric($resultDados['NUMERO_FORNECEDORES'])):
             $erro = true;
-            $mensagem = "NUMERO FORNECEDORES somente numeros";
+            $mensagem = "NUMERO FORNECEDORES somente números";
         
         elseif (((strlen($resultDados['NUMERO_FORNECEDORES'])) < 1)):
             $erro = true;
-            $mensagem = " NUMERO FORNECEDORES deve ter no minímo 1 caracteres";
+            $mensagem = " NÚMERO FORNECEDORES deve ter no minímo 1 caracteres";
 
         /* BAIRRO FORNECEDORES */
         elseif (!preg_match("#[a-z]+#", $resultDados['BAIRRO_FORNECEDORES'])):
             $erro = true;
-            $mensagem = "O campo BAIRRO FORNECEDORES precisa de pelo menos uma letra minuscula";
+            $mensagem = "O campo BAIRRO FORNECEDORES precisa de pelo menos uma letra minúscula";
         
         elseif (stristr($resultDados['BAIRRO_FORNECEDORES'], "'")):
             $erro = true;
@@ -313,7 +313,7 @@
                 );
     
             } catch (Exception $ex){
-                $mensagem = "Erro ao cadastrar usuario";
+                $mensagem = "Erro ao cadastrar usuário";
                 
                 $data = array(
                     'mensagem' => $mensagem
