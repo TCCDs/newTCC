@@ -14,8 +14,8 @@ $(document).ready(function() {
                 var resultValorPreco = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalPreco);
 
                 var resultQuantidade = dados[i].QUANTIDADE_PRODUTOS
-                var subTotal = (resultValorPreco * resultQuantidade)
-
+                var subTotal = resultValorPreco * resultQuantidade
+                
                 var resultSubTotal = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(subTotal);
 
                 let cupomSupermercado = `
