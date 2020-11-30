@@ -53,7 +53,7 @@ $(document).ready(function() {
                                 </div>
                                 <div class="row mt-1">
                                     <h6>
-                                        R$: ` + dados[i].product_price * dados[i].QUANTIDADE_PRODUTOS + `
+                                        R$: ` + dados[i].PRECO_PRODUTOS * dados[i].QUANTIDADE_PRODUTOS + `
                                     </h6>
                                 </div>
                             </div>
