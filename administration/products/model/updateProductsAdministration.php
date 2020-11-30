@@ -16,7 +16,6 @@
         $dados_strs = array_map('stripslashes', $dados_strc);
         $resultDados = array_map('trim', $dados_strs);
 
-        exit;
         /* validade */
         $validade = explode('/', $resultDados['VALIDADE_PRODUTOS']);
         $dataImplode = implode("-",$validade);
