@@ -127,7 +127,7 @@
                 </div>
             </div>
             <div class="sidebar-footer logout">
-                <a href="#">
+                <a href="login/model/sair.php">
                     <i class="mdi mdi-power"></i>
                 </a>
             </div>
