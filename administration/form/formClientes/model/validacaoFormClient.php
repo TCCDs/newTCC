@@ -99,7 +99,7 @@
             $erro = true;
             $mensagem = "Caracter ( ' ) utilizado no SEXO CLIENTES é inválido";
 
-        elseif ((strlen($resultDados['SEXO_CLIENTES'])) >= 7 ):
+        elseif ((strlen($resultDados['SEXO_CLIENTES'])) >= 2 ):
             $erro = true;
             $mensagem = "SEXO CLIENTES deve ter no minímo 8  e máximo 9";
         
