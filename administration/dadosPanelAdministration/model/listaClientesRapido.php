@@ -5,10 +5,11 @@
     $sql = "SELECT 
                 clientes.ID_CLIENTES,
                 clientes.NOME_CLIENTES, 
-                clientes.EMAIL_CLIENTES,
+                login_usuarios.LOGIN_USUARIOS,
                 clientes.CELULAR_CLIENTES 
             FROM 
                 clientes
+            INNER JOIN login_usuarios ON clientes.ID_USUARIOS = login_usuarios.ID_USUARIOS
             ORDER BY clientes.ID_CLIENTES DESC LIMIT 10";
 
     $resultado = $conn->getConn()->prepare($sql);
