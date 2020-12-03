@@ -252,7 +252,7 @@
 			    $mensagem = "Este CPF já está sendo utilizado";
             endif;
 
-            $sql = "SELECT ID_CLIENTES FROM clientes WHERE clientes.EMAIL_CLIENTES = :EMAIL_CLIENTES ";
+            /*$sql = "SELECT ID_CLIENTES FROM clientes WHERE clientes.EMAIL_CLIENTES = :EMAIL_CLIENTES ";
             $resultado = $conn->getConn()->prepare($sql);
             $resultado->bindParam(':EMAIL_CLIENTES', $resultDados['EMAIL_CLIENTES']);
             $resultado->execute();
@@ -260,7 +260,7 @@
 		    if(($resultado) AND ($resultado->rowCount() != 0)):
 			    $erro = true;
 			    $mensagem = "Este e-mail já está sendo utilizado";
-            endif;
+            endif;*/
         endif;
 
         if (!$erro):
