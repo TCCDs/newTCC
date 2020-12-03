@@ -13,7 +13,6 @@ $(document).ready(function() {
                 let listaClientesRapido = `
                 <tr>
                     <td class="text-center" width="40%"> ` + dados[i].NOME_CLIENTES + ` </td>
-                    <td class="text-center" width="20%"> ` + dados[i].EMAIL_CLIENTES + ` </td>
                     <td class="text-center" width="20%"> ` + dados[i].CELULAR_CLIENTES + ` </td>
                 </tr>
                 `
@@ -22,3 +21,5 @@ $(document).ready(function() {
         }
     })
 })
+
+//td class="text-center" width="20%"> ` + dados[i].EMAIL_CLIENTES + ` </td>
