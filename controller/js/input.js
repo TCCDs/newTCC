@@ -5,11 +5,14 @@ $(document).ready(function() {
     $('#CELULAR_CLIENTES').mask('(99) 99999-9999')
     $('#DATA_NASCIMENTO_CLIENTES').mask('99/99/9999')
     $('#CEP_CLIENTES').cep();
+
     $('#VALIDADE_PRODUTOS').mask('99/99/9999')
+
     $('#CNPJ_FORNECEDORES').mask(' 99.999.999/9999-99')
     $('#CELULAR_FORNECEDORES').mask('(99) 99999-9999')
     $('#DATA_NASCIMENTO_FORNECEDORES').mask('99/99/9999')
     $('#CEP_FORNECEDORES').cep();
+    
     $('#CPF_ADMINISTRADOR').mask('999.999.999 - 99')
     $('#RG_ADMINISTRADOR').mask('99.999.999-9')
     $('#CELULAR_ADMINISTRADOR').mask('(99) 99999-9999')
