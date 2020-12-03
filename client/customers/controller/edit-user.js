@@ -25,17 +25,6 @@ $(document).ready(function() {
                             <div class="row">
                                 <div class="col-12 col-md-12">
                                     <div class=" form-group form">
-                                        <input type="text" name="EMAIL_CLIENTES" id="EMAIL_CLIENTES" aria-autocomplete="off" required value="` + dados[i].EMAIL_CLIENTES + `">
-                                        <label for="EMAIL_CLIENTES" class="label-input">
-                                            <span class="content-input">Email</span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-md-12">
-                                    <div class=" form-group form">
                                         <input type="text" name="NOME_CLIENTES" id="NOME_CLIENTES" aria-autocomplete="off" required value="` + dados[i].NOME_CLIENTES + `">
                                         <label for="NOME_CLIENTES" class="label-input">
                                             <span class="content-input">Nome</span>

@@ -128,19 +128,6 @@
         elseif ((strlen($resultDados['CELULAR_CLIENTES'])) < 11):
             $erro = true;
             $mensagem = " CELULAR CLIENTES deve ter no máximo 11";
-        
-        /* EMAIL CLIENTES */
-        elseif (!preg_match("#[a-z]+#", $resultDados['EMAIL_CLIENTES'])):
-            $erro = true;
-            $mensagem = "O campo EMAIL CLIENTES precisa de pelo menos uma letra minúscula";
-        
-        elseif (stristr($resultDados['EMAIL_CLIENTES'], "'")):
-            $erro = true;
-            $mensagem = "Caracter ( ' ) utilizado no EMAIL CLIENTES é inválido";
-
-        elseif ((!isset ($resultDados['EMAIL_CLIENTES']) || !filter_var($resultDados['EMAIL_CLIENTES'], FILTER_VALIDATE_EMAIL)) && !$erro):
-            $erro = true;
-            $mensagem = "O campo EMAIL CLIENTES precisa de um endereço válido";
 
         /* NACIONALIDADE CLIENTES */
         elseif (!preg_match("#[a-z]+#", $resultDados['NACIONALIDADE_CLIENTES'])):
@@ -278,8 +265,8 @@
 
         if (!$erro):
             try{
-                $sql = "INSERT INTO clientes (ID_USUARIOS, NOME_CLIENTES, RG_CLIENTES, CPF_CLIENTES, SEXO_CLIENTES, DATA_NASCIMENTO_CLIENTES, EMAIL_CLIENTES, CELULAR_CLIENTES, CEP_CLIENTES, CIDADE_CLIENTES, ESTADO_CLIENTES, ENDERECO_CLIENTES, NUMERO_CLIENTES, BAIRRO_CLIENTES, NACIONALIDADE_CLIENTES, COMPLEMENTO_CLIENTES)
-                VALUES (:ID_USUARIOS, :NOME_CLIENTES, :RG_CLIENTES, :CPF_CLIENTES, :SEXO_CLIENTES, :DATA_NASCIMENTO_CLIENTES, :EMAIL_CLIENTES, :CELULAR_CLIENTES, :CEP_CLIENTES, :CIDADE_CLIENTES, :ESTADO_CLIENTES, :ENDERECO_CLIENTES, :NUMERO_CLIENTES, :BAIRRO_CLIENTES, :NACIONALIDADE_CLIENTES, :COMPLEMENTO_CLIENTES)
+                $sql = "INSERT INTO clientes (ID_USUARIOS, NOME_CLIENTES, RG_CLIENTES, CPF_CLIENTES, SEXO_CLIENTES, DATA_NASCIMENTO_CLIENTES, CELULAR_CLIENTES, CEP_CLIENTES, CIDADE_CLIENTES, ESTADO_CLIENTES, ENDERECO_CLIENTES, NUMERO_CLIENTES, BAIRRO_CLIENTES, NACIONALIDADE_CLIENTES, COMPLEMENTO_CLIENTES)
+                VALUES (:ID_USUARIOS, :NOME_CLIENTES, :RG_CLIENTES, :CPF_CLIENTES, :SEXO_CLIENTES, :DATA_NASCIMENTO_CLIENTES, :CELULAR_CLIENTES, :CEP_CLIENTES, :CIDADE_CLIENTES, :ESTADO_CLIENTES, :ENDERECO_CLIENTES, :NUMERO_CLIENTES, :BAIRRO_CLIENTES, :NACIONALIDADE_CLIENTES, :COMPLEMENTO_CLIENTES)
                     ";
 
     
@@ -290,7 +277,6 @@
                 ':CPF_CLIENTES'                 => $resultDados["CPF_CLIENTES"],
                 ':SEXO_CLIENTES'                => $resultDados["SEXO_CLIENTES"],
                 ':DATA_NASCIMENTO_CLIENTES'     => $resultDados['DATA_NASCIMENTO_CLIENTES'],
-                ':EMAIL_CLIENTES'               => $resultDados["EMAIL_CLIENTES"],
                 ':CELULAR_CLIENTES'             => $resultDados["CELULAR_CLIENTES"],
                 ':CEP_CLIENTES'                 => $resultDados["CEP_CLIENTES"],
                 ':CIDADE_CLIENTES'              => $resultDados["CIDADE_CLIENTES"],

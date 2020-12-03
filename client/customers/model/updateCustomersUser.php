@@ -129,19 +129,6 @@
             $erro = true;
             $mensagem = " CELULAR CLIENTES deve ter no maximo 11";
         
-        /* EMAIL CLIENTES */
-        elseif (!preg_match("#[a-z]+#", $resultDados['EMAIL_CLIENTES'])):
-            $erro = true;
-            $mensagem = "O campo EMAIL CLIENTES precisa de pelo menos uma letra minuscula";
-        
-        elseif (stristr($resultDados['EMAIL_CLIENTES'], "'")):
-            $erro = true;
-            $mensagem = "Caracter ( ' ) utilizado no EMAIL CLIENTES é inválido";
-
-        elseif ((!isset ($resultDados['EMAIL_CLIENTES']) || !filter_var($resultDados['EMAIL_CLIENTES'], FILTER_VALIDATE_EMAIL)) && !$erro):
-            $erro = true;
-            $mensagem = "O campo EMAIL CLIENTES precisa de um endereço valido";
-
         /* NACIONALIDADE CLIENTES */
         elseif (!preg_match("#[a-z]+#", $resultDados['NACIONALIDADE_CLIENTES'])):
             $erro = true;
@@ -179,7 +166,7 @@
         if (!$erro):
 
             try {
-                $sql = "UPDATE clientes SET EMAIL_CLIENTES = :EMAIL_CLIENTES, NOME_CLIENTES = :NOME_CLIENTES, CPF_CLIENTES = :CPF_CLIENTES, RG_CLIENTES = :RG_CLIENTES, DATA_NASCIMENTO_CLIENTES = :DATA_NASCIMENTO_CLIENTES, SEXO_CLIENTES = :SEXO_CLIENTES, NACIONALIDADE_CLIENTES = :NACIONALIDADE_CLIENTES, CELULAR_CLIENTES = :CELULAR_CLIENTES  WHERE ID_CLIENTES = :ID_CLIENTES";
+                $sql = "UPDATE clientes SET NOME_CLIENTES = :NOME_CLIENTES, CPF_CLIENTES = :CPF_CLIENTES, RG_CLIENTES = :RG_CLIENTES, DATA_NASCIMENTO_CLIENTES = :DATA_NASCIMENTO_CLIENTES, SEXO_CLIENTES = :SEXO_CLIENTES, NACIONALIDADE_CLIENTES = :NACIONALIDADE_CLIENTES, CELULAR_CLIENTES = :CELULAR_CLIENTES  WHERE ID_CLIENTES = :ID_CLIENTES";
 
                 $user_data = array(
                     ':NOME_CLIENTES'                => $resultDados["NOME_CLIENTES"],
@@ -187,7 +174,6 @@
                     ':CPF_CLIENTES'                 => $resultDados["CPF_CLIENTES"],
                     ':SEXO_CLIENTES'                => $resultDados["SEXO_CLIENTES"],
                     ':DATA_NASCIMENTO_CLIENTES'     => $resultDados['DATA_NASCIMENTO_CLIENTES'],
-                    ':EMAIL_CLIENTES'               => $resultDados["EMAIL_CLIENTES"],
                     ':CELULAR_CLIENTES'             => $resultDados["CELULAR_CLIENTES"],
                     ':NACIONALIDADE_CLIENTES'       => $resultDados["NACIONALIDADE_CLIENTES"],
                     ':ID_CLIENTES'                  => $resultDados["ID_CLIENTES"]

@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   CONSTRAINT `FK_ID_USUARIOS_LOGIN_USUARIOS` FOREIGN KEY (`ID_USUARIOS`) REFERENCES `login_usuarios` (`ID_USUARIOS`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela caravelas.clientes: ~10 rows (aproximadamente)
+-- Copiando dados para a tabela caravelas.clientes: ~11 rows (aproximadamente)
 /*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
 INSERT INTO `clientes` (`ID_CLIENTES`, `ID_USUARIOS`, `NOME_CLIENTES`, `RG_CLIENTES`, `CPF_CLIENTES`, `SEXO_CLIENTES`, `DATA_NASCIMENTO_CLIENTES`, `EMAIL_CLIENTES`, `CELULAR_CLIENTES`, `RAZAO_SOCIAL_CLIENTES`, `NOME_FANTASIA_CLIENTES`, `CNPJ_CLIENTES`, `CEP_CLIENTES`, `CIDADE_CLIENTES`, `ESTADO_CLIENTES`, `ENDERECO_CLIENTES`, `NUMERO_CLIENTES`, `BAIRRO_CLIENTES`, `NACIONALIDADE_CLIENTES`, `COMPLEMENTO_CLIENTES`, `DATA_CAD`, `DATA_MOD`) VALUES
 	(1, 1, 'Jessica Oliveira', '158426359', '15245', 'Feminino', '1998-09-07', 'qq2515720@gmail.com', '14995663225', NULL, NULL, NULL, '62106', 'Bauru', 'SP', '13 Abril', '158', 'centro', 'Brasileira', 'casa', '2020-09-08 19:22:25', '2020-11-24 09:55:09'),
@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `cliente_pagamentos` (
   CONSTRAINT `FK_ID_MOEDAS_MOEDAS` FOREIGN KEY (`ID_MOEDAS`) REFERENCES `moedas` (`ID_MOEDAS`)
 ) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela caravelas.cliente_pagamentos: ~35 rows (aproximadamente)
+-- Copiando dados para a tabela caravelas.cliente_pagamentos: ~39 rows (aproximadamente)
 /*!40000 ALTER TABLE `cliente_pagamentos` DISABLE KEYS */;
 INSERT INTO `cliente_pagamentos` (`ID_PAGAMENTO`, `ID_MOEDAS`, `ORDER_NUMBER`, `ORDER_TOTAL_AMOUNT`, `TRANSACAO`, `CODIGO_CARTAO`, `CARTAO_VALIDADE_MES`, `CARTAO_VALIDADE_ANO`, `ORDER_STATUS`, `NUMERO_CARTAO`, `EMAIL_CLIENTE`, `NOME_CARTAO`) VALUES
 	(1, 2, 775684, 20, 'txn_1HPG3VDZjX8sc9JCEe96Y9H7', 148, '02', '2021', 'succeeded', '4242424242424242', NULL, 'Jessica Oliveira'),
@@ -174,7 +174,7 @@ CREATE TABLE IF NOT EXISTS `compras` (
   CONSTRAINT `FK_IDCLIENTES_COMPRAS` FOREIGN KEY (`ID_CLIENTES_COMPRAS`) REFERENCES `clientes` (`ID_CLIENTES`)
 ) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela caravelas.compras: ~30 rows (aproximadamente)
+-- Copiando dados para a tabela caravelas.compras: ~46 rows (aproximadamente)
 /*!40000 ALTER TABLE `compras` DISABLE KEYS */;
 INSERT INTO `compras` (`ID_COMPRAS`, `ID_CLIENTES_COMPRAS`, `CODIGO_COMPRAS`, `VALOR_COMPRAS`, `TOTAL_DESCONTO_COMPRAS`, `STATUS_COMPRAS`, `TIPO_PAGAMENTO`, `DATA_CAD_COMPRAS`, `DATA_MOD`) VALUES
 	(1, 1, '200705041', 9.28, 0.00, 'F', NULL, '2020-08-08 21:00:23', '2020-09-21 17:38:14'),
@@ -240,7 +240,7 @@ CREATE TABLE IF NOT EXISTS `compras_itens` (
   CONSTRAINT `FK_ID_COMPRAS_COMPRAS_ITENS` FOREIGN KEY (`ID_COMPRAS`) REFERENCES `compras` (`ID_COMPRAS`)
 ) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela caravelas.compras_itens: ~39 rows (aproximadamente)
+-- Copiando dados para a tabela caravelas.compras_itens: ~58 rows (aproximadamente)
 /*!40000 ALTER TABLE `compras_itens` DISABLE KEYS */;
 INSERT INTO `compras_itens` (`ID_COMPRA_ITENS`, `ID_COMPRAS`, `CODIGO_ITENS`, `NOME_PRODUTOS`, `QUANTIDADE_PRODUTOS`, `PRECO_PRODUTOS`, `LUCRO`, `QR_CODE`) VALUES
 	(1, 1, '1026437604', 'Detergente LÃÂ­quido YpÃÂª Clear ', 1, 1.89, 0.00, '1399495777'),
@@ -322,7 +322,7 @@ CREATE TABLE IF NOT EXISTS `compras_pagamentos` (
   CONSTRAINT `FK_ID_COMPRAS_ITENS_COMPRAS_ITENS` FOREIGN KEY (`ID_COMPRAS_ITENS`) REFERENCES `compras_itens` (`ID_COMPRA_ITENS`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela caravelas.compras_pagamentos: ~9 rows (aproximadamente)
+-- Copiando dados para a tabela caravelas.compras_pagamentos: ~10 rows (aproximadamente)
 /*!40000 ALTER TABLE `compras_pagamentos` DISABLE KEYS */;
 INSERT INTO `compras_pagamentos` (`ID_COMPRAS_PAGAMENTO`, `ID_COMPRAS_ITENS`, `NOME_CARTAO`, `NUMERO_CARTAO`, `STATUS_PAGAMENTO`, `CARTAO_VALIDADE_MES`, `CARTAO_VALIDADE_ANO`, `CODIGO_CARTAO`, `TRANSACAO`, `TOTAL_COMPRA`, `CODIGO_PAGAMENTO`, `DATA_CAD`) VALUES
 	(1, 2, 'Jessica Oliveira', '4242424242424242', 'succeeded', '02', '2021', 148, 'txn_1HPGjbDZjX8sc9JCzetX4sN4', 9.28, '451420', '2020-09-12 20:58:21'),
@@ -360,7 +360,7 @@ CREATE TABLE IF NOT EXISTS `fornecedores` (
   PRIMARY KEY (`ID_FORNECEDORES`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela caravelas.fornecedores: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela caravelas.fornecedores: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `fornecedores` DISABLE KEYS */;
 INSERT INTO `fornecedores` (`ID_FORNECEDORES`, `NOME_FANTASIA_FORNECEDORES`, `CNPJ_FORNECEDORES`, `EMAIL_FORNECEDORES`, `RAZAO_SOCIAL_FORNECEDORES`, `CELULAR_FORNECEDORES`, `SEXO_FORNECEDORES`, `DATA_NASCIMENTO_FORNECEDORES`, `NACIONALIDADE_FORNECEDORES`, `CEP_FORNECEDORES`, `CIDADE_FORNECEDORES`, `ENDERECO_FORNECEDORES`, `BAIRRO_FORNECEDORES`, `NUMERO_FORNECEDORES`, `ESTADO_FORNECEDORES`, `COMPLEMENTO_FORNECEDORES`, `DATA_CAD`, `DATA_MOD`) VALUES
 	(1, 'Felipe', '5151', 'felipe@gmail.com', 'teste', '14885263332', 'M', '2020-06-03', 'Brasileiro', '15248025', 'teste', 'teste', 'teste', '144', 'sp', 'teste', '2020-09-08 20:42:17', '2020-09-08 20:44:17'),
@@ -377,7 +377,7 @@ CREATE TABLE IF NOT EXISTS `login_usuarios` (
   PRIMARY KEY (`ID_USUARIOS`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela caravelas.login_usuarios: ~11 rows (aproximadamente)
+-- Copiando dados para a tabela caravelas.login_usuarios: ~19 rows (aproximadamente)
 /*!40000 ALTER TABLE `login_usuarios` DISABLE KEYS */;
 INSERT INTO `login_usuarios` (`ID_USUARIOS`, `LOGIN_USUARIOS`, `SENHA_USUARIOS`, `TIPO_USUARIOS`) VALUES
 	(1, 'qq2515720@gmail.com', '$2y$10$92SpQU0QdW9yTl8dzXmBp.h2sHzKVybZA6vq93pZzTGKKpNiweIyO', 1),
@@ -409,7 +409,7 @@ CREATE TABLE IF NOT EXISTS `marca` (
   PRIMARY KEY (`ID_MARCA`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela caravelas.marca: ~3 rows (aproximadamente)
+-- Copiando dados para a tabela caravelas.marca: ~6 rows (aproximadamente)
 /*!40000 ALTER TABLE `marca` DISABLE KEYS */;
 INSERT INTO `marca` (`ID_MARCA`, `CODIGO_MARCA`, `NOME_MARCA`) VALUES
 	(1, '256148752', 'Coca Cola'),
@@ -432,7 +432,7 @@ CREATE TABLE IF NOT EXISTS `moedas` (
   CONSTRAINT `FK_ID_CLIENTES_MOEDAS` FOREIGN KEY (`ID_CLIENTES_MOEDAS`) REFERENCES `clientes` (`ID_CLIENTES`)
 ) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela caravelas.moedas: ~36 rows (aproximadamente)
+-- Copiando dados para a tabela caravelas.moedas: ~40 rows (aproximadamente)
 /*!40000 ALTER TABLE `moedas` DISABLE KEYS */;
 INSERT INTO `moedas` (`ID_MOEDAS`, `ID_CLIENTES_MOEDAS`, `CODIGOS`, `VALOR_MOEDAS`, `DATA_CAD_MOEDAS`) VALUES
 	(1, 1, '1760117895', 20.00, '2020-07-08 19:35:35'),
@@ -491,7 +491,7 @@ CREATE TABLE IF NOT EXISTS `ofertas` (
   CONSTRAINT `FK_ID_PRODUTOS` FOREIGN KEY (`ID_PRODUTOS`) REFERENCES `produtos` (`ID_PRODUTOS`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela caravelas.ofertas: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela caravelas.ofertas: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `ofertas` DISABLE KEYS */;
 INSERT INTO `ofertas` (`ID_OFERTA`, `ID_PRODUTOS`, `PRECO_OFERTA`, `STATUS_OFERTA`, `DESCRICAO`, `DATA_CAD_OFERTAS`, `DATA_MOD_OFERTAS`) VALUES
 	(2, 1, 0.50, 'A', 'Ofertas de Outubro', '2020-10-05 16:05:32', '2020-10-05 16:05:32');
@@ -524,7 +524,7 @@ CREATE TABLE IF NOT EXISTS `produtos` (
   CONSTRAINT `FK_produtos_marca` FOREIGN KEY (`ID_MARCAS_PRODUTOS`) REFERENCES `marca` (`ID_MARCA`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela caravelas.produtos: ~2 rows (aproximadamente)
+-- Copiando dados para a tabela caravelas.produtos: ~4 rows (aproximadamente)
 /*!40000 ALTER TABLE `produtos` DISABLE KEYS */;
 INSERT INTO `produtos` (`ID_PRODUTOS`, `ID_MARCAS_PRODUTOS`, `ID_FORNECEDORES_PRODUTOS`, `NOME_PRODUTOS`, `PRECO_CUSTO_PRODUTOS`, `PRECO_VENDA_PRODUTOS`, `PESO_PRODUTOS`, `VALIDADE_PRODUTOS`, `DESCRICAO_PRODUTOS`, `QR_CODE_PRODUTOS`, `ESTOQUE_PRODUTOS`, `CATEGORIAS_PRODUTOS`, `CORREDOR_PRODUTOS`, `PRATILEIRA_PRODUTOS`, `LOTE_PRODUTOS`, `STATUS_PRODUTOS`, `DATA_CAD_PRODUTOS`, `DATA_MOD_PRODUTOS`) VALUES
 	(1, 2, 1, 'Detergente Liquido Ype Clear ', 0.50, 1.89, '500ML', '2021-09-08', 'Detergente Líquido Ypê Clear 500ml', '15962370', 10, 'Alimento', 'A', 'A', '158', 'D', '2020-09-08 20:46:44', '2020-09-21 18:33:40'),
@@ -548,7 +548,7 @@ CREATE TABLE IF NOT EXISTS `receita` (
   CONSTRAINT `FK_receita_categoria_id` FOREIGN KEY (`categoria_id`) REFERENCES `receita_categoria` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- Copiando dados para a tabela caravelas.receita: ~5 rows (aproximadamente)
+-- Copiando dados para a tabela caravelas.receita: ~6 rows (aproximadamente)
 /*!40000 ALTER TABLE `receita` DISABLE KEYS */;
 INSERT INTO `receita` (`id`, `categoria_id`, `titulo`, `slug`, `linha_fina`, `descricao`, `thumb`, `data`) VALUES
 	(20, 5, 'Doce de leite', 'doce-de-leite', 'axxaeaxevgd', '&#60;h2&#62;&#60;span style=&#34;color:#c0392b&#34;&#62;&#60;span style=&#34;font-family:Arial,Helvetica,sans-serif&#34;&#62;&#60;code&#62;Ingredientes&#60;/code&#62;&#60;/span&#62;&#60;/span&#62;&#60;/h2&#62;&#13;&#10;&#13;&#10;&#60;h4&#62;&#60;span style=&#34;color:#3498db&#34;&#62;&#60;tt&#62;&#60;strong&#62;&#60;span style=&#34;font-family:Arial,Helvetica,sans-serif&#34;&#62;&#60;code&#62;1 - manteiga&#60;/code&#62;&#60;/span&#62;&#60;/strong&#62;&#60;/tt&#62;&#60;/span&#62;&#60;/h4&#62;&#13;&#10;&#13;&#10;&#60;h4&#62;&#60;span style=&#34;color:#3498db&#34;&#62;&#60;tt&#62;&#60;strong&#62;&#60;span style=&#34;font-family:Arial,Helvetica,sans-serif&#34;&#62;&#60;code&#62;2 - toddy&#60;/code&#62;&#60;/span&#62;&#60;/strong&#62;&#60;/tt&#62;&#60;/span&#62;&#60;/h4&#62;&#13;&#10;&#13;&#10;&#60;h4&#62;&#60;span style=&#34;color:#3498db&#34;&#62;&#60;tt&#62;&#60;strong&#62;&#60;span style=&#34;font-family:Arial,Helvetica,sans-serif&#34;&#62;&#60;code&#62;3 - leite condensado&#60;/code&#62;&#60;/span&#62;&#60;/strong&#62;&#60;/tt&#62;&#60;/span&#62;&#60;/h4&#62;&#13;&#10;&#13;&#10;&#60;h2&#62;&#60;span style=&#34;color:#c0392b&#34;&#62;&#60;span style=&#34;font-family:Arial,Helvetica,sans-serif&#34;&#62;&#60;code&#62;Modo de Preparo&#60;/code&#62;&#60;/span&#62;&#60;/span&#62;&#60;/h2&#62;&#13;&#10;&#13;&#10;&#60;h4&#62;&#60;span style=&#34;color:#3498db&#34;&#62;&#60;tt&#62;&#60;strong&#62;&#60;span style=&#34;font-family:Arial,Helvetica,sans-serif&#34;&#62;&#60;code&#62;misturar tudo na panela&#60;/code&#62;&#60;/span&#62;&#60;/strong&#62;&#60;/tt&#62;&#60;/span&#62;&#60;/h4&#62;&#13;&#10;', 'http://aguanabocabh.com/sites/default/files/field/image/Brigadeiro%20de%20colher.jpg', '2020-10-10 10:50:20'),
@@ -567,7 +567,7 @@ CREATE TABLE IF NOT EXISTS `receita_categoria` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- Copiando dados para a tabela caravelas.receita_categoria: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela caravelas.receita_categoria: ~7 rows (aproximadamente)
 /*!40000 ALTER TABLE `receita_categoria` DISABLE KEYS */;
 INSERT INTO `receita_categoria` (`id`, `titulo`, `slug`) VALUES
 	(5, 'Doce', 'doce'),
@@ -589,7 +589,7 @@ CREATE TABLE IF NOT EXISTS `saldo_clientes` (
   CONSTRAINT `FK_ID_CLIENTE_SALDO_CLIENTES` FOREIGN KEY (`ID_CLIENTE`) REFERENCES `clientes` (`ID_CLIENTES`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela caravelas.saldo_clientes: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela caravelas.saldo_clientes: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `saldo_clientes` DISABLE KEYS */;
 INSERT INTO `saldo_clientes` (`ID_SALDO`, `ID_CLIENTE`, `SALDO_CLIENTES`) VALUES
 	(1, 1, 2898.24);
@@ -611,7 +611,7 @@ CREATE TABLE IF NOT EXISTS `supermercado` (
   PRIMARY KEY (`ID_SUPERMERCADO`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela caravelas.supermercado: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela caravelas.supermercado: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `supermercado` DISABLE KEYS */;
 INSERT INTO `supermercado` (`ID_SUPERMERCADO`, `NOME`, `CNPJ`, `TELEFONE`, `CIDADE`, `ENDERECO`, `NUMERO`, `EMAIL`, `CEP`, `BAIRRO`, `ESTADO`) VALUES
 	(1, 'Supermercado Caravelas', '99651235687459', '14996325514', 'Praia Grande', 'Rua Luiza Borba Ranciaro', '1589', 'supermercadocaravelas@gmail.com', '11720170', 'Vila São Jorge', 'SP');
