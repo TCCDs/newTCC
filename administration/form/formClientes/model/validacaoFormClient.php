@@ -101,7 +101,7 @@
 
         elseif ((strlen($resultDados['SEXO_CLIENTES'])) >= 2 ):
             $erro = true;
-            $mensagem = "SEXO CLIENTES deve ter no minímo 8  e máximo 9";
+            $mensagem = "SEXO CLIENTES deve ter no minímo 2";
         
         /* DATA_NASCIMENTO_CLIENTES */
         elseif (!checkdate($validade[1], $validade[0], $validade[2])):
