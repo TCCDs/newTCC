@@ -9,6 +9,8 @@ $(document).ready(function() {
         $('#conteudo').load('client/customers/view/customers.html')
         $('.saldo').hide();
         $('.menu').hide();
+        $('.bg-menu').show();
+
     })
 
     $('.consumo').click(function() {
@@ -43,13 +45,13 @@ $(document).ready(function() {
     $('.leitorQrProdutos').click(function() {
         $('#conteudo').load('client/leitorQr/view/leitorProdutos.html')
         $('.saldo').hide();
-        $('.menu').hide();
+        // $('.menu').hide();
     })
 
     $('.testeLeitor').click(function() {
         $('#conteudo').load('client/leitorQr/view/testeLeitor.html')
         $('.saldo').hide();
-        $('.menu').hide();
+        // $('.menu').hide();
     })
 
     $('.leitorOfertas').click(function() {
@@ -81,6 +83,7 @@ $(document).ready(function() {
         $('#conteudo').load('login/view/edit-usuario.html');
         $('.saldo').hide();
 
+
     })
 
     $('.receitas').click(function() {
@@ -95,7 +98,7 @@ $(document).ready(function() {
         $('.menu').hide();
         $('.bg-menu').hide();
         $('#nav-receita').show();
-        $('#menu-rodape').hide();
+        $("#menu-rodape").removeClass(".menu-rodape");
 
 
 
