@@ -168,6 +168,7 @@ form input:valid+.label-input .content-input {
 #register_form {
     width: 100%;
     text-align: center;
+    position: relative;
 }
 
 #register_form h2,
@@ -190,11 +191,12 @@ form input:valid+.label-input .content-input {
     border: 0 none;
     border-radius: 6px;
     padding: 18px;
-    box-shadow: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 15 1px rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
     /* Nao deixa o conteudo passar do tamanho do elemento pai  */
+    width: 80%;
     margin: 0 10%;
-    margin-bottom: 5em;
+    position: absolute;
 }
 
 #register_form #formCad:not(:first-of-type) {
@@ -233,7 +235,7 @@ form input:valid+.label-input .content-input {
 #register_form #progress li:after {
     content: '';
     width: 100%;
-    background: rgb(26, 145, 62);
+    background: white;
     height: 2px;
     position: absolute;
     top: 9px;
