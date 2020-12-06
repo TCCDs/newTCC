@@ -208,7 +208,7 @@ form input:valid+.label-input .content-input {
 
 #register_form #progress li {
     list-style-type: none;
-    color: white;
+    color: rgb(14, 14, 14);
     font-weight: bold;
     text-transform: uppercase;
     font-size: 10px;
@@ -232,7 +232,7 @@ form input:valid+.label-input .content-input {
 #register_form #progress li:after {
     content: '';
     width: 100%;
-    background: white;
+    background: rgb(115, 116, 115);
     height: 2px;
     position: absolute;
     top: 9px;
