@@ -174,7 +174,7 @@ form input:valid+.label-input .content-input {
 #register_form h2,
 #register_form h3 {
     font: 22px "Trebuchet MS", tahoma, arial;
-    color: rgb(52, 165, 42);
+    color: rgb(43, 71, 97);
     width: 100%;
     float: left;
     text-align: left;
@@ -194,9 +194,6 @@ form input:valid+.label-input .content-input {
     box-shadow: 0 0 15 1px rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
     /* Nao deixa o conteudo passar do tamanho do elemento pai  */
-    width: 80%;
-    margin: 0 10%;
-    position: absolute;
 }
 
 #register_form #formCad:not(:first-of-type) {
@@ -253,6 +250,16 @@ form input:valid+.label-input .content-input {
     background: rgba(62, 177, 81, 0.897);
     color: white;
     text-shadow: 0 1px 0;
+}
+
+#formCad .acao {
+    background: #116e75ef;
+    color: white;
+}
+
+#formCad .acao:hover {
+    background: #08353def;
+    cursor: pointer;
 }
 
 .ctr-cliente:hover {

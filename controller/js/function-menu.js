@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+
     $('.produtos-cliente').click(function() {
         $('#conteudo').load('client/products/view/customersProducts.html')
         $('.saldo').hide();
