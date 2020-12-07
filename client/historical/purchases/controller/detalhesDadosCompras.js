@@ -9,7 +9,7 @@ $(document).ready(function() {
     //$('.listaDadosCompras').empty()
 
     var url = "client/historical/purchases/model/viewComprasDados.php"
-    var dados = "ID_USUARIOS="
+    var dados = "CODIGO_COMPRAS="
     dados += $(this).attr('id')
 
 
