@@ -1,7 +1,15 @@
-$(document).ready(function() {
-    $('.listaProdutos').empty()
+$(document).ready(function() {    
+    $('.btn-detalhes').click(function(e){
+    e.preventDefault()
+
+    $('.modal-title').empty()
+    $('.modal-body').empty()
+    $('.modal.footer').empty()
+   //$('.listaProdutos').empty()
 
     var url = "client/historical/purchases/model/detalhesComprasProdutos.php"
+    var dados = "CODIGO_COMPRAS="
+    dados += $(this).attr('id')
 
     $.ajax({
         type: 'POST',
@@ -25,9 +33,13 @@ $(document).ready(function() {
                     </div>
                 </div>
                 `
-                $('.listaProdutos').append(detalhesComprasProdutos)
+
+                $('.modal-title').append(dados[i].NOME_PRODUTOS)
+                $('.modal-body').append(detalhesComprasProdutos)
+                //$('.listaProdutos').append(detalhesComprasProdutos)
             }
 
         }
     })
+})
 })

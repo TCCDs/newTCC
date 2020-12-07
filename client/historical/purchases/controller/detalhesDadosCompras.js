@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.btn-detalhes').click(function(e){
+    $('.btn').click(function(e){
         e.preventDefault()
 
         $('.modal-title').empty()

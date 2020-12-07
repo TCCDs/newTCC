@@ -32,6 +32,8 @@ $(document).ready(function() {
                 `
                 $('.listaClientes').append(detalhesDadosCompras)
             }
+
+            $('#modalContato').modal('show')
         }
     })
 })
