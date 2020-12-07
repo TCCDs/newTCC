@@ -1,24 +1,25 @@
-$(document).ready(function() {    
-    $('.btn-detalhes').click(function(e){
-    e.preventDefault()
+$(document).ready(function() {
+    $('.btn-detalhes').click(function(e) {
+        e.preventDefault()
 
-    $('.modal-title').empty()
-    $('.modal-body').empty()
-    $('.modal.footer').empty()
-   //$('.listaProdutos').empty()
+        $('.modal-title').empty()
+        $('.modal-body').empty()
+        $('.modal-footer').empty()
+            //$('.listaProdutos').empty()
 
-    var url = "client/historical/purchases/model/detalhesComprasProdutos.php"
-    var dados = "CODIGO_ITENS="
-    dados += $(this).attr('id')
+        var url = "client/historical/purchases/model/detalhesComprasProdutos.php"
+        var dados = "CODIGO_ITENS="
+        dados += $(this).attr('id')
 
-    $.ajax({
-        type: 'POST',
-        dataType: 'json',
-        url: url,
-        async: true,
-        success: function(dados) {
-            for (var i = 0; i < dados.length; i++) {
-                let detalhesComprasProdutos = `
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            data: dados,
+            url: url,
+            async: true,
+            success: function(dados) {
+                for (var i = 0; i < dados.length; i++) {
+                    let detalhesComprasProdutos = `
                 <div class="row">
                     <div class="mt-3 mr-2 col-12 col-md-2">
                         <div class="card" style="width: 18rem;">
@@ -34,12 +35,12 @@ $(document).ready(function() {
                 </div>
                 `
 
-                $('.modal-title').append(dados[i].NOME_PRODUTOS)
-                $('.modal-body').append(detalhesComprasProdutos)
-                //$('.listaProdutos').append(detalhesComprasProdutos)
+                    $('.modal-title').append(dados[i].NOME_PRODUTOS)
+                    $('.modal-body').append(detalhesComprasProdutos)
+                        //$('.listaProdutos').append(detalhesComprasProdutos)
+                }
+                $('#modalContato').modal('show')
             }
-            $('#modalContato').modal('show')
-        }
+        })
     })
-})
 })
