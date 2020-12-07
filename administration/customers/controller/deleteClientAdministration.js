@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('.btn-delete').click(function(e) {
         e.preventDefault()
 
-        var dados = 'ID_PRODUTOS='
+        var dados = 'ID_CLIENTES='
         dados += $(this).attr('id')
 
         Swal.fire({
