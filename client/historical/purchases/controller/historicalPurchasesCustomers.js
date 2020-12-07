@@ -46,7 +46,7 @@ $(document).ready(function() {
                 `
                 $('.credito').append(detalhesDadosCompras)
             }
-            $('body').append('<script src="client/historical/purchases/controller/detalhesComprasProdutos.js"></script>')
+            $('body').append('<script src="client/historical/purchases/controller/detalhesDadosCompras.js"></script>')
         }
     })
 })
