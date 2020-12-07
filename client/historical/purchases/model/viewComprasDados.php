@@ -5,6 +5,9 @@
 
     $idDadosCompras = $_POST['ID_USUARIOS'];
 
+    print_r($idDadosCompras);
+    exit;
+
     $sql = 'SELECT 
                 compras_pagamentos.NOME_CARTAO,
                 compras_pagamentos.NUMERO_CARTAO,
