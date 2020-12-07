@@ -10,7 +10,6 @@ $(document).ready(function() {
         atual_fs.hide(800);
         next_fs.show(800);
     });
-    
     $('.prev').click(function() {
         atual_fs = $(this).parent();
         prev_fs = $(this).parent().prev();

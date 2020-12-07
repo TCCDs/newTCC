@@ -167,14 +167,14 @@ form input:valid+.label-input .content-input {
 
 #register_form {
     width: 100%;
-    margin: 50px auto;
     text-align: center;
+    position: relative;
 }
 
 #register_form h2,
 #register_form h3 {
     font: 22px "Trebuchet MS", tahoma, arial;
-    color: rgb(52, 165, 42);
+    color: rgb(43, 71, 97);
     width: 100%;
     float: left;
     text-align: left;
@@ -191,11 +191,9 @@ form input:valid+.label-input .content-input {
     border: 0 none;
     border-radius: 6px;
     padding: 18px;
-    box-shadow: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 15 1px rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
     /* Nao deixa o conteudo passar do tamanho do elemento pai  */
-    margin: 0 10%;
-    margin-bottom: 5em;
 }
 
 #register_form #formCad:not(:first-of-type) {
@@ -210,7 +208,7 @@ form input:valid+.label-input .content-input {
 
 #register_form #progress li {
     list-style-type: none;
-    color: white;
+    color: rgb(14, 14, 14);
     font-weight: bold;
     text-transform: uppercase;
     font-size: 10px;
@@ -234,7 +232,7 @@ form input:valid+.label-input .content-input {
 #register_form #progress li:after {
     content: '';
     width: 100%;
-    background: rgb(26, 145, 62);
+    background: rgb(115, 116, 115);
     height: 2px;
     position: absolute;
     top: 9px;
@@ -252,6 +250,16 @@ form input:valid+.label-input .content-input {
     background: rgba(62, 177, 81, 0.897);
     color: white;
     text-shadow: 0 1px 0;
+}
+
+#formCad .acao {
+    background: #139987ef;
+    color: white;
+}
+
+#formCad .acao:hover {
+    background: #083d31ef;
+    cursor: pointer;
 }
 
 .ctr-cliente:hover {

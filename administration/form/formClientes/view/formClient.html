@@ -11,7 +11,7 @@
                 <h2>Perfis Pessoais </h2>
                 <h3>Algumas Configurações</h3>
                 <div class="row">
-                    <div class="col-12 col md-12">
+                    <div class="col-12 col-md-6">
                         <div class=" form-group form">
                             <input type="text" name="NOME_CLIENTES" id="NOME_CLIENTES" aria-autocomplete="off" required>
                             <label for="NOME_CLIENTES" class="label-input">
@@ -19,8 +19,6 @@
                             </label>
                         </div>
                     </div>
-                </div>
-                <div class="row">
                     <div class="col-12 col-md-6">
                         <div class=" form-group form">
                             <input type="text" name="RG_CLIENTES" id="RG_CLIENTES" aria-autocomplete="off" required>
@@ -29,6 +27,8 @@
                             </label>
                         </div>
                     </div>
+                </div>
+                <div class="row">
                     <div class="col-12 col-md-6">
                         <div class=" form-group form">
                             <input type="text" name="CPF_CLIENTES" id="CPF_CLIENTES" aria-autocomplete="off" required>
@@ -37,28 +37,21 @@
                             </label>
                         </div>
                     </div>
-                </div>
-                <div class="row">
                     <div class="col-12 col-md-6">
-                        <div class=" form-group form">
-                            <input type="text" name="SEXO_CLIENTES" id="SEXO_CLIENTES" aria-autocomplete="off" required>
-                            <label for="SEXO_CLIENTES" class="label-input">
-                                <span class="content-input">Gêreno</span>
-                            </label>
-                        </div>
-                    </div>
-                    <!--<div class="col-12 col-md-6">
                         <div class=" form-group">
-                            <label for="my-select">Tipo do Usuário</label>
-                            <select id="my-select" class="custom-select" name="">
-                                    <option>Administrador</option>
-                                    <option>Cliente</option>
+                            <label for="SEXO_CLIENTES">Gênero</label>
+                            <select id="SEXO_CLIENTES" class="custom-select" name="">
+                                    <option>Selecione uma opção</option>
+                                    <option>Feminino</option>
+                                    <option>Masculino</option>
+                                    <option>Outros</option>
                             </select>
                         </div>
-                    </div>-->
+                    </div>
                 </div>
-                <input type="submit" name="next" class="btn btn-block btn-success next acao" value="Proximo">
+                <input type="submit" name="next" class="btn btn-block next acao" value="Proximo">
             </div>
+
             <div id="formCad">
                 <h2>Configurações da conta</h2>
                 <h3>Detalhes de Contato</h3>
@@ -81,15 +74,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <!--<div class="col-12 col-md-6">
-                        <div class=" form-group form">
-                            <input type="text" name="EMAIL_CLIENTES" id="EMAIL_CLIENTES" aria-autocomplete="off" required>
-                            <label for="EMAIL_CLIENTES" class="label-input">
-                                <span class="content-input">Email</span>
-                            </label>
-                        </div>
-                    </div>-->
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-12">
                         <div class=" form-group form">
                             <input type="text" name="NACIONALIDADE_CLIENTES" id="NACIONALIDADE_CLIENTES" aria-autocomplete="off" required>
                             <label for="NACIONALIDADE_CLIENTES" class="label-input">
@@ -98,8 +83,8 @@
                         </div>
                     </div>
                 </div>
-                <input type="submit" name="prev" class="prev acao btn btn-block btn-warning" value="Anterior">
-                <input type="submit" name="next" class="next acao btn btn-block btn-success" value="Proximo">
+                <input type="submit" name="prev" class="prev acao btn btn-block btn-info" value="Anterior">
+                <input type="submit" name="next" class="next acao btn btn-block" value="Proximo">
 
             </div>
             <div id="formCad">
@@ -170,8 +155,8 @@
                         </div>
                     </div>
                 </div>
-                <input type="submit" name="prev" class="prev acao btn btn-block btn-warning" value="Anterior">
-                <input type="submit" name="registrar" class="registrar acao btn btn-block btn-success" value="Registrar">
+                <input type="submit" name="prev" class="prev acao btn btn-block btn-info" value="Anterior">
+                <input type="submit" name="registrar" class="registrar acao btn btn-block" value="Registrar">
             </div>
 
         </form>

@@ -19,7 +19,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Painel de controle</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="components/css/bootstrap.min.css">
     <link rel="stylesheet" href="components/libs/MaterialDesign/css/materialdesignicons.css">
     <link rel="stylesheet" href="components/libs/sweetalert2/dist/sweetalert2.css">
     <link rel="stylesheet" href="components/css/login.css">
@@ -57,11 +57,15 @@
                 </li>
 
             </ul>
-            <form class="form-inline my-2 my-lg-0" action="" method="POST">
-                <input class="form-pesquisa mr-2" type="text" name="pesquisa" id="pesquisa" placeholder="Pesquisar" minlength="2" required>
-                <button class="btn btn-pesquisar my-2 my-sm-0" type="button">Pesquisar</button>
-            </form>
-
+            <div class="row">
+                    <form class="form-inline my-2 my-lg-0" action="" method="POST">
+                        <div class="col-12">
+                            <input class="form-pesquisa mr-2" type="text" name="pesquisa" id="pesquisa" placeholder="Pesquisar" minlength="2" required>
+                            <button class="btn btn-pesquisar my-2 my-sm-0" type="button">Pesquisar</button>
+                        </div>
+                    </form>
+            </div>
+        
     </div>
 </nav>
     <div class="page-wrapper chiller-theme toggled">
