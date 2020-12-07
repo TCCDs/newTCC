@@ -9,12 +9,9 @@ $(document).ready(function() {
     //$('.listaDadosCompras').empty()
 
     var url = "client/historical/purchases/model/viewComprasDados.php"
-    let idCodigo = `CODIGO_COMPRAS=${$(this).attr('id')}`
-    /*var dados = "CODIGO_COMPRAS="
-    dados += $(this).attr('id')*/
-
-    console.log(dados)
-
+    //let idCodigo = `CODIGO_COMPRAS=${$(this).attr('id')}`
+    var dados = "CODIGO_COMPRAS="
+    dados += $(this).attr('id')
 
     function adicionaZero(numero) {
         if (numero <= 9)
@@ -29,7 +26,7 @@ $(document).ready(function() {
         dataType: 'json',
         url: url,
         async: true,
-        data: idCodigo,
+        //data: idCodigo,
         success: function(dados) {
             for (var i = 0; i < dados.length; i++) {
                 let dataAtual2 = new Date(dados[i].DATA_CAD_COMPRAS);
