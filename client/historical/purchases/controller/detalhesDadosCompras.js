@@ -12,6 +12,8 @@ $(document).ready(function() {
     var dados = "CODIGO_COMPRAS="
     dados += $(this).attr('id')
 
+    console.log(dados)
+
 
     function adicionaZero(numero) {
         if (numero <= 9)
