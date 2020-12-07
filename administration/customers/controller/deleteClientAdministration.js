@@ -20,7 +20,7 @@ $(document).ready(function() {
                     type: 'POST',
                     dataType: 'json',
                     data: dados,
-                    url: 'administration/products/model/deleteClientAdministration.php',
+                    url: 'administration/customers/model/deleteClientAdministration.php',
                     success: function(dados) {
                         Swal.fire({
                             icon: 'success',
