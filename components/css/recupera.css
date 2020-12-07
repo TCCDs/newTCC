@@ -2,7 +2,7 @@
     background: transparent;
     border: none;
     color: rgb(13, 65, 58);
-    border-bottom: 1px solid rgb(19, 67, 95);
+    border-bottom: 1px solid rgb(19, 67, 95) !important;
     width: 100%;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .acao {
-    background: #139987ef;
+    background: #175d79ef;
     color: white;
 }
 
@@ -24,4 +24,21 @@
     background: #083d31ef;
     cursor: pointer;
     color: white;
+}
+
+.bg-menu {
+    background-image: linear-gradient(to bottom right, #1c5160, rgb(72, 117, 138));
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.btn-voltar {
+    background: transparent;
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.btn-voltar:hover {
+    background: #17476e;
+    color: rgb(255, 255, 255);
 }

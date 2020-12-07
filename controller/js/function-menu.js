@@ -126,7 +126,7 @@ $(document).ready(function() {
     })
 
     $('.recuperar').click(function() {
-        $('#conteudo').load('recuperar/index.php')
+        $('body').load('recuperar/index.php')
     })
 
     $('.login').click(function() {
@@ -134,6 +134,11 @@ $(document).ready(function() {
     })
 
     $('.logout').click(function() {
+        window.location.href = "index.php";
+
+    })
+
+    $('.btn-voltar').click(function() {
         window.location.href = "index.php";
 
     })
