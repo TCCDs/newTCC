@@ -38,7 +38,7 @@ $(document).ready(function() {
                 $('.modal-body').append(detalhesComprasProdutos)
                 //$('.listaProdutos').append(detalhesComprasProdutos)
             }
-
+            $('#modalContato').modal('show')
         }
     })
 })
