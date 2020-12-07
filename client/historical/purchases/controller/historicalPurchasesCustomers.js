@@ -34,7 +34,7 @@ $(document).ready(function() {
                                             <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Data de cadastro<span/></div><div class="col-12 col-md-12 mt-2">` + dataAtualFormatada2 + `</div></div></li>
                                             <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Status da compra<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].STATUS_COMPRAS + `</div></div></li>
                                             <li class="list-group-item">  
-                                                <button id="` + dados[i].ID_USUARIOS + `" class="btn btn-block btn-outline-primary btn-sm btn-detalhes"> 
+                                                <button id="` + dados[i].CODIGO_COMPRAS + `" class="btn btn-block btn-outline-primary btn-sm btn-detalhes"> 
                                                     <i class="mdi mdi-eye mdi-18px"></i> 
                                                 </button>
                                             </li>
