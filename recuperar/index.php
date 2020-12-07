@@ -1,42 +1,66 @@
+<!-- 
+<form action="" method="post" enctype="multipart/form-data" class="formF" >
+	<div class="row">
+        <div class="col-12 col-md-12">
+			<div class="form-group form">
+				<input type="text" name="email" id="example-search-input" aria-autocomplete="off" required>
+					<label for="example-search-input" class="label-input">
+						<span class="content-input">Email*</span>
+					</label>
+			</div>
+
+			<button type="submit" name="ok" id="ok" class="btn btn-primary" id="btn-contato">Enviar mensagem</button>
+			<div class="loading" style="float: left;margin-left:20px;"></div>
+		</div>
+
+	
+		<button type="submit" name="ok" id="ok" class="btn btn-primary" id="btn-contato">Enviar mensagem</button>
+		<div class="loading" style="float: left;margin-left:20px;"></div> 
+	</div>
+</form>	-->
 
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title></title>
+<title>Formulário em Ajax e Alerta Personalizado</title>
 	
+	<!-- jquery -->
+	<script  src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	
-<link rel="stylesheet" href="../components/css/bootstrap.css">	
-<link rel="stylesheet" href="../components/css/recupera.css">	
-
-
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
 	<script src="js/sweetalert.js"></script>
 	
 </head>
 <body>
-<div class="container">
-			<div class="jumbotron mt-2">
-				<h1 class="display-4">Recuperar senha</h1>
-			</div>
-		<form action="" method="post" enctype="multipart/form-data" class="form">
+	<div class="container">
 		
-		<div class="row">
-			<div class="col-12 col-md-12">
-					<div class="form-group">
-							<label for="my-input">Email de recuperação</label>
-							<input id="my-input" name="email" class="recuperaSenha" type="text" aria-autocomplete="off" placeholder="Digite o email de recuperação" required>
-					</div>
+		<br><br>
+		<h3 id="textual-inputs">Formulário em Ajax</h3>
+		<br><br>
+		
+		<form action="" method="post" enctype="multipart/form-data" class="form">
+			<div class="form-group row">
+			  	<label for="example-search-input" class="col-xs-2 col-form-label">Email*</label>
+				<div class="col-xs-10">
+					<input class="form-control" name="email" type="email" value="" id="example-search-input" >
+				</div>
 			</div>
-				<button type="submit" name="ok" id="ok" class="btn btn-block acao" id="btn-contato">Enviar mensagem</button>
-				<div class="loading" style="float: left;margin-left:20px;"></div>
-		</div>
+			<div class="form-group row">
+				<label class="col-xs-2 col-form-label"></label>
+				<div class="col-xs-10">
+					<button type="submit" name="ok" id="ok" class="btn btn-primary pull-left" id="btn-contato">Enviar mensagem</button>
+					<div class="loading" style="float: left;margin-left:20px;"></div>
+				</div>
+			</div>
 		</form>		
 		<div class="mostrar"></div>
 	</div><!-- container -->	
-
-	<script src="../components/js/jquery-3.4.1.min.js"></script>
-	<script src="../components/js/bootstrap.js"></script>
-
+	
 <script>
 	$(function(){
 		$('.form').submit(function(){
