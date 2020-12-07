@@ -253,12 +253,12 @@ form input:valid+.label-input .content-input {
 }
 
 #formCad .acao {
-    background: #116e75ef;
+    background: #139987ef;
     color: white;
 }
 
 #formCad .acao:hover {
-    background: #08353def;
+    background: #083d31ef;
     cursor: pointer;
 }
 
