@@ -6,9 +6,9 @@
 
 	if(!empty($email)){
 
-		$sql = "SELECT EMAIL_CLIENTES FROM clientes WHERE EMAIL_CLIENTES = :EMAIL_CLIENTES";
+		$sql = "SELECT LOGIN_USUARIOS FROM login_usuarios WHERE LOGIN_USUARIOS = :LOGIN_USUARIOS";
 		$resultado = $conn->getConn()->prepare($sql);
-		$resultado->bindParam(':EMAIL_CLIENTES', $email);
+		$resultado->bindParam(':LOGIN_USUARIOS', $email);
 		$resultado->execute();
 		$resultadoRs = $resultado->fetch(PDO::FETCH_ASSOC);
 		$total = $resultado->rowCount();

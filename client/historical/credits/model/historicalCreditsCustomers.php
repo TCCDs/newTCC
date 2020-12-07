@@ -9,9 +9,9 @@
                 moedas.CODIGOS,
                 moedas.VALOR_MOEDAS,
                 moedas.DATA_CAD_MOEDAS,
-                clientes.NOME_CLIENTES,
-                cliente_pagamentos.NOME_CARTAO,
-                cliente_pagamentos.NUMERO_CARTAO
+                clientes.NOME_CLIENTES
+                /*cliente_pagamentos.NOME_CARTAO,
+                cliente_pagamentos.NUMERO_CARTAO*/
             FROM
 	            cliente_pagamentos
             INNER JOIN moedas ON cliente_pagamentos.ID_MOEDAS = moedas.ID_MOEDAS
