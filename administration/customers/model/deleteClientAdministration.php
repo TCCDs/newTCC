@@ -2,7 +2,7 @@
     include_once('../../../server/Connect.php');
     $conn = new Conn();
 
-    $idClient = $_POST['ID_PRODUTOS'];
+    $idClient = $_POST['ID_CLIENTES'];
     $statusClient = 'D';
 
     try {
