@@ -8,7 +8,7 @@ $(document).ready(function() {
 
     //$('.listaDadosCompras').empty()
 
-    var url = "client/historical/purchases/model/detalhesComprasDados.php"
+    var url = "client/historical/purchases/model/viewComprasDados.php"
     var dados = "ID_USUARIOS="
     dados += $(this).attr('id')
 
