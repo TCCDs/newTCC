@@ -41,37 +41,37 @@ $(document).ready(function() {
     $('.payment-coin').click(function() {
         $('#conteudo').load('client/payment/view/payment-coin.html')
         $('.saldo').hide();
-        // $('.menu').hide();
+        $('.menu').hide();
     })
 
     $('.leitorQrProdutos').click(function() {
         $('#conteudo').load('client/leitorQr/view/leitorProdutos.html')
         $('.saldo').hide();
-        // $('.menu').hide();
+        $('.menu').hide();
     })
 
     $('.testeLeitor').click(function() {
         $('#conteudo').load('client/leitorQr/view/testeLeitor.html')
         $('.saldo').hide();
-        // $('.menu').hide();
+        $('.menu').hide();
     })
 
     $('.leitorOfertas').click(function() {
         $('#conteudo').load('client/leitorQr/view/leitorOfertas.html')
         $('.saldo').hide();
-        // $('.menu').hide();
+        $('.menu').hide();
     })
 
     $('.grafico').click(function() {
         $('#conteudo').load('graficos/graficoMoedas.php')
         $('.saldo').hide();
-        // $('.menu').hide();
+        $('.menu').hide();
     })
 
     $('.credito-pagamento').click(function() {
         $('#conteudo').load('client/shopping/model/order_process.php')
         $('.saldo').hide();
-        // $('.menu').hide();
+        $('.menu').hide();
     })
 
 
@@ -84,6 +84,8 @@ $(document).ready(function() {
     $('.dados-usuario').click(function() {
         $('#conteudo').load('login/view/edit-usuario.html');
         $('.saldo').hide();
+        $('.menu').hide();
+
 
 
     })
