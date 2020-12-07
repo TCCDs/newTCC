@@ -8,7 +8,7 @@ $(document).ready(function() {
    //$('.listaProdutos').empty()
 
     var url = "client/historical/purchases/model/detalhesComprasProdutos.php"
-    var dados = "CODIGO_COMPRAS="
+    var dados = "CODIGO_ITENS="
     dados += $(this).attr('id')
 
     $.ajax({

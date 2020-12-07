@@ -2,7 +2,7 @@
     include_once ('../../../../server/Connect.php');
     $conn = new Conn();
 
-    $codigos_itens = 1026437604;
+    $codigos_itens = $_POST['CODIGO_ITENS']; //1026437604;
 
     $sql = 'SELECT * FROM compras_itens WHERE compras_itens.CODIGO_ITENS = :CODIGOS_ITENS';
     $resultado = $conn->getConn()->prepare($sql);
