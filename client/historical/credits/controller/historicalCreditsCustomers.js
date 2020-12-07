@@ -34,8 +34,6 @@ $(document).ready(function() {
                                     <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Código<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].CODIGOS + `</div></div></li>
                                     <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Valor de Moedas<span/></div><div class="col-12 col-md-12 mt-2">` + resultValorMoedas + `</div></div></li>
                                     <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Data de cadastro<span/></div><div class="col-12 col-md-12 mt-2">` + dataAtualFormatada2 + `</div></div></li>
-                                    <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Nome do cartão<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].NOME_CARTAO + `</div></div></li>
-                                    <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Número do cartão<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].NUMERO_CARTAO + `</div></div></li>
                                     <li class="list-group-item"> <button id="` + dados[i].ID_MOEDAS + `" class="btn btn-block btn-outline-primary btn-sm btn-view-credito"> <i class="mdi mdi-eye mdi-18px"></i> </button>
                                     </li>
                                 </ul>
@@ -51,3 +49,8 @@ $(document).ready(function() {
         }
     })
 })
+
+/*
+     <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Nome do cartão<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].NOME_CARTAO + `</div></div></li>
+                                    <li class="list-group-item"><div class="row mt-2"><div class="col-12 col-md-12"><span>Número do cartão<span/></div><div class="col-12 col-md-12 mt-2">` + dados[i].NUMERO_CARTAO + `</div></div></li>
+*/
