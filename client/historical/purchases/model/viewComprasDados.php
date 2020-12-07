@@ -3,10 +3,7 @@
     include_once ('../../../../server/Connect.php');
     $conn = new Conn();
 
-    $idDadosCompras = $_REQUEST; //$_POST['CODIGO_COMPRAS'];
-
-    print_r($idDadosCompras);
-    exit;
+    $idDadosCompras = $_POST['CODIGO_COMPRAS'];
 
     $sql = 'SELECT 
                 compras.CODIGO_COMPRAS,
