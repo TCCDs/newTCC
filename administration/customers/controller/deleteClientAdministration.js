@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('.btn-delete').click(function(e) {
         e.preventDefault()
 
-        var dados = 'ID_PRODUTOS='
+        var dados = 'ID_CLIENTES='
         dados += $(this).attr('id')
 
         Swal.fire({
@@ -20,7 +20,7 @@ $(document).ready(function() {
                     type: 'POST',
                     dataType: 'json',
                     data: dados,
-                    url: 'administration/products/model/deleteClientAdministration.php',
+                    url: 'administration/customers/model/deleteClientAdministration.php',
                     success: function(dados) {
                         Swal.fire({
                             icon: 'success',
