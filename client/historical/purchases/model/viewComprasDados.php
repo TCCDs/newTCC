@@ -3,7 +3,7 @@
     include_once ('../../../../server/Connect.php');
     $conn = new Conn();
 
-    $idDadosCompras = $_POST['ID_USUARIOS'];
+    $idDadosCompras = 1; //$_POST['ID_USUARIOS'];
 
     print_r($idDadosCompras);
     exit;
