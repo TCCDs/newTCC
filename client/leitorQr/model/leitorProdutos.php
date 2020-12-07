@@ -39,6 +39,8 @@
 
    $_SESSION['testeProdutos'] = json_encode($produtos,  JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
    //Header( "Location: ../view/testeLeitor.html" );
+   echo json_encode($data);
+
 ?>
 
 <script>
