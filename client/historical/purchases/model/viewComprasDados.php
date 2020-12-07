@@ -40,8 +40,8 @@
     $resultado->execute();
 
     while($resultadoCompras = $resultado->fetch(PDO::FETCH_ASSOC)) {
-        $detalhesDadosCompras[] = array_map('utf8_encode', $resultadoCompras);
+        $viewDetalhesDadosCompras[] = array_map('utf8_encode', $resultadoCompras);
     }
 
-    echo json_encode($detalhesDadosCompras, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+    echo json_encode($viewDetalhesDadosCompras, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 ?>

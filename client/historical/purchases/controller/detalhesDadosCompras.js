@@ -34,7 +34,7 @@ $(document).ready(function() {
                 var totalCompras = dados[i].VALOR_COMPRAS
                 var resultValorCompras= Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalCompras);
 
-                let detalhesDadosCompras = `
+                let viewDetalhesDadosCompras = `
                     <p> Nome do Produto: ` + dados[i].NOME_PRODUTOS + ` </p>
                     <p> Valor da compra: ` + resultValorCompras + ` </p>
                     <p> Data de Cadastro: ` + dataAtualFormatada2 + ` </p>
@@ -42,7 +42,7 @@ $(document).ready(function() {
                 `
 
                 $('.modal-title').append(dados[i].CODIGO_COMPRAS)
-                $('.modal-body').append(detalhesDadosCompras)
+                $('.modal-body').append(viewDetalhesDadosCompras)
                // $('.listaDadosCompras').append(detalhesDadosCompras)
             }
             $('#modalContato').modal('show')
