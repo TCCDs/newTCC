@@ -10,8 +10,8 @@ $(document).ready(function() {
             dataType: 'json',
             url: url,
             async: true,
-            data: $produtos,
-            success: function($produtos) {
+            data: dados,
+            success: function(dados) {
                 if (dados.return == true) {
                     Swal.fire({
                         icon: 'success',
