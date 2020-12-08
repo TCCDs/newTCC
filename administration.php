@@ -208,7 +208,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-3 text-center grafico2">
+                <div class="row mt-3 text-center">
                         <div class="col-12 col-md-12 text-left text-white">
                             <h4>Contabilidade</h4>
                             <hr class="bg-white-50">
