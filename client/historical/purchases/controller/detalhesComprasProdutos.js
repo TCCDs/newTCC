@@ -35,7 +35,7 @@ $(document).ready(function() {
                 </div>
                 `
 
-                    $('.modal-title').append(dados[i].NOME_PRODUTOS)
+                    // $('.modal-title').append(dados[i].NOME_PRODUTOS)
                     $('.modal-body').append(detalhesComprasProdutos)
                         //$('.listaProdutos').append(detalhesComprasProdutos)
                 }
