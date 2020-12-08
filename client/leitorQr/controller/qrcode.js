@@ -10,9 +10,9 @@ $(document).ready(function() {
             dataType: 'json',
             url: url,
             async: true,
-            data: produtos,
-            success: function(produtos) {
-                if (produtos.return == true) {
+            data: dados,
+            success: function(dados) {
+                if (dados.return == true) {
                     Swal.fire({
                         icon: 'success',
                         title: 'Supermercado Caravelas!',
@@ -24,7 +24,7 @@ $(document).ready(function() {
                     Swal.fire({
                         icon: 'error',
                         title: 'SysAgenda!',
-                        text: produtos.return,
+                        text: dados.return,
                         type: 'error',
                         confirmButtonText: 'Tente novamente...!'
                     })

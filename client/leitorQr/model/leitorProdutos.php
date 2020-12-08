@@ -36,6 +36,8 @@
     while($resultado_user = $resultado->fetch(PDO::FETCH_ASSOC)) {
         $produtos[] = array_map('utf8_encode', $resultado_user);
     }
+    
+    echo json_encode($data);
 
    $_SESSION['testeProdutos'] = json_encode($produtos,  JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
    //Header( "Location: ../view/testeLeitor.html" );
