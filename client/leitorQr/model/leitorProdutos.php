@@ -4,8 +4,7 @@
     $conn = new Conn();
 
     $qr_code = $_POST['qrcode'];
-echo 'qrcode='.$qr_code;
-exit;
+
     $sql = "SELECT  
                 ofertas.ID_PRODUTOS,
                 produtos.NOME_PRODUTOS,
