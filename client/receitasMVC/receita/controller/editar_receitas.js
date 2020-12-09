@@ -79,6 +79,7 @@ $(document).ready(function() {
 
                         $('.modal-body').append(receita)
                     }*/
+                console.log($('#exampleModalLong'))
                 $('#exampleModalLong').modal('show')
                     // $('body').append('<script src="client/receitasMVC/receita/controller/updateReceita.js"></script>')
             }
