@@ -18,7 +18,7 @@ $(document).ready(function() {
             //var resultValorPreco = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalPreco);
 
             let listaProdutos = `        
-                <h3> ` + total + ` </h3>
+                <h3> R$ ` + total + ` </h3>
             `
 
             $('.listaTotalProdutos').append(listaProdutos)
