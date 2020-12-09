@@ -133,13 +133,13 @@ $(document).ready(function() {
                 success: function(data) {
                     // load_cart_data();
                     Swal.fire({
-                        title: 'Are you sure?',
-                        text: "You won't be able to revert this!",
+                        title: 'Deseja adicionar mais produtos?',
                         icon: 'warning',
                         showCancelButton: true,
                         confirmButtonColor: '#3085d6',
                         cancelButtonColor: '#d33',
-                        confirmButtonText: 'Yes, delete it!'
+                        cancelButtonText: 'Finalizar compra',
+                        confirmButtonText: 'Sim'
                     }).then((result) => {
                         if (result.isConfirmed) {
                             Swal.fire(
@@ -147,6 +147,8 @@ $(document).ready(function() {
                                 'Your file has been deleted.',
                                 'success'
                             )
+                        } else {
+
                         }
                     })
                 }
