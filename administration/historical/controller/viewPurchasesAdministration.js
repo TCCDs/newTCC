@@ -25,6 +25,7 @@ $(document).ready(function() {
                         <p> Total Desconto: ` + resultValorMoedas + ` </p>
                         <p> Total Itens: ` + dados[i].TOTAL_ITENS_COMPRAS + ` </p>
                         <p> Status: ` + dados[i].STATUS_COMPRAS + ` </p>
+                        <p> Pagmento: ` + dados[i].TIPO_PAGAMENTOS + ` </p>
                     `
 
                     $('.modal-title').append(dados[i].NOME_CLIENTES)
