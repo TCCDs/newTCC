@@ -142,11 +142,7 @@ $(document).ready(function() {
                         confirmButtonText: 'Sim'
                     }).then((result) => {
                         if (result.isConfirmed) {
-                            Swal.fire(
-                                'Deleted!',
-                                'Your file has been deleted.',
-                                'success'
-                            )
+
                         } else {
 
                         }
