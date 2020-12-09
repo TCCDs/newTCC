@@ -13,7 +13,7 @@ $(document).ready(function() {
             data: produtos,
             success: function(produtos) {
                 if (produtos.length > 0) {
-                    $('#conteudo').load('client/leitorQr/view/leitorProdutos.html')
+                    $('#conteudo').load('client/leitorQr/view/testeLeitor.html')
                 } else {
                     Swal.fire({
                         icon: 'error',
