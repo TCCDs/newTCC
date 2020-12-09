@@ -12,19 +12,13 @@ $(document).ready(function() {
             async: true,
             data: produtos,
             success: function(produtos) {
-                if (produtos.return == true) {
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Supermercado Caravelas!',
-                        text: 'Cadastro efetuado com sucesso!',
-                        type: 'success',
-                        confirmButtonText: 'Feito!'
-                    })
+                if (produtos.length > 0) {
+                    $('#conteudo').load('client/leitorQr/view/leitorProdutos.html')
                 } else {
                     Swal.fire({
                         icon: 'error',
-                        title: 'SysAgenda!',
-                        text: produtos.return,
+                        title: 'Supermercado Caravelas!',
+                        text: 'Código inválido',
                         type: 'error',
                         confirmButtonText: 'Tente novamente...!'
                     })
