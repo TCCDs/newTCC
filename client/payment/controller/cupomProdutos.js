@@ -15,7 +15,7 @@ $(document).ready(function() {
 
                 var resultQuantidade = dados[i].QUANTIDADE_PRODUTOS
                 var subTotal = resultValorPreco * resultQuantidade
-                
+                console.log(subTotal)
                 //var resultSubTotal = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(subTotal);
 
                 let cupomSupermercado = `
