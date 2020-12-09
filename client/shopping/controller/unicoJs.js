@@ -145,15 +145,16 @@ $(document).ready(function() {
                         showCancelButton: true,
                         confirmButtonColor: '#3085d6',
                         cancelButtonColor: '#d33',
-                        cancelButtonText: 'Finalizar compra',
-                        confirmButtonText: 'Sim'
+                        confirmButtonText: 'Sim',
+                        cancelButtonText: 'Finalizar compra'
+
                     }).then((result) => {
                         if (result.isConfirmed) {
                             $('#conteudo').load('client/leitorQr/view/leitorProdutos.html')
                             $('.saldo').hide();
                             $('.menu').hide();
                         } else {
-                            $('#conteudo').load('client/shopping/view/shopping.html')
+                            $('#conteudo').load('client/leitorQr/view/leitorProdutos.html')
                             $('.saldo').hide();
                             $('.menu').hide();
                         }
