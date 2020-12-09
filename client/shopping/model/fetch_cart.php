@@ -3,18 +3,18 @@
     $total_price = 0;
 
     $output = '
-        <div "overflow-auto mt-2 tb-carrinho"id="order_table">
+        <div "table-responsive tb-carrinho"id="order_table">
             <table class="table table-borderless text-center">
-            <thead class="">
-            <tr class="tr-carrinho">
-              <th scope="col">Check</th>
-              <th scope="col">Nome do Produto</th>
-              <th scope="col">Quantidade</th>
-              <th scope="col">Preço Unt</th>
-              <th scope="col">Preço Total</th>
-              <th scope="col">Ação</th>
-            </tr>
-          </thead>
+                <thead class="">
+                    <tr class="tr-carrinho">
+                    <th scope="col">Check</th>
+                    <th scope="col">Nome do Produto</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">Preço Unt</th>
+                    <th scope="col">Preço Total</th>
+                    <th scope="col">Ação</th>
+                    </tr>
+                </thead>
     ';
 
     if(!empty($_SESSION["shopping_cart"])) {

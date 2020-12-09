@@ -23,33 +23,31 @@ $(document).ready(function() {
                             </div>
 
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                    <div class="col-12 col-md-6">
-                                        Quantidade
-                                    </div>
+                                    <li class="list-group-item">
+                                            <div class="col-12 col-md-6">
+                                                Quantidade
+                                            </div>
 
-                                    <div class="col-12 col-md-6>
-                                        <small>` + dados[i].product_quantity + `</small>
-                                    </div>
-                                </li>
+                                            <div class="col-12 col-md-6>
+                                                <small>` + dados[i].product_quantity + `</small>
+                                            </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="col-12 col-md-6">
+                                            Preço
+                                        </div>
 
-                                <li class="list-group-item">
-                                    <div class="col-12 col-md-6">
-                                        Preço
-                                    </div>
-
-                                    <div class="col-12 col-md-6">
-                                        <small> ` + resultValorPreco + `</small>
-                                    </div>
-                                </li>
-
+                                        <div class="col-12 col-md-6">
+                                            <small> ` + resultValorPreco + `</small>
+                                        </div>
+                                    </li>
                                 <li class="list-group-item">
                                     <div class="col-12 col-md-6">
                                         Subtotal 
                                     </div>
 
                                     <div class="col-12 col-md-6">
-                                        <small> R$: ` + dados[i].product_quantity * dados[i].product_price + `</small>
+                                        <small> R$ ` + dados[i].product_quantity * dados[i].product_price + `</small>
                                     </div>
                                 </li>
                             </ul>
