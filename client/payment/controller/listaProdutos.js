@@ -24,7 +24,6 @@ $(document).ready(function() {
 
                             <ul class="list-group list-group-flush">
                                     <li class="list-group-item">
-                                        <div class="row">
                                             <div class="col-12 col-md-6">
                                                 Quantidade
                                             </div>
@@ -32,7 +31,6 @@ $(document).ready(function() {
                                             <div class="col-12 col-md-6>
                                                 <small>` + dados[i].product_quantity + `</small>
                                             </div>
-                                        </div>
                                     </li>
                                     <li class="list-group-item">
                                         <div class="col-12 col-md-6">
