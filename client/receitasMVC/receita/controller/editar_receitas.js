@@ -78,7 +78,7 @@ $(document).ready(function() {
                     $('.modal-body').append(receita)
                 }
                 $('#modalReceita').modal('show')
-                $('body').append('<script src="client/receitasMVC/receita/controller/updateReceita.js"></script>')
+                    // $('body').append('<script src="client/receitasMVC/receita/controller/updateReceita.js"></script>')
             }
         })
     })
