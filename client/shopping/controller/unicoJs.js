@@ -77,7 +77,14 @@ $(document).ready(function() {
                                     <h5 class="text-center mt-2"> R$` + data[i].PRECO_VENDA_PRODUTOS + ` </h5>
                                 </div>
                                 <ul class="list-group list-group-flush">
-                                    <input type="text"  name="quantity" id="quantity` + data[i].ID_PRODUTOS + `" class="form-control" value="1" />
+                                <div class="col-12 col-md-12">
+                                <div class=" form-group form">
+                                    <input type="text" name="quantity" id="quantity` + data[i].ID_PRODUTOS + `" aria-autocomplete="off" required  value="1">
+                                    <label for="quantity" class="label-input">
+                                        <span class="content-input">Quantidade</span>
+                                    </label>
+                                </div>
+                            </div>
                                     <input type="hidden" name="hidden_name" id="name` + data[i].ID_PRODUTOS + `" value="` + data[i].NOME_PRODUTOS + `" />
                                     <input type="hidden" name="hidden_price" id="price` + data[i].ID_PRODUTOS + `" value="` + data[i].PRECO_VENDA_PRODUTOS + `" />
                                     <input type="button" name="add_to_cart" id="` + data[i].ID_PRODUTOS + `" style="margin-top:5px;" class="btn btn-info form-control add_to_cart" value="Adicionar ao carrinho" />
@@ -142,9 +149,13 @@ $(document).ready(function() {
                         confirmButtonText: 'Sim'
                     }).then((result) => {
                         if (result.isConfirmed) {
-
+                            $('#conteudo').load('client/leitorQr/view/leitorProdutos.html')
+                            $('.saldo').hide();
+                            $('.menu').hide();
                         } else {
-
+                            $('#conteudo').load('client/shopping/view/shopping.html')
+                            $('.saldo').hide();
+                            $('.menu').hide();
                         }
                     })
                 }
