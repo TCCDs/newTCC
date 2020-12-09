@@ -154,7 +154,7 @@ $(document).ready(function() {
                             $('.saldo').hide();
                             $('.menu').hide();
                         } else {
-                            $('#conteudo').load('client/leitorQr/view/leitorProdutos.html')
+                            $('#conteudo').load('client/shopping/view/shopping.html')
                             $('.saldo').hide();
                             $('.menu').hide();
                         }
