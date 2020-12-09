@@ -149,7 +149,7 @@ $(document).ready(function() {
                         cancelButtonText: 'Finalizar compra'
 
                     }).then((result) => {
-                        if (result.isConfirmed) {
+                        if (result.value) {
                             $('#conteudo').load('client/leitorQr/view/leitorProdutos.html')
                             $('.saldo').hide();
                             $('.menu').hide();
