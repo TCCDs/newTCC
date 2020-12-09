@@ -131,7 +131,7 @@ $(document).ready(function() {
                     action: action
                 },
                 success: function(data) {
-                    load_cart_data();
+                    // load_cart_data();
                     Swal.fire({
                         title: 'Are you sure?',
                         text: "You won't be able to revert this!",
