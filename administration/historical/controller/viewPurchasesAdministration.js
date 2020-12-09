@@ -17,7 +17,7 @@ $(document).ready(function() {
             url: url,
             success: function(dados) {
                 for (var i = 0; dados.length > i; i++) {
-                    var totalDesconto = dados[i].TOTAL_DESCONTO_COMPRAS
+                    var totalDesconto = dados[i].VALOR_COMPRAS
                     var resultValorMoedas = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalDesconto);
                     
 
@@ -25,6 +25,7 @@ $(document).ready(function() {
                         <p> Total Desconto: ` + resultValorMoedas + ` </p>
                         <p> Total Itens: ` + dados[i].TOTAL_ITENS_COMPRAS + ` </p>
                         <p> Status: ` + dados[i].STATUS_COMPRAS + ` </p>
+                        <p> Pagmento: ` + dados[i].TIPO_PAGAMENTOS + ` </p>
                     `
 
                     $('.modal-title').append(dados[i].NOME_CLIENTES)
