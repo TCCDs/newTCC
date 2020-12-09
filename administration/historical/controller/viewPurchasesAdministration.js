@@ -17,7 +17,7 @@ $(document).ready(function() {
             url: url,
             success: function(dados) {
                 for (var i = 0; dados.length > i; i++) {
-                    var totalDesconto = dados[i].TOTAL_DESCONTO_COMPRAS
+                    var totalDesconto = dados[i].VALOR_COMPRAS
                     var resultValorMoedas = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalDesconto);
                     
 
