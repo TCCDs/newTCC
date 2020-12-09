@@ -42,10 +42,3 @@
    $_SESSION['testeProdutos'] = json_encode($produtos,  JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
    echo json_encode($produtos,  JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 ?>
-
-<!-- <script>
-    /*$(document).ready(function() {
-        $('#conteudo').load('client/leitorQr/view/testeLeitor.html')
-        //window.location.replace("http://newpage.php/");
-    })*/
-</script> -->
