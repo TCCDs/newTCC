@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    $('.btn-receitaEditar').click(function(e) {
+    // $('.btn-receitaEditar').click(function(e) {
+    $('#receitaTable').on('click', 'button.btn-receitaEditar', function(e) {
         e.preventDefault()
         $('.modal-title').empty()
         $('.modal-body').empty()
@@ -16,10 +17,8 @@ $(document).ready(function() {
             data: dados,
             url: url,
             success: function(dados) {
-                console.log(dados)
-                    /*
-                    for (var i = 0; dados.length > i; i++) {
-                        let receita = `
+                for (var i = 0; dados.length > i; i++) {
+                    let receita = `
                             <form class="mt-3" id="edit-receita">
                             <div id="formCad">
                                     <div class="row">
@@ -77,9 +76,8 @@ $(document).ready(function() {
                                 </form>
                             `
 
-                        $('.modal-body').append(receita)
-                    }*/
-                console.log($('#exampleModalLong'))
+                    $('.modal-body').append(receita)
+                }
                 $('#exampleModalLong').modal('show')
                     // $('body').append('<script src="client/receitasMVC/receita/controller/updateReceita.js"></script>')
             }
