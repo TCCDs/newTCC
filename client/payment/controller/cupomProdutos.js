@@ -16,7 +16,7 @@ $(document).ready(function() {
                 var resultQuantidade = dados[i].QUANTIDADE_PRODUTOS
                 var subTotal = resultValorPreco * resultQuantidade
                 
-                var resultSubTotal = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(subTotal);
+                //var resultSubTotal = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(subTotal);
 
                 let cupomSupermercado = `
                 <ul class="list-group list-group-flush">
@@ -58,7 +58,7 @@ $(document).ready(function() {
                                 </div>
                                 <div class="row mt-1">
                                     <h6>
-                                        R$: ` + resultSubTotal + `
+                                        R$: ` + subTotal + `
                                     </h6>
                                 </div>
                             </div>
