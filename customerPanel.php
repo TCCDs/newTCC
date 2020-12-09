@@ -193,7 +193,24 @@
                 </div>
             </div>
         </div>
-        
+
+   
+
+        <script src="components/js/jquery-3.4.1.min.js"></script>
+        <script src="components/js/bootstrap.js"></script>
+        <script src="components/js/bootstrap.min.js"></script>
+        <script src="components/js/Chart.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="public/vendor/summernote/summernote-bs4.min.js"></script>
+
+        <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+        <script src="components/libs/sweetalert2/dist/sweetalert2.js"></script>
+
+        <script src="controller/js/function-menu.js"></script>
+        <script src="client/navUsers/controller/nav.js"></script>
+        <script src="client/dadosPainelPrincipal/controller/saldoCliente.js"></script>
+
         <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -213,23 +230,6 @@
         </div>
     </div>
 </div>
-
-        <script src="components/js/jquery-3.4.1.min.js"></script>
-        <script src="components/js/bootstrap.js"></script>
-        <script src="components/js/bootstrap.min.js"></script>
-        <script src="components/js/Chart.min.js"></script>
-
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="public/vendor/summernote/summernote-bs4.min.js"></script>
-
-        <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
-        <script src="components/libs/sweetalert2/dist/sweetalert2.js"></script>
-
-        <script src="controller/js/function-menu.js"></script>
-        <script src="client/navUsers/controller/nav.js"></script>
-        <script src="client/dadosPainelPrincipal/controller/saldoCliente.js"></script>
-
-      
 </body>
 
 </html>
