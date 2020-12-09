@@ -13,7 +13,11 @@ $(document).ready(function() {
                 var totalPreco = dados[i].PRECO_PRODUTOS
                 var resultValorPreco = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalPreco);
 
+                console.log(resultValorPreco)
+                console.log(' ')
                 var resultQuantidade = dados[i].QUANTIDADE_PRODUTOS
+                console.log(resultQuantidade)
+                console.log(' ')
                 var subTotal = resultValorPreco * resultQuantidade
                 console.log(subTotal)
                 //var resultSubTotal = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(subTotal);
