@@ -23,28 +23,26 @@ $(document).ready(function() {
                             </div>
 
                             <ul class="list-group list-group-flush">
-                                <div class="row">
                                     <li class="list-group-item">
-                                        <div class="col-12 col-md-6">
-                                            Quantidade
-                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-md-6">
+                                                Quantidade
+                                            </div>
 
-                                        <div class="col-12 col-md-6>
-                                            <small>` + dados[i].product_quantity + `</small>
+                                            <div class="col-12 col-md-6>
+                                                <small>` + dados[i].product_quantity + `</small>
+                                            </div>
                                         </div>
                                     </li>
-                                </div>
-                                <div class="row">
                                     <li class="list-group-item">
                                         <div class="col-12 col-md-6">
                                             Preço
                                         </div>
 
                                         <div class="col-12 col-md-6">
-                                            <small> R$ ` + resultValorPreco + `</small>
+                                            <small> ` + resultValorPreco + `</small>
                                         </div>
                                     </li>
-                                </div> 
                                 <li class="list-group-item">
                                     <div class="col-12 col-md-6">
                                         Subtotal 
