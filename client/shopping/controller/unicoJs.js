@@ -80,7 +80,7 @@ $(document).ready(function() {
                                     <input type="text"  name="quantity" id="quantity` + data[i].ID_PRODUTOS + `" class="form-control" value="1" />
                                     <input type="hidden" name="hidden_name" id="name` + data[i].ID_PRODUTOS + `" value="` + data[i].NOME_PRODUTOS + `" />
                                     <input type="hidden" name="hidden_price" id="price` + data[i].ID_PRODUTOS + `" value="` + data[i].PRECO_VENDA_PRODUTOS + `" />
-                                    <input type="button" name="add_to_cart" id="` + data[i].ID_PRODUTOS + `" style="margin-top:5px;" class="btn btn-success form-control add_to_cart" value="Adicionar ao carrinho" />
+                                    <input type="button" name="add_to_cart" id="` + data[i].ID_PRODUTOS + `" style="margin-top:5px;" class="btn btn-info form-control add_to_cart" value="Adicionar ao carrinho" />
                                 </ul>
                             </div>
                         `
@@ -132,10 +132,31 @@ $(document).ready(function() {
                 },
                 success: function(data) {
                     load_cart_data();
+                    Swal.fire({
+                        title: 'Are you sure?',
+                        text: "You won't be able to revert this!",
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Yes, delete it!'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            )
+                        }
+                    })
                 }
             })
         } else {
-            // alert("Digite o número da quantidade ");
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Digite uma quantidade válida',
+            })
         }
     });
 
