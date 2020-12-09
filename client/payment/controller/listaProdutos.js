@@ -33,7 +33,8 @@ $(document).ready(function() {
                                             <small>` + dados[i].product_quantity + `</small>
                                         </div>
                                     </li>
-
+                                </div>
+                                <div class="row">
                                     <li class="list-group-item">
                                         <div class="col-12 col-md-6">
                                             Preço
@@ -43,7 +44,7 @@ $(document).ready(function() {
                                             <small> R$ ` + resultValorPreco + `</small>
                                         </div>
                                     </li>
-                                </div>
+                                </div> 
                                 <li class="list-group-item">
                                     <div class="col-12 col-md-6">
                                         Subtotal 
