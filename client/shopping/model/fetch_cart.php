@@ -3,7 +3,7 @@
     $total_price = 0;
 
     $output = '
-        <div "table-responsive tb-carrinho"id="order_table">
+        <div class="table-responsive tb-carrinho" id="order_table">
             <table class="table table-borderless text-center">
                 <thead class="">
                     <tr class="tr-carrinho">
