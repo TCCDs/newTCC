@@ -81,7 +81,7 @@ $(document).ready(function() {
                                         <div class=" form-group">
                                             <label for="">Quantidade</label>
 
-                                            <input type="text"  name="quantity" id="quantity` + data[i].ID_PRODUTOS + `" class="form-control" value="1" />
+                                            <input type="text"  name="quantity" id="quantity` + data[i].ID_PRODUTOS + `" class="quantity" value="1" />
                                             </div>
                                     <input type="hidden" name="hidden_name" id="name` + data[i].ID_PRODUTOS + `" value="` + data[i].NOME_PRODUTOS + `" />
                                     <input type="hidden" name="hidden_price" id="price` + data[i].ID_PRODUTOS + `" value="` + data[i].PRECO_VENDA_PRODUTOS + `" />
