@@ -461,6 +461,22 @@ form input:valid+.label-input .content-input {
     outline: none;
 }
 
+.quantity {
+    background: transparent;
+    border: none;
+    color: rgb(59, 65, 150);
+    border-bottom: 1px solid rgb(78, 114, 192);
+}
+
+.quantity::placeholder {
+    color: rgb(80, 85, 151);
+}
+
+.quantity:focus {
+    border: none;
+    outline: none;
+}
+
 .qr-code {
     margin: 1em;
     border-radius: 8px;

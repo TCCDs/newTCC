@@ -70,7 +70,7 @@ $(document).ready(function() {
                 var i = 0;
                 while (data[i]) {
                     let listaProdutos = `
-                            <div class="card" style="width: 18rem;">
+                            <div class="card mb-2" style="width: 19rem;">
                                 <div class="card-body">
                                     <h5 class="text-center">  ` + data[i].DESCRICAO + ` </h5>
                                     <h4 class="text-center"> ` + data[i].NOME_PRODUTOS + ` </h4>
