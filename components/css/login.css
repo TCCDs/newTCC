@@ -478,7 +478,7 @@ form input:valid+.label-input .content-input {
 }
 
 .card-leitor {
-    margin: 2em;
+    padding: 10px;
 }
 
 .qr-code {
