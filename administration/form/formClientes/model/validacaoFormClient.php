@@ -17,6 +17,7 @@
         $dados_strs = array_map('stripslashes', $dados_strc);
         $resultDados = array_map('trim', $dados_strs);
 
+        $status = 'A';
         /* CPF */
         $cpf = preg_replace("/[^0-9]/", "", $resultDados['CPF_CLIENTES']);
         $resultDados['CPF_CLIENTES'] = str_pad($cpf, 11, '0', STR_PAD_LEFT);
@@ -91,7 +92,7 @@
             $mensagem = " CPF CLIENTES inválido";
         
         /* SEXO CLIENTES */
-        elseif (!preg_match("#[a-z]+#", $resultDados['SEXO_CLIENTES'])):
+       /* elseif (!preg_match("#[a-z]+#", $resultDados['SEXO_CLIENTES'])):
             $erro = true;
             $mensagem = "O campo SEXO CLIENTES precisa de pelo menos uma letra minúscula";
         
@@ -101,7 +102,7 @@
 
         elseif ((strlen($resultDados['SEXO_CLIENTES'])) < 7 ):
             $erro = true;
-            $mensagem = "SEXO CLIENTES deve ter no minímo 8";
+            $mensagem = "SEXO CLIENTES deve ter no minímo 8";*/
         
         /* DATA_NASCIMENTO_CLIENTES */
         elseif (!checkdate($validade[1], $validade[0], $validade[2])):
@@ -265,8 +266,8 @@
 
         if (!$erro):
             try{
-                $sql = "INSERT INTO clientes (ID_USUARIOS, NOME_CLIENTES, RG_CLIENTES, CPF_CLIENTES, SEXO_CLIENTES, DATA_NASCIMENTO_CLIENTES, CELULAR_CLIENTES, CEP_CLIENTES, CIDADE_CLIENTES, ESTADO_CLIENTES, ENDERECO_CLIENTES, NUMERO_CLIENTES, BAIRRO_CLIENTES, NACIONALIDADE_CLIENTES, COMPLEMENTO_CLIENTES)
-                VALUES (:ID_USUARIOS, :NOME_CLIENTES, :RG_CLIENTES, :CPF_CLIENTES, :SEXO_CLIENTES, :DATA_NASCIMENTO_CLIENTES, :CELULAR_CLIENTES, :CEP_CLIENTES, :CIDADE_CLIENTES, :ESTADO_CLIENTES, :ENDERECO_CLIENTES, :NUMERO_CLIENTES, :BAIRRO_CLIENTES, :NACIONALIDADE_CLIENTES, :COMPLEMENTO_CLIENTES)
+                $sql = "INSERT INTO clientes (ID_USUARIOS, NOME_CLIENTES, RG_CLIENTES, CPF_CLIENTES, SEXO_CLIENTES, DATA_NASCIMENTO_CLIENTES, CELULAR_CLIENTES, CEP_CLIENTES, CIDADE_CLIENTES, ESTADO_CLIENTES, ENDERECO_CLIENTES, NUMERO_CLIENTES, BAIRRO_CLIENTES, NACIONALIDADE_CLIENTES, COMPLEMENTO_CLIENTES, STATUS_CLIENTES)
+                VALUES (:ID_USUARIOS, :NOME_CLIENTES, :RG_CLIENTES, :CPF_CLIENTES, :SEXO_CLIENTES, :DATA_NASCIMENTO_CLIENTES, :CELULAR_CLIENTES, :CEP_CLIENTES, :CIDADE_CLIENTES, :ESTADO_CLIENTES, :ENDERECO_CLIENTES, :NUMERO_CLIENTES, :BAIRRO_CLIENTES, :NACIONALIDADE_CLIENTES, :COMPLEMENTO_CLIENTES, :STATUS_CLIENTES)
                     ";
 
     
@@ -285,7 +286,8 @@
                 ':NUMERO_CLIENTES'              => $resultDados['NUMERO_CLIENTES'],
                 ':BAIRRO_CLIENTES'              => $resultDados["BAIRRO_CLIENTES"],
                 ':NACIONALIDADE_CLIENTES'       => $resultDados["NACIONALIDADE_CLIENTES"],
-                ':COMPLEMENTO_CLIENTES'         => $resultDados["COMPLEMENTO_CLIENTES"]
+                ':COMPLEMENTO_CLIENTES'         => $resultDados["COMPLEMENTO_CLIENTES"],
+                ':STATUS_CLIENTES'              => $status
             );
     
             $resultado = $conn->getConn()->prepare($sql);
