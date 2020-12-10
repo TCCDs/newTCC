@@ -436,7 +436,7 @@ form input:valid+.label-input .content-input {
 }
 
 .btn-receita:hover {
-    background: #0e474def;
+    background: #1e1e1fef;
     color: white;
 }
 
@@ -459,6 +459,17 @@ form input:valid+.label-input .content-input {
 .form-pesquisa:focus {
     border: none;
     outline: none;
+}
+
+.qr-code {
+    margin: 1em;
+    border-radius: 8px;
+    background: white;
+    padding: 10px;
+}
+
+.text-qr {
+    color: #116e75ef;
 }
 
 @media (max-width: 576px) {
