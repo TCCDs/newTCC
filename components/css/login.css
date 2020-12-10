@@ -477,6 +477,10 @@ form input:valid+.label-input .content-input {
     outline: none;
 }
 
+.card-leitor {
+    margin: 2em;
+}
+
 .qr-code {
     margin: 1em;
     border-radius: 8px;

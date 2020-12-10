@@ -70,7 +70,7 @@ $(document).ready(function() {
                 var i = 0;
                 while (data[i]) {
                     let listaProdutos = `
-                            <div class="card mb-2" style="width: 19rem;">
+                            <div class="card card-leitor" style="width: 19rem;">
                                 <div class="card-body">
                                     <h5 class="text-center">  ` + data[i].DESCRICAO + ` </h5>
                                     <h4 class="text-center"> ` + data[i].NOME_PRODUTOS + ` </h4>
@@ -80,7 +80,7 @@ $(document).ready(function() {
                                     <div class="col-12 col-md-12">
                                         <div class=" form-group">
                                             <label for="">Quantidade</label>
-                                            <input class="form-control type="text" name="quantity" id="quantity ` + data[i].ID_PRODUTOS + `"  placeholder="Quantidade"  required>
+                                            <input class="quantity type="text" name="quantity" id="quantity ` + data[i].ID_PRODUTOS + `"  placeholder="Quantidade"  required>
                                         </div>
                                     <input type="hidden" name="hidden_name" id="name` + data[i].ID_PRODUTOS + `" value="` + data[i].NOME_PRODUTOS + `" />
                                     <input type="hidden" name="hidden_price" id="price` + data[i].ID_PRODUTOS + `" value="` + data[i].PRECO_VENDA_PRODUTOS + `" />
