@@ -91,7 +91,7 @@
             $mensagem = " CPF CLIENTES inválido";
         
         /* SEXO CLIENTES */
-        elseif (!preg_match("#[a-z]+#", $resultDados['SEXO_CLIENTES'])):
+       /* elseif (!preg_match("#[a-z]+#", $resultDados['SEXO_CLIENTES'])):
             $erro = true;
             $mensagem = "O campo SEXO CLIENTES precisa de pelo menos uma letra minúscula";
         
@@ -101,7 +101,7 @@
 
         elseif ((strlen($resultDados['SEXO_CLIENTES'])) < 7 ):
             $erro = true;
-            $mensagem = "SEXO CLIENTES deve ter no minímo 8";
+            $mensagem = "SEXO CLIENTES deve ter no minímo 8";*/
         
         /* DATA_NASCIMENTO_CLIENTES */
         elseif (!checkdate($validade[1], $validade[0], $validade[2])):
