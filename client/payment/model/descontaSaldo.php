@@ -47,6 +47,9 @@
     $status_compras = 'F';
     $tipo_pagamento = 'Moeda Virtual';
             
+    print_r($ID_USUARIOS . ' ');
+    print_r($_SESSION["CODIGO_COMPRAS"]);
+    exit;
     //if (!$erro):
         try {
             $sql =  "
