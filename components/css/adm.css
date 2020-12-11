@@ -3,7 +3,7 @@
     }
     
     .bg-menu-adm {
-        background-image: linear-gradient(to bottom right, #316d7e7a, rgba(72, 117, 138, 0.486));
+        background-image: linear-gradient(to bottom right, #1c51607a, rgba(72, 117, 138, 0.486));
         border-bottom-right-radius: 12px;
         border-bottom-left-radius: 12px;
     }
@@ -175,12 +175,12 @@
     }
     
     .dados3 {
-        background: linear-gradient( rgba(12, 60, 66, 0.514), rgba(16, 47, 82, 0.568));
+        background: rgba(12, 60, 66, 0.514);
         color: white;
     }
     
     .grafico2 {
-        background: rgb(12, 60, 66);
+        background: linear-gradient( rgba(12, 60, 66, 0.514), rgba(16, 47, 82, 0.568));
         padding: 0.4em;
         border-radius: 10px;
     }
