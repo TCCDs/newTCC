@@ -3,7 +3,7 @@
     }
     
     .bg-menu-adm {
-        background-image: linear-gradient(to bottom right, #1c51607a, rgba(72, 117, 138, 0.486));
+        background-image: #202b30;
         border-bottom-right-radius: 12px;
         border-bottom-left-radius: 12px;
     }
@@ -155,7 +155,7 @@
     
     .graficos {
         border-radius: 8px;
-        background: rgb(12, 60, 66);
+        background: rgb(43, 70, 73);
         padding: 10px;
     }
     
