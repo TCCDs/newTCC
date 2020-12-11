@@ -45,7 +45,7 @@
     } else {
 
         $output .= '
-            <tr>
+            <tr class="tr-carrinho">
                 <td colspan="5" align="center">                
                     Seu carrinho está vazio!
                 </td>
