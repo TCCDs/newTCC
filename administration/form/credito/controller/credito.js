@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-    $('.registrar').click(function(e) {
+    /*$('.registrar').click(function(e) {
         e.preventDefault()
 
-        var dados = $('#register_form').serialize()
-        var url = "administration/form/formUsuario/model/validacaoFormUser.php"
+        var dados = $('#register_form').serialize()*/
+        //var url = "administration/form/formUsuario/model/validacaoFormUser.php"
 
         $.ajax({
             type: 'POST',
@@ -25,6 +25,5 @@ $(document).ready(function() {
                 }
             }
         })
-   // })
-
+    //})
 });
