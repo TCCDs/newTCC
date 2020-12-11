@@ -6,11 +6,6 @@
     $id_clientes_compras = $_SESSION['ID_USUARIOS'];
 
     $sql = 'SELECT 
-                compras_pagamentos.NOME_CARTAO,
-                compras_pagamentos.NUMERO_CARTAO,
-                compras_pagamentos.STATUS_PAGAMENTO,
-                compras_pagamentos.CODIGO_PAGAMENTO,
-                
                 compras.CODIGO_COMPRAS,
                 compras.VALOR_COMPRAS,
                 compras.STATUS_COMPRAS,
@@ -23,13 +18,13 @@
                 clientes.ENDERECO_CLIENTES,
                 clientes.NUMERO_CLIENTES,
                 clientes.BAIRRO_CLIENTES,
-
+                
                 compras_itens.NOME_PRODUTOS,
                 compras_itens.CODIGO_ITENS
             FROM 
-                compras_pagamentos
-            INNER JOIN compras_itens ON compras_pagamentos.ID_COMPRAS_ITENS = compras_itens.ID_COMPRA_ITENS
-            INNER JOIN compras ON compras_itens.ID_COMPRAS = compras.ID_COMPRAS
+                compras
+            /*INNER JOIN compras_itens ON compras_pagamentos.ID_COMPRAS_ITENS = compras_itens.ID_COMPRA_ITENS*/
+            INNER JOIN compras_itens ON compras.ID_COMPRAS = compras_itens.ID_COMPRAS
             INNER JOIN clientes ON (compras.ID_CLIENTES_COMPRAS = clientes.ID_CLIENTES)
             WHERE 
                 clientes.ID_USUARIOS = :ID_USUARIOS
