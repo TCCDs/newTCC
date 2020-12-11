@@ -7,6 +7,8 @@
 
     /* DESCONTO SALDO MOEDA VIRTUAL */
     $ID_USUARIOS = $_SESSION['ID_USUARIOS'];
+    print_r($ID_USUARIOS);
+    exit;
     $sql = 'SELECT sum(saldo_clientes.SALDO_CLIENTES) AS saldo_clientes,
                 clientes.NOME_CLIENTES 
             FROM saldo_clientes
