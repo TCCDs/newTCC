@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
-    $('.registrar').click(function(e) {
+ /*   $('.registrar').click(function(e) {
         e.preventDefault()
 
-        var dados = $('#register_form').serialize()
+        var dados = $('#register_form').serialize()*/
         var url = "administration/form/formUsuario/model/validacaoFormUser.php"
 
         $.ajax({
@@ -14,26 +14,17 @@ $(document).ready(function() {
             data: dados,
             success: function(dados) {
                 if (dados.return == true) {
-                    Swal.fire({
+                   /* Swal.fire({
                         icon: 'success',
                         title: 'Supermercado Caravelas!',
                         text: 'Cadastro efetuado com sucesso!',
                         type: 'success',
                         confirmButtonText: 'Feito!'
-                    })
+                    })*/
                     $('#conteudo').load('administration/form/formClientes/view/formClient.html')
-                } else {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Supermercado Caravelas!',
-                        text: dados.mensagem,
-                        type: 'error',
-                        confirmButtonText: 'Tente novamente...!'
-                    })
                 }
-                // $('#register_form input').val("")
             }
         })
-    })
+   // })
 
 });

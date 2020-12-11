@@ -41,8 +41,8 @@ $(document).ready(function() {
                         type: 'success',
                         confirmButtonText: 'Feito!'
                     })
-                    $('#conteudo').load('administration/form/formClientes/view/formClient.html')
-
+                   // $('#conteudo').load('administration/form/formClientes/view/formClient.html')
+                   $('#conteudo').load('administration/form/credito/model/addCredito.php')
                 } else {
                     Swal.fire({
                         icon: 'error',

@@ -10,10 +10,8 @@
                     VALUES (:ID_CLIENTE, :SALDO_CLIENTES)
                 ";
 
-        $password_hash = password_hash($resultDados['SENHA_USUARIOS'], PASSWORD_DEFAULT);
-
         $user_data = array(
-            ':ID_CLIENTE'       => $resultDados['ID_CLIENTE'],
+            ':ID_CLIENTE'       => $_SESSION['ID_CLIENTE'],
             ':SALDO_CLIENTES'   => $saldo
         );
 
@@ -28,7 +26,6 @@
         );
 
         } catch (Exception $ex){
-            //$data = array('return' => $ex->getMessage());
             $mensagem = "Erro ao cadastrar usuário";
             
             $data = array(
