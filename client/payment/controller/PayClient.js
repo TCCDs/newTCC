@@ -36,16 +36,8 @@ $(document).ready(function() {
                         }
                     }).then((result) => {
                         /* Read more about handling dismissals below */
-                        if (result.value === Swal.DismissReason.timer) {
+                        if (result.dismiss === Swal.DismissReason.timer) {
                             $('#conteudo').load('client/payment/view/tax.html')
-                        } else {
-                            Swal.fire({
-                                icon: 'error',
-                                title: 'Supermercado Caravelas!',
-                                text: dados.mensagem,
-                                type: 'error',
-                                confirmButtonText: 'Tente novamente...!'
-                            })
                         }
                     })
                 } else {
