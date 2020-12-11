@@ -47,13 +47,7 @@
     $status_compras = 'F';
     $tipo_pagamento = 'Moeda Virtual';
             
-    print_r($ID_USUARIOS . ' ');
-    print_r($_SESSION["CODIGO_COMPRAS"]);
-    print_r($totalCompraCliente . ' ');
-    print_r($total_desconto_compras);
-    print_r($status_compras . ' ');
-    print_r($tipo_pagamento);
-    exit;
+
     //if (!$erro):
         try {
             $sql =  "
