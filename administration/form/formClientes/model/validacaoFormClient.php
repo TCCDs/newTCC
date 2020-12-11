@@ -270,7 +270,6 @@
                 VALUES (:ID_USUARIOS, :NOME_CLIENTES, :RG_CLIENTES, :CPF_CLIENTES, :SEXO_CLIENTES, :DATA_NASCIMENTO_CLIENTES, :CELULAR_CLIENTES, :CEP_CLIENTES, :CIDADE_CLIENTES, :ESTADO_CLIENTES, :ENDERECO_CLIENTES, :NUMERO_CLIENTES, :BAIRRO_CLIENTES, :NACIONALIDADE_CLIENTES, :COMPLEMENTO_CLIENTES, :STATUS_CLIENTES)
                     ";
 
-    
             $user_data = array(
                 ':ID_USUARIOS'                  => $_SESSION['idUsuario'],
                 ':NOME_CLIENTES'                => $resultDados["NOME_CLIENTES"],
@@ -292,9 +291,9 @@
     
             $resultado = $conn->getConn()->prepare($sql);
             $resultado->execute($user_data);
-            /*$idCliente = $conn->getConn()->lastInsertId();
+            $idCliente = $conn->getConn()->lastInsertId();
 
-            $_SESSION['ID_CLIENTE'] = $idCliente;*/
+            $_SESSION['ID_CLIENTE'] = $idCliente;
     
             $mensagem = "Cadastro efetuado com sucesso!";
 
@@ -311,6 +310,38 @@
                 );
 
             }
+
+
+            $saldo = 0.00;
+            try{
+                $sql = "INSERT INTO saldo_clientes (ID_CLIENTE, SALDO_CLIENTES)
+                        VALUES (:ID_CLIENTE, :SALDO_CLIENTES)
+                    ";
+    
+            $user_data = array(
+                ':ID_CLIENTE'       => $_SESSION['ID_CLIENTE'],
+                ':SALDO_CLIENTES'   => $saldo
+            );
+    
+            $resultado = $conn->getConn()->prepare($sql);
+            $resultado->execute($user_data);
+    
+            $mensagem = "Cadastro efetuado com sucesso!";
+    
+            $data = array(
+                'return' => true,
+                'mensagem' => $mensagem
+            );
+    
+            } catch (Exception $ex){
+                $mensagem = "Erro ao cadastrar usuário";
+                
+                $data = array(
+                    'mensagem' => $mensagem
+                );
+    
+            }
+
 
         else:
             $data = array('mensagem' => $mensagem);
