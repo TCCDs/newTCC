@@ -36,7 +36,7 @@
         }
 
         $output .= '
-            <tr>  
+            <tr class="tr-carrinho">  
                 <td colspan="4" align="right">Total</td>  
                 <td align="right">$ '.number_format($total_price, 2).'</td>  
                 <td></td>  
@@ -45,7 +45,7 @@
     } else {
 
         $output .= '
-            <tr class="tr-carrinho">
+            <tr >
                 <td colspan="5" align="center">                
                     Seu carrinho está vazio!
                 </td>
