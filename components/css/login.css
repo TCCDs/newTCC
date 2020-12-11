@@ -12,7 +12,8 @@ hr {
 }
 
 .conteudo1 {
-    margin-bottom: 5em !important;
+    margin-bottom: 5em;
+    background: rebeccapurple;
 }
 
 #conteudo {
