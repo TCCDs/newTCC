@@ -110,7 +110,7 @@
                         <div class="card dados3 ">
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-12 col-md-6  d-none d-sm-block">
+                                    <div class="col-12 col-md-6 ">
                                     <h1 class="display-4 icone bg-secondary text-light"><i class="mdi mdi-account"></i></h1>
                                     </div>
                                     <div class="col-12 col-md-6">
@@ -127,7 +127,7 @@
                         <div class="card dados3 ">
                             <div class="card-body">
                             <div class="row">
-                                    <div class="col-12 col-md-6  d-none d-sm-block">
+                                    <div class="col-12 col-md-6 ">
                                     <h1 class="display-4 icone bg-primary text-light"><i class="mdi mdi-truck"></i></h1>
                                     </div>
                                     <div class="col-12 col-md-6">
@@ -144,7 +144,7 @@
                         <div class="card dados3">
                             <div class="card-body">
                             <div class="row align-items-center">
-                                    <div class="col-12 col-md-6  d-none d-sm-block">
+                                    <div class="col-12 col-md-6 ">
                                     <h1 class="display-4 icone  bg-success text-light"><i class="mdi mdi-cash"></i></h1>
                                     </div>
                                     <div class="col-12 col-md-6 ">
@@ -161,7 +161,7 @@
                         <div class="card dados3">
                             <div class="card-body">
                                 <div class="row align-items-center ">
-                                    <div class="col-12 col-md-6 d-none d-sm-block">
+                                    <div class="col-12 col-md-6">
                                         <h1 class="display-4 icone bg-danger text-light"><i class="mdi mdi-hamburger"></i></h1>
                                     </div>
                                     <div class="col-12 col-md-6">
@@ -178,7 +178,7 @@
                         <div class="card dados3">
                             <div class="card-body">
                                 <div class="row align-items-center" >
-                                    <div class="col-12 col-md-6 d-none d-sm-block  ">
+                                    <div class="col-12 col-md-6  ">
                                         <h1 class="display-4 icone bg-warning text-light"><i class="mdi mdi-tag-heart "></i></h1>
                                     </div>
                                     <div class="col-12 col-md-6">
@@ -195,7 +195,7 @@
                         <div class="card dados3">
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-12 col-md-6 d-none d-sm-block ">
+                                    <div class="col-12 col-md-6 ">
                                     <h1 class="display-4 icone bg-info text-light"><i class="mdi mdi-clock"></i></h1>
                                     </div>
                                     <div class="col-12 col-md-6">

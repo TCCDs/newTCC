@@ -1,5 +1,5 @@
     body {
-        background: #235468;
+        background: #16333f;
     }
     
     .bg-menu-adm {
@@ -74,7 +74,7 @@
     #register_form h2,
     #register_form h3 {
         font: 22px "Trebuchet MS", tahoma, arial;
-        color: brown;
+        color: rgb(42, 165, 73);
         width: 100%;
         float: left;
         text-align: left;
@@ -133,7 +133,7 @@
     #register_form #progress li:after {
         content: '';
         width: 100%;
-        background: rgb(145, 26, 26);
+        background: rgb(26, 145, 95);
         height: 2px;
         position: absolute;
         top: 9px;
@@ -155,7 +155,7 @@
     
     .graficos {
         border-radius: 8px;
-        background: linear-gradient( rgb(12, 60, 66), rgb(16, 47, 82));
+        background: rgb(12, 60, 66), ;
         padding: 10px;
     }
     
@@ -180,7 +180,7 @@
     }
     
     .grafico2 {
-        background: linear-gradient( rgba(12, 60, 66, 0.514), rgba(16, 47, 82, 0.568));
+        background: rgb(12, 60, 66);
         padding: 0.4em;
         border-radius: 10px;
     }
