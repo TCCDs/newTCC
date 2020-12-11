@@ -40,6 +40,9 @@
         $descontoSaldoCliente = $saldoAtualCliente - $totalCompraCliente;
     }
     
+    print_r($descontoSaldoCliente);
+    print_r($idClientes);
+    exit;
     // -- -- //
 
     $codigo_compras = mt_rand();
@@ -115,7 +118,7 @@
 
             $resultado = $conn->getConn()->prepare($sql);
             $resultado->bindParam(':SALDO_CLIENTES', $descontoSaldoCliente);
-            $resultado->bindParam(':ID_CLIENTE', $ID_USUARIOS);
+            $resultado->bindParam(':ID_CLIENTE', $idClientes);
             $resultado->execute();
                 
             $data = array('return' => true);
