@@ -36,7 +36,7 @@ $(document).ready(function() {
                         }
                     }).then((result) => {
                         /* Read more about handling dismissals below */
-                        if (result.dismiss === Swal.DismissReason.timer) {
+                        if (result.value === Swal.DismissReason.timer) {
                             $('#conteudo').load('client/payment/view/tax.html')
                         } else {
                             Swal.fire({
