@@ -3,11 +3,11 @@
     include_once ('../../../server/Connect.php');
     $conn = new Conn();
 
-    $erro = false;
+    //$erro = false;
 
     /* DESCONTO SALDO MOEDA VIRTUAL */
     $ID_USUARIOS = $_SESSION['ID_USUARIOS'];
-    
+
     $sql = 'SELECT sum(saldo_clientes.SALDO_CLIENTES) AS saldo_clientes,
                 clientes.NOME_CLIENTES 
             FROM saldo_clientes
@@ -32,7 +32,7 @@
     }
     
     if ($totalCompraCliente > $saldoAtualCliente) {
-        $erro = true;
+        //$erro = true;
         $mensagem =  "saldo insuficiente"; //echo "saldo insuficiente";
     } else {
         $descontoSaldoCliente = $saldoAtualCliente - $totalCompraCliente;
@@ -47,7 +47,7 @@
     $status_compras = 'F';
     $tipo_pagamento = 'Moeda Virtual';
             
-    if (!$erro):
+    //if (!$erro):
         try {
             $sql =  "
                 INSERT INTO compras
@@ -120,9 +120,9 @@
         } catch (Exception $ex){
             $data = array('return' => $ex->getMessage());
         }
-    else:
-        $data = array('mensagem' => $mensagem);
-    endif;
+    //else:
+//$data = array('mensagem' => $mensagem);
+    //endif;
 
 
     unset($_SESSION["shopping_cart"]);
