@@ -110,15 +110,12 @@
             }
         }
 
-        print_r($_SESSION["DESCONTA_SALDO"]. ' ');
-        print_r($idClientes);
-        exit;
         /* UPDATE ATUALIZAR SALDO */
         try {
             $sql = "UPDATE saldo_clientes SET SALDO_CLIENTES = :SALDO_CLIENTES  WHERE ID_CLIENTE = :ID_CLIENTE";
 
             $resultado = $conn->getConn()->prepare($sql);
-            $resultado->bindParam(':SALDO_CLIENTES', $descontoSaldoCliente);
+            $resultado->bindParam(':SALDO_CLIENTES', $_SESSION["DESCONTA_SALDO"]);
             $resultado->bindParam(':ID_CLIENTE', $idClientes);
             $resultado->execute();
                 
