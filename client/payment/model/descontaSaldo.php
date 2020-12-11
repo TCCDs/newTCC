@@ -119,9 +119,10 @@
         } catch (Exception $ex){
             $data = array('return' => $ex->getMessage());
         }
+    else:
+        $data = array('mensagem' => $mensagem);
     endif;
 
-    $data = array('mensagem' => $mensagem);
 
     unset($_SESSION["shopping_cart"]);
     echo json_encode($data);
