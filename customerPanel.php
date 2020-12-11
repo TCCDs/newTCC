@@ -147,7 +147,12 @@
                     <small>Adicionar</small>
                 </div>
             </div>
-            <div id="conteudo"></div>
+            <div class="conteudo1">
+            <div id="conteudo">
+
+            </div>
+            </div>
+        
             <div class="fixed-bottom">
                 <div class="menu">
                     <div class="row text-center">
