@@ -147,7 +147,7 @@
                     <small>Adicionar</small>
                 </div>
             </div>
-            <div id="conteudo">
+            <div id="conteudo mb-5">
 
             </div>
         
