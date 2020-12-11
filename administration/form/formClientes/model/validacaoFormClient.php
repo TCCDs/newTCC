@@ -292,9 +292,9 @@
     
             $resultado = $conn->getConn()->prepare($sql);
             $resultado->execute($user_data);
-            $idCliente = $conn->getConn()->lastInsertId();
+            /*$idCliente = $conn->getConn()->lastInsertId();
 
-            $_SESSION['ID_CLIENTE'] = $idCliente;
+            $_SESSION['ID_CLIENTE'] = $idCliente;*/
     
             $mensagem = "Cadastro efetuado com sucesso!";
 
