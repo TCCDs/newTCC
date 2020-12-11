@@ -17,15 +17,15 @@ $(document).ready(function() {
                         <td> ` + dados[i].slug + `</td>
                         <td> ` + dados[i].cattitulo + `</td>
                         <td> ` + dados[i].data + `</td>
-                        <td>
-                            <button id="` + dados[i].id + `" class="btn btn-receitaEditar"> 
-                                Editar
-                            </button>
+                        // <td>
+                        //     <button id=" + dados[i].id + " class="btn btn-receitaEditar"> 
+                        //         Editar
+                        //     </button>
 
-                            <button id="` + dados[i].id + `" class="btn btn-info ml-2 btn-receitaView"> 
-                                Ver
-                            </button>
-                        </td>
+                        //     <button id=" + dados[i].id + " class="btn btn-info ml-2 btn-receitaView"> 
+                        //         Ver
+                        //     </button>
+                        // </td>
                     </tr>
                 `
                 $('tbody').append(receita)
