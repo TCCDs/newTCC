@@ -40,9 +40,6 @@
         $descontoSaldoCliente = $saldoAtualCliente - $totalCompraCliente;
     }
     
-    print_r($descontoSaldoCliente);
-    print_r($idClientes);
-    exit;
     // -- -- //
 
     $codigo_compras = mt_rand();
@@ -112,6 +109,9 @@
             }
         }
 
+        print_r($descontoSaldoCliente);
+        print_r($idClientes);
+        exit;
         /* UPDATE ATUALIZAR SALDO */
         try {
             $sql = "UPDATE saldo_clientes SET SALDO_CLIENTES = :SALDO_CLIENTES  WHERE ID_CLIENTE = :ID_CLIENTE";
