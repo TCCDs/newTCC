@@ -42,7 +42,7 @@ $(document).ready(function() {
                             Swal.fire({
                                 icon: 'error',
                                 title: 'Supermercado Caravelas!',
-                                text: 'Saldo insuficiente',
+                                text: mensagem,
                                 type: 'error',
                                 confirmButtonText: 'Tente novamente...!'
                             })
