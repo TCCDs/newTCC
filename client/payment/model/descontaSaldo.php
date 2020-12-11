@@ -44,6 +44,7 @@
 
     $codigo_compras = mt_rand();
     $_SESSION["CODIGO_COMPRAS"] = $codigo_compras;
+    $_SESSION["DESCONTA_SALDO"] = $descontoSaldoCliente;
 
     $total_desconto_compras = 0;
     $status_compras = 'F';
@@ -109,7 +110,7 @@
             }
         }
 
-        print_r($descontoSaldoCliente);
+        print_r($_SESSION["DESCONTA_SALDO"]. ' ');
         print_r($idClientes);
         exit;
         /* UPDATE ATUALIZAR SALDO */
