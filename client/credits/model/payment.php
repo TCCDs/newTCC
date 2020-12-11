@@ -10,7 +10,8 @@
     /* SALDO MOEDA VIRTUAL */
     $ID_USUARIOS = $_SESSION['ID_USUARIOS'];
     $sql = 'SELECT sum(saldo_clientes.SALDO_CLIENTES) AS saldo_clientes,
-                clientes.NOME_CLIENTES 
+                clientes.NOME_CLIENTES,
+				clientes.ID_CLIENTES 
             FROM saldo_clientes
             INNER JOIN clientes ON saldo_clientes.ID_CLIENTE = clientes.ID_CLIENTES
             WHERE clientes.ID_USUARIOS = :ID_USUARIOS
@@ -21,7 +22,8 @@
     $resultado->execute();
     
     while($saldoAtual = $resultado->fetch(PDO::FETCH_ASSOC)) {
-        $saldoAtualCliente = $saldoAtual["saldo_clientes"];
+		$saldoAtualCliente = $saldoAtual["saldo_clientes"];
+		$idClientes = $saldoAtual["ID_CLIENTES"];
     }
 
 if(isset($_POST["token"])) {
@@ -56,7 +58,7 @@ if(isset($_POST["token"])) {
 
 		$order_item_data = array(
 			':CODIGOS'				=>	$codigos,
-			':ID_CLIENTES_MOEDAS'	=>	$ID_USUARIOS,
+			':ID_CLIENTES_MOEDAS'	=>	$idClientes,
 			':VALOR_MOEDAS'			=>	$amount
 		);
 
@@ -106,7 +108,7 @@ if(isset($_POST["token"])) {
 		$addMoedas = $amount + $saldoAtualCliente;
 
 		$order_saldo = array(
-			':ID_CLIENTE' => $ID_USUARIOS,
+			':ID_CLIENTE' => $idClientes,
 			':SALDO_CLIENTES' => $addMoedas
 		);
 
