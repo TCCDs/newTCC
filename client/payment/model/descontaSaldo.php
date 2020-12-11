@@ -25,10 +25,6 @@
         $idClientes = $saldoAtual["ID_CLIENTES"];
     }
 
-    print_r($saldoAtualCliente . " ");
-    print_r($idClientes);
-    exit;
-    
     /* TOTAL DA COMPRA */
     $totalCompraCliente = 0;
     if(!empty($_SESSION["shopping_cart"])) {
