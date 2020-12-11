@@ -60,7 +60,7 @@
             ";
                     
             $resultado = $conn->getConn()->prepare($sql);
-            $resultado->bindParam(':ID_CLIENTES_COMPRAS', $ID_USUARIOS);
+            $resultado->bindParam(':ID_CLIENTES_COMPRAS', $idClientes);
             $resultado->bindParam(':CODIGO_COMPRAS', $_SESSION["CODIGO_COMPRAS"]);
             $resultado->bindParam(':VALOR_COMPRAS', $totalCompraCliente);
             $resultado->bindParam(':TOTAL_DESCONTO_COMPRAS', $total_desconto_compras);
