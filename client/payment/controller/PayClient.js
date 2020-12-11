@@ -42,7 +42,7 @@ $(document).ready(function() {
                             Swal.fire({
                                 icon: 'error',
                                 title: 'Supermercado Caravelas!',
-                                text: mensagem,
+                                text: dados.mensagem,
                                 type: 'error',
                                 confirmButtonText: 'Tente novamente...!'
                             })
