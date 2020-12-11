@@ -147,10 +147,8 @@
                     <small>Adicionar</small>
                 </div>
             </div>
-            <div class="conteudo1">
             <div id="conteudo">
 
-            </div>
             </div>
         
             <div class="fixed-bottom">

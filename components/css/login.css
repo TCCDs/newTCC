@@ -11,13 +11,9 @@ hr {
     padding: 18px;
 }
 
-.conteudo1 {
-    bottom: 5em;
-    background: rebeccapurple;
-}
-
 #conteudo {
-    margin-bottom: 5em !important;
+    margin-bottom: 20em;
+    background: rgb(46, 156, 12);
 }
 
 h2 {
