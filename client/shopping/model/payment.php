@@ -4,6 +4,21 @@
 	$conn = new Conn();
 
 	session_start();
+	/* ID_CLIENTES */
+	$ID_USUARIOS = $_SESSION['ID_USUARIOS'];
+
+	$sql = 'SELECT 
+				clientes.ID_CLIENTES 
+			FROM clientes
+			WHERE clientes.ID_USUARIOS = :ID_USUARIOS';
+	
+	$resultado = $conn->getConn()->prepare($sql);
+	$resultado->bindParam(':ID_USUARIOS', $ID_USUARIOS, PDO::PARAM_INT);
+	$resultado->execute();
+	
+	while($saldoAtual = $resultado->fetch(PDO::FETCH_ASSOC)) {
+		$idClientes = $saldoAtual["ID_CLIENTES"];
+	}
 
 	if(isset($_POST["token"])) {
 		require_once '../../../vendor/autoload.php';
@@ -32,9 +47,11 @@
 		if($response["amount_refunded"] == 0 && empty($response["failure_code"]) && $response['paid'] == 1 && $response["captured"] == 1 && $response['status'] == 'succeeded') {
 			$amount = $response["amount"]/100;
 
+
+
 			#compras simples
 			$codigo_compras = mt_rand();
-			$id_clientes_compras = $_SESSION['ID_USUARIOS'];
+			$id_clientes_compras = $idClientes;
 			$total_desconto_compras = 0;
 			$status_compras = 'F';
 			$tipo_pagamento = 'Cartão de Credito';
