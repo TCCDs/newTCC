@@ -9,7 +9,8 @@
     $ID_USUARIOS = $_SESSION['ID_USUARIOS'];
 
     $sql = 'SELECT sum(saldo_clientes.SALDO_CLIENTES) AS saldo_clientes,
-                clientes.NOME_CLIENTES 
+                clientes.NOME_CLIENTES,
+                clientes.ID_CLIENTES
             FROM saldo_clientes
             INNER JOIN clientes ON saldo_clientes.ID_CLIENTE = clientes.ID_CLIENTES
             WHERE clientes.ID_USUARIOS = :ID_USUARIOS
@@ -21,8 +22,13 @@
     
     while($saldoAtual = $resultado->fetch(PDO::FETCH_ASSOC)) {
         $saldoAtualCliente = $saldoAtual["saldo_clientes"];
+        $idClientes = $saldoAtual["ID_CLIENTES"];
     }
 
+    print_r($saldoAtualCliente . " ");
+    print_r($idClientes);
+    exit;
+    
     /* TOTAL DA COMPRA */
     $totalCompraCliente = 0;
     if(!empty($_SESSION["shopping_cart"])) {
