@@ -15,7 +15,7 @@ $(document).ready(function() {
                 if (dados.return == true) {
                     Swal.fire({
                         icon: 'success',
-                        title: 'SysAgenda!',
+                        title: 'Supermercado Caravelas!',
                         text: 'Alteração efetuada com sucesso!',
                         type: 'success',
                         confirmButtonText: 'Feito!'

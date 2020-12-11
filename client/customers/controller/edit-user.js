@@ -65,7 +65,7 @@ $(document).ready(function() {
                                     <div class=" form-group form">
                                         <input type="text" name="SEXO_CLIENTES" id="SEXO_CLIENTES" aria-autocomplete="off" required value="` + dados[i].SEXO_CLIENTES + `">
                                         <label for="SEXO_CLIENTES" class="label-input">
-                                            <span class="content-input">Data de nascimento</span>
+                                            <span class="content-input">Gênero</span>
                                         </label>
                                     </div>
                                 </div>
@@ -76,7 +76,7 @@ $(document).ready(function() {
                                     <div class=" form-group form">
                                         <input type="text" name="CELULAR_CLIENTES" id="CELULAR_CLIENTES" aria-autocomplete="off" required value="` + dados[i].CELULAR_CLIENTES + `">
                                         <label for="CELULAR_CLIENTES" class="label-input">
-                                            <span class="content-input">Data de nascimento</span>
+                                            <span class="content-input">Celular</span>
                                         </label>
                                     </div>
                                 </div>
@@ -84,7 +84,7 @@ $(document).ready(function() {
                                     <div class=" form-group form">
                                         <input type="text" name="NACIONALIDADE_CLIENTES" id="NACIONALIDADE_CLIENTES" aria-autocomplete="off" required value="` + dados[i].NACIONALIDADE_CLIENTES + `">
                                         <label for="NACIONALIDADE_CLIENTES" class="label-input">
-                                            <span class="content-input">Data de nascimento</span>
+                                            <span class="content-input">Nacionalidade</span>
                                         </label>
                                     </div>
                                 </div>
