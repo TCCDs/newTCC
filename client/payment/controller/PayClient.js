@@ -38,6 +38,14 @@ $(document).ready(function() {
                         /* Read more about handling dismissals below */
                         if (result.dismiss === Swal.DismissReason.timer) {
                             $('#conteudo').load('client/payment/view/tax.html')
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Supermercado Caravelas!',
+                                text: 'Saldo insuficiente',
+                                type: 'error',
+                                confirmButtonText: 'Tente novamente...!'
+                            })
                         }
                     })
                 } else {
