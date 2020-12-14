@@ -91,7 +91,7 @@ $(document).ready(function() {
     })
 
     $('.receitas').click(function() {
-        $('#conteudo').load('client/receitasMVC/partials/view/index.html')
+        $('#conteudo').load('client/my-receitas/public/index.php')
         $('.saldo').hide();
         $('.menu').hide();
     })

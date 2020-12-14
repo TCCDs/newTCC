@@ -125,6 +125,10 @@
                         <li class="lista">
                             <a class="btn historico-adm text-left receitasMVC">Receitas</a>
                         </li>
+
+                        <li class="lista">
+                            <a class="btn historico-adm text-left receitas">TESTE</a>
+                        </li>
                     </ul>
                 </div>
             </div>
