@@ -11,10 +11,10 @@
         public function __construct() {
             $this->debug = true;
 
-            $this->server   =  'mysql669.umbler.com';
-            $this->user     =  'supercaravelas';
-            $this->password =  'tccdesenvolvimento2020';
-            $this->database =  'caravelas';
+            $this->server   =  '151.106.96.51';
+            $this->user     =  'u372636767_caravelas';
+            $this->password =  'Supercaravelas2020';
+            $this->database =  'u372636767_caravelas';
         }
 
         private function getConnection() {
