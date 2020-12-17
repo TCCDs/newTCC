@@ -10,13 +10,34 @@
         document.getElementById("testeQRcode").value = resultado;
     });
 
-    Instascan.Camera.getCameras().then(cameras => {
+    Instascan.Camera.getCameras().then(function (cameras) {
+        let selectedCamera;
+
+        // Tratamento para pegar a camera traseira do smartphone
+        if (cameras.length > 0) {
+            for (let c = 0; c < cameras.length; c++) {
+                if (cameras[c].name.indexOf('back') != -1) {
+                    selectedCamera = cameras[c];
+                }
+            }
+            
+            if (!selectedCamera) selectedCamera = cameras[0];
+        }
+            
+        if (selectedCamera) {
+            scanner.start(selectedCamera);
+        } else {
+            console.error("No cameras found.");
+        }
+    });
+
+    /*Instascan.Camera.getCameras().then(cameras => {
         if (cameras.length > 1) {
             scanner.start(cameras[1]);
         } else {
             console.error("Não existe câmera no dispositivo!");
         }
-    });
+    });*/
 </script>
 
 <div class="row">
